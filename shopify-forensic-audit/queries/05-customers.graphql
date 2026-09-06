@@ -1,0 +1,78 @@
+query CustomersPage($cursor: String, $first: Int = 50) {
+  customers(first: $first, after: $cursor, sortKey: CREATED_AT) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      legacyResourceId
+      displayName
+      firstName
+      lastName
+      email
+      phone
+      createdAt
+      updatedAt
+      state
+      verifiedEmail
+      taxExempt
+      taxExemptions
+      tags
+      note
+      numberOfOrders
+      lifetimeDuration
+      amountSpent {
+        amount
+        currencyCode
+      }
+      defaultAddress {
+        id
+        company
+        address1
+        address2
+        city
+        province
+        provinceCode
+        zip
+        country
+        countryCodeV2
+        phone
+      }
+      addresses(first: 20) {
+        id
+        company
+        address1
+        address2
+        city
+        province
+        provinceCode
+        zip
+        country
+        countryCodeV2
+        phone
+      }
+      metafields(first: 50) {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        nodes {
+          id
+          namespace
+          key
+          type
+          value
+          jsonValue
+        }
+      }
+      companyContactProfiles {
+        id
+        company {
+          id
+          name
+        }
+      }
+    }
+  }
+}

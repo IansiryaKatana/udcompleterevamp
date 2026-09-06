@@ -10,7 +10,7 @@ import { StorefrontLayout } from '@/components/layout/StorefrontLayout'
 
 export const Route = createFileRoute('/cart')({
   component: CartPage,
-  head: () => ({ meta: [{ title: 'Your Cart | Astor Electronics' }] }),
+  head: () => ({ meta: [{ title: 'Your Cart | Unique Distribution' }] }),
 })
 
 function CartPage() {

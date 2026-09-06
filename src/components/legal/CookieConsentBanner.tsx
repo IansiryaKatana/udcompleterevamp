@@ -21,7 +21,7 @@ export function CookieConsentBanner() {
                 We value your privacy
               </p>
               <p id="cookie-consent-desc" className="mt-1 text-xs leading-relaxed text-white/75 sm:text-sm">
-                We use strictly necessary cookies for checkout and your cart. With your consent we also use optional analytics and marketing cookies to improve Astor Electronics. See our{' '}
+                We use strictly necessary cookies for checkout and your cart. With your consent we also use optional analytics and marketing cookies to improve Unique Distribution. See our{' '}
                 <Link to="/pages/cookies" className="font-semibold text-[#f7efe5] underline">
                   Cookie Policy
                 </Link>

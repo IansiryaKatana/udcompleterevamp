@@ -75,7 +75,7 @@
 
 1. Apply all Supabase migrations
 2. Create `cms-media` storage bucket (public read)
-3. Set `VITE_SUPABASE_URL` + `VITE_SUPABASE_ANON_KEY`
+3. Set `VITE_SUPABASE_URL=https://oelolusdbaoyiqkgukib.supabase.co` + `VITE_SUPABASE_ANON_KEY` from The UD Revamp
 4. Admin → Integrations: enter Stripe publishable key + secret (test mode)
 5. Deploy edge functions; set `STRIPE_WEBHOOK_SECRET` in Supabase secrets
 6. Admin → Site Settings: currency, brand copy

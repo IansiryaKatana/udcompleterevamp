@@ -6,7 +6,7 @@ import { AdminCheckout } from '@/admin/AdminCheckout'
 import { AdminIntegrations } from '@/admin/AdminIntegrations'
 
 const TABS = [
-  { id: 'orders', label: 'Orders', content: <AdminOrders /> },
+  { id: 'orders', label: 'Orders', content: <AdminOrders embedded /> },
   { id: 'customers', label: 'Customers', content: <AdminCustomers /> },
   { id: 'coupons', label: 'Coupons', content: <AdminCoupons /> },
   { id: 'checkout', label: 'Checkout', content: <AdminCheckout /> },
@@ -19,7 +19,7 @@ export function AdminCommerceHub({ tab }: { tab: TabId }) {
   return (
     <AdminTabHub
       title="Commerce"
-      subtitle="Orders, checkout settings, and payment integrations."
+      subtitle="Orders workspace, checkout settings, and payment integrations."
       hubPath="/backend/commerce"
       tabs={[...TABS]}
       activeTab={tab}

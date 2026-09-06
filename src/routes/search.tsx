@@ -38,8 +38,8 @@ function SearchPage() {
   }, [q])
 
   usePageMeta({
-    title: q ? `Search: ${q} | Astor Electronics` : 'Search | Astor Electronics',
-    description: q ? `Search results for “${q}” at Astor Electronics.` : 'Search the Astor Electronics catalog.',
+    title: q ? `Search: ${q} | Unique Distribution` : 'Search | Unique Distribution',
+    description: q ? `Search results for “${q}” at Unique Distribution.` : 'Search the Unique Distribution catalog.',
     path: q ? `/search?q=${encodeURIComponent(q)}` : '/search',
   })
 

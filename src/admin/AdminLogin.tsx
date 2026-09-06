@@ -57,7 +57,7 @@ export function AdminLogin() {
             <Lock className="h-5 w-5" />
           </div>
           <div>
-            <h1 className="text-xl font-semibold text-[var(--admin-text)]">Astor Admin</h1>
+            <h1 className="text-xl font-semibold text-[var(--admin-text)]">Unique Admin</h1>
             <p className="text-sm text-[var(--admin-muted)]">Sign in to manage the storefront CMS</p>
           </div>
         </div>

@@ -1,0 +1,454 @@
+query OrdersPage($cursor: String, $first: Int = 25) {
+  orders(first: $first, after: $cursor, sortKey: CREATED_AT) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      legacyResourceId
+      name
+      createdAt
+      processedAt
+      updatedAt
+      cancelledAt
+      closedAt
+      cancelReason
+      confirmed
+      test
+      unpaid
+      fullyPaid
+      displayFinancialStatus
+      displayFulfillmentStatus
+      sourceName
+      sourceIdentifier
+      tags
+      note
+      email
+      phone
+      poNumber
+      currencyCode
+      presentmentCurrencyCode
+      taxesIncluded
+      taxExempt
+      totalWeight
+      discountCode
+      paymentGatewayNames
+      registeredSourceUrl
+      confirmationNumber
+      customer {
+        id
+        displayName
+        email
+        phone
+        tags
+        taxExempt
+        createdAt
+      }
+      purchasingEntity {
+        __typename
+        ... on PurchasingCompany {
+          company {
+            id
+            name
+          }
+          location {
+            id
+            name
+          }
+          contact {
+            id
+          }
+        }
+        ... on Customer {
+          id
+        }
+      }
+      billingAddress {
+        name
+        company
+        address1
+        address2
+        city
+        province
+        provinceCode
+        zip
+        country
+        countryCodeV2
+        phone
+      }
+      shippingAddress {
+        name
+        company
+        address1
+        address2
+        city
+        province
+        provinceCode
+        zip
+        country
+        countryCodeV2
+        phone
+      }
+      customAttributes {
+        key
+        value
+      }
+      metafields(first: 50) {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        nodes {
+          id
+          namespace
+          key
+          type
+          value
+          jsonValue
+        }
+      }
+      currentSubtotalPriceSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      currentTotalPriceSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      currentTotalTaxSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      currentTotalDiscountsSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      originalTotalPriceSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      totalOutstandingSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      totalReceivedSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      totalRefundedSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      totalShippingPriceSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      subtotalPriceSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      totalPriceSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      totalTaxSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      taxLines {
+        title
+        rate
+        ratePercentage
+        priceSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
+        channelLiable
+      }
+      shippingLines(first: 10) {
+        nodes {
+          id
+          title
+          code
+          source
+          carrierIdentifier
+          originalPriceSet {
+            shopMoney {
+              amount
+              currencyCode
+            }
+          }
+        }
+      }
+      discountApplications(first: 20) {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        nodes {
+          __typename
+          index
+          allocationMethod
+          targetSelection
+          targetType
+          value {
+            __typename
+            ... on MoneyV2 {
+              amount
+              currencyCode
+            }
+            ... on PricingPercentageValue {
+              percentage
+            }
+          }
+        }
+      }
+      lineItems(first: 50) {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        nodes {
+          id
+          sku
+          name
+          title
+          variantTitle
+          quantity
+          currentQuantity
+          vendor
+          requiresShipping
+          taxable
+          isGiftCard
+          originalUnitPriceSet {
+            shopMoney {
+              amount
+              currencyCode
+            }
+          }
+          discountedUnitPriceSet {
+            shopMoney {
+              amount
+              currencyCode
+            }
+          }
+          originalTotalSet {
+            shopMoney {
+              amount
+              currencyCode
+            }
+          }
+          discountedTotalSet {
+            shopMoney {
+              amount
+              currencyCode
+            }
+          }
+          product {
+            id
+            title
+            handle
+            status
+            productType
+            vendor
+          }
+          variant {
+            id
+            sku
+            barcode
+            title
+          }
+          customAttributes {
+            key
+            value
+          }
+          taxLines {
+            title
+            rate
+            ratePercentage
+            priceSet {
+              shopMoney {
+                amount
+                currencyCode
+              }
+            }
+          }
+        }
+      }
+      fulfillments(first: 20) {
+        id
+        status
+        displayStatus
+        createdAt
+        updatedAt
+        deliveredAt
+        estimatedDeliveryAt
+        inTransitAt
+        name
+        trackingInfo {
+          company
+          number
+          url
+        }
+        location {
+          id
+          name
+        }
+        service {
+          handle
+          serviceName
+        }
+        fulfillmentLineItems(first: 50) {
+          pageInfo {
+            hasNextPage
+            endCursor
+          }
+          nodes {
+            id
+            quantity
+            lineItem {
+              id
+              sku
+              name
+            }
+          }
+        }
+      }
+      transactions(first: 30) {
+        id
+        kind
+        status
+        gateway
+        formattedGateway
+        amountSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
+        createdAt
+        processedAt
+        paymentId
+        authorizationCode
+        errorCode
+        test
+        manuallyCapturable
+        accountNumber
+        paymentIcon {
+          altText
+        }
+      }
+      refunds(first: 20) {
+        id
+        createdAt
+        note
+        totalRefundedSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
+        refundLineItems(first: 50) {
+          pageInfo {
+            hasNextPage
+            endCursor
+          }
+          nodes {
+            id
+            quantity
+            restockType
+            restocked
+            priceSet {
+              shopMoney {
+                amount
+                currencyCode
+              }
+            }
+            subtotalSet {
+              shopMoney {
+                amount
+                currencyCode
+              }
+            }
+            totalTaxSet {
+              shopMoney {
+                amount
+                currencyCode
+              }
+            }
+            lineItem {
+              id
+              sku
+              name
+            }
+          }
+        }
+      }
+      returns(first: 10) {
+        nodes {
+          id
+          status
+          name
+        }
+      }
+      events(first: 50) {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        nodes {
+          id
+          createdAt
+          message
+          appTitle
+          attributeToApp
+          attributeToUser
+          criticalAlert
+          ... on CommentEvent {
+            rawMessage
+          }
+        }
+      }
+      app {
+        id
+        name
+      }
+      channelInformation {
+        channelId
+        displayName
+        app {
+          id
+          title
+          handle
+        }
+      }
+    }
+  }
+}

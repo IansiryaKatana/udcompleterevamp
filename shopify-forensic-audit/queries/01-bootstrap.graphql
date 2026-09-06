@@ -1,0 +1,97 @@
+query ForensicBootstrap {
+  shop {
+    id
+    name
+    email
+    myshopifyDomain
+    primaryDomain {
+      url
+      host
+      sslEnabled
+    }
+    currencyCode
+    ianaTimezone
+    timezoneAbbreviation
+    createdAt
+    updatedAt
+    taxesIncluded
+    taxShipping
+    weightUnit
+    unitSystem
+    checkoutApiSupported
+    customerAccounts
+    plan {
+      partnerDevelopment
+      shopifyPlus
+      publicDisplayName
+    }
+    shopAddress {
+      country
+      countryCodeV2
+      city
+      province
+      zip
+    }
+    currencyFormats {
+      moneyFormat
+      moneyWithCurrencyFormat
+    }
+    fulfillmentServices {
+      handle
+      serviceName
+      type
+    }
+    enabledPresentmentCurrencies
+  }
+  currentAppInstallation {
+    id
+    accessScopes {
+      handle
+      description
+    }
+    app {
+      id
+      title
+      handle
+    }
+  }
+  productsCount {
+    count
+  }
+  collectionsCount {
+    count
+  }
+  customersCount {
+    count
+  }
+  ordersCount {
+    count
+  }
+  draftOrdersCount {
+    count
+  }
+  locationsCount {
+    count
+  }
+  abandonedCheckoutsCount {
+    count
+  }
+  oldestOrder: orders(first: 1, sortKey: CREATED_AT) {
+    nodes {
+      id
+      name
+      createdAt
+      processedAt
+      legacyResourceId
+    }
+  }
+  newestOrder: orders(first: 1, sortKey: CREATED_AT, reverse: true) {
+    nodes {
+      id
+      name
+      createdAt
+      processedAt
+      legacyResourceId
+    }
+  }
+}

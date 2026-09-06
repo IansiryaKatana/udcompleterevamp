@@ -29,7 +29,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'Astor Electronics' },
+      { title: 'Unique Distribution' },
     ],
     links: [
       { rel: 'icon', href: DEFAULT_FAVICON_URL, type: 'image/png' },

@@ -1,0 +1,4050 @@
+{
+  "products": {
+    "count": 2213,
+    "status": [
+      {
+        "key": "ARCHIVED",
+        "value": 1430
+      },
+      {
+        "key": "ACTIVE",
+        "value": 723
+      },
+      {
+        "key": "DRAFT",
+        "value": 58
+      },
+      {
+        "key": "UNLISTED",
+        "value": 2
+      }
+    ],
+    "variantCount": 12677,
+    "tracked": {
+      "yes": 12677,
+      "no": 0
+    },
+    "withSku": 12398,
+    "withBarcode": 8689,
+    "giftCard": 0,
+    "withCompareAt": 686,
+    "options": [
+      {
+        "key": "Title",
+        "value": 947
+      },
+      {
+        "key": "Flavour",
+        "value": 456
+      },
+      {
+        "key": "Strength",
+        "value": 161
+      },
+      {
+        "key": "Size",
+        "value": 153
+      },
+      {
+        "key": "Flavours",
+        "value": 140
+      },
+      {
+        "key": "Colour",
+        "value": 131
+      },
+      {
+        "key": "Coil Type",
+        "value": 61
+      },
+      {
+        "key": "Color",
+        "value": 54
+      },
+      {
+        "key": "Options",
+        "value": 35
+      },
+      {
+        "key": "POS",
+        "value": 30
+      },
+      {
+        "key": "Included",
+        "value": 30
+      },
+      {
+        "key": "Coil Size",
+        "value": 28
+      },
+      {
+        "key": "Type",
+        "value": 25
+      },
+      {
+        "key": "Storage",
+        "value": 22
+      },
+      {
+        "key": "Pack Size",
+        "value": 16
+      },
+      {
+        "key": "Coil Resistance",
+        "value": 13
+      },
+      {
+        "key": "Resistance",
+        "value": 13
+      },
+      {
+        "key": "Colours",
+        "value": 9
+      },
+      {
+        "key": "Variant",
+        "value": 7
+      },
+      {
+        "key": "Nicotine",
+        "value": 5
+      },
+      {
+        "key": "Capacity",
+        "value": 3
+      },
+      {
+        "key": "Coil",
+        "value": 3
+      },
+      {
+        "key": "Flavor",
+        "value": 3
+      },
+      {
+        "key": "Shampoo Options",
+        "value": 3
+      },
+      {
+        "key": "Ohm",
+        "value": 2
+      },
+      {
+        "key": "Sign",
+        "value": 2
+      },
+      {
+        "key": "Variants",
+        "value": 2
+      },
+      {
+        "key": "Battery size",
+        "value": 2
+      },
+      {
+        "key": "Bundle Offer",
+        "value": 1
+      },
+      {
+        "key": "Stregnth",
+        "value": 1
+      },
+      {
+        "key": "3 Pack",
+        "value": 1
+      },
+      {
+        "key": "SIze",
+        "value": 1
+      },
+      {
+        "key": "flavours",
+        "value": 1
+      },
+      {
+        "key": "Bulk Buy",
+        "value": 1
+      },
+      {
+        "key": "Lemon & Lime",
+        "value": 1
+      },
+      {
+        "key": "VariantTest",
+        "value": 1
+      },
+      {
+        "key": "Warranty",
+        "value": 1
+      },
+      {
+        "key": "Pad Options",
+        "value": 1
+      },
+      {
+        "key": "Toothbrush Options",
+        "value": 1
+      },
+      {
+        "key": "Gel options",
+        "value": 1
+      }
+    ],
+    "tags": [
+      {
+        "key": "Archived",
+        "value": 1425
+      },
+      {
+        "key": "Online Store",
+        "value": 891
+      },
+      {
+        "key": "ActiveShopify",
+        "value": 744
+      },
+      {
+        "key": "ActiveShopifyItems",
+        "value": 743
+      },
+      {
+        "key": "label-New",
+        "value": 736
+      },
+      {
+        "key": "UD-10ml-Nic-Salt",
+        "value": 528
+      },
+      {
+        "key": "10ml Nic Salt",
+        "value": 406
+      },
+      {
+        "key": "Eliquid Type-Nic Salt",
+        "value": 247
+      },
+      {
+        "key": "shopcoll",
+        "value": 174
+      },
+      {
+        "key": "Pack-of-5",
+        "value": 172
+      },
+      {
+        "key": "UD-Vape-Pods",
+        "value": 160
+      },
+      {
+        "key": "Pack-of-10",
+        "value": 143
+      },
+      {
+        "key": "Disposable Vapes",
+        "value": 139
+      },
+      {
+        "key": "UD-POS",
+        "value": 132
+      },
+      {
+        "key": "UD-Disposable-Vapes",
+        "value": 127
+      },
+      {
+        "key": "UD-removed-black-friday",
+        "value": 120
+      },
+      {
+        "key": "UD-Pod-Kits",
+        "value": 119
+      },
+      {
+        "key": "No Kit",
+        "value": 118
+      },
+      {
+        "key": "Confectionery",
+        "value": 113
+      },
+      {
+        "key": "Drinks",
+        "value": 105
+      },
+      {
+        "key": "Vape Hardware",
+        "value": 94
+      },
+      {
+        "key": "UD-Coils-Tanks",
+        "value": 92
+      },
+      {
+        "key": "label-ComingSoon",
+        "value": 89
+      },
+      {
+        "key": "Essentials",
+        "value": 83
+      },
+      {
+        "key": "UD-NicotinePouch",
+        "value": 81
+      },
+      {
+        "key": "HW-5%",
+        "value": 76
+      },
+      {
+        "key": "UD-Essentials",
+        "value": 76
+      },
+      {
+        "key": "UD-Shortfills-Nic-Shots",
+        "value": 72
+      },
+      {
+        "key": "new",
+        "value": 71
+      },
+      {
+        "key": "maxlimit1",
+        "value": 69
+      }
+    ],
+    "productType": [
+      {
+        "key": "10ml Nic Salt 20mg",
+        "value": 145
+      },
+      {
+        "key": "POS",
+        "value": 105
+      },
+      {
+        "key": "(blank)",
+        "value": 102
+      },
+      {
+        "key": "Pod Kits",
+        "value": 67
+      },
+      {
+        "key": "Legal Big Puff",
+        "value": 64
+      },
+      {
+        "key": "Nicotine Pouches",
+        "value": 58
+      },
+      {
+        "key": "10ml Nic Salt 10mg",
+        "value": 58
+      },
+      {
+        "key": "NIC SALTS",
+        "value": 57
+      },
+      {
+        "key": "Vape coils/pods",
+        "value": 48
+      },
+      {
+        "key": "Legal Big Puff Pods",
+        "value": 43
+      },
+      {
+        "key": "Crisps",
+        "value": 35
+      },
+      {
+        "key": "Coils",
+        "value": 31
+      },
+      {
+        "key": "50/50 e-Liquid",
+        "value": 31
+      },
+      {
+        "key": "10ml Ghost Salts Nic Salt 10mg",
+        "value": 29
+      },
+      {
+        "key": "Ghost Salts 10ml Nic Salt 20mg",
+        "value": 29
+      },
+      {
+        "key": "Drinks",
+        "value": 29
+      },
+      {
+        "key": "10ml Riot E Liquid Nic Salt 10mg",
+        "value": 28
+      },
+      {
+        "key": "Soft Drinks",
+        "value": 28
+      },
+      {
+        "key": "10ml Riot E Liquid Nic Salt 5mg",
+        "value": 27
+      },
+      {
+        "key": "Smoking Accessories",
+        "value": 25
+      }
+    ],
+    "vendor": [
+      {
+        "key": "Vapes Bars",
+        "value": 197
+      },
+      {
+        "key": "Hayati",
+        "value": 147
+      },
+      {
+        "key": "Doozy Vape Co",
+        "value": 90
+      },
+      {
+        "key": "Riot E Liquid",
+        "value": 85
+      },
+      {
+        "key": "IVG",
+        "value": 80
+      },
+      {
+        "key": "Vaporesso",
+        "value": 71
+      },
+      {
+        "key": "Aspire",
+        "value": 63
+      },
+      {
+        "key": "Voopoo",
+        "value": 52
+      },
+      {
+        "key": "Elux",
+        "value": 52
+      },
+      {
+        "key": "Edge",
+        "value": 51
+      },
+      {
+        "key": "Bar Juice 5000",
+        "value": 43
+      },
+      {
+        "key": "Lost Mary",
+        "value": 42
+      },
+      {
+        "key": "OXVA",
+        "value": 42
+      },
+      {
+        "key": "Elf Bar",
+        "value": 39
+      },
+      {
+        "key": "Wick Liquor",
+        "value": 36
+      },
+      {
+        "key": "BAR JUICE",
+        "value": 35
+      },
+      {
+        "key": "Geekvape",
+        "value": 31
+      },
+      {
+        "key": "Velo",
+        "value": 31
+      },
+      {
+        "key": "Just Juice",
+        "value": 30
+      },
+      {
+        "key": "SKE",
+        "value": 28
+      }
+    ]
+  },
+  "customers": {
+    "count": 6219,
+    "taxExempt": 1,
+    "withPhone": 5545,
+    "withEmail": 6199,
+    "withCompany": 3518,
+    "notePresent": 5916,
+    "numberOfOrders": {
+      "zero": 3996,
+      "one": 635,
+      "twoToTen": 1074,
+      "overTen": 514
+    },
+    "amountSpent": 24971608,
+    "tags": [
+      {
+        "key": "SureCust_Wholesale",
+        "value": 5726
+      },
+      {
+        "key": "verified",
+        "value": 5708
+      },
+      {
+        "key": "b2b",
+        "value": 3461
+      },
+      {
+        "key": "b2b_company",
+        "value": 3328
+      },
+      {
+        "key": "LowSpendCustomers",
+        "value": 2799
+      },
+      {
+        "key": "sms_manual_sub",
+        "value": 2355
+      },
+      {
+        "key": "NoSPMeta",
+        "value": 1529
+      },
+      {
+        "key": "John Yates",
+        "value": 804
+      },
+      {
+        "key": "REF:JohnYates",
+        "value": 803
+      },
+      {
+        "key": "PAY LATER",
+        "value": 718
+      },
+      {
+        "key": "REF:MahendraBadsiwal",
+        "value": 704
+      },
+      {
+        "key": "Karanjot Bassi",
+        "value": 693
+      },
+      {
+        "key": "Mahendra Badsiwal",
+        "value": 690
+      },
+      {
+        "key": "SP_JohnYates",
+        "value": 680
+      },
+      {
+        "key": "loyalty_customers",
+        "value": 661
+      },
+      {
+        "key": "REF:KaranjotBassi",
+        "value": 611
+      },
+      {
+        "key": "SP_MahendraBadsiwal",
+        "value": 480
+      },
+      {
+        "key": "REF:AdamFysal",
+        "value": 464
+      },
+      {
+        "key": "Adam Fysal",
+        "value": 450
+      },
+      {
+        "key": "SP_KaranjotBassi",
+        "value": 421
+      },
+      {
+        "key": "Reece Morgan",
+        "value": 414
+      },
+      {
+        "key": "REF:ReeceMorgan",
+        "value": 413
+      },
+      {
+        "key": "SP_ReeceMorgan",
+        "value": 413
+      },
+      {
+        "key": "Simon Hartshorn",
+        "value": 400
+      },
+      {
+        "key": "REF:SimonHartshorn",
+        "value": 380
+      },
+      {
+        "key": "SP_SimonHartshorn",
+        "value": 370
+      },
+      {
+        "key": "Ref:KulwantSingh",
+        "value": 329
+      },
+      {
+        "key": "SP_KulwantSingh",
+        "value": 329
+      },
+      {
+        "key": "Kulwant Singh",
+        "value": 328
+      },
+      {
+        "key": "No Referrer",
+        "value": 322
+      },
+      {
+        "key": "SP_AdamFysal",
+        "value": 305
+      },
+      {
+        "key": "Nash Shakti",
+        "value": 289
+      },
+      {
+        "key": "REF:NashShakti",
+        "value": 287
+      },
+      {
+        "key": "SP_NashShakti",
+        "value": 287
+      },
+      {
+        "key": "pending",
+        "value": 213
+      },
+      {
+        "key": "REF:VivekKeshwala",
+        "value": 200
+      },
+      {
+        "key": "SP_VivekKeshwala",
+        "value": 200
+      },
+      {
+        "key": "Vivek Keshwala",
+        "value": 199
+      },
+      {
+        "key": "SP_AdamYousuf",
+        "value": 193
+      },
+      {
+        "key": "Neil Gill",
+        "value": 189
+      },
+      {
+        "key": "REF:NeilGill",
+        "value": 188
+      },
+      {
+        "key": "SP_NeilGill",
+        "value": 188
+      },
+      {
+        "key": "REF:AdamYousuf",
+        "value": 185
+      },
+      {
+        "key": "POS Customer",
+        "value": 178
+      },
+      {
+        "key": "SureCust_POS",
+        "value": 177
+      },
+      {
+        "key": "sales_rep_karanjot646",
+        "value": 174
+      },
+      {
+        "key": "REF:YusufLambat",
+        "value": 147
+      },
+      {
+        "key": "SP_YusufLambat",
+        "value": 147
+      },
+      {
+        "key": "SP_MattScarborough",
+        "value": 146
+      },
+      {
+        "key": "Matt Scarborough",
+        "value": 142
+      }
+    ]
+  },
+  "companies": {
+    "count": 3518,
+    "withContacts": 3496,
+    "withLocations": 3518,
+    "paymentTerms": [
+      {
+        "key": "Due on fulfillment|FULFILLMENT|",
+        "value": 1
+      }
+    ]
+  },
+  "orders": {
+    "count": 21767,
+    "totalValue": 24796280,
+    "totalTax": 4126944,
+    "totalRefunded": 17135,
+    "totalOutstanding": 1107160,
+    "taxesIncluded": 3,
+    "taxExempt": 4,
+    "unpaid": 848,
+    "test": 0,
+    "cancelled": 551,
+    "withPo": 133,
+    "withNote": 289,
+    "withCompany": 21530,
+    "withRefund": 2959,
+    "withReturn": 5,
+    "withFulfillment": 21177,
+    "commentEvents": 11705,
+    "missingProduct": 819,
+    "lineItemCount": 531738,
+    "firstCreated": "2024-07-10T12:11:31Z",
+    "lastCreated": "2026-09-05T07:46:10Z",
+    "financial": [
+      {
+        "key": "PAID",
+        "value": 20543
+      },
+      {
+        "key": "PENDING",
+        "value": 726
+      },
+      {
+        "key": "VOIDED",
+        "value": 245
+      },
+      {
+        "key": "PARTIALLY_REFUNDED",
+        "value": 157
+      },
+      {
+        "key": "PARTIALLY_PAID",
+        "value": 79
+      },
+      {
+        "key": "REFUNDED",
+        "value": 17
+      }
+    ],
+    "fulfillment": [
+      {
+        "key": "FULFILLED",
+        "value": 21052
+      },
+      {
+        "key": "UNFULFILLED",
+        "value": 585
+      },
+      {
+        "key": "PARTIALLY_FULFILLED",
+        "value": 89
+      },
+      {
+        "key": "ON_HOLD",
+        "value": 41
+      }
+    ],
+    "sourceName": [
+      {
+        "key": "web",
+        "value": 17883
+      },
+      {
+        "key": "shopify_draft_order",
+        "value": 3876
+      },
+      {
+        "key": "pos",
+        "value": 8
+      }
+    ],
+    "app": [
+      {
+        "key": "Online Store",
+        "value": 17883
+      },
+      {
+        "key": "Draft Orders",
+        "value": 3876
+      },
+      {
+        "key": "Point of Sale",
+        "value": 8
+      }
+    ],
+    "channel": [
+      {
+        "key": "Online Store",
+        "value": 17883
+      },
+      {
+        "key": "(none)",
+        "value": 3876
+      },
+      {
+        "key": "Point of Sale",
+        "value": 8
+      }
+    ],
+    "tags": [
+      {
+        "key": "PAID",
+        "value": 20318
+      },
+      {
+        "key": "WebsiteOrder",
+        "value": 17872
+      },
+      {
+        "key": "WorldPayCard",
+        "value": 10285
+      },
+      {
+        "key": "persistent_cart",
+        "value": 7579
+      },
+      {
+        "key": "REF:KaranjotBassi",
+        "value": 4286
+      },
+      {
+        "key": "getDraftOrderData1_item.name",
+        "value": 3913
+      },
+      {
+        "key": "Review_Customer_Type",
+        "value": 3913
+      },
+      {
+        "key": "FromDraft",
+        "value": 3742
+      },
+      {
+        "key": "SP_KaranjotBassi",
+        "value": 3545
+      },
+      {
+        "key": "Karanjot Bassi",
+        "value": 3538
+      },
+      {
+        "key": "REF:AdamFysal",
+        "value": 2637
+      },
+      {
+        "key": "REF:SimonHartshorn",
+        "value": 2618
+      },
+      {
+        "key": "SP_AdamFysal",
+        "value": 2239
+      },
+      {
+        "key": "REF:JohnYates",
+        "value": 2170
+      },
+      {
+        "key": "REF:MahendraBadsiwal",
+        "value": 2161
+      },
+      {
+        "key": "SP_SimonHartshorn",
+        "value": 2008
+      },
+      {
+        "key": "SP_JohnYates",
+        "value": 2003
+      },
+      {
+        "key": "SP_MahendraBadsiwal",
+        "value": 1796
+      },
+      {
+        "key": "sales_rep_simon175",
+        "value": 1649
+      },
+      {
+        "key": "REF:JakeDodd",
+        "value": 1476
+      },
+      {
+        "key": "REF:AdamYousuf",
+        "value": 1400
+      },
+      {
+        "key": "css_sales_team",
+        "value": 1369
+      },
+      {
+        "key": "SP_AdamYousuf",
+        "value": 1363
+      },
+      {
+        "key": "Awaiting payment",
+        "value": 1211
+      },
+      {
+        "key": "SP_JakeDodd",
+        "value": 1060
+      },
+      {
+        "key": "Jake Dodd",
+        "value": 1052
+      },
+      {
+        "key": "Adam Fysal",
+        "value": 1022
+      },
+      {
+        "key": "SP_TomCook",
+        "value": 1008
+      },
+      {
+        "key": "Tom Cook",
+        "value": 997
+      },
+      {
+        "key": "sales_rep_karanjot646",
+        "value": 974
+      },
+      {
+        "key": "REF:TomCook",
+        "value": 969
+      },
+      {
+        "key": "Mahendra Badsiwal",
+        "value": 927
+      },
+      {
+        "key": "John Yates",
+        "value": 917
+      },
+      {
+        "key": "sales_rep_adam319",
+        "value": 719
+      },
+      {
+        "key": "REF:KulwantSingh",
+        "value": 686
+      },
+      {
+        "key": "SP_KulwantSingh",
+        "value": 677
+      },
+      {
+        "key": "Simon Hartshorn",
+        "value": 657
+      },
+      {
+        "key": "CG:",
+        "value": 625
+      },
+      {
+        "key": "CG_",
+        "value": 625
+      },
+      {
+        "key": "Awaiting Payment",
+        "value": 594
+      }
+    ],
+    "gateways": [
+      {
+        "key": "Worldpay eCommerce",
+        "value": 10294
+      },
+      {
+        "key": "Bank Deposit",
+        "value": 9709
+      },
+      {
+        "key": "manual",
+        "value": 2828
+      },
+      {
+        "key": "PAY LATER",
+        "value": 970
+      },
+      {
+        "key": "Pay By Cash",
+        "value": 38
+      },
+      {
+        "key": "shopify_store_credit",
+        "value": 25
+      },
+      {
+        "key": "shopify_payments",
+        "value": 3
+      },
+      {
+        "key": "Order Now, Pay Later",
+        "value": 2
+      },
+      {
+        "key": "Worldpay Payments",
+        "value": 2
+      }
+    ],
+    "gatewayMoney": [
+      {
+        "key": "Worldpay eCommerce",
+        "value": {
+          "count": 10294,
+          "amount": 6010549.56999997
+        }
+      },
+      {
+        "key": "Bank Deposit",
+        "value": {
+          "count": 9709,
+          "amount": 16608392.400000015
+        }
+      },
+      {
+        "key": "manual",
+        "value": {
+          "count": 2828,
+          "amount": 8794465.15
+        }
+      },
+      {
+        "key": "PAY LATER",
+        "value": {
+          "count": 970,
+          "amount": 674666.4099999998
+        }
+      },
+      {
+        "key": "Pay By Cash",
+        "value": {
+          "count": 38,
+          "amount": 316168.2299999999
+        }
+      },
+      {
+        "key": "shopify_store_credit",
+        "value": {
+          "count": 25,
+          "amount": 31601.59
+        }
+      },
+      {
+        "key": "shopify_payments",
+        "value": {
+          "count": 3,
+          "amount": 121.47999999999999
+        }
+      },
+      {
+        "key": "Order Now, Pay Later",
+        "value": {
+          "count": 2,
+          "amount": 238.4
+        }
+      },
+      {
+        "key": "Worldpay Payments",
+        "value": {
+          "count": 2,
+          "amount": 908.34
+        }
+      }
+    ],
+    "txKind": [
+      {
+        "key": "SALE",
+        "value": 32989
+      },
+      {
+        "key": "VOID",
+        "value": 1248
+      },
+      {
+        "key": "REFUND",
+        "value": 189
+      },
+      {
+        "key": "AUTHORIZATION",
+        "value": 2
+      },
+      {
+        "key": "CAPTURE",
+        "value": 2
+      }
+    ],
+    "txStatus": [
+      {
+        "key": "SALE|SUCCESS",
+        "value": 23037
+      },
+      {
+        "key": "SALE|PENDING",
+        "value": 8749
+      },
+      {
+        "key": "VOID|SUCCESS",
+        "value": 1248
+      },
+      {
+        "key": "SALE|FAILURE",
+        "value": 1181
+      },
+      {
+        "key": "REFUND|SUCCESS",
+        "value": 178
+      },
+      {
+        "key": "SALE|ERROR",
+        "value": 22
+      },
+      {
+        "key": "REFUND|FAILURE",
+        "value": 10
+      },
+      {
+        "key": "AUTHORIZATION|SUCCESS",
+        "value": 2
+      },
+      {
+        "key": "CAPTURE|SUCCESS",
+        "value": 2
+      },
+      {
+        "key": "REFUND|PENDING",
+        "value": 1
+      }
+    ],
+    "txGateway": [
+      {
+        "key": "Bank Deposit",
+        "value": 16788
+      },
+      {
+        "key": "Worldpay eCommerce",
+        "value": 11528
+      },
+      {
+        "key": "manual",
+        "value": 3052
+      },
+      {
+        "key": "PAY LATER",
+        "value": 2964
+      },
+      {
+        "key": "Pay By Cash",
+        "value": 55
+      },
+      {
+        "key": "shopify_store_credit",
+        "value": 27
+      },
+      {
+        "key": "Worldpay Payments",
+        "value": 7
+      },
+      {
+        "key": "Order Now, Pay Later",
+        "value": 6
+      },
+      {
+        "key": "shopify_payments",
+        "value": 3
+      }
+    ],
+    "taxTitles": [
+      {
+        "key": "GB VAT",
+        "value": 21671
+      }
+    ],
+    "taxRates": [
+      {
+        "key": "GB VAT|20",
+        "value": 21664
+      },
+      {
+        "key": "GB VAT|5",
+        "value": 7
+      }
+    ],
+    "trackingCompanies": [
+      {
+        "key": "Other",
+        "value": 14212
+      },
+      {
+        "key": "DPD",
+        "value": 12660
+      },
+      {
+        "key": "DPD UK",
+        "value": 2404
+      },
+      {
+        "key": "DPD Local",
+        "value": 222
+      },
+      {
+        "key": "DX",
+        "value": 197
+      },
+      {
+        "key": "UPS",
+        "value": 32
+      },
+      {
+        "key": "(blank)",
+        "value": 4
+      },
+      {
+        "key": "99 Minutos",
+        "value": 2
+      }
+    ],
+    "fulfillmentServices": [
+      {
+        "key": "Manual",
+        "value": 22917
+      }
+    ],
+    "shippingTitles": [
+      {
+        "key": "Standard Delivery",
+        "value": 18387
+      },
+      {
+        "key": "Saturday delivery",
+        "value": 528
+      },
+      {
+        "key": "Saturday Delivery",
+        "value": 409
+      },
+      {
+        "key": "Standard",
+        "value": 255
+      },
+      {
+        "key": "Free Delivery",
+        "value": 94
+      },
+      {
+        "key": "Next Day Delivery",
+        "value": 44
+      },
+      {
+        "key": "Delivery Charges",
+        "value": 40
+      },
+      {
+        "key": "Standard Shipping",
+        "value": 19
+      },
+      {
+        "key": "Shipping Charge",
+        "value": 12
+      },
+      {
+        "key": "Shipping",
+        "value": 6
+      },
+      {
+        "key": "Shipping charge",
+        "value": 6
+      },
+      {
+        "key": "shipping",
+        "value": 2
+      },
+      {
+        "key": "saturday delivery",
+        "value": 2
+      },
+      {
+        "key": "Delivery",
+        "value": 1
+      },
+      {
+        "key": "Custom",
+        "value": 1
+      },
+      {
+        "key": "5 Cartons",
+        "value": 1
+      },
+      {
+        "key": "Standard Delivery (3.2 lb: Items 2.2 lb, Package 1.0 lb)",
+        "value": 1
+      },
+      {
+        "key": "Saturday deliver",
+        "value": 1
+      },
+      {
+        "key": "Standard delivery",
+        "value": 1
+      },
+      {
+        "key": "Shipping Fee",
+        "value": 1
+      }
+    ],
+    "customAttributes": [
+      {
+        "key": "DPD Delivery Status",
+        "value": 7527
+      },
+      {
+        "key": "from",
+        "value": 10
+      },
+      {
+        "key": "Order/Invoice NO.",
+        "value": 1
+      }
+    ],
+    "eventApps": [
+      {
+        "key": "DPD Integration by WSA",
+        "value": 55700
+      },
+      {
+        "key": "Shopify Web",
+        "value": 46296
+      },
+      {
+        "key": "SKULabs",
+        "value": 20588
+      },
+      {
+        "key": "Shopify Mobile for Android",
+        "value": 13
+      },
+      {
+        "key": "Shopify Mobile for iPhone",
+        "value": 11
+      },
+      {
+        "key": "Point of Sale",
+        "value": 9
+      },
+      {
+        "key": "Self Serve web",
+        "value": 9
+      }
+    ],
+    "monthly": [
+      {
+        "key": "2026-07",
+        "value": 1855
+      },
+      {
+        "key": "2026-08",
+        "value": 1839
+      },
+      {
+        "key": "2026-03",
+        "value": 1651
+      },
+      {
+        "key": "2026-06",
+        "value": 1622
+      },
+      {
+        "key": "2026-05",
+        "value": 1551
+      },
+      {
+        "key": "2026-04",
+        "value": 1510
+      },
+      {
+        "key": "2026-02",
+        "value": 1433
+      },
+      {
+        "key": "2026-01",
+        "value": 1409
+      },
+      {
+        "key": "2025-12",
+        "value": 1233
+      },
+      {
+        "key": "2025-11",
+        "value": 1146
+      },
+      {
+        "key": "2025-10",
+        "value": 1096
+      },
+      {
+        "key": "2025-09",
+        "value": 997
+      },
+      {
+        "key": "2025-07",
+        "value": 987
+      },
+      {
+        "key": "2025-06",
+        "value": 845
+      },
+      {
+        "key": "2025-08",
+        "value": 778
+      },
+      {
+        "key": "2025-05",
+        "value": 575
+      },
+      {
+        "key": "2025-04",
+        "value": 477
+      },
+      {
+        "key": "2026-09",
+        "value": 310
+      },
+      {
+        "key": "2025-03",
+        "value": 291
+      },
+      {
+        "key": "2025-02",
+        "value": 114
+      },
+      {
+        "key": "2025-01",
+        "value": 29
+      },
+      {
+        "key": "2024-12",
+        "value": 13
+      },
+      {
+        "key": "2024-11",
+        "value": 3
+      },
+      {
+        "key": "2024-07",
+        "value": 2
+      },
+      {
+        "key": "2024-09",
+        "value": 1
+      }
+    ]
+  },
+  "drafts": {
+    "count": 4093,
+    "status": [
+      {
+        "key": "COMPLETED",
+        "value": 3884
+      },
+      {
+        "key": "OPEN",
+        "value": 205
+      },
+      {
+        "key": "INVOICE_SENT",
+        "value": 4
+      }
+    ],
+    "withPo": 2,
+    "withNote": 0,
+    "completed": 3876,
+    "invoiceSent": 4093,
+    "totalValue": 12387793,
+    "firstCreated": "2024-11-20T14:21:49Z",
+    "lastCreated": "2026-09-04T15:46:11Z",
+    "tags": [
+      {
+        "key": "Awaiting payment",
+        "value": 1231
+      },
+      {
+        "key": "Awaiting Payment",
+        "value": 1222
+      },
+      {
+        "key": "Awaiting payments",
+        "value": 574
+      },
+      {
+        "key": "REF:AdamYousuf",
+        "value": 566
+      },
+      {
+        "key": "AwaitingPayment",
+        "value": 563
+      },
+      {
+        "key": "Ref : Adam Fysal",
+        "value": 497
+      },
+      {
+        "key": "REF:SimonHartshorn",
+        "value": 298
+      },
+      {
+        "key": "REF:Jake Dodd",
+        "value": 214
+      },
+      {
+        "key": "Ref Adam Yousuf",
+        "value": 191
+      },
+      {
+        "key": "REF:AdamFysal",
+        "value": 170
+      },
+      {
+        "key": "REF: Adam Yousuf",
+        "value": 152
+      },
+      {
+        "key": "REF:KaranjotBassi",
+        "value": 146
+      },
+      {
+        "key": "REF: Kulwant Singh",
+        "value": 137
+      },
+      {
+        "key": "Ref : Tom Cook",
+        "value": 136
+      },
+      {
+        "key": "⚠️ Out of stock item",
+        "value": 112
+      },
+      {
+        "key": "REF: Simon Hartshorn",
+        "value": 106
+      },
+      {
+        "key": "REF:MahendraBadsiwal",
+        "value": 82
+      },
+      {
+        "key": "FromDraft",
+        "value": 80
+      },
+      {
+        "key": "Ref John Yates",
+        "value": 74
+      },
+      {
+        "key": "REF: Karanjot Bassi",
+        "value": 68
+      },
+      {
+        "key": "REF: Mahendra Badiswal",
+        "value": 61
+      },
+      {
+        "key": "REF:JohnYates",
+        "value": 60
+      },
+      {
+        "key": "Ref:Adam Yousuf",
+        "value": 59
+      },
+      {
+        "key": "SP_ KulwantSingh",
+        "value": 56
+      },
+      {
+        "key": "persistent_cart",
+        "value": 51
+      },
+      {
+        "key": "Ref: Mahendra Badiswal",
+        "value": 49
+      },
+      {
+        "key": "WebsiteOrder",
+        "value": 48
+      },
+      {
+        "key": "REF: Reece morgan",
+        "value": 48
+      },
+      {
+        "key": "REF: Adam",
+        "value": 38
+      },
+      {
+        "key": "REF:JakeDodd",
+        "value": 34
+      }
+    ],
+    "source": [
+      {
+        "key": "PurchasingCompany",
+        "value": 2436
+      },
+      {
+        "key": "Customer",
+        "value": 1584
+      },
+      {
+        "key": "(none)",
+        "value": 73
+      }
+    ]
+  },
+  "inventory": {
+    "count": 13247,
+    "tracked": 13247,
+    "untracked": 0,
+    "skuBlank": 310,
+    "locations": [
+      {
+        "key": "UD WH 1",
+        "value": 13247
+      }
+    ]
+  },
+  "abandoned": {
+    "count": 173,
+    "tags": [],
+    "totalValue": 37901.43999999998,
+    "withEmail": 0,
+    "completed": 1
+  },
+  "collections": {
+    "count": 368
+  },
+  "metafieldDefs": {
+    "ORDER": 14,
+    "CUSTOMER": 20,
+    "DRAFTORDER": 5,
+    "PRODUCT": 46,
+    "PRODUCTVARIANT": 25,
+    "COLLECTION": 6,
+    "COMPANY": 5,
+    "SHOP": 1,
+    "VALIDATION": 1
+  },
+  "metafieldLiveTop": [
+    {
+      "id": "custom.salesperson",
+      "type": "single_line_text_field",
+      "populatedCount": 25444,
+      "ownerTypes": {
+        "ORDER": 21767,
+        "DRAFTORDER": 3677
+      },
+      "topValues": [
+        {
+          "key": "Karanjot Bassi",
+          "value": 4513
+        },
+        {
+          "key": "Adam Fysal",
+          "value": 3305
+        },
+        {
+          "key": "Simon Hartshorn",
+          "value": 3067
+        },
+        {
+          "key": "Adam Yousuf",
+          "value": 2403
+        },
+        {
+          "key": "Mahendra Badsiwal",
+          "value": 2374
+        },
+        {
+          "key": "John Yates",
+          "value": 2297
+        },
+        {
+          "key": "Jake Dodd",
+          "value": 1732
+        },
+        {
+          "key": "Tom Cook",
+          "value": 1156
+        }
+      ]
+    },
+    {
+      "id": "custom.referrer",
+      "type": "single_line_text_field",
+      "populatedCount": 25333,
+      "ownerTypes": {
+        "ORDER": 21763,
+        "DRAFTORDER": 3570
+      },
+      "topValues": [
+        {
+          "key": "Karanjot Bassi",
+          "value": 4427
+        },
+        {
+          "key": "Adam Fysal",
+          "value": 3293
+        },
+        {
+          "key": "Simon Hartshorn",
+          "value": 3023
+        },
+        {
+          "key": "Adam Yousuf",
+          "value": 2327
+        },
+        {
+          "key": "Mahendra Badsiwal",
+          "value": 2308
+        },
+        {
+          "key": "John Yates",
+          "value": 2292
+        },
+        {
+          "key": "Jake Dodd",
+          "value": 1699
+        },
+        {
+          "key": "Tom Cook",
+          "value": 1155
+        }
+      ]
+    },
+    {
+      "id": "storename.tradingname",
+      "type": "single_line_text_field",
+      "populatedCount": 21060,
+      "ownerTypes": {
+        "ORDER": 19053,
+        "DRAFTORDER": 2007
+      },
+      "topValues": [
+        {
+          "key": "Ninja Vapes Limited",
+          "value": 269
+        },
+        {
+          "key": "Evolution Vapes",
+          "value": 226
+        },
+        {
+          "key": "Love n vape",
+          "value": 189
+        },
+        {
+          "key": "vape online store",
+          "value": 181
+        },
+        {
+          "key": "Burrows store",
+          "value": 158
+        },
+        {
+          "key": "Wolvercote Superstore",
+          "value": 151
+        },
+        {
+          "key": "Simply Local",
+          "value": 145
+        },
+        {
+          "key": "Vape station",
+          "value": 140
+        }
+      ]
+    },
+    {
+      "id": "dollar-cashback.no-credit-reason",
+      "type": "single_line_text_field",
+      "populatedCount": 8688,
+      "ownerTypes": {
+        "ORDER": 8688
+      },
+      "topValues": [
+        {
+          "key": "Cashback calculated to zero: no matching products or line items qualify",
+          "value": 8394
+        },
+        {
+          "key": "Order has no customer associated",
+          "value": 294
+        }
+      ]
+    },
+    {
+      "id": "registration.channel",
+      "type": "single_line_text_field",
+      "populatedCount": 6219,
+      "ownerTypes": {
+        "CUSTOMER": 6219
+      },
+      "topValues": [
+        {
+          "key": "Website Registration",
+          "value": 6049
+        },
+        {
+          "key": "POS Registration",
+          "value": 163
+        },
+        {
+          "key": "Tester",
+          "value": 5
+        },
+        {
+          "key": "Created Manually",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "custom.referredby",
+      "type": "single_line_text_field",
+      "populatedCount": 5988,
+      "ownerTypes": {
+        "CUSTOMER": 5957,
+        "ORDER": 27,
+        "DRAFTORDER": 4
+      },
+      "topValues": [
+        {
+          "key": "John Yates",
+          "value": 802
+        },
+        {
+          "key": "Mahendra Badsiwal",
+          "value": 704
+        },
+        {
+          "key": "Karanjot Bassi",
+          "value": 692
+        },
+        {
+          "key": "Adam Fysal",
+          "value": 469
+        },
+        {
+          "key": "Reece Morgan",
+          "value": 412
+        },
+        {
+          "key": "Simon Hartshorn",
+          "value": 411
+        },
+        {
+          "key": "Kulwant Singh",
+          "value": 332
+        },
+        {
+          "key": "Nash Shakti",
+          "value": 288
+        }
+      ]
+    },
+    {
+      "id": "custom.salesperson_assigned",
+      "type": "single_line_text_field",
+      "populatedCount": 5988,
+      "ownerTypes": {
+        "CUSTOMER": 5948,
+        "COMPANY": 40
+      },
+      "topValues": [
+        {
+          "key": "John Yates",
+          "value": 814
+        },
+        {
+          "key": "Mahendra Badsiwal",
+          "value": 718
+        },
+        {
+          "key": "Karanjot Bassi",
+          "value": 705
+        },
+        {
+          "key": "Adam Fysal",
+          "value": 469
+        },
+        {
+          "key": "Reece Morgan",
+          "value": 418
+        },
+        {
+          "key": "Simon Hartshorn",
+          "value": 398
+        },
+        {
+          "key": "Kulwant Singh",
+          "value": 333
+        },
+        {
+          "key": "Nash Shakti",
+          "value": 290
+        }
+      ]
+    },
+    {
+      "id": "dollar-segments.customer-segments",
+      "type": "json",
+      "populatedCount": 5626,
+      "ownerTypes": {
+        "CUSTOMER": 5626
+      },
+      "topValues": [
+        {
+          "key": "[1119268569414,1121115767110,1131586158918,1133659488582,1135339602246]",
+          "value": 133
+        },
+        {
+          "key": "[1121115767110,1131586158918,1133659488582,1135339602246,1140170817862]",
+          "value": 95
+        },
+        {
+          "key": "[1124340859206,1124341219654,1124362060102,1131586126150,1131675550022,1133659488582,1133663027526,1135339602246,1140170817862]",
+          "value": 94
+        },
+        {
+          "key": "[1121115767110,1126407471430,1126703530310,1126846595398,1131586158918,1133659488582,1135339602246]",
+          "value": 90
+        },
+        {
+          "key": "[1121115767110,1131586158918,1133659488582,1135339602246]",
+          "value": 79
+        },
+        {
+          "key": "[1119339807046,1121115767110,1129813049670,1131586158918,1133659488582,1135339602246]",
+          "value": 72
+        },
+        {
+          "key": "[1119268766022,1121115767110,1131586158918,1133659488582,1135339602246,1140557906246]",
+          "value": 69
+        },
+        {
+          "key": "[1124340859206,1131586158918,1133659488582,1133663027526,1135339602246,1140170817862]",
+          "value": 63
+        }
+      ]
+    },
+    {
+      "id": "store_name.trading_as",
+      "type": "single_line_text_field",
+      "populatedCount": 5446,
+      "ownerTypes": {
+        "CUSTOMER": 5446
+      },
+      "topValues": [
+        {
+          "key": "Londis",
+          "value": 44
+        },
+        {
+          "key": "Premier",
+          "value": 44
+        },
+        {
+          "key": "Nisa Local",
+          "value": 19
+        },
+        {
+          "key": "Costcutter",
+          "value": 19
+        },
+        {
+          "key": "Best one",
+          "value": 18
+        },
+        {
+          "key": "Go Local",
+          "value": 18
+        },
+        {
+          "key": "Go local",
+          "value": 17
+        },
+        {
+          "key": "Bargain Booze",
+          "value": 13
+        }
+      ]
+    },
+    {
+      "id": "udcustom.customer_id",
+      "type": "single_line_text_field",
+      "populatedCount": 4091,
+      "ownerTypes": {
+        "CUSTOMER": 4091
+      },
+      "topValues": [
+        {
+          "key": "8235751047494",
+          "value": 1
+        },
+        {
+          "key": "8513291518278",
+          "value": 1
+        },
+        {
+          "key": "22836978712902",
+          "value": 1
+        },
+        {
+          "key": "22837912371526",
+          "value": 1
+        },
+        {
+          "key": "22840888557894",
+          "value": 1
+        },
+        {
+          "key": "22840956223814",
+          "value": 1
+        },
+        {
+          "key": "22841197560134",
+          "value": 1
+        },
+        {
+          "key": "22841277415750",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "customer.weekly_spend",
+      "type": "single_line_text_field",
+      "populatedCount": 3945,
+      "ownerTypes": {
+        "CUSTOMER": 3945
+      },
+      "topValues": [
+        {
+          "key": "Less than £1000",
+          "value": 2220
+        },
+        {
+          "key": "Between £1-£3000",
+          "value": 1330
+        },
+        {
+          "key": "£5000+",
+          "value": 256
+        },
+        {
+          "key": "£10,000+",
+          "value": 139
+        }
+      ]
+    },
+    {
+      "id": "customer.num_of_stores",
+      "type": "number_integer",
+      "populatedCount": 3944,
+      "ownerTypes": {
+        "CUSTOMER": 3944
+      },
+      "topValues": [
+        {
+          "key": "1",
+          "value": 2944
+        },
+        {
+          "key": "2",
+          "value": 452
+        },
+        {
+          "key": "3",
+          "value": 203
+        },
+        {
+          "key": "0",
+          "value": 86
+        },
+        {
+          "key": "4",
+          "value": 76
+        },
+        {
+          "key": "5",
+          "value": 61
+        },
+        {
+          "key": "7",
+          "value": 17
+        },
+        {
+          "key": "10",
+          "value": 13
+        }
+      ]
+    },
+    {
+      "id": "customer.store_type",
+      "type": "single_line_text_field",
+      "populatedCount": 3889,
+      "ownerTypes": {
+        "CUSTOMER": 3889
+      },
+      "topValues": [
+        {
+          "key": "Convenience Store",
+          "value": 2958
+        },
+        {
+          "key": "Vape Shop",
+          "value": 931
+        }
+      ]
+    },
+    {
+      "id": "custom.company_name",
+      "type": "single_line_text_field",
+      "populatedCount": 3687,
+      "ownerTypes": {
+        "CUSTOMER": 3687
+      },
+      "topValues": [
+        {
+          "key": "Na",
+          "value": 30
+        },
+        {
+          "key": "Costcutter",
+          "value": 9
+        },
+        {
+          "key": "Premier",
+          "value": 8
+        },
+        {
+          "key": "Best one",
+          "value": 8
+        },
+        {
+          "key": "0000",
+          "value": 7
+        },
+        {
+          "key": "Nearby",
+          "value": 7
+        },
+        {
+          "key": "Bargain Booze",
+          "value": 6
+        },
+        {
+          "key": "N/a",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "id": "custom.company_registration_number",
+      "type": "single_line_text_field",
+      "populatedCount": 3681,
+      "ownerTypes": {
+        "CUSTOMER": 3681
+      },
+      "topValues": [
+        {
+          "key": "0000",
+          "value": 557
+        },
+        {
+          "key": "00000",
+          "value": 221
+        },
+        {
+          "key": "Na",
+          "value": 210
+        },
+        {
+          "key": "N/A",
+          "value": 122
+        },
+        {
+          "key": ".",
+          "value": 106
+        },
+        {
+          "key": "X",
+          "value": 106
+        },
+        {
+          "key": "000000",
+          "value": 102
+        },
+        {
+          "key": "N/a",
+          "value": 101
+        }
+      ]
+    },
+    {
+      "id": "custom.website_url_shop_name",
+      "type": "single_line_text_field",
+      "populatedCount": 3680,
+      "ownerTypes": {
+        "CUSTOMER": 3680
+      },
+      "topValues": [
+        {
+          "key": "Na",
+          "value": 317
+        },
+        {
+          "key": "Shop",
+          "value": 302
+        },
+        {
+          "key": "X",
+          "value": 210
+        },
+        {
+          "key": "N/A",
+          "value": 121
+        },
+        {
+          "key": "shop",
+          "value": 120
+        },
+        {
+          "key": "NA",
+          "value": 107
+        },
+        {
+          "key": "na",
+          "value": 104
+        },
+        {
+          "key": "N/a",
+          "value": 71
+        }
+      ]
+    },
+    {
+      "id": "custom.do_you_own_a_website_or_a_shop",
+      "type": "single_line_text_field",
+      "populatedCount": 3236,
+      "ownerTypes": {
+        "CUSTOMER": 3236
+      },
+      "topValues": [
+        {
+          "key": "Shop",
+          "value": 3030
+        },
+        {
+          "key": "Website & Shop",
+          "value": 106
+        },
+        {
+          "key": "Website",
+          "value": 95
+        },
+        {
+          "key": "NA",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "id": "skulabs.shopname",
+      "type": "single_line_text_field",
+      "populatedCount": 1467,
+      "ownerTypes": {
+        "CUSTOMER": 1462,
+        "ORDER": 5
+      },
+      "topValues": [
+        {
+          "key": "Premier",
+          "value": 19
+        },
+        {
+          "key": "Londis",
+          "value": 12
+        },
+        {
+          "key": "Best one",
+          "value": 10
+        },
+        {
+          "key": "Costcutter",
+          "value": 6
+        },
+        {
+          "key": "Nisa",
+          "value": 5
+        },
+        {
+          "key": "Budgens",
+          "value": 5
+        },
+        {
+          "key": "Bargain booze",
+          "value": 4
+        },
+        {
+          "key": "Nisa Local",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "custom.draft_customer_type",
+      "type": "single_line_text_field",
+      "populatedCount": 909,
+      "ownerTypes": {
+        "ORDER": 599,
+        "DRAFTORDER": 310
+      },
+      "topValues": [
+        {
+          "key": "Wholesale",
+          "value": 909
+        }
+      ]
+    },
+    {
+      "id": "zenvio.company_reg_number",
+      "type": "string",
+      "populatedCount": 531,
+      "ownerTypes": {
+        "CUSTOMER": 531
+      },
+      "topValues": [
+        {
+          "key": "Na",
+          "value": 71
+        },
+        {
+          "key": "0000",
+          "value": 59
+        },
+        {
+          "key": "N",
+          "value": 41
+        },
+        {
+          "key": "na",
+          "value": 15
+        },
+        {
+          "key": "00000",
+          "value": 13
+        },
+        {
+          "key": "NA",
+          "value": 11
+        },
+        {
+          "key": "000000",
+          "value": 10
+        },
+        {
+          "key": "00",
+          "value": 8
+        }
+      ]
+    },
+    {
+      "id": "custom.vendor",
+      "type": "single_line_text_field",
+      "populatedCount": 500,
+      "ownerTypes": {
+        "PRODUCT": 500
+      },
+      "topValues": [
+        {
+          "key": "Vaporesso",
+          "value": 33
+        },
+        {
+          "key": "Hayati",
+          "value": 31
+        },
+        {
+          "key": "Velo",
+          "value": 30
+        },
+        {
+          "key": "OXVA",
+          "value": 26
+        },
+        {
+          "key": "IVG",
+          "value": 15
+        },
+        {
+          "key": "Coca Cola",
+          "value": 15
+        },
+        {
+          "key": "Bar Juice",
+          "value": 14
+        },
+        {
+          "key": "Lost Mary",
+          "value": 14
+        }
+      ]
+    },
+    {
+      "id": "app-3890849--eligibility.eligibility_details",
+      "type": "json_string",
+      "populatedCount": 482,
+      "ownerTypes": {
+        "PRODUCT": 482
+      },
+      "topValues": [
+        {
+          "key": "{\"product_discovery_ineligible_reasons\":[\"rules_based\"],\"moderation_outcomes\":[],\"product_prohibited_categories\":[\"TOBACCO\"]}",
+          "value": 241
+        },
+        {
+          "key": "{\"product_discovery_ineligible_reasons\":[\"product_status\",\"product_not_published_to_shop_sales_channel\",\"rules_based\"],\"moderation_outcomes\":[],\"product_prohibited_categories\":[\"TOBACCO\"]}",
+          "value": 194
+        },
+        {
+          "key": "{\"product_discovery_ineligible_reasons\":[\"not_categorized\"],\"moderation_outcomes\":[],\"product_prohibited_categories\":[]}",
+          "value": 26
+        },
+        {
+          "key": "{\"product_discovery_ineligible_reasons\":[\"price_in_shop_currency\",\"not_categorized\"],\"moderation_outcomes\":[],\"product_prohibited_categories\":[]}",
+          "value": 10
+        },
+        {
+          "key": "{\"product_discovery_ineligible_reasons\":[],\"moderation_outcomes\":[],\"product_prohibited_categories\":[]}",
+          "value": 6
+        },
+        {
+          "key": "{\"product_discovery_ineligible_reasons\":[\"product_status\",\"product_not_published_to_shop_sales_channel\"],\"moderation_outcomes\":[],\"product_prohibited_categories\":[]}",
+          "value": 3
+        },
+        {
+          "key": "{\"product_discovery_ineligible_reasons\":[\"product_status\",\"product_not_published_to_shop_sales_channel\",\"rules_based\"],\"moderation_outcomes\":[\"TOBACCO\"],\"product_prohibited_categories\":[\"TOBACCO\"]}",
+          "value": 1
+        },
+        {
+          "key": "{\"product_discovery_ineligible_reasons\":[\"product_status\",\"product_not_published_to_shop_sales_channel\",\"price_in_shop_currency\",\"rules_based\"],\"moderation_outcomes\":[],\"product_prohibited_categories\"",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "global.title_tag",
+      "type": "string",
+      "populatedCount": 429,
+      "ownerTypes": {
+        "PRODUCT": 322,
+        "COLLECTION": 107
+      },
+      "topValues": [
+        {
+          "key": "Nic salt shots for vape liquids | Vapes Bars | Click & Vape",
+          "value": 28
+        },
+        {
+          "key": "Buy Dojo Blast 10K Prefilled Pods Online UK",
+          "value": 5
+        },
+        {
+          "key": "Hayati pro max 2ml Refillable Pods  | Unique Distribution",
+          "value": 5
+        },
+        {
+          "key": "Hayati PRO MAX+ 6K+  Bulk Buy | Unique Distribution",
+          "value": 4
+        },
+        {
+          "key": "Wholesale Elux Legend Nic salts in the UK | Unique Distribution",
+          "value": 3
+        },
+        {
+          "key": "Lost Mary BM6000 Compliant Vape Kit – Easy Refill & Smooth Draw",
+          "value": 3
+        },
+        {
+          "key": "Lost Mary BM6000 Prefilled Pod – Ready-to-Use Vaping Solution",
+          "value": 3
+        },
+        {
+          "key": "Fanta Fruit Twist 24x330ml Case",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "custom.type",
+      "type": "single_line_text_field",
+      "populatedCount": 396,
+      "ownerTypes": {
+        "PRODUCT": 396
+      },
+      "topValues": [
+        {
+          "key": "Nic Salt",
+          "value": 51
+        },
+        {
+          "key": "Nicotine Pouch",
+          "value": 51
+        },
+        {
+          "key": "Vape Pods",
+          "value": 46
+        },
+        {
+          "key": "Vape Kits",
+          "value": 45
+        },
+        {
+          "key": "Vape Kit",
+          "value": 37
+        },
+        {
+          "key": "Drink",
+          "value": 31
+        },
+        {
+          "key": "Pod Kit",
+          "value": 22
+        },
+        {
+          "key": "Candy",
+          "value": 17
+        }
+      ]
+    },
+    {
+      "id": "custom.nicotine_strength",
+      "type": "single_line_text_field",
+      "populatedCount": 384,
+      "ownerTypes": {
+        "PRODUCT": 384
+      },
+      "topValues": [
+        {
+          "key": "10mg",
+          "value": 195
+        },
+        {
+          "key": "20mg",
+          "value": 96
+        },
+        {
+          "key": "0mg",
+          "value": 35
+        },
+        {
+          "key": "5mg",
+          "value": 10
+        },
+        {
+          "key": "11mg",
+          "value": 7
+        },
+        {
+          "key": "6mg",
+          "value": 5
+        },
+        {
+          "key": "16mg",
+          "value": 4
+        },
+        {
+          "key": "14mg",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "custom.hide_variant",
+      "type": "boolean",
+      "populatedCount": 381,
+      "ownerTypes": {
+        "PRODUCTVARIANT": 381
+      },
+      "topValues": [
+        {
+          "key": "true",
+          "value": 313
+        },
+        {
+          "key": "false",
+          "value": 68
+        }
+      ]
+    },
+    {
+      "id": "custom.box",
+      "type": "single_line_text_field",
+      "populatedCount": 380,
+      "ownerTypes": {
+        "PRODUCT": 380
+      },
+      "topValues": [
+        {
+          "key": "Pack of 5",
+          "value": 182
+        },
+        {
+          "key": "Pack of 10",
+          "value": 152
+        },
+        {
+          "key": "Pack of 12",
+          "value": 15
+        },
+        {
+          "key": "24 Pack",
+          "value": 9
+        },
+        {
+          "key": "Pack of 24",
+          "value": 7
+        },
+        {
+          "key": "24",
+          "value": 4
+        },
+        {
+          "key": "6 Pack",
+          "value": 4
+        },
+        {
+          "key": "20 Pack",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "global.description_tag",
+      "type": "string",
+      "populatedCount": 368,
+      "ownerTypes": {
+        "PRODUCT": 213,
+        "COLLECTION": 155
+      },
+      "topValues": [
+        {
+          "key": "Free delivery across the UK. Browse our premium brand selection of Disposable Vapes, E-Liquids, Vape Pods and Kits.",
+          "value": 58
+        },
+        {
+          "key": "Bulk buy Hayati PRO MAX+ 6K+ Kit wholesale price in the UK. Hayati PRO MAX+ 6000+ offers delicious 600 puffs and comes in 24 flavours. Order yours now",
+          "value": 5
+        },
+        {
+          "key": "Pablo Gold Edition 17mg pouches offer bold nicotine delivery in a discreet, tobacco-free format with a premium blend.",
+          "value": 4
+        },
+        {
+          "key": "Fanta Fruit Twist 24x330ml Case",
+          "value": 4
+        },
+        {
+          "key": "Get Elf Bar 600 at wholesale rates in the UK. Elf Bar 600 now available for bulk buy in more than 30 different flavours. Get yours today!",
+          "value": 3
+        },
+        {
+          "key": "Elux Legend Nic Salts are designed to be compatible with Elux Vapes and come in a wide variety of flavors. Stock up for your retail store at wholesale prices.",
+          "value": 3
+        },
+        {
+          "key": "The Vapes Bars Angel 20K POS stand holds 12 pieces, sold by UD. A sleek retail display to showcase vapes, attract customers & boost sales. Free (Zero Price).",
+          "value": 3
+        },
+        {
+          "key": "Meet compliance standards with the Lost Mary BM6000 refillable pod system—engineered for flavor accuracy and ease of use.",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "mm-google-shopping.google_product_category",
+      "type": "string",
+      "populatedCount": 252,
+      "ownerTypes": {
+        "PRODUCT": 252
+      },
+      "topValues": [
+        {
+          "key": "413",
+          "value": 53
+        },
+        {
+          "key": "500044",
+          "value": 33
+        },
+        {
+          "key": "4748",
+          "value": 30
+        },
+        {
+          "key": "543635",
+          "value": 18
+        },
+        {
+          "key": "3916",
+          "value": 13
+        },
+        {
+          "key": "4091",
+          "value": 9
+        },
+        {
+          "key": "1253",
+          "value": 7
+        },
+        {
+          "key": "525",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "id": "custom.exclude_all_channels",
+      "type": "boolean",
+      "populatedCount": 176,
+      "ownerTypes": {
+        "COLLECTION": 176
+      },
+      "topValues": [
+        {
+          "key": "false",
+          "value": 94
+        },
+        {
+          "key": "true",
+          "value": 82
+        }
+      ]
+    },
+    {
+      "id": "custom.strength",
+      "type": "single_line_text_field",
+      "populatedCount": 138,
+      "ownerTypes": {
+        "PRODUCT": 138
+      },
+      "topValues": [
+        {
+          "key": "10MG",
+          "value": 34
+        },
+        {
+          "key": "20MG",
+          "value": 26
+        },
+        {
+          "key": "8MG",
+          "value": 10
+        },
+        {
+          "key": "17MG",
+          "value": 6
+        },
+        {
+          "key": "5MG",
+          "value": 5
+        },
+        {
+          "key": "11MG",
+          "value": 4
+        },
+        {
+          "key": "0MG 50VG/50PG",
+          "value": 4
+        },
+        {
+          "key": "0MG 70/30",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "custom.customer_type",
+      "type": "single_line_text_field",
+      "populatedCount": 138,
+      "ownerTypes": {
+        "ORDER": 138
+      },
+      "topValues": [
+        {
+          "key": "Wholesale",
+          "value": 138
+        }
+      ]
+    },
+    {
+      "id": "custom.limit_max_qty",
+      "type": "number_integer",
+      "populatedCount": 130,
+      "ownerTypes": {
+        "PRODUCT": 56,
+        "PRODUCTVARIANT": 74
+      },
+      "topValues": [
+        {
+          "key": "1",
+          "value": 58
+        },
+        {
+          "key": "80",
+          "value": 29
+        },
+        {
+          "key": "20",
+          "value": 16
+        },
+        {
+          "key": "10",
+          "value": 13
+        },
+        {
+          "key": "50",
+          "value": 9
+        },
+        {
+          "key": "15",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "id": "custom.cg_assigned",
+      "type": "single_line_text_field",
+      "populatedCount": 124,
+      "ownerTypes": {
+        "ORDER": 124
+      },
+      "topValues": [
+        {
+          "key": "Sam Hussain",
+          "value": 47
+        },
+        {
+          "key": "Kal Joshi",
+          "value": 46
+        },
+        {
+          "key": "Muaaz Raja",
+          "value": 17
+        },
+        {
+          "key": "Haseeb Ali",
+          "value": 14
+        }
+      ]
+    },
+    {
+      "id": "custom.productvariantlinks",
+      "type": "boolean",
+      "populatedCount": 123,
+      "ownerTypes": {
+        "PRODUCT": 123
+      },
+      "topValues": [
+        {
+          "key": "true",
+          "value": 113
+        },
+        {
+          "key": "false",
+          "value": 10
+        }
+      ]
+    },
+    {
+      "id": "custom.collection_page_short_description",
+      "type": "multi_line_text_field",
+      "populatedCount": 112,
+      "ownerTypes": {
+        "COLLECTION": 112
+      },
+      "topValues": [
+        {
+          "key": "Explore Unique Distribution's wide range of premium nicotine pouches! Enjoy various flavors and strengths. ",
+          "value": 2
+        },
+        {
+          "key": "Explore the Grabit collection, featuring rich flavors and enhanced convenience with larger capacity options.",
+          "value": 2
+        },
+        {
+          "key": "Enjoy premium, tobacco-free Angel® Nicotine Pouches in over 10 unique flavors for a satisfying vaping experience.",
+          "value": 2
+        },
+        {
+          "key": "Buy bulk legal Big Puff devices from Unique Distribution! Enjoy top brands, wholesale pricing, and a variety of flavors and puff counts.",
+          "value": 1
+        },
+        {
+          "key": "Dive into our exclusive selection of top-quality vaping products available at discounted prices.",
+          "value": 1
+        },
+        {
+          "key": "Stay tuned for updates and be among the first to snag these exciting new products as they launch. ",
+          "value": 1
+        },
+        {
+          "key": "Disposable vapes are compact, single-use devices that come pre-filled with e-liquid and feature a pre-charged battery. They are designed for convenience, making them an ideal choice for both beginners",
+          "value": 1
+        },
+        {
+          "key": "Explore our range of clearance items, including popular disposable vapes, accessories, and e-liquids from top brands. ",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "custom.variant_links",
+      "type": "multi_line_text_field",
+      "populatedCount": 110,
+      "ownerTypes": {
+        "PRODUCT": 110
+      },
+      "topValues": [
+        {
+          "key": "/products/velo-6mg-nicotine-pouches,/products/velo-8mg-nicotine-pouches,/products/velo-10mg-nicotine-pouches,/products/velo-nicotine-pouches-11mg",
+          "value": 31
+        },
+        {
+          "key": "/products/six-licks-3mg-freebase,/products/six-licks-6mg-freebase,/products/six-licks-12mg-freebase,/products/six-licks-18mg-freebase",
+          "value": 4
+        },
+        {
+          "key": "/products/hayati-pro-max-nic-salt-10mg,/products/hayati-pro-max-nic-salt-20mg",
+          "value": 4
+        },
+        {
+          "key": " /products/elux-legend-nic-salt-5mg, /products/elux-legend-nic-salt-10mg, /products/elux-legend-nic-salt-20mg",
+          "value": 3
+        },
+        {
+          "key": "/products/bar-juice-5000-nic-salt-5mg,/products/bar-juice-5000-nic-salt-10mg,/products/bar-juice-5000-nic-salt-20mg",
+          "value": 3
+        },
+        {
+          "key": "/products/just-juice-bar-nic-salt-5mg,/products/just-juice-bar-nic-salt-10mg,/products/just-juice-bar-nic-salt-20mg",
+          "value": 3
+        },
+        {
+          "key": "/products/poke-nicotine-pouches-9mg,/products/poke-nicotine-pouches-12mg,/products/poke-nicotine-pouches-16mg",
+          "value": 3
+        },
+        {
+          "key": "/products/hayati-nic-pouches-12mg,/products/hayati-nic-pouches-20mg,/products/hayati-nic-pouches-30mg",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "custom.size",
+      "type": "single_line_text_field",
+      "populatedCount": 107,
+      "ownerTypes": {
+        "PRODUCT": 107
+      },
+      "topValues": [
+        {
+          "key": "24x490ml",
+          "value": 6
+        },
+        {
+          "key": "20x65g",
+          "value": 6
+        },
+        {
+          "key": "100ML",
+          "value": 5
+        },
+        {
+          "key": "500ml ",
+          "value": 5
+        },
+        {
+          "key": "330ml",
+          "value": 5
+        },
+        {
+          "key": "24x330ml",
+          "value": 4
+        },
+        {
+          "key": "24X250ML",
+          "value": 4
+        },
+        {
+          "key": "6x2L",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "custom.sg_assigned",
+      "type": "single_line_text_field",
+      "populatedCount": 101,
+      "ownerTypes": {
+        "CUSTOMER": 101
+      },
+      "topValues": [
+        {
+          "key": "Kal Joshi",
+          "value": 58
+        },
+        {
+          "key": "Haseeb Ali",
+          "value": 29
+        },
+        {
+          "key": "Muaaz Raja",
+          "value": 13
+        },
+        {
+          "key": "Sam Hussain",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "custom.puffs",
+      "type": "single_line_text_field",
+      "populatedCount": 97,
+      "ownerTypes": {
+        "PRODUCT": 97
+      },
+      "topValues": [
+        {
+          "key": "600",
+          "value": 13
+        },
+        {
+          "key": "10K",
+          "value": 12
+        },
+        {
+          "key": "6K",
+          "value": 9
+        },
+        {
+          "key": "30K",
+          "value": 6
+        },
+        {
+          "key": "2400",
+          "value": 5
+        },
+        {
+          "key": "12K",
+          "value": 5
+        },
+        {
+          "key": "15K",
+          "value": 5
+        },
+        {
+          "key": "25K+",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "id": "custom.credit_note",
+      "type": "single_line_text_field",
+      "populatedCount": 80,
+      "ownerTypes": {
+        "ORDER": 80
+      },
+      "topValues": [
+        {
+          "key": "Yes",
+          "value": 79
+        },
+        {
+          "key": "No",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "dollar-cashback.cashback-details",
+      "type": "json",
+      "populatedCount": 79,
+      "ownerTypes": {
+        "ORDER": 79
+      },
+      "topValues": [
+        {
+          "key": "{\"lineItems\":[{\"id\":36308697645382,\"quantity\":15,\"cashbackAmount\":0.2475,\"name\":\"PIXL 8000 Prefilled Pod - Cherry Ice\",\"productId\":14989953499462,\"variantId\":54407692353862,\"config\":\"75932943-2116-4ec",
+          "value": 1
+        },
+        {
+          "key": "{\"lineItems\":[{\"id\":36308914438470,\"quantity\":10,\"cashbackAmount\":0.0975,\"name\":\"SKE Crystal 600 Pro Prefilled Pod Kit - Strawberry Burst\",\"productId\":14990018085190,\"variantId\":54407888339270,\"config",
+          "value": 1
+        },
+        {
+          "key": "{\"lineItems\":[{\"id\":36309214101830,\"quantity\":5,\"cashbackAmount\":0.1625,\"name\":\"Hayati PRO ULTRA+ 25000+ PUFF - Blue Sour Raspberry\",\"productId\":14964557250886,\"variantId\":54350009434438,\"config\":\"9f5",
+          "value": 1
+        },
+        {
+          "key": "{\"lineItems\":[{\"id\":36309246378310,\"quantity\":40,\"cashbackAmount\":0.41,\"name\":\"SKE Crystal 600 Pro Prefilled Pod Kit - Lemon & Lime\",\"productId\":14990018085190,\"variantId\":54407888208198,\"config\":\"efb",
+          "value": 1
+        },
+        {
+          "key": "{\"lineItems\":[{\"id\":36311937319238,\"quantity\":10,\"cashbackAmount\":0.34,\"name\":\"Hayati PRO ULTRA+ 25000+ PUFF - Blueberry Raspberry\",\"productId\":14964557250886,\"variantId\":54303972458822,\"config\":\"0f1f",
+          "value": 1
+        },
+        {
+          "key": "{\"lineItems\":[{\"id\":36312590909766,\"quantity\":5,\"cashbackAmount\":0.1187,\"name\":\"IVG Smart Max 10K Prefilled Vape Kit Compliant Post June 1st - Mixed Berries\",\"productId\":15004817785158,\"variantId\":551",
+          "value": 1
+        },
+        {
+          "key": "{\"lineItems\":[{\"id\":36312679022918,\"quantity\":5,\"cashbackAmount\":0.17,\"name\":\"Hayati PRO ULTRA+ 25000+ PUFF - Blue Razz GB\",\"productId\":14964557250886,\"variantId\":54303972327750,\"config\":\"729f9344-690",
+          "value": 1
+        },
+        {
+          "key": "{\"lineItems\":[{\"id\":36312755700038,\"quantity\":60,\"cashbackAmount\":0.54,\"name\":\"SKE Crystal 600 Pro Prefilled Pods - Blueberry Sour Raspberry\",\"productId\":15007479955782,\"variantId\":54465772880198,\"con",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "shopify.e-cigarette-vaporizer-style",
+      "type": "list.metaobject_reference",
+      "populatedCount": 73,
+      "ownerTypes": {
+        "PRODUCT": 73
+      },
+      "topValues": [
+        {
+          "key": "[\"gid://shopify/Metaobject/86778249542\"]",
+          "value": 73
+        }
+      ]
+    },
+    {
+      "id": "vcustom.nic_strength",
+      "type": "single_line_text_field",
+      "populatedCount": 72,
+      "ownerTypes": {
+        "PRODUCTVARIANT": 72
+      },
+      "topValues": [
+        {
+          "key": "0mg",
+          "value": 31
+        },
+        {
+          "key": "10mg",
+          "value": 23
+        },
+        {
+          "key": "20mg",
+          "value": 18
+        }
+      ]
+    },
+    {
+      "id": "dollar-cashback.store-credit-dollar",
+      "type": "json",
+      "populatedCount": 69,
+      "ownerTypes": {
+        "CUSTOMER": 69
+      },
+      "topValues": [
+        {
+          "key": "[{\"currency\":\"GBP\",\"amount\":0.59}]",
+          "value": 3
+        },
+        {
+          "key": "[{\"currency\":\"GBP\",\"amount\":1.7}]",
+          "value": 2
+        },
+        {
+          "key": "[{\"currency\":\"GBP\",\"amount\":1.09}]",
+          "value": 2
+        },
+        {
+          "key": "[{\"currency\":\"GBP\",\"amount\":0.65}]",
+          "value": 2
+        },
+        {
+          "key": "[{\"currency\":\"GBP\",\"amount\":0.42}]",
+          "value": 2
+        },
+        {
+          "key": "[{\"currency\":\"GBP\",\"amount\":0.54}]",
+          "value": 2
+        },
+        {
+          "key": "[{\"currency\":\"GBP\",\"amount\":2.18}]",
+          "value": 1
+        },
+        {
+          "key": "[{\"currency\":\"GBP\",\"amount\":0.55}]",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "order.payment_due_date",
+      "type": "date",
+      "populatedCount": 61,
+      "ownerTypes": {
+        "ORDER": 61
+      },
+      "topValues": [
+        {
+          "key": "2025-05-05",
+          "value": 28
+        },
+        {
+          "key": "2025-05-02",
+          "value": 17
+        },
+        {
+          "key": "2025-05-01",
+          "value": 7
+        },
+        {
+          "key": "2025-05-04",
+          "value": 5
+        },
+        {
+          "key": "2025-05-03",
+          "value": 3
+        },
+        {
+          "key": "2025-05-31",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "custom.variant_badge",
+      "type": "single_line_text_field",
+      "populatedCount": 60,
+      "ownerTypes": {
+        "PRODUCTVARIANT": 60
+      },
+      "topValues": [
+        {
+          "key": "new",
+          "value": 60
+        }
+      ]
+    },
+    {
+      "id": "custom.variant_description",
+      "type": "rich_text_field",
+      "populatedCount": 60,
+      "ownerTypes": {
+        "PRODUCTVARIANT": 60
+      },
+      "topValues": [
+        {
+          "key": "{\"type\":\"root\",\"children\":[{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Specifications\",\"bold\":true}]},{\"type\":\"list\",\"listType\":\"unordered\",\"children\":[{\"type\":\"list-item\",\"children\":[{\"ty",
+          "value": 25
+        },
+        {
+          "key": "{\"type\":\"root\",\"children\":[{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"A delicious juicy blueberry paired with exotic pomegranate for a truly fruity treat. Slightly tart, utterly delightfu",
+          "value": 1
+        },
+        {
+          "key": "{\"type\":\"root\",\"children\":[{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"A juicy and refreshing watermelon flavour with a chilly menthol twist!\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"t",
+          "value": 1
+        },
+        {
+          "key": "{\"type\":\"root\",\"children\":[{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Found Mary FM600 is a disposable vape featuring blackcurrant squash flavor, making it a convenient option for vaping ",
+          "value": 1
+        },
+        {
+          "key": "{\"type\":\"root\",\"children\":[{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Found Mary FM600 is a disposable vape featuring Raspberry flavor, making it a convenient option for vaping on-the-go.",
+          "value": 1
+        },
+        {
+          "key": "{\"type\":\"root\",\"children\":[{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Found Mary FM600 is a disposable vape featuring Blue Razz Lemon flavor, making it a convenient option for vaping on-t",
+          "value": 1
+        },
+        {
+          "key": "{\"type\":\"root\",\"children\":[{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"A blast of sweet berries paired with tart blackcurrant gives you a fruity sensation on the exhale.\"}]},{\"type\":\"parag",
+          "value": 1
+        },
+        {
+          "key": "{\"type\":\"root\",\"children\":[{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"A punch of sweet blackberries and blueberries combined with a hint of slightly tart cranberries.\"}]},{\"type\":\"paragra",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "custom.customergroup01",
+      "type": "list.single_line_text_field",
+      "populatedCount": 43,
+      "ownerTypes": {
+        "CUSTOMER": 43
+      },
+      "topValues": [
+        {
+          "key": "[\"FirstGroup\"]",
+          "value": 43
+        }
+      ]
+    },
+    {
+      "id": "shopify.e-liquid-variety",
+      "type": "list.metaobject_reference",
+      "populatedCount": 42,
+      "ownerTypes": {
+        "PRODUCT": 42
+      },
+      "topValues": [
+        {
+          "key": "[\"gid://shopify/Metaobject/100430446918\"]",
+          "value": 42
+        }
+      ]
+    },
+    {
+      "id": "mm-google-shopping.condition",
+      "type": "string",
+      "populatedCount": 27,
+      "ownerTypes": {
+        "PRODUCT": 27
+      },
+      "topValues": [
+        {
+          "key": "new",
+          "value": 27
+        }
+      ]
+    },
+    {
+      "id": "custom.related_products",
+      "type": "list.product_reference",
+      "populatedCount": 24,
+      "ownerTypes": {
+        "PRODUCT": 24
+      },
+      "topValues": [
+        {
+          "key": "[\"gid://shopify/Product/15211308122438\",\"gid://shopify/Product/15211308187974\",\"gid://shopify/Product/15211308253510\",\"gid://shopify/Product/15211308351814\",\"gid://shopify/Product/15211308515654\",\"gid",
+          "value": 3
+        },
+        {
+          "key": "[\"gid://shopify/Product/15563107041606\",\"gid://shopify/Product/15490074345798\",\"gid://shopify/Product/15490072707398\",\"gid://shopify/Product/15478278619462\",\"gid://shopify/Product/9199346712902\"]",
+          "value": 2
+        },
+        {
+          "key": "[\"gid://shopify/Product/15211308187974\",\"gid://shopify/Product/15211308253510\",\"gid://shopify/Product/15211308351814\",\"gid://shopify/Product/15211308515654\",\"gid://shopify/Product/15211308581190\",\"gid",
+          "value": 1
+        },
+        {
+          "key": "[\"gid://shopify/Product/15211308122438\",\"gid://shopify/Product/15211308253510\",\"gid://shopify/Product/15211308351814\",\"gid://shopify/Product/15211308515654\",\"gid://shopify/Product/15211308581190\",\"gid",
+          "value": 1
+        },
+        {
+          "key": "[\"gid://shopify/Product/15211308122438\",\"gid://shopify/Product/15211308187974\",\"gid://shopify/Product/15211308351814\",\"gid://shopify/Product/15211308515654\",\"gid://shopify/Product/15211308581190\",\"gid",
+          "value": 1
+        },
+        {
+          "key": "[\"gid://shopify/Product/15211308122438\",\"gid://shopify/Product/15211308187974\",\"gid://shopify/Product/15211308253510\",\"gid://shopify/Product/15211308515654\",\"gid://shopify/Product/15211308581190\",\"gid",
+          "value": 1
+        },
+        {
+          "key": "[\"gid://shopify/Product/15211308122438\",\"gid://shopify/Product/15211308187974\",\"gid://shopify/Product/15211308253510\",\"gid://shopify/Product/15211308351814\",\"gid://shopify/Product/15211308581190\",\"gid",
+          "value": 1
+        },
+        {
+          "key": "[\"gid://shopify/Product/15211309138246\",\"gid://shopify/Product/15211308908870\",\"gid://shopify/Product/15211309072710\",\"gid://shopify/Product/15211309007174\"]",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "global.MPN",
+      "type": "string",
+      "populatedCount": 24,
+      "ownerTypes": {
+        "PRODUCT": 24
+      },
+      "topValues": [
+        {
+          "key": "COL365",
+          "value": 2
+        },
+        {
+          "key": "BIC5R",
+          "value": 1
+        },
+        {
+          "key": "BIC201",
+          "value": 1
+        },
+        {
+          "key": "BIC203",
+          "value": 1
+        },
+        {
+          "key": "BRY100",
+          "value": 1
+        },
+        {
+          "key": "BRY101",
+          "value": 1
+        },
+        {
+          "key": "COC1",
+          "value": 1
+        },
+        {
+          "key": "COL324",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "custom.flavour",
+      "type": "single_line_text_field",
+      "populatedCount": 20,
+      "ownerTypes": {
+        "PRODUCTVARIANT": 20
+      },
+      "topValues": [
+        {
+          "key": "Cool Menthol",
+          "value": 2
+        },
+        {
+          "key": "Blueberry Sour Raspberry",
+          "value": 2
+        },
+        {
+          "key": "Juicy Peach",
+          "value": 2
+        },
+        {
+          "key": "Blue Razz Lemonade",
+          "value": 2
+        },
+        {
+          "key": "Fizzy Cherry",
+          "value": 2
+        },
+        {
+          "key": "Strawberry Raspberry Cherry Ice",
+          "value": 2
+        },
+        {
+          "key": "Pineapple Ice\t",
+          "value": 2
+        },
+        {
+          "key": "Strawberry Ice",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "custom.related_variants",
+      "type": "list.product_reference",
+      "populatedCount": 19,
+      "ownerTypes": {
+        "PRODUCT": 19
+      },
+      "topValues": [
+        {
+          "key": "[\"gid://shopify/Product/15218450039110\",\"gid://shopify/Product/9106811289926\",\"gid://shopify/Product/14816017809734\"]",
+          "value": 3
+        },
+        {
+          "key": "[\"gid://shopify/Product/15531649892678\",\"gid://shopify/Product/15531649958214\",\"gid://shopify/Product/15531649990982\",\"gid://shopify/Product/15531650023750\"]",
+          "value": 3
+        },
+        {
+          "key": "[\"gid://shopify/Product/9112659689798\",\"gid://shopify/Product/9112660541766\"]",
+          "value": 2
+        },
+        {
+          "key": "[\"gid://shopify/Product/15466732749126\",\"gid://shopify/Product/15466732683590\"]",
+          "value": 2
+        },
+        {
+          "key": "[\"gid://shopify/Product/15490072707398\",\"gid://shopify/Product/15478278619462\",\"gid://shopify/Product/9199346712902\",\"gid://shopify/Product/15490074345798\"]",
+          "value": 2
+        },
+        {
+          "key": "[\"gid://shopify/Product/15490074345798\",\"gid://shopify/Product/15490072707398\",\"gid://shopify/Product/15478278619462\",\"gid://shopify/Product/9199346712902\"]",
+          "value": 2
+        },
+        {
+          "key": "[\"gid://shopify/Product/9129415442758\",\"gid://shopify/Product/9129440969030\"]",
+          "value": 1
+        },
+        {
+          "key": "[\"gid://shopify/Product/9129440969030\",\"gid://shopify/Product/9129415442758\"]",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "custom.current_variant_text",
+      "type": "single_line_text_field",
+      "populatedCount": 13,
+      "ownerTypes": {
+        "PRODUCT": 13
+      },
+      "topValues": [
+        {
+          "key": "10MG",
+          "value": 1
+        },
+        {
+          "key": "Lime Flame",
+          "value": 1
+        },
+        {
+          "key": "20MG",
+          "value": 1
+        },
+        {
+          "key": "5MG",
+          "value": 1
+        },
+        {
+          "key": "Orange",
+          "value": 1
+        },
+        {
+          "key": "Apple",
+          "value": 1
+        },
+        {
+          "key": "Sweet papaya",
+          "value": 1
+        },
+        {
+          "key": "Purple Grape",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "custom.strength_label",
+      "type": "single_line_text_field",
+      "populatedCount": 12,
+      "ownerTypes": {
+        "PRODUCT": 12
+      },
+      "topValues": [
+        {
+          "key": "20MG",
+          "value": 5
+        },
+        {
+          "key": "0MG",
+          "value": 2
+        },
+        {
+          "key": "10MG",
+          "value": 2
+        },
+        {
+          "key": "5mg",
+          "value": 1
+        },
+        {
+          "key": "10mg",
+          "value": 1
+        },
+        {
+          "key": "20mg",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "custom.capacity",
+      "type": "single_line_text_field",
+      "populatedCount": 12,
+      "ownerTypes": {
+        "PRODUCT": 12
+      },
+      "topValues": [
+        {
+          "key": "500ml",
+          "value": 4
+        },
+        {
+          "key": "330ml",
+          "value": 2
+        },
+        {
+          "key": "30ML ",
+          "value": 1
+        },
+        {
+          "key": "100ml",
+          "value": 1
+        },
+        {
+          "key": "60ml",
+          "value": 1
+        },
+        {
+          "key": "100ML",
+          "value": 1
+        },
+        {
+          "key": "12ML",
+          "value": 1
+        },
+        {
+          "key": "330ml ",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "custom.pack_size",
+      "type": "number_integer",
+      "populatedCount": 8,
+      "ownerTypes": {
+        "PRODUCTVARIANT": 8
+      },
+      "topValues": [
+        {
+          "key": "10",
+          "value": 6
+        },
+        {
+          "key": "5",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "dollar-cashback.store-credit-used",
+      "type": "single_line_text_field",
+      "populatedCount": 6,
+      "ownerTypes": {
+        "ORDER": 6
+      },
+      "topValues": [
+        {
+          "key": "£0.00",
+          "value": 4
+        },
+        {
+          "key": "£156.60",
+          "value": 1
+        },
+        {
+          "key": "£22.74",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "dollar-cashback.store-credit-given",
+      "type": "single_line_text_field",
+      "populatedCount": 6,
+      "ownerTypes": {
+        "ORDER": 6
+      },
+      "topValues": [
+        {
+          "key": "£0.00",
+          "value": 2
+        },
+        {
+          "key": "£6.54",
+          "value": 1
+        },
+        {
+          "key": "£0.14",
+          "value": 1
+        },
+        {
+          "key": "£0.06",
+          "value": 1
+        },
+        {
+          "key": "£1.56",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "shopify.battery-size",
+      "type": "list.metaobject_reference",
+      "populatedCount": 5,
+      "ownerTypes": {
+        "PRODUCT": 5
+      },
+      "topValues": [
+        {
+          "key": "[\"gid://shopify/Metaobject/480636338502\"]",
+          "value": 4
+        },
+        {
+          "key": "[\"gid://shopify/Metaobject/593013932358\"]",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "custom.pack_size_rule",
+      "type": "single_line_text_field",
+      "populatedCount": 4,
+      "ownerTypes": {
+        "PRODUCTVARIANT": 4
+      },
+      "topValues": [
+        {
+          "key": "10",
+          "value": 3
+        },
+        {
+          "key": "5",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "custom.collection_about_descriptions",
+      "type": "rich_text_field",
+      "populatedCount": 4,
+      "ownerTypes": {
+        "COLLECTION": 4
+      },
+      "topValues": [
+        {
+          "key": "{\"type\":\"root\",\"children\":[{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Al Fakher started in 1999 with a focus on producing high-quality shisha. Today, the brand is available in more than 1",
+          "value": 1
+        },
+        {
+          "key": "{\"type\":\"root\",\"children\":[{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Hayati has risen to become a leading choice among the youth in the United Kingdom, admired for its sleek designs and ",
+          "value": 1
+        },
+        {
+          "key": "{\"type\":\"root\",\"children\":[{\"type\":\"heading\",\"level\":2,\"children\":[{\"type\":\"text\",\"value\":\"The Lost Mary BM6000 Prefilled Pod Kit\"}]},{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"The Lost M",
+          "value": 1
+        },
+        {
+          "key": "{\"type\":\"root\",\"children\":[{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"Born from a spark of innovation, Angel® by Vapes Bars® has rapidly grown into one of the most trusted and fastest-ris",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "custom.collection_about_title",
+      "type": "single_line_text_field",
+      "populatedCount": 4,
+      "ownerTypes": {
+        "COLLECTION": 4
+      },
+      "topValues": [
+        {
+          "key": "About Al Fakher",
+          "value": 1
+        },
+        {
+          "key": "Hot Products",
+          "value": 1
+        },
+        {
+          "key": "About Hayati",
+          "value": 1
+        },
+        {
+          "key": "About Angel",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "custom.collection_about_image",
+      "type": "file_reference",
+      "populatedCount": 4,
+      "ownerTypes": {
+        "COLLECTION": 4
+      },
+      "topValues": [
+        {
+          "key": "gid://shopify/MediaImage/69110261121350",
+          "value": 1
+        },
+        {
+          "key": "gid://shopify/MediaImage/69042930254150",
+          "value": 1
+        },
+        {
+          "key": "gid://shopify/MediaImage/69044330070342",
+          "value": 1
+        },
+        {
+          "key": "gid://shopify/MediaImage/69109967585606",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "custom.bought_together",
+      "type": "list.product_reference",
+      "populatedCount": 3,
+      "ownerTypes": {
+        "PRODUCT": 3
+      },
+      "topValues": [
+        {
+          "key": "[\"gid://shopify/Product/14914149056838\",\"gid://shopify/Product/14914148729158\"]",
+          "value": 1
+        },
+        {
+          "key": "[\"gid://shopify/Product/14914148729158\",\"gid://shopify/Product/14914143224134\",\"gid://shopify/Product/14914149056838\"]",
+          "value": 1
+        },
+        {
+          "key": "[\"gid://shopify/Product/14914148729158\",\"gid://shopify/Product/14914143224134\"]",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "mm-google-shopping.custom_product",
+      "type": "boolean",
+      "populatedCount": 3,
+      "ownerTypes": {
+        "PRODUCT": 3
+      },
+      "topValues": [
+        {
+          "key": "true",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "custom.resistance",
+      "type": "single_line_text_field",
+      "populatedCount": 2,
+      "ownerTypes": {
+        "PRODUCT": 2
+      },
+      "topValues": [
+        {
+          "key": "0.6Ω, 0.8Ω",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "shopify.color-pattern",
+      "type": "list.metaobject_reference",
+      "populatedCount": 2,
+      "ownerTypes": {
+        "PRODUCT": 2
+      },
+      "topValues": [
+        {
+          "key": "[\"gid://shopify/Metaobject/89282183494\"]",
+          "value": 1
+        },
+        {
+          "key": "[\"gid://shopify/Metaobject/288570442054\"]",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "wcp_set_prices.wcp_set_prices",
+      "type": "single_line_text_field",
+      "populatedCount": 2,
+      "ownerTypes": {
+        "PRODUCT": 2
+      },
+      "topValues": [
+        {
+          "key": "DiscountVprimeTest1--54237340729670-1525.00^54237340762438-1525.00^54237340795206-1525.00^54237340827974-1525.00^54237340860742-1525.00^54237340893510-1525.00^54237340926278-1525.00^54237340959046-152",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "custom.collection_page_description",
+      "type": "multi_line_text_field",
+      "populatedCount": 2,
+      "ownerTypes": {
+        "COLLECTION": 2
+      },
+      "topValues": [
+        {
+          "key": "This page is 10ml nic salt collection.",
+          "value": 1
+        },
+        {
+          "key": "This is CUBA description",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "custom.collection_about_description",
+      "type": "multi_line_text_field",
+      "populatedCount": 2,
+      "ownerTypes": {
+        "COLLECTION": 2
+      },
+      "topValues": [
+        {
+          "key": "This vibrant selection is perfect for vapers seeking the latest trending products and exclusive offerings from Unique Distribution. Our HOT collection features a diverse array of innovative disposable",
+          "value": 1
+        },
+        {
+          "key": "Hayati has risen to become a leading choice among the youth in the United Kingdom, admired for its sleek designs and diverse flavour options. It quickly gained a strong following, becoming a go-to pic",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "company.store_type",
+      "type": "single_line_text_field",
+      "populatedCount": 2,
+      "ownerTypes": {
+        "COMPANY": 2
+      },
+      "topValues": [
+        {
+          "key": "Convenience Store",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "company.number_of_stores",
+      "type": "number_integer",
+      "populatedCount": 2,
+      "ownerTypes": {
+        "COMPANY": 2
+      },
+      "topValues": [
+        {
+          "key": "1",
+          "value": 1
+        },
+        {
+          "key": "4",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "shopify.e-liquid-flavor",
+      "type": "list.metaobject_reference",
+      "populatedCount": 1,
+      "ownerTypes": {
+        "PRODUCT": 1
+      },
+      "topValues": [
+        {
+          "key": "[\"gid://shopify/Metaobject/89282216262\",\"gid://shopify/Metaobject/89282249030\"]",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "shopify--discovery--product_recommendation.related_products",
+      "type": "list.product_reference",
+      "populatedCount": 1,
+      "ownerTypes": {
+        "PRODUCT": 1
+      },
+      "topValues": [
+        {
+          "key": "[\"gid://shopify/Product/14914148729158\",\"gid://shopify/Product/14914149056838\",\"gid://shopify/Product/14914143224134\"]",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "custom.shipping_returns_tab",
+      "type": "rich_text_field",
+      "populatedCount": 1,
+      "ownerTypes": {
+        "PRODUCT": 1
+      },
+      "topValues": [
+        {
+          "key": "{\"type\":\"root\",\"children\":[{\"type\":\"paragraph\",\"children\":[{\"type\":\"text\",\"value\":\"/products/voopoo-vmate-top-fill-cartridge\"}]}]}",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "shopify.toothpaste-type",
+      "type": "list.metaobject_reference",
+      "populatedCount": 1,
+      "ownerTypes": {
+        "PRODUCT": 1
+      },
+      "topValues": [
+        {
+          "key": "[\"gid://shopify/Metaobject/461569294662\",\"gid://shopify/Metaobject/461569327430\"]",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "shopify.vg-pg-ratio",
+      "type": "list.metaobject_reference",
+      "populatedCount": 1,
+      "ownerTypes": {
+        "PRODUCT": 1
+      },
+      "topValues": [
+        {
+          "key": "[\"gid://shopify/Metaobject/464065986886\"]",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}

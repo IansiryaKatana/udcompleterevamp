@@ -12,7 +12,7 @@ import { FinalCTA } from '@/components/home/FinalCTA'
 
 export const Route = createFileRoute('/')({
   component: HomePage,
-  head: () => ({ meta: [{ title: 'Astor Electronics — Premium Tech' }] }),
+  head: () => ({ meta: [{ title: 'Unique Distribution — Premium Tech' }] }),
 })
 
 function HomePage() {

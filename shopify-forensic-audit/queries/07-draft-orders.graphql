@@ -1,0 +1,192 @@
+query DraftOrdersPage($cursor: String, $first: Int = 25) {
+  draftOrders(first: $first, after: $cursor) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      legacyResourceId
+      name
+      status
+      createdAt
+      updatedAt
+      completedAt
+      invoiceSentAt
+      invoiceUrl
+      tags
+      note2
+      email
+      phone
+      poNumber
+      taxExempt
+      taxesIncluded
+      currencyCode
+      ready
+      reserveInventoryUntil
+      purchasingEntity {
+        __typename
+        ... on PurchasingCompany {
+          company {
+            id
+            name
+          }
+          location {
+            id
+            name
+          }
+        }
+        ... on Customer {
+          id
+          displayName
+          email
+        }
+      }
+      customer {
+        id
+        displayName
+        email
+        phone
+        tags
+      }
+      billingAddress {
+        name
+        company
+        address1
+        city
+        province
+        zip
+        country
+        countryCodeV2
+        phone
+      }
+      shippingAddress {
+        name
+        company
+        address1
+        city
+        province
+        zip
+        country
+        countryCodeV2
+        phone
+      }
+      customAttributes {
+        key
+        value
+      }
+      metafields(first: 50) {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        nodes {
+          id
+          namespace
+          key
+          type
+          value
+          jsonValue
+        }
+      }
+      lineItems(first: 50) {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        nodes {
+          id
+          sku
+          name
+          title
+          quantity
+          originalUnitPriceSet {
+            shopMoney {
+              amount
+              currencyCode
+            }
+          }
+          discountedTotalSet {
+            shopMoney {
+              amount
+              currencyCode
+            }
+          }
+          product {
+            id
+            title
+            handle
+          }
+          variant {
+            id
+            sku
+          }
+          customAttributes {
+            key
+            value
+          }
+        }
+      }
+      subtotalPriceSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      totalPriceSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      totalTaxSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      totalShippingPriceSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      taxLines {
+        title
+        rate
+        ratePercentage
+        priceSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
+      }
+      shippingLine {
+        title
+        code
+        originalPriceSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
+      }
+      order {
+        id
+        name
+        createdAt
+      }
+      events(first: 30) {
+        nodes {
+          id
+          createdAt
+          message
+          appTitle
+          attributeToApp
+          attributeToUser
+        }
+      }
+    }
+  }
+}

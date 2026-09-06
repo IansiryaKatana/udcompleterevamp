@@ -60,7 +60,7 @@ Deno.serve(async (req) => {
     const notifyEmail =
       notifyRow?.value?.trim() ||
       Deno.env.get('CONTACT_NOTIFICATION_EMAIL')?.trim() ||
-      'info@astor.ae'
+      'info@uniquedistribution.com'
 
     const messageHtml = `<p style="margin:0;font-size:14px;line-height:1.6;color:#3d3428;white-space:pre-wrap;">${escapeHtml(message)}</p>`
     const emailResult = await sendTemplateEmail(supabase, 'contact_form_admin', notifyEmail, {

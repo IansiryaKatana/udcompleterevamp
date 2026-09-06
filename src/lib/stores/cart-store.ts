@@ -207,7 +207,7 @@ export const useCartStore = create<CartState>()(
       itemCount: () => get().items.reduce((sum, i) => sum + i.quantity, 0),
     }),
     {
-      name: 'astor-cart',
+      name: 'unique-cart',
       version: 2,
       migrate: (persisted, version) => {
         if (!persisted || typeof persisted !== 'object' || !('items' in persisted)) {

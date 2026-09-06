@@ -37,7 +37,7 @@ export function usePageMeta(meta: PageMeta | null) {
   }, [meta?.title, meta?.description, meta?.image, meta?.path])
 }
 
-export function buildProductMeta(product: { name: string; description: string; imageUrl: string; slug: string }, siteName = 'Astor Electronics'): PageMeta {
+export function buildProductMeta(product: { name: string; description: string; imageUrl: string; slug: string }, siteName = 'Unique Distribution'): PageMeta {
   return {
     title: `${product.name} | ${siteName}`,
     description: stripHtml(product.description).slice(0, 160) || `Shop ${product.name} at ${siteName}.`,
@@ -46,7 +46,7 @@ export function buildProductMeta(product: { name: string; description: string; i
   }
 }
 
-export function buildCollectionMeta(title: string, description: string | undefined, slug: string, siteName = 'Astor Electronics'): PageMeta {
+export function buildCollectionMeta(title: string, description: string | undefined, slug: string, siteName = 'Unique Distribution'): PageMeta {
   return {
     title: `${title} | ${siteName}`,
     description: stripHtml(description ?? '').slice(0, 160) || `Browse ${title} at ${siteName}.`,
@@ -54,7 +54,7 @@ export function buildCollectionMeta(title: string, description: string | undefin
   }
 }
 
-export function buildMarketingPageMeta(page: { title: string; metaDescription?: string; slug: string }, siteName = 'Astor Electronics'): PageMeta {
+export function buildMarketingPageMeta(page: { title: string; metaDescription?: string; slug: string }, siteName = 'Unique Distribution'): PageMeta {
   return {
     title: `${page.title} | ${siteName}`,
     description: page.metaDescription?.slice(0, 160) || `${page.title} — ${siteName}`,

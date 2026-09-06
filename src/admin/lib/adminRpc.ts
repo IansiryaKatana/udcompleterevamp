@@ -141,3 +141,177 @@ export async function listAdminOrders(options?: { limit?: number; offset?: numbe
   if (!result?.ok) throw new Error(result.error ?? 'Failed to load orders')
   return { items: result.items ?? [], total: Number(result.total ?? 0) }
 }
+
+export type AdminOrderListRow = {
+  id: string
+  order_number: string
+  internal_order_number: string
+  order_date: string
+  email: string
+  financial_status: string | null
+  commerce_fulfillment_status: string | null
+  legacy_fulfillment_status: string | null
+  legacy_status: string
+  order_source: string | null
+  source_app: string | null
+  trading_name_snapshot: string | null
+  customer_type_snapshot: string | null
+  total: number
+  total_received: number
+  total_outstanding: number
+  currency: string
+  payment_due_on: string | null
+  draft_order_id: string | null
+  from_draft: boolean
+  customer_id: string | null
+  company_id: string | null
+  salesperson_id: string | null
+  cg_assigned_id: string | null
+  referrer_id: string | null
+  dpd_delivery_status: string | null
+  delivery_status: string | null
+  customer_name: string | null
+  customer_email: string | null
+  company_name: string | null
+  salesperson_name: string | null
+  cg_name: string | null
+  referrer_name: string | null
+  item_quantity: number
+  line_count: number
+  shipping_method: string | null
+  has_tracking: boolean
+  tags: string[]
+}
+
+export async function listAdminOrdersV2(options?: {
+  limit?: number
+  offset?: number
+  sort?: string
+  filters?: Record<string, unknown>
+}) {
+  const supabase = getClient()
+  const { data, error } = await supabase.rpc('rpc_list_admin_orders_v2', {
+    p_limit: options?.limit ?? 25,
+    p_offset: options?.offset ?? 0,
+    p_sort: options?.sort ?? 'date_desc',
+    p_filters: options?.filters ?? {},
+  })
+  if (error) throw new Error(error.message)
+  const result = data as RpcOk<{ items: AdminOrderListRow[]; total: number }> | RpcErr
+  if (!result?.ok) throw new Error(result.error ?? 'Failed to load orders')
+  return { items: result.items ?? [], total: Number(result.total ?? 0) }
+}
+
+export async function fetchOrderFilterFacets() {
+  const supabase = getClient()
+  const { data, error } = await supabase.rpc('rpc_admin_order_filter_facets')
+  if (error) throw new Error(error.message)
+  const result = data as
+    | RpcOk<{
+        financial_statuses: string[]
+        fulfillment_statuses: string[]
+        order_sources: string[]
+        customer_types: string[]
+        delivery_statuses: string[]
+        staff: { id: string; name: string }[]
+      }>
+    | RpcErr
+  if (!result?.ok) throw new Error(result.error ?? 'Failed to load facets')
+  return {
+    financialStatuses: result.financial_statuses ?? [],
+    fulfillmentStatuses: result.fulfillment_statuses ?? [],
+    orderSources: result.order_sources ?? [],
+    customerTypes: result.customer_types ?? [],
+    deliveryStatuses: result.delivery_statuses ?? [],
+    staff: result.staff ?? [],
+  }
+}
+
+export async function getAdminOrderWorkspace(orderId: string) {
+  const supabase = getClient()
+  const { data, error } = await supabase.rpc('rpc_get_admin_order_workspace', { p_order_id: orderId })
+  if (error) throw new Error(error.message)
+  const result = data as RpcOk<Record<string, unknown>> | RpcErr
+  if (!result?.ok) throw new Error(result.error ?? 'Failed to load order')
+  return result
+}
+
+export async function listAdminOrderItems(options: {
+  orderId: string
+  limit?: number
+  offset?: number
+  search?: string
+}) {
+  const supabase = getClient()
+  const { data, error } = await supabase.rpc('rpc_list_admin_order_items', {
+    p_order_id: options.orderId,
+    p_limit: options.limit ?? 50,
+    p_offset: options.offset ?? 0,
+    p_search: options.search ?? null,
+  })
+  if (error) throw new Error(error.message)
+  const result = data as RpcOk<{ items: Record<string, unknown>[]; total: number }> | RpcErr
+  if (!result?.ok) throw new Error(result.error ?? 'Failed to load line items')
+  return { items: result.items ?? [], total: Number(result.total ?? 0) }
+}
+
+export async function listAdminOrderPayments(orderId: string) {
+  const supabase = getClient()
+  const { data, error } = await supabase.rpc('rpc_list_admin_order_payments', { p_order_id: orderId })
+  if (error) throw new Error(error.message)
+  const result = data as RpcOk<{ transactions: Record<string, unknown>[]; refunds: Record<string, unknown>[] }> | RpcErr
+  if (!result?.ok) throw new Error(result.error ?? 'Failed to load payments')
+  return { transactions: result.transactions ?? [], refunds: result.refunds ?? [] }
+}
+
+export async function listAdminOrderFulfillments(orderId: string) {
+  const supabase = getClient()
+  const { data, error } = await supabase.rpc('rpc_list_admin_order_fulfillments', { p_order_id: orderId })
+  if (error) throw new Error(error.message)
+  const result = data as RpcOk<{ fulfillments: Record<string, unknown>[] }> | RpcErr
+  if (!result?.ok) throw new Error(result.error ?? 'Failed to load fulfillments')
+  return { fulfillments: result.fulfillments ?? [] }
+}
+
+export async function listAdminOrderTimeline(options: { orderId: string; limit?: number; offset?: number }) {
+  const supabase = getClient()
+  const { data, error } = await supabase.rpc('rpc_list_admin_order_timeline', {
+    p_order_id: options.orderId,
+    p_limit: options.limit ?? 50,
+    p_offset: options.offset ?? 0,
+  })
+  if (error) throw new Error(error.message)
+  const result = data as
+    | RpcOk<{ events: Record<string, unknown>[]; total: number; comments: Record<string, unknown>[] }>
+    | RpcErr
+  if (!result?.ok) throw new Error(result.error ?? 'Failed to load timeline')
+  return {
+    events: result.events ?? [],
+    total: Number(result.total ?? 0),
+    comments: result.comments ?? [],
+  }
+}
+
+export async function addAdminOrderComment(orderId: string, body: string) {
+  const supabase = getClient()
+  const { data, error } = await supabase.rpc('rpc_admin_add_order_comment', {
+    p_order_id: orderId,
+    p_body: body,
+  })
+  if (error) throw new Error(error.message)
+  const result = data as RpcOk<{ id: string }> | RpcErr
+  if (!result?.ok) throw new Error(result.error ?? 'Failed to add note')
+  return result
+}
+
+export async function updateAdminOrderOps(orderId: string, patch: Record<string, unknown>) {
+  const supabase = getClient()
+  const { data, error } = await supabase.rpc('rpc_admin_update_order_ops', {
+    p_order_id: orderId,
+    p_patch: patch,
+  })
+  if (error) throw new Error(error.message)
+  const result = data as RpcOk<{ changed: boolean; changes?: Record<string, unknown> }> | RpcErr
+  if (!result?.ok) throw new Error(result.error ?? 'Failed to update order')
+  return result
+}

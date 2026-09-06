@@ -186,7 +186,7 @@ export async function exportDataBundles(
 
   const json = JSON.stringify(payload, null, 2)
   const stamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19)
-  const filename = `astor-export-${stamp}.json`
+  const filename = `unique-export-${stamp}.json`
   const blob = new Blob([json], { type: 'application/json' })
 
   onProgress({

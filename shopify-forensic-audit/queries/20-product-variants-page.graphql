@@ -1,0 +1,63 @@
+# Product variants nested pagination page (READ-ONLY).
+query ProductVariantsPage($id: ID!, $cursor: String, $first: Int!) {
+  product(id: $id) {
+    id
+    title
+    handle
+    variants(first: $first, after: $cursor) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      nodes {
+        id
+        legacyResourceId
+        title
+        sku
+        barcode
+        displayName
+        position
+        availableForSale
+        taxable
+        taxCode
+        inventoryPolicy
+        inventoryQuantity
+        sellableOnlineQuantity
+        createdAt
+        updatedAt
+        price
+        compareAtPrice
+        selectedOptions {
+          name
+          value
+        }
+        inventoryItem {
+          id
+          sku
+          tracked
+          requiresShipping
+          measurement {
+            weight {
+              value
+              unit
+            }
+          }
+          unitCost {
+            amount
+            currencyCode
+          }
+        }
+        metafields(first: 30) {
+          nodes {
+            id
+            namespace
+            key
+            type
+            value
+            jsonValue
+          }
+        }
+      }
+    }
+  }
+}

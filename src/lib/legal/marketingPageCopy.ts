@@ -4,9 +4,9 @@ export const LEGAL_PAGES = {
   privacy: {
     title: 'Privacy Policy',
     slug: 'privacy',
-    metaDescription: 'How Astor Electronics collects, uses, and protects your personal data.',
+    metaDescription: 'How Unique Distribution collects, uses, and protects your personal data.',
     bodyHtml: `<h2>Who we are</h2>
-<p>Astor Electronics operates this online store for components, phones, consoles, and related accessories. This policy explains how we handle your personal information when you browse, request a quote, or place an order.</p>
+<p>Unique Distribution operates this online store for components, phones, consoles, and related accessories. This policy explains how we handle your personal information when you browse, request a quote, or place an order.</p>
 <h2>Information we collect</h2>
 <ul>
 <li><strong>Account &amp; checkout:</strong> name, email address, shipping address, phone number, and order history.</li>
@@ -32,9 +32,9 @@ export const LEGAL_PAGES = {
   terms: {
     title: 'Terms of Service',
     slug: 'terms',
-    metaDescription: 'Terms and conditions for shopping with Astor Electronics.',
+    metaDescription: 'Terms and conditions for shopping with Unique Distribution.',
     bodyHtml: `<h2>Agreement</h2>
-<p>By using astor-electronics.com you agree to these terms. If you do not agree, please do not use our site.</p>
+<p>By using uniquedistribution.com you agree to these terms. If you do not agree, please do not use our site.</p>
 <h2>Products &amp; pricing</h2>
 <p>We sell new and refurbished electronics including PC components, mobile devices, and gaming hardware. Prices are shown in the currency configured at checkout. We may correct pricing errors before accepting an order. Product images are representative; specifications are listed on each product page.</p>
 <h2>Quotes &amp; orders</h2>
@@ -46,14 +46,14 @@ export const LEGAL_PAGES = {
 <h2>Returns</h2>
 <p>Unopened items in resaleable condition may be returned within 14 days of delivery unless excluded (e.g. opened software, personalised builds, or hygiene-sensitive accessories). Faulty items are covered under applicable consumer warranty laws—contact us with your order number.</p>
 <h2>Limitation of liability</h2>
-<p>To the fullest extent permitted by law, Astor Electronics is not liable for indirect or consequential loss. Nothing in these terms limits your statutory consumer rights.</p>
+<p>To the fullest extent permitted by law, Unique Distribution is not liable for indirect or consequential loss. Nothing in these terms limits your statutory consumer rights.</p>
 <h2>Governing law</h2>
 <p>These terms are governed by the laws of England and Wales. Disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales unless mandatory consumer law provides otherwise.</p>`,
   },
   shipping: {
     title: 'Shipping Information',
     slug: 'shipping',
-    metaDescription: 'Delivery times, carriers, and shipping policies for Astor Electronics orders.',
+    metaDescription: 'Delivery times, carriers, and shipping policies for Unique Distribution orders.',
     bodyHtml: `<h2>Processing time</h2>
 <p>Orders are typically processed within 1–2 business days. Custom quotes, pre-built systems, and high-value GPUs may require additional verification before dispatch.</p>
 <h2>UK delivery</h2>
@@ -76,7 +76,7 @@ export const LEGAL_PAGES = {
   cookies: {
     title: 'Cookie Policy',
     slug: 'cookies',
-    metaDescription: 'How Astor Electronics uses cookies and similar technologies.',
+    metaDescription: 'How Unique Distribution uses cookies and similar technologies.',
     bodyHtml: `<h2>What are cookies?</h2>
 <p>Cookies are small text files stored on your device when you visit our website. They help the store function, remember preferences, and—if you consent—understand how visitors use our site.</p>
 <h2>How we use cookies</h2>
@@ -98,7 +98,7 @@ export const LEGAL_PAGES = {
   contact: {
     title: 'Contact Us',
     slug: 'contact',
-    metaDescription: 'Get in touch with Astor Electronics for quotes, orders, and product support.',
+    metaDescription: 'Get in touch with Unique Distribution for quotes, orders, and product support.',
     bodyHtml: `<p>Questions about compatibility, bulk orders, shipping, or an existing purchase? Send us a message and our team will respond within one business day.</p>`,
   },
 } as const

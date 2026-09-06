@@ -45,10 +45,10 @@ export function AdminEmailTemplates() {
   const brand: EmailBrandContext = useMemo(() => {
     const storeUrl =
       getSettingValue(entries, 'store_url') ||
-      (typeof window !== 'undefined' ? window.location.origin : 'https://astor.example')
+      (typeof window !== 'undefined' ? window.location.origin : 'https://uniquedistribution.com')
 
     return {
-      siteName: snapshot.siteName || getSettingValue(entries, 'email_from_name', 'Astor Electronics'),
+      siteName: snapshot.siteName || getSettingValue(entries, 'email_from_name', 'Unique Distribution'),
       logoUrl: snapshot.siteSettings.logo_light_url?.trim() ?? '',
       brandColor:
         getSettingValue(entries, 'email_brand_color') ||
@@ -203,7 +203,7 @@ export function AdminEmailTemplates() {
               className={adminInput}
               value={getSettingValue(entries, 'email_from_name', snapshot.siteName)}
               onChange={(e) => updateBrandSetting('email_from_name', e.target.value)}
-              placeholder="Astor Electronics"
+              placeholder="Unique Distribution"
             />
           </div>
           <div>

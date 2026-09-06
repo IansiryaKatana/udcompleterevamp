@@ -40,8 +40,8 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
       setConsent(detail)
       setBannerOpen(false)
     }
-    window.addEventListener('astor:cookie-consent', onConsentChange)
-    return () => window.removeEventListener('astor:cookie-consent', onConsentChange)
+    window.addEventListener('unique:cookie-consent', onConsentChange)
+    return () => window.removeEventListener('unique:cookie-consent', onConsentChange)
   }, [])
 
   const acceptAll = useCallback(() => {

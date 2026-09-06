@@ -1,0 +1,27 @@
+query FilesPage($cursor: String, $first: Int = 50) {
+  files(first: $first, after: $cursor) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      alt
+      createdAt
+      fileStatus
+      ... on MediaImage {
+        mimeType
+        image {
+          url
+          width
+          height
+        }
+      }
+      ... on GenericFile {
+        url
+        mimeType
+        originalFileSize
+      }
+    }
+  }
+}

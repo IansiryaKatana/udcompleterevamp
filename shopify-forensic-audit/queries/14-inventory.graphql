@@ -1,0 +1,42 @@
+query InventoryItemsPage($cursor: String, $first: Int = 50) {
+  inventoryItems(first: $first, after: $cursor) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      sku
+      tracked
+      requiresShipping
+      createdAt
+      updatedAt
+      duplicateSkuCount
+      unitCost {
+        amount
+        currencyCode
+      }
+      variant {
+        id
+        sku
+        product {
+          id
+          title
+        }
+      }
+      inventoryLevels(first: 20) {
+        nodes {
+          id
+          quantities(names: ["available", "on_hand", "committed", "incoming", "reserved"]) {
+            name
+            quantity
+          }
+          location {
+            id
+            name
+          }
+        }
+      }
+    }
+  }
+}

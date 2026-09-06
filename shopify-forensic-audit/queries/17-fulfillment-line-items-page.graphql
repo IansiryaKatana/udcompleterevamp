@@ -1,0 +1,23 @@
+# Nested fulfillmentLineItems pagination for a single Fulfillment (READ-ONLY).
+query FulfillmentLineItemsPage($id: ID!, $cursor: String, $first: Int!) {
+  fulfillment(id: $id) {
+    id
+    name
+    status
+    lineItems: fulfillmentLineItems(first: $first, after: $cursor) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      nodes {
+        id
+        quantity
+        lineItem {
+          id
+          sku
+          name
+        }
+      }
+    }
+  }
+}

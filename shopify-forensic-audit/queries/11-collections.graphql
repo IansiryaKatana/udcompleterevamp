@@ -1,0 +1,30 @@
+query CollectionsPage($cursor: String, $first: Int = 50) {
+  collections(first: $first, after: $cursor) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      legacyResourceId
+      title
+      handle
+      updatedAt
+      sortOrder
+      descriptionHtml
+      productsCount {
+        count
+      }
+      metafields(first: 30) {
+        nodes {
+          id
+          namespace
+          key
+          type
+          value
+          jsonValue
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-# Astor Electronics — Netlify deployment
+# Unique Distribution — Netlify deployment
 # Build with: npm run build:netlify
 
 [build]
@@ -10,4 +10,5 @@
   NPM_FLAGS = "--include=dev"
 
 # Client-side routing + SSR are handled by @netlify/vite-plugin-tanstack-start.
-# Ensure VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY are set in Netlify UI.
+# Set VITE_SUPABASE_URL=https://oelolusdbaoyiqkgukib.supabase.co
+# and VITE_SUPABASE_ANON_KEY from The UD Revamp dashboard.

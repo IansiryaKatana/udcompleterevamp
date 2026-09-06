@@ -1,0 +1,63 @@
+query AbandonedCheckoutsPage($cursor: String, $first: Int = 50) {
+  abandonedCheckouts(first: $first, after: $cursor) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      createdAt
+      updatedAt
+      completedAt
+      abandonedCheckoutUrl
+      totalPriceSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      subtotalPriceSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      totalTaxSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      totalDiscountSet {
+        shopMoney {
+          amount
+          currencyCode
+        }
+      }
+      customer {
+        id
+        displayName
+        email
+      }
+      billingAddress {
+        country
+        countryCodeV2
+        company
+      }
+      shippingAddress {
+        country
+        countryCodeV2
+        company
+      }
+      lineItems(first: 50) {
+        nodes {
+          id
+          title
+          quantity
+          sku
+          variantTitle
+        }
+      }
+    }
+  }
+}

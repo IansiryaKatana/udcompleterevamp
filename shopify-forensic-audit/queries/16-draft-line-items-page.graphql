@@ -1,0 +1,46 @@
+# Targeted nested lineItems pagination for a single DraftOrder (READ-ONLY).
+query DraftOrderLineItemsPage($id: ID!, $cursor: String, $first: Int!) {
+  draftOrder(id: $id) {
+    id
+    name
+    lineItems(first: $first, after: $cursor) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      nodes {
+        id
+        sku
+        name
+        title
+        quantity
+        originalUnitPriceSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
+        discountedTotalSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
+        product {
+          id
+          title
+          handle
+        }
+        variant {
+          id
+          sku
+          title
+        }
+        customAttributes {
+          key
+          value
+        }
+      }
+    }
+  }
+}

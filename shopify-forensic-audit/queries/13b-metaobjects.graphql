@@ -1,0 +1,20 @@
+query MetaobjectsByType($type: String!, $cursor: String, $first: Int = 50) {
+  metaobjects(type: $type, first: $first, after: $cursor) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      handle
+      type
+      displayName
+      updatedAt
+      fields {
+        key
+        value
+        jsonValue
+      }
+    }
+  }
+}

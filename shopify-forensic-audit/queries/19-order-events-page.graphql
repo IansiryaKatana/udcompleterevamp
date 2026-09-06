@@ -1,0 +1,25 @@
+# Nested order events pagination (READ-ONLY).
+query OrderEventsPage($id: ID!, $cursor: String, $first: Int!) {
+  order(id: $id) {
+    id
+    name
+    events(first: $first, after: $cursor) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      nodes {
+        id
+        createdAt
+        message
+        appTitle
+        attributeToApp
+        attributeToUser
+        criticalAlert
+        ... on CommentEvent {
+          rawMessage
+        }
+      }
+    }
+  }
+}

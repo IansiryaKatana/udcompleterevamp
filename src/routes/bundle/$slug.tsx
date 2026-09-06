@@ -37,7 +37,7 @@ function BundleDetailPage() {
           title: `${bundle.name} | ${snapshot.siteName}`,
           description: bundle.overview ?? `Shop the ${bundle.name} bundle at ${snapshot.siteName}.`,
         }
-      : { title: 'Bundle | Astor Electronics' },
+      : { title: 'Bundle | Unique Distribution' },
   )
 
   function handleSelectionChange(bundleItemId: string, variant: ProductVariant | null) {

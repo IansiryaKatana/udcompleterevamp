@@ -1,0 +1,13 @@
+{
+  "id": "cms-media",
+  "name": "cms-media",
+  "public": true,
+  "file_size_limit": 5242880,
+  "allowed_mime_types": ["image/jpeg", "image/png", "image/webp", "image/gif"],
+  "policies": [
+    "public_read_cms_media",
+    "admin_insert_cms_media",
+    "admin_update_cms_media",
+    "admin_delete_cms_media"
+  ]
+}

@@ -1,0 +1,2322 @@
+{
+  "fetchedAt": "2026-09-05T06:16:26.318Z",
+  "definitionCount": 123,
+  "byOwnerCounts": {
+    "ORDER": 14,
+    "CUSTOMER": 20,
+    "DRAFTORDER": 5,
+    "PRODUCT": 46,
+    "PRODUCTVARIANT": 25,
+    "COLLECTION": 6,
+    "COMPANY": 5,
+    "SHOP": 1,
+    "VALIDATION": 1
+  },
+  "rows": [
+    {
+      "ownerType": "ORDER",
+      "name": "Salesperson",
+      "namespace": "custom",
+      "key": "salesperson",
+      "type": "single_line_text_field",
+      "description": "Stores the salesperson responsible for the order.",
+      "metafieldsCount": 10001,
+      "pinnedPosition": 3,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"Adam Fysal\",\"Adam Yousuf\",\"Inderpal Bolla\",\"Jake Dodd\",\"John Yates\",\"Karanjot Bassi\",\"Kulwant Singh\",\"Mahendra Badsiwal\",\"MM\",\"MP\",\"No Salesperson\",\"Oscar Patel\",\"Richard Bell\",\"Rob Lister\",\"Simon Hartshorn\",\"Tom Cook\",\"UD LEADS\",\"UK PLUG ME\",\"VB LEADS\",\"Yusuf Lambat\",\"Amjad Ashraf\",\"Corbin Rose\",\"Mo Farah\",\"Nick Gourlay\",\"Rashad Akhtar\",\"Teresa Campbell\",\"Tauqir Ashfaq\",\"Frank Castle\",\"Neil Cookson\",\"Drew Murray\",\"Nash Shakti\",\"Neil Gill\",\"Davide Almeida\",\"Reece Morgan\",\"Anas M\",\"Ben Stevens\",\"Matt Scarborough\",\"Harry Sihra\",\"Mo Khan\",\"Sam Robins\",\"Andy James\",\"Maz Barlas\",\"Nick Jane\",\"Tom Thompson\",\"Sharoze Ali\",\"Vivek Keshwala\",\"Kalpesh Joshi\",\"Mohammed Hussain\",\"Muaaz Raja\",\"Kal Joshi\",\"Sam Hussain\",\"Haseeb Ali\",\"Rose Thomson\",\"Sol Umar\",\"UD Wholesale\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "READ_WRITE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "ORDER",
+      "name": "ReferredBy",
+      "namespace": "custom",
+      "key": "referrer",
+      "type": "single_line_text_field",
+      "description": "Enter salesperson who referred",
+      "metafieldsCount": 10001,
+      "pinnedPosition": 4,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"Adam Fysal\",\"Adam Yousuf\",\"Inderpal Bolla\",\"Jake Dodd\",\"John Yates\",\"Karanjot Bassi\",\"Kulwant Singh\",\"Mahendra Badsiwal\",\"MM\",\"MP\",\"No Referrer\",\"Oscar Patel\",\"Richard Bell\",\"Rob Lister\",\"Simon Hartshorn\",\"Tom Cook\",\"UD LEADS\",\"UK PLUG ME\",\"VB LEADS\",\"Yusuf Lambat\",\"Amjad Ashraf\",\"Corbin Rose\",\"Mo Farah\",\"Rashad Akhtar\",\"Teresa Campbell\",\"Tauqir Ashfaq\",\"Frank Castle\",\"Neil Cookson\",\"Nash Shakti\",\"Drew Murray\",\"Neil Gill\",\"Davide Almeida\",\"Reece Morgan\",\"Anas M\",\"Ben Stevens\",\"Matt Scarborough\",\"Harry Sihra\",\"Sam Robins\",\"Andy James\",\"Maz Barlas\",\"Nick Jane\",\"Tom Thompson\",\"Sharoze Ali\",\"Vivek Keshwala\",\"Kalpesh Joshi\",\"Mohammed Hussain\",\"Muaaz Raja\",\"Kal Joshi\",\"Sam Hussain\",\"Haseeb Ali\",\"Rose Thomson\",\"Sol Umar\",\"UD Wholesale\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "ORDER",
+      "name": "StoreName",
+      "namespace": "storename",
+      "key": "tradingname",
+      "type": "single_line_text_field",
+      "description": "Capture the Store name from submitted registratrion",
+      "metafieldsCount": 10001,
+      "pinnedPosition": 2,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "READ"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "ORDER",
+      "name": "No Credit Reason",
+      "namespace": "dollar-cashback",
+      "key": "no-credit-reason",
+      "type": "single_line_text_field",
+      "description": "Reason why store credit/cashback was not given for this order",
+      "metafieldsCount": 8687,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "Registration Channel",
+      "namespace": "registration",
+      "key": "channel",
+      "type": "single_line_text_field",
+      "description": "Registration Channel POS or Website",
+      "metafieldsCount": 6219,
+      "pinnedPosition": 4,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "READ_WRITE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "Referredby",
+      "namespace": "custom",
+      "key": "referredby",
+      "type": "single_line_text_field",
+      "description": "Stores the salesperson who referred customer.",
+      "metafieldsCount": 5957,
+      "pinnedPosition": 15,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"Adam Fysal\",\"Adam Yousuf\",\"Anas M\",\"Corbin Rose\",\"Jake Dodd\",\"John Yates\",\"Karanjot Bassi\",\"Kulwant Singh\",\"Mahendra Badsiwal\",\"MM\",\"MP\",\"No Referrer\",\"Oscar Patel\",\"Richard Bell\",\"Rob Lister\",\"Simon Hartshorn\",\"Tom Cook\",\"UD LEADS\",\"UK PLUG ME\",\"VB LEADS\",\"Yusuf Lambat\",\"Amjad Ashraf\",\"Inderpal Bolla\",\"Tauqir Ashfaq\",\"Frank Castle\",\"Neil Cookson\",\"Nash Shakti\",\"Drew Murray\",\"Neil Gill\",\"Davide Almeida\",\"Reece Morgan\",\"Ben Stevens\",\"Matt Scarborough\",\"Harry Sihra\",\"Sam Robins\",\"Andy James\",\"Maz Barlas\",\"Nick Jane\",\"Sharoze Ali\",\"Tom Thompson\",\"Vivek Keshwala\",\"Kalpesh Joshi\",\"Mohammed Hussain\",\"Muaaz Raja\",\"Kal Joshi\",\"Sam Hussain\",\"Haseeb Ali\",\"Rose Thomson\",\"Sol Umar\",\"UD Wholesale\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "READ_WRITE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "SP_Assigned",
+      "namespace": "custom",
+      "key": "salesperson_assigned",
+      "type": "single_line_text_field",
+      "description": "SP_Assigned",
+      "metafieldsCount": 5948,
+      "pinnedPosition": 14,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"No Salesperson\",\"Adam Fysal\",\"Adam Yousuf\",\"Jake Dodd\",\"John Yates\",\"Karanjot Bassi\",\"Kulwant Singh\",\"Mahendra Badsiwal\",\"MM\",\"MP\",\"Oscar Patel\",\"Rob Lister\",\"Simon Hartshorn\",\"Tom Cook\",\"UD LEADS\",\"UK PLUG ME\",\"VB LEADS\",\"Yusuf Lambat\",\"Inderpal Bolla\",\"Tauqir Ashfaq\",\"Frank Castle\",\"Neil Cookson\",\"Nash Shakti\",\"Drew Murray\",\"Neil Gill\",\"Davide Almeida\",\"Reece Morgan\",\"Anas M\",\"Ben Stevens\",\"Matt Scarborough\",\"Harry Sihra\",\"Sam Robins\",\"Andy James\",\"Maz Barlas\",\"Nick Jane\",\"Sharoze Ali\",\"Tom Thompson\",\"Vivek Keshwala\",\"Kalpesh Joshi\",\"Mohammed Hussain\",\"Muaaz Raja\",\"Kal Joshi\",\"Sam Hussain\",\"Haseeb Ali\",\"Rose Thomson\",\"Sol Umar\",\"UD Wholesale\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "READ_WRITE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "Customer Segments",
+      "namespace": "dollar-segments",
+      "key": "customer-segments",
+      "type": "json",
+      "description": "Segment IDs the customer belongs to",
+      "metafieldsCount": 5626,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "StoreName",
+      "namespace": "store_name",
+      "key": "trading_as",
+      "type": "single_line_text_field",
+      "description": "Store name trading as",
+      "metafieldsCount": 5446,
+      "pinnedPosition": 13,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "ud_customer id",
+      "namespace": "udcustom",
+      "key": "customer_id",
+      "type": "single_line_text_field",
+      "description": "ud.customer_id",
+      "metafieldsCount": 4091,
+      "pinnedPosition": 16,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "READ_WRITE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "Weekly Spend",
+      "namespace": "customer",
+      "key": "weekly_spend",
+      "type": "single_line_text_field",
+      "description": "Weekly Spend",
+      "metafieldsCount": 3945,
+      "pinnedPosition": 10,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"Less than £1000\",\"Between £1-£3000\",\"£5000+\",\"£10,000+\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "How many stores owner have ",
+      "namespace": "customer",
+      "key": "num_of_stores",
+      "type": "number_integer",
+      "description": "How many number of stores that company have",
+      "metafieldsCount": 3944,
+      "pinnedPosition": 11,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "Store Type",
+      "namespace": "customer",
+      "key": "store_type",
+      "type": "single_line_text_field",
+      "description": " Retail establishment store type from customer registration",
+      "metafieldsCount": 3889,
+      "pinnedPosition": 12,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"Vape Shop\",\"Convenience Store\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "READ"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "Company Name",
+      "namespace": "custom",
+      "key": "company_name",
+      "type": "single_line_text_field",
+      "description": "Company Name from registration",
+      "metafieldsCount": 3687,
+      "pinnedPosition": 8,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "READ"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "Company Registration Number",
+      "namespace": "custom",
+      "key": "company_registration_number",
+      "type": "single_line_text_field",
+      "description": "Company Registration Number",
+      "metafieldsCount": 3681,
+      "pinnedPosition": 7,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "Website URL/Shop name",
+      "namespace": "custom",
+      "key": "website_url_shop_name",
+      "type": "single_line_text_field",
+      "description": "Website URL/Shop name",
+      "metafieldsCount": 3680,
+      "pinnedPosition": 5,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "DRAFTORDER",
+      "name": "Salesperson",
+      "namespace": "custom",
+      "key": "salesperson",
+      "type": "single_line_text_field",
+      "description": "Stores the salesperson responsible for the order.",
+      "metafieldsCount": 3677,
+      "pinnedPosition": 2,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"Adam Fysal\",\"Adam Yousuf\",\"Inderpal Bolla\",\"Jake Dodd\",\"John Yates\",\"Karanjot Bassi\",\"Kulwant Singh\",\"Mahendra Badsiwal\",\"MM\",\"MP\",\"No Salesperson\",\"Oscar Patel\",\"Richard Bell\",\"Rob Lister\",\"Simon Hartshorn\",\"Tom Cook\",\"UD LEADS\",\"UK PLUG ME\",\"VB LEADS\",\"Yusuf Lambat\",\"Amjad Ashraf\",\"Corbin Rose\",\"Mo Farah\",\"Nick Gourlay\",\"Rashad Akhtar\",\"Teresa Campbell\",\"Tauqir Ashfaq\",\"Frank Castle\",\"Neil Cookson\",\"Drew Murray\",\"Nash Shakti\",\"Neil Gill\",\"Davide Almeida\",\"Reece Morgan\",\"Anas M\",\"Ben Stevens\",\"Matt Scarborough\",\"Harry Sihra\",\"Mo Khan\",\"Sam Robins\",\"Andy James\",\"Maz Barlas\",\"Nick Jane\",\"Tom Thompson\",\"Sharoze Ali\",\"Vivek Keshwala\",\"Kalpesh Joshi\",\"Mohammed Hussain\",\"Muaaz Raja\",\"Kal Joshi\",\"Sam Hussain\",\"Haseeb Ali\",\"Rose Thomson\",\"Sol Umar\",\"UD Wholesale\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "DRAFTORDER",
+      "name": "Referrer",
+      "namespace": "custom",
+      "key": "referrer",
+      "type": "single_line_text_field",
+      "description": "Enter salesperson who referred",
+      "metafieldsCount": 3570,
+      "pinnedPosition": 1,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"Adam Fysal\",\"Adam Yousuf\",\"Inderpal Bolla\",\"Jake Dodd\",\"John Yates\",\"Karanjot Bassi\",\"Kulwant Singh\",\"Mahendra Badsiwal\",\"MM\",\"MP\",\"No Referrer\",\"Oscar Patel\",\"Richard Bell\",\"Rob Lister\",\"Simon Hartshorn\",\"Tom Cook\",\"UD LEADS\",\"UK PLUG ME\",\"VB LEADS\",\"Yusuf Lambat\",\"Amjad Ashraf\",\"Corbin Rose\",\"Mo Farah\",\"Rashad Akhtar\",\"Teresa Campbell\",\"Tauqir Ashfaq\",\"Frank Castle\",\"Neil Cookson\",\"Nash Shakti\",\"Drew Murray\",\"Neil Gill\",\"Davide Almeida\",\"Reece Morgan\",\"Anas M\",\"Ben Stevens\",\"Matt Scarborough\",\"Harry Sihra\",\"Sam Robins\",\"Andy James\",\"Maz Barlas\",\"Nick Jane\",\"Tom Thompson\",\"Sharoze Ali\",\"Vivek Keshwala\",\"Kalpesh Joshi\",\"Mohammed Hussain\",\"Muaaz Raja\",\"Kal Joshi\",\"Sam Hussain\",\"Haseeb Ali\",\"Rose Thomson\",\"Sol Umar\",\"UD Wholesale\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "Do you own a website or a shop",
+      "namespace": "custom",
+      "key": "do_you_own_a_website_or_a_shop",
+      "type": "single_line_text_field",
+      "description": "Do you own a website or a shop?",
+      "metafieldsCount": 3236,
+      "pinnedPosition": 6,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"Shop\",\"Website\",\"Website & Shop\",\"NA\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "DRAFTORDER",
+      "name": "Store Name",
+      "namespace": "storename",
+      "key": "tradingname",
+      "type": "single_line_text_field",
+      "description": "Capture the Store name from submitted registratrion",
+      "metafieldsCount": 2007,
+      "pinnedPosition": 3,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "Shop Name",
+      "namespace": "skulabs",
+      "key": "shopname",
+      "type": "single_line_text_field",
+      "description": "Store name use for customer delivery address in packing list",
+      "metafieldsCount": 1462,
+      "pinnedPosition": 19,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "READ"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "ORDER",
+      "name": "Customer Type",
+      "namespace": "custom",
+      "key": "draft_customer_type",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 598,
+      "pinnedPosition": 6,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"Retail\",\"Wholesale\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Vendor",
+      "namespace": "custom",
+      "key": "vendor",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 500,
+      "pinnedPosition": 13,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "hide_variant",
+      "namespace": "custom",
+      "key": "hide_variant",
+      "type": "boolean",
+      "description": "",
+      "metafieldsCount": 423,
+      "pinnedPosition": 12,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Type",
+      "namespace": "custom",
+      "key": "type",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 396,
+      "pinnedPosition": 10,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Nicotine Strength",
+      "namespace": "custom",
+      "key": "nicotine_strength",
+      "type": "single_line_text_field",
+      "description": "Nic Strength",
+      "metafieldsCount": 384,
+      "pinnedPosition": 5,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"0% Nicotine Free\",\"0mg\",\"2mg\",\"3mg\",\"4mg\",\"5mg\",\"6mg\",\"7mg\",\"8mg\",\"9mg\",\"10mg\",\"11mg\",\"12mg\",\"13mg\",\"14mg\",\"15mg\",\"16mg\",\"16.5mg\",\"17mg\",\"18mg\",\"19mg\",\"20mg\",\"21mg\",\"22mg\",\"25mg\",\"33mg\",\"50mg\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Box",
+      "namespace": "custom",
+      "key": "box",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 380,
+      "pinnedPosition": 16,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "DRAFTORDER",
+      "name": "Customer Type",
+      "namespace": "custom",
+      "key": "draft_customer_type",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 310,
+      "pinnedPosition": 5,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"Retail\",\"Wholesale\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "COLLECTION",
+      "name": "exclude_all_channels",
+      "namespace": "custom",
+      "key": "exclude_all_channels",
+      "type": "boolean",
+      "description": "Set collection if excluded in all sales channels, hidden.",
+      "metafieldsCount": 176,
+      "pinnedPosition": 2,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "ORDER",
+      "name": "Customer Type (Do not use)",
+      "namespace": "custom",
+      "key": "customer_type",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 138,
+      "pinnedPosition": 5,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"Retail\",\"Wholesale\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Strength",
+      "namespace": "custom",
+      "key": "strength",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 138,
+      "pinnedPosition": 14,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "ORDER",
+      "name": "CG_Assigned",
+      "namespace": "custom",
+      "key": "cg_assigned",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 124,
+      "pinnedPosition": 7,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"Muaaz Raja\",\"Kal Joshi\",\"Sam Hussain\",\"Haseeb Ali\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "ProductVariantLinks",
+      "namespace": "custom",
+      "key": "productvariantlinks",
+      "type": "boolean",
+      "description": "Custom Product Variant Links",
+      "metafieldsCount": 123,
+      "pinnedPosition": 7,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "variant_badge",
+      "namespace": "custom",
+      "key": "variant_badge",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 113,
+      "pinnedPosition": 13,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "COLLECTION",
+      "name": "Collection Page Short Description",
+      "namespace": "custom",
+      "key": "collection_page_short_description",
+      "type": "multi_line_text_field",
+      "description": "Collection Page Short Description",
+      "metafieldsCount": 112,
+      "pinnedPosition": 1,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "variant_links",
+      "namespace": "custom",
+      "key": "variant_links",
+      "type": "multi_line_text_field",
+      "description": "variant_links for variant switch tabs",
+      "metafieldsCount": 110,
+      "pinnedPosition": 6,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Size",
+      "namespace": "custom",
+      "key": "size",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 107,
+      "pinnedPosition": 17,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "CG_Assigned",
+      "namespace": "custom",
+      "key": "sg_assigned",
+      "type": "single_line_text_field",
+      "description": "SG_Assigned",
+      "metafieldsCount": 101,
+      "pinnedPosition": 18,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"Muaaz Raja\",\"Kal Joshi\",\"Sam Hussain\",\"Haseeb Ali\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "READ"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Puffs",
+      "namespace": "custom",
+      "key": "puffs",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 97,
+      "pinnedPosition": 12,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "limit_max_qty",
+      "namespace": "custom",
+      "key": "limit_max_qty",
+      "type": "number_integer",
+      "description": "",
+      "metafieldsCount": 87,
+      "pinnedPosition": 8,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "ORDER",
+      "name": "Credit Note",
+      "namespace": "custom",
+      "key": "credit_note",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 80,
+      "pinnedPosition": 8,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"Yes\",\"No\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "ORDER",
+      "name": "Cashback Details",
+      "namespace": "dollar-cashback",
+      "key": "cashback-details",
+      "type": "json",
+      "description": "Cashback Details for the order",
+      "metafieldsCount": 79,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "E-cigarette/Vaporizer style",
+      "namespace": "shopify",
+      "key": "e-cigarette-vaporizer-style",
+      "type": "list.metaobject_reference",
+      "description": "Classifies e-cigarettes and vaporizers by their form factor, e.g. disposable, pen",
+      "metafieldsCount": 73,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "metaobject_definition_id",
+          "value": "gid://shopify/MetaobjectDefinition/5403607366"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "Nic Strength Variant",
+      "namespace": "vcustom",
+      "key": "nic_strength",
+      "type": "single_line_text_field",
+      "description": "Variant Nic Strength",
+      "metafieldsCount": 72,
+      "pinnedPosition": 1,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"0% Nicotine Free\",\"0mg\",\"3mg\",\"6mg\",\"5mg\",\"10mg\",\"11mg\",\"12mg\",\"13mg\",\"15mg\",\"18mg\",\"20mg\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "ORDER",
+      "name": "Payment Due date",
+      "namespace": "order",
+      "key": "payment_due_date",
+      "type": "date",
+      "description": "Order Payment Due date",
+      "metafieldsCount": 61,
+      "pinnedPosition": 1,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "READ"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "Variant Description",
+      "namespace": "custom",
+      "key": "variant_description",
+      "type": "rich_text_field",
+      "description": "Variant Description",
+      "metafieldsCount": 60,
+      "pinnedPosition": 2,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "limit_max_qty",
+      "namespace": "custom",
+      "key": "limit_max_qty",
+      "type": "number_integer",
+      "description": "",
+      "metafieldsCount": 56,
+      "pinnedPosition": 18,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "customergroup01",
+      "namespace": "custom",
+      "key": "customergroup01",
+      "type": "list.single_line_text_field",
+      "description": "",
+      "metafieldsCount": 43,
+      "pinnedPosition": 3,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"FirstGroup\",\"NewCustomerGroup\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "READ"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "E-liquid variety",
+      "namespace": "shopify",
+      "key": "e-liquid-variety",
+      "type": "list.metaobject_reference",
+      "description": "Distinguishes between different e-liquid options, e.g. short fill, nicotine shot",
+      "metafieldsCount": 42,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "metaobject_definition_id",
+          "value": "gid://shopify/MetaobjectDefinition/7183171910"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "COMPANY",
+      "name": "SP_Assigned",
+      "namespace": "custom",
+      "key": "salesperson_assigned",
+      "type": "single_line_text_field",
+      "description": "SP_Assigned",
+      "metafieldsCount": 40,
+      "pinnedPosition": 5,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Related Products",
+      "namespace": "custom",
+      "key": "related_products",
+      "type": "list.product_reference",
+      "description": "",
+      "metafieldsCount": 24,
+      "pinnedPosition": 21,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "flavour",
+      "namespace": "custom",
+      "key": "flavour",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 20,
+      "pinnedPosition": 14,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Related Variants",
+      "namespace": "custom",
+      "key": "related_variants",
+      "type": "list.product_reference",
+      "description": "",
+      "metafieldsCount": 19,
+      "pinnedPosition": 19,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Current Variant Text",
+      "namespace": "custom",
+      "key": "current_variant_text",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 13,
+      "pinnedPosition": 20,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Capacity",
+      "namespace": "custom",
+      "key": "capacity",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 12,
+      "pinnedPosition": 11,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "strength_label",
+      "namespace": "custom",
+      "key": "strength_label",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 12,
+      "pinnedPosition": 23,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "pack_size",
+      "namespace": "custom",
+      "key": "pack_size",
+      "type": "number_integer",
+      "description": "",
+      "metafieldsCount": 8,
+      "pinnedPosition": 15,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "ORDER",
+      "name": "Store Credit Used",
+      "namespace": "dollar-cashback",
+      "key": "store-credit-used",
+      "type": "single_line_text_field",
+      "description": "Amount and currency of store credit used/redeemed in this order",
+      "metafieldsCount": 6,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "ORDER",
+      "name": "Store Credit Given",
+      "namespace": "dollar-cashback",
+      "key": "store-credit-given",
+      "type": "single_line_text_field",
+      "description": "Amount and currency of store credit/cashback given for this order",
+      "metafieldsCount": 6,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "ORDER",
+      "name": "Skulabs Shopname",
+      "namespace": "skulabs",
+      "key": "shopname",
+      "type": "single_line_text_field",
+      "description": "Skulabs Shopname Field for PDF Template",
+      "metafieldsCount": 5,
+      "pinnedPosition": 9,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "READ"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Battery size",
+      "namespace": "shopify",
+      "key": "battery-size",
+      "type": "list.metaobject_reference",
+      "description": "Indicates the battery compatibility for the product, such as AAA or 9V",
+      "metafieldsCount": 5,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "metaobject_definition_id",
+          "value": "gid://shopify/MetaobjectDefinition/27618279750"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "COLLECTION",
+      "name": "Collection About Image",
+      "namespace": "custom",
+      "key": "collection_about_image",
+      "type": "file_reference",
+      "description": "",
+      "metafieldsCount": 4,
+      "pinnedPosition": 3,
+      "validations": [
+        {
+          "name": "file_type_options",
+          "value": "[\"Image\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "COLLECTION",
+      "name": "Collection About Title",
+      "namespace": "custom",
+      "key": "collection_about_title",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 4,
+      "pinnedPosition": 4,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "COLLECTION",
+      "name": "Collection About Descriptions",
+      "namespace": "custom",
+      "key": "collection_about_descriptions",
+      "type": "rich_text_field",
+      "description": "",
+      "metafieldsCount": 4,
+      "pinnedPosition": 5,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "pack_size_rule",
+      "namespace": "custom",
+      "key": "pack_size_rule",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 4,
+      "pinnedPosition": 16,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Google: Custom Product",
+      "namespace": "mm-google-shopping",
+      "key": "custom_product",
+      "type": "boolean",
+      "description": "Use to indicate whether or not the unique product identifiers (UPIs) GTIN, MPN, and brand are available for your product.",
+      "metafieldsCount": 3,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "bought together",
+      "namespace": "custom",
+      "key": "bought_together",
+      "type": "list.product_reference",
+      "description": "Product - List of products",
+      "metafieldsCount": 3,
+      "pinnedPosition": 4,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "COMPANY",
+      "name": "Num of stores",
+      "namespace": "company",
+      "key": "number_of_stores",
+      "type": "number_integer",
+      "description": "company.number_of_stores owned",
+      "metafieldsCount": 2,
+      "pinnedPosition": 2,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "COMPANY",
+      "name": "Store Type",
+      "namespace": "company",
+      "key": "store_type",
+      "type": "single_line_text_field",
+      "description": "company.store_type",
+      "metafieldsCount": 2,
+      "pinnedPosition": 3,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"Vape Shop\",\"Convenience Store\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Color",
+      "namespace": "shopify",
+      "key": "color-pattern",
+      "type": "list.metaobject_reference",
+      "description": "Defines the primary color or pattern, such as blue or striped",
+      "metafieldsCount": 2,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "metaobject_definition_id",
+          "value": "gid://shopify/MetaobjectDefinition/5403640134"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Resistance",
+      "namespace": "custom",
+      "key": "resistance",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 2,
+      "pinnedPosition": 15,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "COMPANY",
+      "name": "Store Name",
+      "namespace": "custom",
+      "key": "store_name",
+      "type": "single_line_text_field",
+      "description": "Shops Name",
+      "metafieldsCount": 1,
+      "pinnedPosition": 6,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Related products",
+      "namespace": "shopify--discovery--product_recommendation",
+      "key": "related_products",
+      "type": "list.product_reference",
+      "description": "List of related products",
+      "metafieldsCount": 1,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "list.max",
+          "value": "10"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "E-liquid flavor",
+      "namespace": "shopify",
+      "key": "e-liquid-flavor",
+      "type": "list.metaobject_reference",
+      "description": "Specifies the taste of e-liquids for vaporizers and electronic cigarettes, e.g. coffee, strawberry",
+      "metafieldsCount": 1,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "metaobject_definition_id",
+          "value": "gid://shopify/MetaobjectDefinition/5836046662"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "shipping-returns-tab",
+      "namespace": "custom",
+      "key": "shipping_returns_tab",
+      "type": "rich_text_field",
+      "description": "Product Tab",
+      "metafieldsCount": 1,
+      "pinnedPosition": 1,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Toothpaste type",
+      "namespace": "shopify",
+      "key": "toothpaste-type",
+      "type": "list.metaobject_reference",
+      "description": "Defines the specific function of toothpaste, such as anti-decay or whitening",
+      "metafieldsCount": 1,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "metaobject_definition_id",
+          "value": "gid://shopify/MetaobjectDefinition/25742410054"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "VG/PG ratio",
+      "namespace": "shopify",
+      "key": "vg-pg-ratio",
+      "type": "list.metaobject_reference",
+      "description": "Indicates the vegetable glycerin to propylene glycol ratio in e-liquids, e.g. 30:70",
+      "metafieldsCount": 1,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "metaobject_definition_id",
+          "value": "gid://shopify/MetaobjectDefinition/26232324422"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Allergen information",
+      "namespace": "shopify",
+      "key": "allergen-information",
+      "type": "list.metaobject_reference",
+      "description": "Indicates potential allergens present in food or beverages, such as wheat or peanuts",
+      "metafieldsCount": 1,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "metaobject_definition_id",
+          "value": "gid://shopify/MetaobjectDefinition/31177834822"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Chocolate type",
+      "namespace": "shopify",
+      "key": "chocolate-type",
+      "type": "list.metaobject_reference",
+      "description": "Defines the variety of chocolate based on its ingredients and cocoa content, e.g. dark chocolate, milk chocolate",
+      "metafieldsCount": 1,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "metaobject_definition_id",
+          "value": "gid://shopify/MetaobjectDefinition/31177867590"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "SHOP",
+      "name": "BOGOS custom_data (Do not edit)",
+      "namespace": "secomapp",
+      "key": "freegifts_custom_data",
+      "type": "json",
+      "description": "",
+      "metafieldsCount": 1,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "COLLECTION",
+      "name": "collection-banner-image-right",
+      "namespace": "custom",
+      "key": "collection_banner_image_right",
+      "type": "file_reference",
+      "description": "",
+      "metafieldsCount": 0,
+      "pinnedPosition": 6,
+      "validations": [
+        {
+          "name": "file_type_options",
+          "value": "[\"Image\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "COMPANY",
+      "name": "Company Registration Number",
+      "namespace": "company",
+      "key": "company_registration_number",
+      "type": "single_line_text_field",
+      "description": "Company Registration Number",
+      "metafieldsCount": 0,
+      "pinnedPosition": 4,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "cart_data",
+      "namespace": "custom",
+      "key": "cart_data",
+      "type": "json",
+      "description": "",
+      "metafieldsCount": 0,
+      "pinnedPosition": 2,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "Tiered Price Segment",
+      "namespace": "customer",
+      "key": "tiered_price_segment",
+      "type": "single_line_text_field",
+      "description": "Customer Tiered Price Segment",
+      "metafieldsCount": 0,
+      "pinnedPosition": 1,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"Tier 1\",\"Tier 2\",\"Tier 3\",\"Tier 4\",\"Tier 5\",\"Tier 6\",\"Tier 7\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "B2B Customer Data",
+      "namespace": "b2b",
+      "key": "customer_data",
+      "type": "json",
+      "description": "B2B data (company name, VAT number, Peppol address)",
+      "metafieldsCount": 0,
+      "pinnedPosition": 17,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "CUSTOMER",
+      "name": "Customer Cashback Data",
+      "namespace": "dollar-cashback",
+      "key": "customer-data",
+      "type": "json",
+      "description": "Customer data for cashback rewards including birthday and social rewards",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "DRAFTORDER",
+      "name": "Payment Due date",
+      "namespace": "order",
+      "key": "payment_due_date",
+      "type": "date",
+      "description": "Order Payment Due date",
+      "metafieldsCount": 0,
+      "pinnedPosition": 4,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "ORDER",
+      "name": "B2B Order Data",
+      "namespace": "b2b",
+      "key": "order_data",
+      "type": "json",
+      "description": "B2B data captured at checkout (company name, VAT number, Peppol address)",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Search product boosts",
+      "namespace": "shopify--discovery--product_search_boost",
+      "key": "queries",
+      "type": "list.single_line_text_field",
+      "description": "List of search queries for which a product gets higher rank in search results",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "max",
+          "value": "100"
+        },
+        {
+          "name": "list.max",
+          "value": "10"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Related products settings",
+      "namespace": "shopify--discovery--product_recommendation",
+      "key": "related_products_display",
+      "type": "single_line_text_field",
+      "description": "Determines how related products are displayed along with algorithmic product recommendations",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "choices",
+          "value": "[\"ahead\",\"only manual\"]"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Complementary products",
+      "namespace": "shopify--discovery--product_recommendation",
+      "key": "complementary_products",
+      "type": "list.product_reference",
+      "description": "List of complementary products",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "list.max",
+          "value": "10"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Dietary preferences",
+      "namespace": "shopify",
+      "key": "dietary-preferences",
+      "type": "list.metaobject_reference",
+      "description": "Helps identify products suitable for specific diets, e.g. vegan, nut free",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "metaobject_definition_id",
+          "value": "gid://shopify/MetaobjectDefinition/6031802694"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Flavor",
+      "namespace": "shopify",
+      "key": "flavor",
+      "type": "list.metaobject_reference",
+      "description": "Specifies the taste or flavor of a product, e.g. vanilla, mint",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "metaobject_definition_id",
+          "value": "gid://shopify/MetaobjectDefinition/6705971526"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Package type",
+      "namespace": "shopify",
+      "key": "package-type",
+      "type": "list.metaobject_reference",
+      "description": "Defines the type of packaging for a product, e.g. jar, pump",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "metaobject_definition_id",
+          "value": "gid://shopify/MetaobjectDefinition/6706135366"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Soda variety",
+      "namespace": "shopify",
+      "key": "soda-variety",
+      "type": "list.metaobject_reference",
+      "description": "Classifies soda products by type or flavor, e.g. lemon lime, orange",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "metaobject_definition_id",
+          "value": "gid://shopify/MetaobjectDefinition/6706168134"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Coil connection",
+      "namespace": "shopify",
+      "key": "coil-connection",
+      "type": "list.metaobject_reference",
+      "description": "Defines the replaceability of the coil in vaping devices, e.g. fixed, changeable",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "metaobject_definition_id",
+          "value": "gid://shopify/MetaobjectDefinition/11650990406"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Vaping style",
+      "namespace": "shopify",
+      "key": "vaping-style",
+      "type": "list.metaobject_reference",
+      "description": "Specifies the vaping technique for electronic cigarettes, e.g. direct-to-lung, mouth-to-lung ",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [
+        {
+          "name": "metaobject_definition_id",
+          "value": "gid://shopify/MetaobjectDefinition/12882706758"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Price Level High",
+      "namespace": "custom",
+      "key": "price_high",
+      "type": "number_decimal",
+      "description": "Custom Product Price High Level",
+      "metafieldsCount": 0,
+      "pinnedPosition": 2,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Price Level Basic Lower",
+      "namespace": "custom",
+      "key": "price_basic",
+      "type": "number_decimal",
+      "description": "Price Level Basic Lower",
+      "metafieldsCount": 0,
+      "pinnedPosition": 3,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "EasyScan Product Bin Location",
+      "namespace": "my_fields",
+      "key": "bin_location",
+      "type": "single_line_text_field",
+      "description": "EasyScan Product Bin Location, update in the EasyScan app",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Pick & Pack Tip",
+      "namespace": "custom",
+      "key": "ProductPickPackTip",
+      "type": "single_line_text_field",
+      "description": "Barcode used for picking products",
+      "metafieldsCount": 0,
+      "pinnedPosition": 8,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Product Location",
+      "namespace": "custom",
+      "key": "ProductLocation",
+      "type": "single_line_text_field",
+      "description": "Location used for picking products",
+      "metafieldsCount": 0,
+      "pinnedPosition": 9,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "available_flavours",
+      "namespace": "custom",
+      "key": "available_flavours",
+      "type": "list.single_line_text_field",
+      "description": "",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "All Flavours",
+      "namespace": "custom",
+      "key": "all_flavours",
+      "type": "list.single_line_text_field",
+      "description": "",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCT",
+      "name": "Batch Number",
+      "namespace": "custom",
+      "key": "batch_number",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 0,
+      "pinnedPosition": 22,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "Google: Custom Label 4",
+      "namespace": "mm-google-shopping",
+      "key": "custom_label_4",
+      "type": "single_line_text_field",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "Google: Custom Label 3",
+      "namespace": "mm-google-shopping",
+      "key": "custom_label_3",
+      "type": "single_line_text_field",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "Google: Custom Label 2",
+      "namespace": "mm-google-shopping",
+      "key": "custom_label_2",
+      "type": "single_line_text_field",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "Google: Custom Label 1",
+      "namespace": "mm-google-shopping",
+      "key": "custom_label_1",
+      "type": "single_line_text_field",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "Google: Custom Label 0",
+      "namespace": "mm-google-shopping",
+      "key": "custom_label_0",
+      "type": "single_line_text_field",
+      "description": "Label that you assign to a product to help organize bidding and reporting in Shopping campaigns.",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "Google: Size System",
+      "namespace": "mm-google-shopping",
+      "key": "size_system",
+      "type": "single_line_text_field",
+      "description": "The country of the size system used by your product.",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "Google: Size Type",
+      "namespace": "mm-google-shopping",
+      "key": "size_type",
+      "type": "single_line_text_field",
+      "description": "Your apparel product’s cut.",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "Google: MPN",
+      "namespace": "mm-google-shopping",
+      "key": "mpn",
+      "type": "single_line_text_field",
+      "description": "Your product’s Manufacturer Part Number (MPN).",
+      "metafieldsCount": 0,
+      "pinnedPosition": 3,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "Google: Gender",
+      "namespace": "mm-google-shopping",
+      "key": "gender",
+      "type": "single_line_text_field",
+      "description": "The gender for which your product is intended.",
+      "metafieldsCount": 0,
+      "pinnedPosition": 4,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "Google: Condition",
+      "namespace": "mm-google-shopping",
+      "key": "condition",
+      "type": "single_line_text_field",
+      "description": "The condition of your product at time of sale.",
+      "metafieldsCount": 0,
+      "pinnedPosition": 5,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "Google: Age Group",
+      "namespace": "mm-google-shopping",
+      "key": "age_group",
+      "type": "single_line_text_field",
+      "description": "The demographic for which your product is intended.",
+      "metafieldsCount": 0,
+      "pinnedPosition": 6,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "EasyScan Variant Bin Location",
+      "namespace": "my_fields",
+      "key": "bin_location",
+      "type": "single_line_text_field",
+      "description": "EasyScan Variant Bin Location, update in the EasyScan app",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "scanpacker.storage_location",
+      "namespace": "scanpacker",
+      "key": "storage_location",
+      "type": "single_line_text_field",
+      "description": "",
+      "metafieldsCount": 0,
+      "pinnedPosition": 7,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "ScanPick Bin Location",
+      "namespace": "mas",
+      "key": "binloc",
+      "type": "single_line_text_field",
+      "description": "An inventory group,bin, or location identifier (used for picking and scanning with ScanPick)",
+      "metafieldsCount": 0,
+      "pinnedPosition": 9,
+      "validations": [
+        {
+          "name": "max",
+          "value": "175"
+        }
+      ],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "Pick & Pack Tip",
+      "namespace": "custom",
+      "key": "PickPackTip",
+      "type": "single_line_text_field",
+      "description": "Tip for picking and packing products",
+      "metafieldsCount": 0,
+      "pinnedPosition": 10,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "Variant Location",
+      "namespace": "custom",
+      "key": "VariantLocation",
+      "type": "single_line_text_field",
+      "description": "Location of the variant",
+      "metafieldsCount": 0,
+      "pinnedPosition": 11,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "name": "Batch Number Variant",
+      "namespace": "custom",
+      "key": "batch_number_variant",
+      "type": "single_line_text_field",
+      "description": "Batch Number Variant",
+      "metafieldsCount": 0,
+      "pinnedPosition": 17,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "PUBLIC_READ",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    },
+    {
+      "ownerType": "VALIDATION",
+      "name": "Order limits",
+      "namespace": "checkoutblocks",
+      "key": "order-limits",
+      "type": "json",
+      "description": "",
+      "metafieldsCount": 0,
+      "pinnedPosition": null,
+      "validations": [],
+      "access": {
+        "admin": "PUBLIC_READ_WRITE",
+        "storefront": "NONE",
+        "customerAccount": "NONE"
+      },
+      "preserve": true
+    }
+  ]
+}

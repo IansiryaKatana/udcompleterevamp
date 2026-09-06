@@ -1,0 +1,85 @@
+query DiscountNodesPage($cursor: String, $first: Int = 50) {
+  discountNodes(first: $first, after: $cursor) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      discount {
+        __typename
+        ... on DiscountCodeBasic {
+          title
+          status
+          shortSummary
+          summary
+          usageLimit
+          asyncUsageCount
+          startsAt
+          endsAt
+          codesCount {
+            count
+          }
+          codes(first: 20) {
+            nodes {
+              code
+            }
+          }
+        }
+        ... on DiscountCodeBxgy {
+          title
+          status
+          summary
+          usageLimit
+          asyncUsageCount
+          startsAt
+          endsAt
+        }
+        ... on DiscountCodeFreeShipping {
+          title
+          status
+          summary
+          usageLimit
+          asyncUsageCount
+          startsAt
+          endsAt
+        }
+        ... on DiscountAutomaticBasic {
+          title
+          status
+          summary
+          asyncUsageCount
+          startsAt
+          endsAt
+        }
+        ... on DiscountAutomaticBxgy {
+          title
+          status
+          summary
+          asyncUsageCount
+          startsAt
+          endsAt
+        }
+        ... on DiscountAutomaticFreeShipping {
+          title
+          status
+          summary
+          asyncUsageCount
+          startsAt
+          endsAt
+        }
+        ... on DiscountAutomaticApp {
+          title
+          status
+          appDiscountType {
+            app {
+              title
+              handle
+            }
+            functionId
+          }
+        }
+      }
+    }
+  }
+}

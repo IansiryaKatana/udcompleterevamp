@@ -213,7 +213,7 @@ export function AdminSocialLinks() {
               className={adminInput}
               value={form.href}
               onChange={(e) => setForm((f) => ({ ...f, href: e.target.value }))}
-              placeholder="https://instagram.com/astor"
+              placeholder="https://instagram.com/uniquedistribution"
             />
           </div>
           <div className="space-y-2">

@@ -143,12 +143,12 @@ export async function loadEmailBrand(supabase: SupabaseClient): Promise<EmailBra
     'brand_primary',
   ])
 
-  const siteName = settings.site_name?.trim() || settings.email_from_name?.trim() || 'Astor Electronics'
+  const siteName = settings.site_name?.trim() || settings.email_from_name?.trim() || 'Unique Distribution'
   const storeUrl =
     settings.store_url?.trim() ||
     Deno.env.get('STORE_URL')?.trim() ||
     Deno.env.get('SITE_URL')?.trim() ||
-    'https://astor.example'
+    'https://uniquedistribution.com'
 
   return {
     siteName,

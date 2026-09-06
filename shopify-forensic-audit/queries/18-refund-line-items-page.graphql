@@ -1,0 +1,43 @@
+# Nested refundLineItems pagination for a single Refund (READ-ONLY).
+query RefundLineItemsPage($id: ID!, $cursor: String, $first: Int!) {
+  refund(id: $id) {
+    id
+    createdAt
+    note
+    lineItems: refundLineItems(first: $first, after: $cursor) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      nodes {
+        id
+        quantity
+        restockType
+        restocked
+        priceSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
+        subtotalSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
+        totalTaxSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
+        lineItem {
+          id
+          sku
+          name
+        }
+      }
+    }
+  }
+}

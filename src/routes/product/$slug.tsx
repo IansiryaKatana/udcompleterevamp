@@ -55,7 +55,7 @@ function ProductDetailPage() {
     `${snapshot.siteName} — Premium electronics for work, play, and everything in between.`
 
   usePageMeta(
-    product ? buildProductMeta(product, snapshot.siteName) : { title: 'Product | Astor Electronics' },
+    product ? buildProductMeta(product, snapshot.siteName) : { title: 'Product | Unique Distribution' },
   )
 
   if (isLoading) {

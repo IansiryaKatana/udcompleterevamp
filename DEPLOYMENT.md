@@ -1,6 +1,6 @@
 # Deployment
 
-Astor Electronics is a **TanStack Start** app with SSR. Use one of two build targets depending on where you host.
+Unique Distribution is a **TanStack Start** app with SSR. Use one of two build targets depending on where you host.
 
 | Target | Command | Output | Host |
 |--------|---------|--------|------|
@@ -47,7 +47,7 @@ Copy `.env.example` to `.env` for local development.
 3. Netlify reads `netlify.toml` automatically:
    - Build command: `npm run build:netlify`
    - Publish directory: `dist/client`
-4. Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` in site environment variables.
+4. Add `VITE_SUPABASE_URL=https://oelolusdbaoyiqkgukib.supabase.co` and `VITE_SUPABASE_ANON_KEY` from [The UD Revamp](https://supabase.com/dashboard/project/oelolusdbaoyiqkgukib/settings/api-keys).
 5. Deploy.
 
 ### CLI (optional)
@@ -82,7 +82,7 @@ Hostinger **shared PHP-only** plans cannot run this app. Use:
 ### Build on the server
 
 ```bash
-cd /path/to/astor-electronics
+cd /path/to/unique-distribution
 npm ci
 npm run build:hostinger
 ```

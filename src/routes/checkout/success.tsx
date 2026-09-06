@@ -13,7 +13,7 @@ export const Route = createFileRoute('/checkout/success')({
     quote: typeof search.quote === 'string' ? search.quote : undefined,
   }),
   component: CheckoutSuccessPage,
-  head: () => ({ meta: [{ title: 'Order Confirmed | Astor Electronics' }] }),
+  head: () => ({ meta: [{ title: 'Order Confirmed | Unique Distribution' }] }),
 })
 
 function CheckoutSuccessPage() {

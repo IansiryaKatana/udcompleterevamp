@@ -1,0 +1,65 @@
+query CompaniesPage($cursor: String, $first: Int = 50) {
+  companies(first: $first, after: $cursor) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      name
+      note
+      createdAt
+      updatedAt
+      customerSince
+      contactCount
+      locationsCount {
+        count
+      }
+      metafields(first: 50) {
+        nodes {
+          id
+          namespace
+          key
+          type
+          value
+          jsonValue
+        }
+      }
+      locations(first: 20) {
+        nodes {
+          id
+          name
+          createdAt
+          buyerExperienceConfiguration {
+            paymentTermsTemplate {
+              id
+              name
+              paymentTermsType
+              dueInDays
+            }
+          }
+          metafields(first: 30) {
+            nodes {
+              id
+              namespace
+              key
+              type
+              value
+              jsonValue
+            }
+          }
+        }
+      }
+      contacts(first: 20) {
+        nodes {
+          id
+          customer {
+            id
+            displayName
+            email
+          }
+        }
+      }
+    }
+  }
+}

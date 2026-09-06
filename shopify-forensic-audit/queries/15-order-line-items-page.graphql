@@ -1,0 +1,79 @@
+# Targeted nested lineItems pagination for a single Order (READ-ONLY).
+query OrderLineItemsPage($id: ID!, $cursor: String, $first: Int!) {
+  order(id: $id) {
+    id
+    name
+    lineItems(first: $first, after: $cursor) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      nodes {
+        id
+        sku
+        name
+        title
+        variantTitle
+        quantity
+        currentQuantity
+        vendor
+        requiresShipping
+        taxable
+        isGiftCard
+        originalUnitPriceSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
+        discountedUnitPriceSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
+        originalTotalSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
+        discountedTotalSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
+        product {
+          id
+          title
+          handle
+          status
+          productType
+          vendor
+        }
+        variant {
+          id
+          sku
+          barcode
+          title
+        }
+        customAttributes {
+          key
+          value
+        }
+        taxLines {
+          title
+          rate
+          ratePercentage
+          priceSet {
+            shopMoney {
+              amount
+              currencyCode
+            }
+          }
+        }
+      }
+    }
+  }
+}

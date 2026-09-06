@@ -1,0 +1,24 @@
+query MetaobjectDefinitionsPage($cursor: String, $first: Int = 50) {
+  metaobjectDefinitions(first: $first, after: $cursor) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      name
+      type
+      description
+      displayNameKey
+      fieldDefinitions {
+        key
+        name
+        type {
+          name
+        }
+        required
+      }
+      metaobjectsCount
+    }
+  }
+}

@@ -19,7 +19,7 @@ import { z } from 'zod'
 
 export const Route = createFileRoute('/account')({
   component: AccountPage,
-  head: () => ({ meta: [{ title: 'My Account | Astor Electronics' }] }),
+  head: () => ({ meta: [{ title: 'My Account | Unique Distribution' }] }),
 })
 
 const authSchema = z.object({

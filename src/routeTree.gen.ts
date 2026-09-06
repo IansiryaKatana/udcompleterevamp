@@ -51,6 +51,7 @@ import { Route as BackendCheckoutRouteImport } from './routes/backend/checkout'
 import { Route as BackendCategoriesRouteImport } from './routes/backend/categories'
 import { Route as BackendCatalogRouteImport } from './routes/backend/catalog'
 import { Route as AdminSplatRouteImport } from './routes/admin/$'
+import { Route as BackendOrdersOrderIdRouteImport } from './routes/backend/orders.$orderId'
 import { Route as AccountOrdersOrderIdRouteImport } from './routes/account/orders/$orderId'
 
 const SearchRoute = SearchRouteImport.update({
@@ -263,6 +264,11 @@ const AdminSplatRoute = AdminSplatRouteImport.update({
   path: '/$',
   getParentRoute: () => AdminRouteRoute,
 } as any)
+const BackendOrdersOrderIdRoute = BackendOrdersOrderIdRouteImport.update({
+  id: '/$orderId',
+  path: '/$orderId',
+  getParentRoute: () => BackendOrdersRoute,
+} as any)
 const AccountOrdersOrderIdRoute = AccountOrdersOrderIdRouteImport.update({
   id: '/orders/$orderId',
   path: '/orders/$orderId',
@@ -297,7 +303,7 @@ export interface FileRoutesByFullPath {
   '/backend/media': typeof BackendMediaRoute
   '/backend/nav-links': typeof BackendNavLinksRoute
   '/backend/newsletter': typeof BackendNewsletterRoute
-  '/backend/orders': typeof BackendOrdersRoute
+  '/backend/orders': typeof BackendOrdersRouteWithChildren
   '/backend/pages': typeof BackendPagesRoute
   '/backend/products': typeof BackendProductsRoute
   '/backend/settings': typeof BackendSettingsRoute
@@ -313,6 +319,7 @@ export interface FileRoutesByFullPath {
   '/backend/': typeof BackendIndexRoute
   '/bundles/': typeof BundlesIndexRoute
   '/account/orders/$orderId': typeof AccountOrdersOrderIdRoute
+  '/backend/orders/$orderId': typeof BackendOrdersOrderIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -340,7 +347,7 @@ export interface FileRoutesByTo {
   '/backend/media': typeof BackendMediaRoute
   '/backend/nav-links': typeof BackendNavLinksRoute
   '/backend/newsletter': typeof BackendNewsletterRoute
-  '/backend/orders': typeof BackendOrdersRoute
+  '/backend/orders': typeof BackendOrdersRouteWithChildren
   '/backend/pages': typeof BackendPagesRoute
   '/backend/products': typeof BackendProductsRoute
   '/backend/settings': typeof BackendSettingsRoute
@@ -356,6 +363,7 @@ export interface FileRoutesByTo {
   '/backend': typeof BackendIndexRoute
   '/bundles': typeof BundlesIndexRoute
   '/account/orders/$orderId': typeof AccountOrdersOrderIdRoute
+  '/backend/orders/$orderId': typeof BackendOrdersOrderIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -386,7 +394,7 @@ export interface FileRoutesById {
   '/backend/media': typeof BackendMediaRoute
   '/backend/nav-links': typeof BackendNavLinksRoute
   '/backend/newsletter': typeof BackendNewsletterRoute
-  '/backend/orders': typeof BackendOrdersRoute
+  '/backend/orders': typeof BackendOrdersRouteWithChildren
   '/backend/pages': typeof BackendPagesRoute
   '/backend/products': typeof BackendProductsRoute
   '/backend/settings': typeof BackendSettingsRoute
@@ -402,6 +410,7 @@ export interface FileRoutesById {
   '/backend/': typeof BackendIndexRoute
   '/bundles/': typeof BundlesIndexRoute
   '/account/orders/$orderId': typeof AccountOrdersOrderIdRoute
+  '/backend/orders/$orderId': typeof BackendOrdersOrderIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -449,6 +458,7 @@ export interface FileRouteTypes {
     | '/backend/'
     | '/bundles/'
     | '/account/orders/$orderId'
+    | '/backend/orders/$orderId'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -492,6 +502,7 @@ export interface FileRouteTypes {
     | '/backend'
     | '/bundles'
     | '/account/orders/$orderId'
+    | '/backend/orders/$orderId'
   id:
     | '__root__'
     | '/'
@@ -537,6 +548,7 @@ export interface FileRouteTypes {
     | '/backend/'
     | '/bundles/'
     | '/account/orders/$orderId'
+    | '/backend/orders/$orderId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -850,6 +862,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminSplatRouteImport
       parentRoute: typeof AdminRouteRoute
     }
+    '/backend/orders/$orderId': {
+      id: '/backend/orders/$orderId'
+      path: '/$orderId'
+      fullPath: '/backend/orders/$orderId'
+      preLoaderRoute: typeof BackendOrdersOrderIdRouteImport
+      parentRoute: typeof BackendOrdersRoute
+    }
     '/account/orders/$orderId': {
       id: '/account/orders/$orderId'
       path: '/orders/$orderId'
@@ -874,6 +893,18 @@ const AdminRouteRouteWithChildren = AdminRouteRoute._addFileChildren(
   AdminRouteRouteChildren,
 )
 
+interface BackendOrdersRouteChildren {
+  BackendOrdersOrderIdRoute: typeof BackendOrdersOrderIdRoute
+}
+
+const BackendOrdersRouteChildren: BackendOrdersRouteChildren = {
+  BackendOrdersOrderIdRoute: BackendOrdersOrderIdRoute,
+}
+
+const BackendOrdersRouteWithChildren = BackendOrdersRoute._addFileChildren(
+  BackendOrdersRouteChildren,
+)
+
 interface BackendRouteRouteChildren {
   BackendCatalogRoute: typeof BackendCatalogRoute
   BackendCategoriesRoute: typeof BackendCategoriesRoute
@@ -894,7 +925,7 @@ interface BackendRouteRouteChildren {
   BackendMediaRoute: typeof BackendMediaRoute
   BackendNavLinksRoute: typeof BackendNavLinksRoute
   BackendNewsletterRoute: typeof BackendNewsletterRoute
-  BackendOrdersRoute: typeof BackendOrdersRoute
+  BackendOrdersRoute: typeof BackendOrdersRouteWithChildren
   BackendPagesRoute: typeof BackendPagesRoute
   BackendProductsRoute: typeof BackendProductsRoute
   BackendSettingsRoute: typeof BackendSettingsRoute
@@ -924,7 +955,7 @@ const BackendRouteRouteChildren: BackendRouteRouteChildren = {
   BackendMediaRoute: BackendMediaRoute,
   BackendNavLinksRoute: BackendNavLinksRoute,
   BackendNewsletterRoute: BackendNewsletterRoute,
-  BackendOrdersRoute: BackendOrdersRoute,
+  BackendOrdersRoute: BackendOrdersRouteWithChildren,
   BackendPagesRoute: BackendPagesRoute,
   BackendProductsRoute: BackendProductsRoute,
   BackendSettingsRoute: BackendSettingsRoute,

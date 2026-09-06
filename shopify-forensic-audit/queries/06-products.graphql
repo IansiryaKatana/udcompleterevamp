@@ -1,0 +1,130 @@
+query ProductsPage($cursor: String, $first: Int = 50) {
+  products(first: $first, after: $cursor, sortKey: CREATED_AT) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      legacyResourceId
+      title
+      handle
+      status
+      vendor
+      productType
+      tags
+      createdAt
+      updatedAt
+      publishedAt
+      isGiftCard
+      hasOutOfStockVariants
+      tracksInventory
+      totalInventory
+      onlineStoreUrl
+      descriptionHtml
+      seo {
+        title
+        description
+      }
+      options {
+        id
+        name
+        values
+        position
+      }
+      featuredMedia {
+        id
+        alt
+        mediaContentType
+      }
+      media(first: 20) {
+        nodes {
+          id
+          alt
+          mediaContentType
+          preview {
+            image {
+              url
+            }
+          }
+        }
+      }
+      metafields(first: 50) {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        nodes {
+          id
+          namespace
+          key
+          type
+          value
+          jsonValue
+        }
+      }
+      collections(first: 20) {
+        nodes {
+          id
+          handle
+          title
+        }
+      }
+      variants(first: 50) {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        nodes {
+          id
+          legacyResourceId
+          title
+          sku
+          barcode
+          displayName
+          position
+          availableForSale
+          taxable
+          taxCode
+          inventoryPolicy
+          inventoryQuantity
+          sellableOnlineQuantity
+          createdAt
+          updatedAt
+          price
+          compareAtPrice
+          selectedOptions {
+            name
+            value
+          }
+          inventoryItem {
+            id
+            sku
+            tracked
+            requiresShipping
+            measurement {
+              weight {
+                value
+                unit
+              }
+            }
+            unitCost {
+              amount
+              currencyCode
+            }
+          }
+          metafields(first: 30) {
+            nodes {
+              id
+              namespace
+              key
+              type
+              value
+              jsonValue
+            }
+          }
+        }
+      }
+    }
+  }
+}

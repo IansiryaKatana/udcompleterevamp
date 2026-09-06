@@ -9,7 +9,7 @@ import { productGridClasses } from '@/components/storefront/productGridClasses'
 
 export const Route = createFileRoute('/bundles/')({
   component: BundlesIndexPage,
-  head: () => ({ meta: [{ title: 'Product Bundles | Astor Electronics' }] }),
+  head: () => ({ meta: [{ title: 'Product Bundles | Unique Distribution' }] }),
 })
 
 function BundlesIndexPage() {

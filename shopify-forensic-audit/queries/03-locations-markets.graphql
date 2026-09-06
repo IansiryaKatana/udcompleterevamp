@@ -1,0 +1,48 @@
+query LocationsMarketsChannels {
+  locations(first: 50, includeLegacy: true, includeInactive: true) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      name
+      isActive
+      isPrimary
+      fulfillsOnlineOrders
+      hasActiveInventory
+      hasUnfulfilledOrders
+      shipsInventory
+      address {
+        address1
+        address2
+        city
+        zip
+        province
+        provinceCode
+        country
+        countryCode
+        phone
+      }
+      fulfillmentService {
+        handle
+        serviceName
+        type
+      }
+    }
+  }
+  markets(first: 50) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      name
+      handle
+      status
+      type
+      primary
+    }
+  }
+}

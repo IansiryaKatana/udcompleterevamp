@@ -1,5 +1,5 @@
 export const COOKIE_CONSENT_VERSION = '1'
-export const COOKIE_CONSENT_STORAGE_KEY = `astor_cookie_consent_v${COOKIE_CONSENT_VERSION}`
+export const COOKIE_CONSENT_STORAGE_KEY = `unique_cookie_consent_v${COOKIE_CONSENT_VERSION}`
 
 export type CookieConsentPreferences = {
   version: string
@@ -40,7 +40,7 @@ export function writeCookieConsent(prefs: Omit<CookieConsentPreferences, 'versio
     decidedAt: prefs.decidedAt ?? new Date().toISOString(),
   }
   localStorage.setItem(COOKIE_CONSENT_STORAGE_KEY, JSON.stringify(payload))
-  window.dispatchEvent(new CustomEvent('astor:cookie-consent', { detail: payload }))
+  window.dispatchEvent(new CustomEvent('unique:cookie-consent', { detail: payload }))
   return payload
 }
 

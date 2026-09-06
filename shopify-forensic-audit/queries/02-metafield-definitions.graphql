@@ -1,0 +1,35 @@
+query MetafieldDefinitions($ownerType: MetafieldOwnerType!, $cursor: String) {
+  metafieldDefinitions(
+    first: 250
+    ownerType: $ownerType
+    after: $cursor
+  ) {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    nodes {
+      id
+      name
+      namespace
+      key
+      description
+      type {
+        name
+        category
+      }
+      ownerType
+      pinnedPosition
+      validations {
+        name
+        value
+      }
+      access {
+        admin
+        storefront
+        customerAccount
+      }
+      metafieldsCount
+    }
+  }
+}

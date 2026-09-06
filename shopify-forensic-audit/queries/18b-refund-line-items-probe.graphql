@@ -1,0 +1,15 @@
+# Probe whether a refund's lineItems connection continues past first page.
+query RefundLineItemsProbe($id: ID!) {
+  refund(id: $id) {
+    id
+    lineItems: refundLineItems(first: 50) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      nodes {
+        id
+      }
+    }
+  }
+}

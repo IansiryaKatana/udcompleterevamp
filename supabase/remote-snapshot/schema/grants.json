@@ -1,0 +1,3117 @@
+[
+  {
+    "table_name": "admin_users",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "admin_users",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "categories",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "cms_media",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "collections",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "coupon_redemptions",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "coupons",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "email_templates",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "feature_cards",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "form_submissions",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "hero_slides",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "homepage_sections",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "inventory_reservations",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "lifestyle_cards",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "marketing_pages",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "nav_links",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "newsletter_subscribers",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "order_items",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "orders",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "private_settings",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "private_settings",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "private_settings",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "private_settings",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "private_settings",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "private_settings",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "private_settings",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "product_bundle_items",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "product_bundles",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "product_reviews",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "product_variants",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "products",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "products",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "products",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "products",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "products",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "products",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "products",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "products",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "products",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "products",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "products",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "products",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "products",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "products",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "products",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "products",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "products",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "products",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "products",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "products",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "products",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "rate_limit_events",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "rate_limit_events",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "rate_limit_events",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "rate_limit_events",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "rate_limit_events",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "rate_limit_events",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "rate_limit_events",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "shipping_zones",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "site_settings",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "social_links",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "stock_alert_subscriptions",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "storefront_carts",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "anon",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "anon",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "anon",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "anon",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "anon",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "anon",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "anon",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "authenticated",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "authenticated",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "authenticated",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "authenticated",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "authenticated",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "authenticated",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "authenticated",
+    "privilege_type": "UPDATE"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "service_role",
+    "privilege_type": "DELETE"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "service_role",
+    "privilege_type": "INSERT"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "service_role",
+    "privilege_type": "REFERENCES"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "service_role",
+    "privilege_type": "SELECT"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "service_role",
+    "privilege_type": "TRIGGER"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "service_role",
+    "privilege_type": "TRUNCATE"
+  },
+  {
+    "table_name": "wishlists",
+    "grantee": "service_role",
+    "privilege_type": "UPDATE"
+  }
+]

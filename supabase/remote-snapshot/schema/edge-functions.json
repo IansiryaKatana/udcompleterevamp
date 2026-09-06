@@ -1,0 +1,12 @@
+[
+  { "slug": "request-quote", "version": 7, "verify_jwt": true, "local": "supabase/functions/request-quote/index.ts" },
+  { "slug": "send-test-email", "version": 7, "verify_jwt": true, "local": "supabase/functions/send-test-email/index.ts" },
+  { "slug": "stripe-webhook", "version": 7, "verify_jwt": true, "local": "supabase/functions/stripe-webhook/index.ts" },
+  { "slug": "submit-contact-form", "version": 6, "verify_jwt": true, "local": "supabase/functions/submit-contact-form/index.ts" },
+  { "slug": "subscribe-newsletter", "version": 6, "verify_jwt": true, "local": "supabase/functions/subscribe-newsletter/index.ts" },
+  { "slug": "verify-checkout-session", "version": 6, "verify_jwt": true, "local": "supabase/functions/verify-checkout-session/index.ts" },
+  { "slug": "admin-stripe-config", "version": 6, "verify_jwt": true, "local": "supabase/functions/admin-stripe-config/index.ts" },
+  { "slug": "create-checkout-session", "version": 7, "verify_jwt": true, "local": "supabase/functions/create-checkout-session/index.ts" },
+  { "slug": "mark-order-shipped", "version": 6, "verify_jwt": true, "local": "supabase/functions/mark-order-shipped/index.ts" },
+  { "slug": "process-abandoned-carts", "version": 4, "verify_jwt": true, "local": "supabase/functions/process-abandoned-carts/index.ts" }
+]

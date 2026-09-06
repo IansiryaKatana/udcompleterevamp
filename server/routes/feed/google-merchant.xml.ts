@@ -37,7 +37,7 @@ export default defineEventHandler(async (event) => {
         image,
         availability,
         `${Number(p.price).toFixed(2)} USD`,
-        'Astor Electronics',
+        'Unique Distribution',
       ].join(',')
     }),
   ]

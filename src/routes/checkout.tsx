@@ -28,7 +28,7 @@ const emptyShipping = (): ShippingAddressValues => ({
 
 export const Route = createFileRoute('/checkout')({
   component: CheckoutPage,
-  head: () => ({ meta: [{ title: 'Checkout | Astor Electronics' }] }),
+  head: () => ({ meta: [{ title: 'Checkout | Unique Distribution' }] }),
 })
 
 function CheckoutPage() {

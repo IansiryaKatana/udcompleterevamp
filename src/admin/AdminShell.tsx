@@ -1,5 +1,6 @@
 import { Link, useRouterState } from '@tanstack/react-router'
 import {
+  ClipboardList,
   FileText,
   LayoutDashboard,
   LogOut,
@@ -19,6 +20,7 @@ import { adminNavLink, adminNavLinkActive, adminSidebarSignOut } from '@/admin/a
 
 const NAV_ITEMS: { label: string; to: string; icon: LucideIcon; exact?: boolean }[] = [
   { label: 'Dashboard', to: '/backend', icon: LayoutDashboard, exact: true },
+  { label: 'Orders', to: '/backend/orders', icon: ClipboardList },
   { label: 'Catalog', to: '/backend/catalog', icon: Package },
   { label: 'Homepage', to: '/backend/homepage', icon: Sparkles },
   { label: 'Site Content', to: '/backend/content', icon: FileText },
@@ -70,7 +72,7 @@ function SidebarFooter({ onSignOut }: { onSignOut: () => void }) {
 function SidebarBrand() {
   return (
     <div className="shrink-0 border-b border-white/10 px-4 py-5">
-      <p className="text-xs font-medium uppercase tracking-widest text-[var(--admin-sidebar-muted)]">Astor CMS</p>
+      <p className="text-xs font-medium uppercase tracking-widest text-[var(--admin-sidebar-muted)]">Unique CMS</p>
       <p className="text-lg font-semibold">Admin</p>
     </div>
   )
@@ -122,7 +124,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
           >
             <Menu className="h-5 w-5" />
           </button>
-          <p className="text-sm font-semibold">Astor Admin</p>
+          <p className="text-sm font-semibold">Unique Admin</p>
           <div className="w-9" />
         </header>
         <main className="admin-main flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">{children}</main>

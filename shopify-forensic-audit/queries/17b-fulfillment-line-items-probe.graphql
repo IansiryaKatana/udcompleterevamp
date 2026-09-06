@@ -1,0 +1,16 @@
+# Probe whether a fulfillment's lineItems connection continues past first page.
+query FulfillmentLineItemsProbe($id: ID!) {
+  fulfillment(id: $id) {
+    id
+    name
+    lineItems: fulfillmentLineItems(first: 50) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      nodes {
+        id
+      }
+    }
+  }
+}

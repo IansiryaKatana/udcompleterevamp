@@ -6,3 +6,15 @@ dist
 .env.local
 *.log
 .DS_Store
+supabase/remote-snapshot/data
+supabase/remote-snapshot/storage
+supabase/remote-snapshot/_raw
+supabase/remote-snapshot/database.types.ts
+
+# Shopify forensic audit raw payloads contain customer PII
+shopify-forensic-audit/raw/
+shopify-forensic-audit/raw_repairs/
+shopify-forensic-audit/import/out/
+
+.tanstack/tmp/
+

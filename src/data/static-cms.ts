@@ -253,8 +253,8 @@ const COL = {
 }
 
 export const staticCmsSnapshot: CmsSnapshot = {
-  siteName: 'Astor',
-  logoText: 'ASTOR',
+  siteName: 'Unique',
+  logoText: 'UNIQUE',
   siteSettings: {
     brand_primary: '#1a3a5c',
     brand_surface: '#f4f6f8',
@@ -264,14 +264,14 @@ export const staticCmsSnapshot: CmsSnapshot = {
     currency_locale: 'en-US',
     contact_phone: '',
     contact_whatsapp: '',
-    contact_whatsapp_message: 'Hello! I have a question about Astor Electronics.',
+    contact_whatsapp_message: 'Hello! I have a question about Unique Distribution.',
     floating_whatsapp_enabled: 'true',
     stripe_enabled: 'false',
     stripe_publishable_key: '',
     stripe_mode: 'test',
     checkout_mode: 'quote',
-    quote_notification_email: 'quotes@astor.example',
-    contact_notification_email: 'info@astor.ae',
+    quote_notification_email: 'quotes@uniquedistribution.com',
+    contact_notification_email: 'info@uniquedistribution.com',
     favicon_url: '/images/favicon%20astor.png',
     logo_dark_url: '/images/ASTOR%20logo.png',
     logo_light_url: '',
@@ -280,7 +280,7 @@ export const staticCmsSnapshot: CmsSnapshot = {
     hero_bg_mobile: '',
     email_brand_color: '#5c4a32',
     email_footer_text: 'Thank you for shopping with us.',
-    email_from_name: 'Astor Electronics',
+    email_from_name: 'Unique Distribution',
     store_url: '',
   },
   navLinks: [
@@ -408,7 +408,7 @@ export const staticCmsSnapshot: CmsSnapshot = {
     {
       id: 's3',
       sectionKey: 'final_cta',
-      title: 'Build Your Setup With Premium Electronics From Astor.',
+      title: 'Build Your Setup With Premium Electronics From Unique.',
       subtitle: '',
       imageUrl: IMG.finalCta,
       ctaLabel: 'Shop Now',
@@ -500,7 +500,7 @@ export const staticCmsSnapshot: CmsSnapshot = {
     { id: 'p2', name: 'ASUS ROG Strix B650-E', slug: 'asus-rog-strix-b650e', description: 'AM5 ATX motherboard with PCIe 5.0, WiFi 6E, and robust VRM cooling.', price: 289.99, imageUrl: IMG.p2, categoryId: CAT.motherboards, collectionId: COL.new, badge: 'Bestseller', isFeatured: true, isNew: true, isSummer: false, inventoryCount: 12, published: true, sortOrder: 1 },
     { id: 'p3', name: 'Corsair Vengeance 32GB DDR5', slug: 'corsair-vengeance-32gb-ddr5', description: '32GB (2×16GB) DDR5-6000 kit optimized for AMD and Intel platforms.', price: 119.99, imageUrl: IMG.p3, categoryId: CAT.ram, collectionId: COL.deals, badge: 'Deal', isFeatured: false, isNew: false, isSummer: true, inventoryCount: 30, published: true, sortOrder: 2 },
     { id: 'p4', name: 'AMD Ryzen 7 7800X3D', slug: 'amd-ryzen-7-7800x3d', description: '8-core gaming processor with 3D V-Cache for exceptional frame rates.', price: 449.99, imageUrl: IMG.p4, categoryId: CAT.processors, collectionId: COL.new, badge: 'Hot', isFeatured: true, isNew: true, isSummer: false, inventoryCount: 9, published: true, sortOrder: 3 },
-    { id: 'p5', name: 'Astor Phantom Gaming PC', slug: 'astor-phantom-gaming-pc', description: 'Pre-built RTX 4070 rig with Ryzen 7, 32GB RAM, and 1TB NVMe SSD.', price: 1599.99, imageUrl: IMG.p5, categoryId: CAT.gamingPc, collectionId: COL.new, badge: 'Premium', isFeatured: true, isNew: true, isSummer: false, inventoryCount: 5, published: true, sortOrder: 4 },
+    { id: 'p5', name: 'Unique Phantom Gaming PC', slug: 'astor-phantom-gaming-pc', description: 'Pre-built RTX 4070 rig with Ryzen 7, 32GB RAM, and 1TB NVMe SSD.', price: 1599.99, imageUrl: IMG.p5, categoryId: CAT.gamingPc, collectionId: COL.new, badge: 'Premium', isFeatured: true, isNew: true, isSummer: false, inventoryCount: 5, published: true, sortOrder: 4 },
     { id: 'p6', name: 'MSI GeForce RTX 4070 Ti Super', slug: 'msi-rtx-4070-ti-super', description: 'Triple-fan cooling, 12GB GDDR6X, ideal for 1440p and 4K gaming.', price: 799.99, imageUrl: IMG.p6, categoryId: CAT.msi, collectionId: COL.new, badge: 'New', isFeatured: true, isNew: true, isSummer: false, inventoryCount: 8, published: true, sortOrder: 5 },
     { id: 'p7', name: 'Zotac RTX 4060 Twin Edge', slug: 'zotac-rtx-4060-twin-edge', description: 'Compact dual-fan GPU for efficient 1080p gaming builds.', price: 299.99, imageUrl: IMG.p5, categoryId: CAT.zotac, collectionId: COL.deals, badge: 'Deal', isFeatured: false, isNew: false, isSummer: true, inventoryCount: 15, published: true, sortOrder: 6 },
     { id: 'p8', name: 'Gigabyte RTX 4080 Super Aero', slug: 'gigabyte-rtx-4080-super-aero', description: '16GB GDDR6X with advanced cooling for demanding creators and gamers.', price: 1099.99, imageUrl: IMG.p6, categoryId: CAT.gigabyte, collectionId: COL.new, badge: 'Pro', isFeatured: true, isNew: false, isSummer: false, inventoryCount: 6, published: true, sortOrder: 7 },
