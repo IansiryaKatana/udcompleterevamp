@@ -10,19 +10,19 @@ const buttonVariants = cva(
       variant: {
         default: 'bg-cta-brown text-white hover:bg-cta-brown/90',
         secondary: 'bg-soft-beige text-text-brown hover:bg-soft-beige/80',
-        outline: 'border border-[#8b7458] bg-transparent text-text-brown hover:bg-soft-beige/50',
+        outline: 'border border-cta-brown/45 bg-transparent text-text-brown hover:bg-soft-beige/50',
         ghost: 'hover:bg-soft-beige/60 text-text-brown',
         destructive: 'bg-red-600 text-white hover:bg-red-700 focus-visible:ring-red-500/40',
         'destructive-ghost': 'text-red-600 hover:bg-red-50 hover:text-red-700',
-        cream: 'bg-[#f6f2e8] text-[#2b2117] hover:bg-[#f6f2e8]/90 rounded-full',
-        pill: 'bg-white text-[#2b2117] hover:bg-white/90 rounded-full',
+        cream: 'bg-cream-text text-text-brown hover:bg-white',
+        pill: 'bg-white text-text-brown hover:bg-white/90',
       },
       size: {
         default: 'h-10 px-4 py-2',
         sm: 'h-8 px-3 text-xs',
         lg: 'h-11 px-8',
         icon: 'h-10 w-10',
-        product: 'h-[34px] min-w-0 flex-1 rounded-md px-4 text-[10px]',
+        product: 'h-10 min-w-0 flex-1 rounded-md px-4 text-xs leading-none',
       },
     },
     defaultVariants: {

@@ -13,6 +13,15 @@ export function isExternalHref(href: string): boolean {
   return /^(https?:|mailto:|tel:)/i.test(href)
 }
 
+function splitHash(href: string): { path: string; hash?: string } {
+  const hashIndex = href.indexOf('#')
+  if (hashIndex === -1) return { path: href }
+  return {
+    path: href.slice(0, hashIndex) || '/',
+    hash: href.slice(hashIndex + 1) || undefined,
+  }
+}
+
 /** Map CMS href strings to typed TanStack Router link targets. */
 export function resolveStorefrontLink(href: string | null | undefined): InternalLinkProps | { external: true; href: string } {
   const normalized = normalizeCmsHref(href)
@@ -21,20 +30,22 @@ export function resolveStorefrontLink(href: string | null | undefined): Internal
     return { external: true, href: normalized }
   }
 
-  const productMatch = normalized.match(/^\/product\/([^/?#]+)/)
+  const { path, hash } = splitHash(normalized)
+
+  const productMatch = path.match(/^\/product\/([^/?]+)/)
   if (productMatch) {
-    return { to: '/product/$slug', params: { slug: decodeURIComponent(productMatch[1]) } }
+    return { to: '/product/$slug', params: { slug: decodeURIComponent(productMatch[1]) }, hash }
   }
 
-  const collectionMatch = normalized.match(/^\/collection\/([^/?#]+)/)
+  const collectionMatch = path.match(/^\/collection\/([^/?]+)/)
   if (collectionMatch) {
-    return { to: '/collection/$slug', params: { slug: decodeURIComponent(collectionMatch[1]) } }
+    return { to: '/collection/$slug', params: { slug: decodeURIComponent(collectionMatch[1]) }, hash }
   }
 
-  const pageMatch = normalized.match(/^\/pages\/([^/?#]+)/)
+  const pageMatch = path.match(/^\/pages\/([^/?]+)/)
   if (pageMatch) {
-    return { to: '/pages/$slug', params: { slug: decodeURIComponent(pageMatch[1]) } }
+    return { to: '/pages/$slug', params: { slug: decodeURIComponent(pageMatch[1]) }, hash }
   }
 
-  return { to: normalized as InternalLinkProps['to'] }
+  return { to: (path || '/') as InternalLinkProps['to'], hash }
 }

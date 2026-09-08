@@ -1,3 +1,5 @@
+import { DEFAULT_BRAND_PALETTE } from '@/lib/brandPalette'
+
 /** Placeholder tokens available in email templates. */
 export const EMAIL_TEMPLATE_VARIABLES = [
   { key: '{{site_name}}', desc: 'Store name from site settings' },
@@ -51,6 +53,11 @@ export function wrapBrandedEmailLayout(brand: EmailBrandContext, bodyHtml: strin
   const logoBlock = brand.logoUrl
     ? `<img src="${escapeHtml(brand.logoUrl)}" alt="${escapeHtml(brand.siteName)}" height="44" style="display:block;max-height:44px;width:auto;" />`
     : `<span style="font-size:22px;font-weight:800;letter-spacing:0.08em;color:#ffffff;">${escapeHtml(brand.siteName)}</span>`
+  const pageBg = DEFAULT_BRAND_PALETTE.pageBg
+  const footerBg = DEFAULT_BRAND_PALETTE.contentBg
+  const footerBorder = DEFAULT_BRAND_PALETTE.border
+  const footerMuted = DEFAULT_BRAND_PALETTE.muted
+  const brandColor = escapeHtml(brand.brandColor)
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -59,13 +66,13 @@ export function wrapBrandedEmailLayout(brand: EmailBrandContext, bodyHtml: strin
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${escapeHtml(brand.siteName)}</title>
 </head>
-<body style="margin:0;padding:0;background-color:#f4f0ea;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f0ea;padding:32px 16px;">
+<body style="margin:0;padding:0;background-color:${pageBg};font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:${pageBg};padding:32px 16px;">
     <tr>
       <td align="center">
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(60,45,30,0.08);">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(20,34,11,0.08);">
           <tr>
-            <td style="background-color:${escapeHtml(brand.brandColor)};padding:28px 32px;text-align:center;">
+            <td style="background-color:${brandColor};padding:28px 32px;text-align:center;">
               ${logoBlock}
             </td>
           </tr>
@@ -75,10 +82,10 @@ export function wrapBrandedEmailLayout(brand: EmailBrandContext, bodyHtml: strin
             </td>
           </tr>
           <tr>
-            <td style="padding:24px 32px;background-color:#faf8f5;border-top:1px solid #e8e0d4;text-align:center;">
-              <p style="margin:0 0 8px;font-size:13px;line-height:1.5;color:#6b5d4d;">${escapeHtml(brand.footerText)}</p>
-              <p style="margin:0;font-size:12px;color:#9a8b78;">
-                <a href="${escapeHtml(brand.storeUrl)}" style="color:#5c4a32;text-decoration:none;font-weight:600;">${escapeHtml(brand.siteName)}</a>
+            <td style="padding:24px 32px;background-color:${footerBg};border-top:1px solid ${footerBorder};text-align:center;">
+              <p style="margin:0 0 8px;font-size:13px;line-height:1.5;color:${footerMuted};">${escapeHtml(brand.footerText)}</p>
+              <p style="margin:0;font-size:12px;color:${footerMuted};">
+                <a href="${escapeHtml(brand.storeUrl)}" style="color:${brandColor};text-decoration:none;font-weight:600;">${escapeHtml(brand.siteName)}</a>
               </p>
             </td>
           </tr>
@@ -123,7 +130,7 @@ export type OrderLineItem = {
 
 export function buildOrderItemsHtml(items: OrderLineItem[], currency: string): string {
   if (items.length === 0) {
-    return '<p style="margin:0;font-size:14px;color:#6b5d4d;">No items</p>'
+    return `<p style="margin:0;font-size:14px;color:${DEFAULT_BRAND_PALETTE.muted};">No items</p>`
   }
 
   const rows = items
@@ -132,10 +139,10 @@ export function buildOrderItemsHtml(items: OrderLineItem[], currency: string): s
         ? `<img src="${escapeHtml(item.image_url)}" alt="" width="48" height="48" style="border-radius:8px;object-fit:cover;display:block;" />`
         : ''
       return `<tr>
-        <td style="padding:12px 8px;border-bottom:1px solid #e8e0d4;vertical-align:middle;width:56px;">${img}</td>
-        <td style="padding:12px 8px;border-bottom:1px solid #e8e0d4;vertical-align:middle;font-size:14px;color:#3d3428;">${escapeHtml(item.name)}</td>
-        <td style="padding:12px 8px;border-bottom:1px solid #e8e0d4;vertical-align:middle;text-align:center;font-size:14px;color:#6b5d4d;">×${item.quantity}</td>
-        <td style="padding:12px 8px;border-bottom:1px solid #e8e0d4;vertical-align:middle;text-align:right;font-size:14px;font-weight:600;color:#3d3428;">${formatMoney(item.line_total, currency)}</td>
+        <td style="padding:12px 8px;border-bottom:1px solid ${DEFAULT_BRAND_PALETTE.border};vertical-align:middle;width:56px;">${img}</td>
+        <td style="padding:12px 8px;border-bottom:1px solid ${DEFAULT_BRAND_PALETTE.border};vertical-align:middle;font-size:14px;color:${DEFAULT_BRAND_PALETTE.text};">${escapeHtml(item.name)}</td>
+        <td style="padding:12px 8px;border-bottom:1px solid ${DEFAULT_BRAND_PALETTE.border};vertical-align:middle;text-align:center;font-size:14px;color:${DEFAULT_BRAND_PALETTE.muted};">×${item.quantity}</td>
+        <td style="padding:12px 8px;border-bottom:1px solid ${DEFAULT_BRAND_PALETTE.border};vertical-align:middle;text-align:right;font-size:14px;font-weight:600;color:${DEFAULT_BRAND_PALETTE.text};">${formatMoney(item.line_total, currency)}</td>
       </tr>`
     })
     .join('')
@@ -143,9 +150,9 @@ export function buildOrderItemsHtml(items: OrderLineItem[], currency: string): s
   return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
     <thead>
       <tr>
-        <th colspan="2" style="padding:8px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:#9a8b78;border-bottom:2px solid #e8e0d4;">Item</th>
-        <th style="padding:8px;text-align:center;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:#9a8b78;border-bottom:2px solid #e8e0d4;">Qty</th>
-        <th style="padding:8px;text-align:right;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:#9a8b78;border-bottom:2px solid #e8e0d4;">Total</th>
+        <th colspan="2" style="padding:8px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:${DEFAULT_BRAND_PALETTE.muted};border-bottom:2px solid ${DEFAULT_BRAND_PALETTE.border};">Item</th>
+        <th style="padding:8px;text-align:center;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:${DEFAULT_BRAND_PALETTE.muted};border-bottom:2px solid ${DEFAULT_BRAND_PALETTE.border};">Qty</th>
+        <th style="padding:8px;text-align:right;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:${DEFAULT_BRAND_PALETTE.muted};border-bottom:2px solid ${DEFAULT_BRAND_PALETTE.border};">Total</th>
       </tr>
     </thead>
     <tbody>${rows}</tbody>
@@ -155,7 +162,7 @@ export function buildOrderItemsHtml(items: OrderLineItem[], currency: string): s
 export function buildNotesBlock(notes: string): string {
   const trimmed = notes.trim()
   if (!trimmed) return ''
-  return `<p style="margin:0 0 8px;font-size:14px;color:#6b5d4d;"><strong>Notes:</strong> ${escapeHtml(trimmed)}</p>`
+  return `<p style="margin:0 0 8px;font-size:14px;color:${DEFAULT_BRAND_PALETTE.muted};"><strong>Notes:</strong> ${escapeHtml(trimmed)}</p>`
 }
 
 export function formatMoney(amount: number, currency: string): string {
@@ -184,7 +191,7 @@ export function getSampleTemplateVars(storeUrl: string): Record<string, string> 
     order_date: new Date().toLocaleDateString('en-US', { dateStyle: 'long' }),
     order_items_html: items,
     notes_block: buildNotesBlock('Please confirm availability for bulk pricing.'),
-    message_html: '<p style="margin:0;font-size:14px;line-height:1.6;color:#3d3428;">Sample contact message from the storefront form.</p>',
+    message_html: `<p style="margin:0;font-size:14px;line-height:1.6;color:${DEFAULT_BRAND_PALETTE.text};">Sample contact message from the storefront form.</p>`,
     account_url: `${storeUrl}/account`,
     store_url: storeUrl,
   }

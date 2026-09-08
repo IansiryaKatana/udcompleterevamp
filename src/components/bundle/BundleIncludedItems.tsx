@@ -12,7 +12,7 @@ type BundleIncludedItemsProps = {
 
 export function BundleIncludedItems({ bundle, selections, onSelectionChange }: BundleIncludedItemsProps) {
   return (
-    <div className="rounded-xl border border-[#e8e0d4] p-4 md:p-6">
+    <div className="rounded-xl border border-brand-border p-4 md:p-6">
       <h2 className="font-display text-lg font-extrabold text-text-brown">What&apos;s included</h2>
       <ul className="mt-4 space-y-4">
         {bundle.items.map((item) => {
@@ -23,7 +23,7 @@ export function BundleIncludedItems({ bundle, selections, onSelectionChange }: B
             ?? ''
 
           return (
-            <li key={item.id} className="flex flex-col gap-3 border-b border-[#e8e0d4] pb-4 last:border-b-0 last:pb-0 sm:flex-row sm:items-start">
+            <li key={item.id} className="flex flex-col gap-3 border-b border-brand-border pb-4 last:border-b-0 last:pb-0 sm:flex-row sm:items-start">
               <img
                 src={item.product.imageUrl}
                 alt=""

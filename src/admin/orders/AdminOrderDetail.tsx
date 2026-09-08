@@ -5,10 +5,13 @@ import { toast } from 'sonner'
 import {
   addAdminOrderComment,
   fetchOrderFilterFacets,
+  getAdminOrderFinancePanel,
   getAdminOrderWorkspace,
+  listAdminInventoryLocations,
   listAdminOrderFulfillments,
   listAdminOrderItems,
   listAdminOrderPayments,
+  listAdminOrderShipmentEvents,
   listAdminOrderTimeline,
   updateAdminOrderOps,
 } from '@/admin/lib/adminRpc'
@@ -20,12 +23,26 @@ import {
   isCreditNoteYes,
   limitedHistoryMessage,
 } from '@/admin/lib/orderOps'
+import {
+  WORLDPAY_DISABLED_MESSAGE,
+  agingBucketBadgeClass,
+  agingBucketLabel,
+  canMutateFinance,
+  financeMoney,
+  formatReconciliationStatus,
+  ledgerBoundaryLabel,
+  reconciliationStatusBadgeClass,
+} from '@/admin/lib/financeOps'
+import type { LedgerBoundary } from '@/admin/lib/financeOps'
+import { AdminManualPaymentForm } from '@/admin/finance/AdminManualPaymentForm'
+import { OrderFulfilmentActions } from '@/admin/fulfilment/OrderFulfilmentActions'
 import { AdminLoadingState, AdminErrorBanner } from '@/admin/components/AdminPageHeading'
 import { adminBtnPrimary, adminBtnSecondary, adminInput, adminLabel } from '@/admin/adminClassNames'
 import { BrandedSelect } from '@/components/ui/BrandedSelect'
 import { formatCurrency } from '@/lib/currency'
 import { formatShippingAddress } from '@/lib/formatShippingAddress'
 import { cn } from '@/lib/utils'
+import { useAdminAuth } from '@/contexts/AdminAuthContext'
 
 type Workspace = Awaited<ReturnType<typeof getAdminOrderWorkspace>>
 
@@ -70,6 +87,8 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 }
 
 export function AdminOrderDetail({ orderId }: { orderId: string }) {
+  const { role } = useAdminAuth()
+  const canMutate = canMutateFinance(role)
   const [ws, setWs] = useState<Workspace | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(true)
@@ -82,6 +101,8 @@ export function AdminOrderDetail({ orderId }: { orderId: string }) {
     refunds: [],
   })
   const [fulfillments, setFulfillments] = useState<Record<string, unknown>[]>([])
+  const [shipmentEvents, setShipmentEvents] = useState<Record<string, unknown>[]>([])
+  const [locations, setLocations] = useState<{ id: string; name: string }[]>([])
   const [timeline, setTimeline] = useState<Record<string, unknown>[]>([])
   const [timelineTotal, setTimelineTotal] = useState(0)
   const [comments, setComments] = useState<Record<string, unknown>[]>([])
@@ -93,6 +114,8 @@ export function AdminOrderDetail({ orderId }: { orderId: string }) {
   const [cgDraft, setCgDraft] = useState('')
   const [refDraft, setRefDraft] = useState('')
   const [advancedOpen, setAdvancedOpen] = useState(false)
+  const [financePanel, setFinancePanel] = useState<Awaited<ReturnType<typeof getAdminOrderFinancePanel>> | null>(null)
+  const [manualPayOpen, setManualPayOpen] = useState(false)
 
   const order = (ws?.order ?? null) as Record<string, unknown> | null
   const currency = String(order?.currency || 'GBP')
@@ -115,11 +138,14 @@ export function AdminOrderDetail({ orderId }: { orderId: string }) {
 
   const loadPanels = useCallback(async () => {
     try {
-      const [it, pay, ff, tl] = await Promise.all([
+      const [it, pay, ff, tl, fin, se, locs] = await Promise.all([
         listAdminOrderItems({ orderId, limit: 50, offset: itemPage * 50, search: itemSearch || undefined }),
         listAdminOrderPayments(orderId),
         listAdminOrderFulfillments(orderId),
         listAdminOrderTimeline({ orderId, limit: 50, offset: 0 }),
+        getAdminOrderFinancePanel(orderId).catch(() => null),
+        listAdminOrderShipmentEvents(orderId).catch(() => ({ events: [] as Record<string, unknown>[] })),
+        listAdminInventoryLocations().catch(() => ({ locations: [] as Record<string, unknown>[] })),
       ])
       setItems(it.items)
       setItemsTotal(it.total)
@@ -128,6 +154,14 @@ export function AdminOrderDetail({ orderId }: { orderId: string }) {
       setTimeline(tl.events)
       setTimelineTotal(tl.total)
       setComments(tl.comments)
+      setFinancePanel(fin)
+      setShipmentEvents(se.events)
+      setLocations(
+        (locs.locations || []).map((l) => ({
+          id: String(l.id),
+          name: String(l.name || l.code || l.id),
+        })),
+      )
     } catch (e) {
       toast.error(e instanceof Error ? e.message : 'Failed to load order panels')
     }
@@ -284,19 +318,35 @@ export function AdminOrderDetail({ orderId }: { orderId: string }) {
           <Panel title="Customer / company">
             <dl className="grid gap-3 sm:grid-cols-2">
               <Field label="Customer">
-                {customer ? (
+                {customer?.id ? (
                   <Link
-                    to="/backend/commerce"
-                    search={{ tab: 'customers' }}
+                    to="/backend/customers/$customerId"
+                    params={{ customerId: String(customer.id) }}
                     className="font-medium text-[var(--admin-primary)] hover:underline"
                   >
                     {String(customer.display_name || `${customer.first_name || ''} ${customer.last_name || ''}`.trim() || 'Customer')}
                   </Link>
+                ) : customer ? (
+                  String(customer.display_name || `${customer.first_name || ''} ${customer.last_name || ''}`.trim() || 'Customer')
                 ) : (
                   '—'
                 )}
               </Field>
-              <Field label="Company">{company ? String(company.name) : '—'}</Field>
+              <Field label="Company">
+                {company?.id ? (
+                  <Link
+                    to="/backend/companies/$companyId"
+                    params={{ companyId: String(company.id) }}
+                    className="font-medium text-[var(--admin-primary)] hover:underline"
+                  >
+                    {String(company.name)}
+                  </Link>
+                ) : company ? (
+                  String(company.name)
+                ) : (
+                  '—'
+                )}
+              </Field>
               <Field label="StoreName / trading">{String(order.trading_name_snapshot || customer?.trading_name || '—')}</Field>
               <Field label="Email">{String(customer?.email || order.email || '—')}</Field>
               <Field label="Phone">{String(customer?.phone || '—')}</Field>
@@ -450,11 +500,177 @@ export function AdminOrderDetail({ orderId }: { orderId: string }) {
             )}
           </Panel>
 
-          <Panel title="Fulfilment">
-            {fulfillments.length === 0 && (
-              <p className="text-sm text-[var(--admin-muted)]">No fulfilments recorded for this order.</p>
+          <Panel
+            title="Finance"
+            actions={
+              <div className="flex flex-wrap gap-2">
+                <Link to="/backend/finance" className="text-xs font-medium text-[var(--admin-primary)] hover:underline">
+                  Finance hub
+                </Link>
+                {canMutate && Number(order.total_outstanding) > 0 && (
+                  <button type="button" className={adminBtnPrimary} onClick={() => setManualPayOpen(true)}>
+                    Post payment
+                  </button>
+                )}
+              </div>
+            }
+          >
+            <div className="mb-3 grid gap-3 sm:grid-cols-3 text-sm">
+              <div>
+                <p className="text-[10px] font-semibold uppercase text-[var(--admin-muted)]">Received</p>
+                <p className="font-semibold tabular-nums">
+                  {financeMoney(financePanel?.total_received ?? order.total_received, currency)}
+                </p>
+              </div>
+              <div>
+                <p className="text-[10px] font-semibold uppercase text-[var(--admin-muted)]">Outstanding</p>
+                <p className="font-semibold tabular-nums text-amber-800">
+                  {financeMoney(financePanel?.outstanding ?? order.total_outstanding, currency)}
+                </p>
+              </div>
+              <div>
+                <p className="text-[10px] font-semibold uppercase text-[var(--admin-muted)]">Aging</p>
+                {financePanel?.aging_bucket ? (
+                  <span
+                    className={cn(
+                      'inline-flex rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase',
+                      agingBucketBadgeClass(String(financePanel.aging_bucket)),
+                    )}
+                  >
+                    {agingBucketLabel(String(financePanel.aging_bucket))}
+                  </span>
+                ) : (
+                  <span className="text-[var(--admin-muted)]">—</span>
+                )}
+              </div>
+            </div>
+            {(() => {
+              const boundary = financePanel?.ledger_boundary as LedgerBoundary | null | undefined
+              const orderMode = String(order.money_ledger_mode || boundary?.money_ledger_mode || '')
+              const reconStatus = String(boundary?.reconciliation_status || order.reconciliation_status || '')
+              const showMismatch =
+                boundary?.ok &&
+                orderMode === 'imported_snapshot' &&
+                reconStatus === 'MISMATCHED'
+              if (!showMismatch) return null
+              return (
+                <div className="mb-4 rounded border border-amber-200 bg-amber-50 px-3 py-3 text-sm">
+                  <p className="mb-2 text-xs font-semibold uppercase text-amber-900">
+                    Ledger boundary — {ledgerBoundaryLabel(orderMode)}
+                  </p>
+                  <dl className="grid gap-2 sm:grid-cols-2">
+                    <div>
+                      <dt className="text-[10px] font-semibold uppercase text-amber-800">Imported (snapshot)</dt>
+                      <dd className="tabular-nums">
+                        Received {financeMoney(boundary?.imported?.received, currency)} · Outstanding{' '}
+                        {financeMoney(boundary?.imported?.outstanding, currency)}
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="text-[10px] font-semibold uppercase text-amber-800">Calculated (semantics)</dt>
+                      <dd className="tabular-nums">
+                        Net received {financeMoney(boundary?.calculated?.net_received, currency)} · Outstanding{' '}
+                        {financeMoney(boundary?.calculated?.outstanding, currency)}
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="text-[10px] font-semibold uppercase text-amber-800">Variance</dt>
+                      <dd className="tabular-nums font-semibold text-amber-900">
+                        Received {financeMoney(boundary?.variance?.received, currency)} · Outstanding{' '}
+                        {financeMoney(boundary?.variance?.outstanding, currency)}
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="text-[10px] font-semibold uppercase text-amber-800">Status</dt>
+                      <dd>
+                        <span
+                          className={cn(
+                            'inline-flex rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase',
+                            reconciliationStatusBadgeClass(reconStatus),
+                          )}
+                        >
+                          {formatReconciliationStatus(reconStatus)}
+                        </span>
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              )
+            })()}
+            <div className="flex flex-wrap gap-3 text-sm">
+              <Link
+                to="/backend/finance/receivables"
+                className="font-medium text-[var(--admin-primary)] hover:underline"
+              >
+                Receivables →
+              </Link>
+              <Link
+                to="/backend/finance/payments"
+                className="font-medium text-[var(--admin-primary)] hover:underline"
+              >
+                Payment ledger →
+              </Link>
+              <Link
+                to="/backend/finance/invoices"
+                className="font-medium text-[var(--admin-primary)] hover:underline"
+              >
+                Invoices →
+              </Link>
+              <Link
+                to="/backend/finance/refunds"
+                className="font-medium text-[var(--admin-primary)] hover:underline"
+              >
+                Refunds →
+              </Link>
+            </div>
+            {(financePanel?.invoices?.length ?? 0) > 0 && (
+              <ul className="mt-3 space-y-1 text-xs">
+                {financePanel!.invoices!.slice(0, 5).map((inv) => (
+                  <li key={String(inv.id)}>
+                    <Link
+                      to="/backend/finance/invoices/$invoiceId"
+                      params={{ invoiceId: String(inv.id) }}
+                      className="text-[var(--admin-primary)] hover:underline"
+                    >
+                      {String(inv.invoice_number || inv.id)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             )}
-            <div className="space-y-4">
+            <p className="mt-3 text-xs text-[var(--admin-muted)]">{WORLDPAY_DISABLED_MESSAGE}</p>
+          </Panel>
+
+          <AdminManualPaymentForm
+            open={manualPayOpen}
+            onOpenChange={setManualPayOpen}
+            orderId={orderId}
+            orderNumber={orderNumber}
+            outstanding={Number(financePanel?.outstanding ?? order.total_outstanding ?? 0)}
+            currency={currency}
+            onPosted={() => {
+              void loadWorkspace()
+              void loadPanels()
+            }}
+          />
+
+          <Panel title="Fulfilment">
+            <OrderFulfilmentActions
+              orderId={orderId}
+              orderNumber={orderNumber}
+              items={items}
+              fulfillments={fulfillments}
+              shipmentEvents={shipmentEvents}
+              locations={locations}
+              onChanged={() => {
+                void loadWorkspace()
+                void loadPanels()
+              }}
+            />
+            {fulfillments.length === 0 && (
+              <p className="mt-3 text-sm text-[var(--admin-muted)]">No fulfilments recorded for this order.</p>
+            )}
+            <div className="mt-4 space-y-4">
               {fulfillments.map((f) => {
                 const lines = (f.lines as Record<string, unknown>[]) || []
                 const url = f.tracking_url ? String(f.tracking_url) : null
@@ -467,9 +683,16 @@ export function AdminOrderDetail({ orderId }: { orderId: string }) {
                         </div>
                         <div className="mt-1 text-xs text-[var(--admin-muted)]">
                           {String(f.tracking_company || f.service_name || '—')}
+                          {f.carrier_name_raw && f.carrier_name_raw !== f.tracking_company
+                            ? ` · raw ${String(f.carrier_name_raw)}`
+                            : ''}
+                          {f.carrier_provider ? ` · provider ${String(f.carrier_provider)}` : ''}
                           {f.tracking_number ? ` · ${String(f.tracking_number)}` : ''}
+                          {f.parcel_count ? ` · parcels ${Number(f.parcel_count)}` : ''}
                           {f.delivered_at ? ` · delivered ${fmtWhen(f.delivered_at)}` : ''}
                           {f.in_transit_at && !f.delivered_at ? ` · in transit ${fmtWhen(f.in_transit_at)}` : ''}
+                          {order.is_test ? ' · TEST' : ''}
+                          {String(f.carrier_mode || '') === 'test' ? ' · TEST DPD' : ''}
                         </div>
                       </div>
                       {url && (

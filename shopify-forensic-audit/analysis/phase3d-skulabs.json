@@ -1,0 +1,1059 @@
+{
+  "generatedAt": "2026-09-06T17:48:20.019Z",
+  "phase": "3D",
+  "scope": "READ_ONLY_SKULabs_warehouse_forensics",
+  "shopifyStore": "c906ff-0a.myshopify.com",
+  "totals": {
+    "orders": 21767,
+    "skulabsEvents": 20588,
+    "skulabsOrders": 10143,
+    "skulabsOrderPct": 46.6
+  },
+  "locations": [
+    {
+      "id": "gid://shopify/Location/93733355846",
+      "name": "UD WH 1",
+      "isActive": true,
+      "isPrimary": true,
+      "fulfillsOnlineOrders": true,
+      "hasActiveInventory": true,
+      "hasUnfulfilledOrders": true,
+      "shipsInventory": true,
+      "fulfillmentService": null,
+      "address": {
+        "address1": "Unit 2, Hollins Business Park",
+        "city": "Darwen",
+        "zip": "BB3 1HN",
+        "province": "England",
+        "countryCode": "GB",
+        "phone": "+447944238204"
+      }
+    }
+  ],
+  "inventory": {
+    "count": 13247,
+    "tracked": 13247,
+    "untracked": 0,
+    "skuBlank": 310,
+    "skuPresent": 12937,
+    "skuDupGroups": 40,
+    "skuDupItemCount": 81,
+    "barcodeBlank": 13247,
+    "barcodePresent": 0,
+    "barcodeDupGroups": 0,
+    "barcodeDupItemCount": 0,
+    "locations": [
+      {
+        "key": "UD WH 1",
+        "value": 13247
+      }
+    ],
+    "qtyByLocation": {
+      "UD WH 1": {
+        "available": 533290,
+        "onHand": 597648,
+        "committed": 63253,
+        "incoming": 205753,
+        "reserved": 0,
+        "items": 13247
+      }
+    },
+    "totalAvailable": 533290,
+    "totalOnHand": 597648,
+    "totalCommitted": 63253,
+    "totalIncoming": 205753,
+    "totalReserved": 0,
+    "itemsWithCommitted": 1548,
+    "itemsWithReserved": 0,
+    "itemsWithIncoming": 887,
+    "sampleBlankSkuIds": [
+      "gid://shopify/InventoryItem/55205688344902",
+      "gid://shopify/InventoryItem/55205688377670",
+      "gid://shopify/InventoryItem/55205688410438",
+      "gid://shopify/InventoryItem/55205688443206",
+      "gid://shopify/InventoryItem/55205689753926"
+    ],
+    "sampleDupSkus": [
+      {
+        "sku": "POD*2-VE 1/2-sgl",
+        "count": 2
+      },
+      {
+        "sku": "POD*2-SBE 1/2-sgl",
+        "count": 2
+      },
+      {
+        "sku": "POD*2-SE 1/2-sgl",
+        "count": 2
+      },
+      {
+        "sku": "POD*2-RE 1/2-sgl",
+        "count": 2
+      },
+      {
+        "sku": "POD*2-PRE 1/2-sgl",
+        "count": 2
+      },
+      {
+        "sku": "POD*2-PE 1/2-sgl",
+        "count": 2
+      },
+      {
+        "sku": "POD*2-NE 1/2-sgl",
+        "count": 2
+      },
+      {
+        "sku": "POD*2-ME 1/2-sgl",
+        "count": 2
+      }
+    ],
+    "sampleDupBarcodes": []
+  },
+  "products": {
+    "count": 2213,
+    "variants": 12677,
+    "withSku": 12398,
+    "withoutSku": 279,
+    "withBarcode": 8689,
+    "withoutBarcode": 3988,
+    "skuDupGroups": 40,
+    "barcodeDupGroups": 121,
+    "sampleDupSkus": [
+      {
+        "sku": "VELO10MGNICORANGICE",
+        "count": 2
+      },
+      {
+        "sku": "VELO10MGNICPEACHICE",
+        "count": 2
+      },
+      {
+        "sku": "VEO14MG-5DOTS-ICYBERRY",
+        "count": 2
+      },
+      {
+        "sku": "VELO6MGNICORANGICE",
+        "count": 2
+      },
+      {
+        "sku": "VELO6MGNICTANGYLIME",
+        "count": 2
+      },
+      {
+        "sku": "POD*2-VE 1/2-sgl",
+        "count": 2
+      },
+      {
+        "sku": "POD*2-SBE 1/2-sgl",
+        "count": 2
+      },
+      {
+        "sku": "POD*2-SE 1/2-sgl",
+        "count": 2
+      }
+    ],
+    "sampleDupBarcodes": [
+      {
+        "barcode": "6941291552875",
+        "count": 2
+      },
+      {
+        "barcode": "5061026750275-sgl",
+        "count": 2
+      },
+      {
+        "barcode": "5061026754525-sgl",
+        "count": 2
+      },
+      {
+        "barcode": "6941736516097",
+        "count": 2
+      },
+      {
+        "barcode": "6941736521732",
+        "count": 2
+      },
+      {
+        "barcode": "6941736521749",
+        "count": 2
+      },
+      {
+        "barcode": "6941736529523",
+        "count": 2
+      },
+      {
+        "barcode": "6975207753599",
+        "count": 2
+      }
+    ],
+    "barcodePatterns": [
+      {
+        "key": "EAN-13",
+        "value": 3812
+      },
+      {
+        "key": "other",
+        "value": 3091
+      },
+      {
+        "key": "EAN-8",
+        "value": 1519
+      },
+      {
+        "key": "ITF-14",
+        "value": 177
+      },
+      {
+        "key": "UPC-A",
+        "value": 48
+      },
+      {
+        "key": "short_alnum",
+        "value": 29
+      },
+      {
+        "key": "numeric_len_11",
+        "value": 13
+      }
+    ],
+    "binMetafieldPopulated": [],
+    "batchMetafieldPopulated": [],
+    "pickTipPopulated": [],
+    "packSizePopulated": [],
+    "status": [
+      {
+        "key": "ARCHIVED",
+        "value": 1430
+      },
+      {
+        "key": "ACTIVE",
+        "value": 723
+      },
+      {
+        "key": "DRAFT",
+        "value": 58
+      },
+      {
+        "key": "UNLISTED",
+        "value": 2
+      }
+    ]
+  },
+  "skulabs": {
+    "eventCount": 20588,
+    "orderCount": 10143,
+    "firstSeen": "2025-11-25T19:22:00Z",
+    "lastSeen": "2026-09-04T17:30:58Z",
+    "withFulfillment": 10143,
+    "withoutFulfillment": 0,
+    "multiFulfillmentOrdersInPull": 1345,
+    "multiFulfillmentWithSkulabs": 406,
+    "attributeToApp": 20588,
+    "attributeToUser": 0,
+    "truncatedLikely50EventOrders": 2,
+    "messageFamilies": [
+      {
+        "key": "other",
+        "value": 10309
+      },
+      {
+        "key": "shipping_related",
+        "value": 10279
+      }
+    ],
+    "messageNormTop": [
+      {
+        "key": "SKULabs marked 80 items as fulfilled from UD WH 1.",
+        "value": 155
+      },
+      {
+        "key": "SKULabs marked 100 items as fulfilled from UD WH 1.",
+        "value": 149
+      },
+      {
+        "key": "SKULabs marked 60 items as fulfilled from UD WH 1.",
+        "value": 147
+      },
+      {
+        "key": "SKULabs marked 70 items as fulfilled from UD WH 1.",
+        "value": 146
+      },
+      {
+        "key": "SKULabs marked 50 items as fulfilled from UD WH 1.",
+        "value": 146
+      },
+      {
+        "key": "SKULabs marked 120 items as fulfilled from UD WH 1.",
+        "value": 140
+      },
+      {
+        "key": "SKULabs marked 75 items as fulfilled from UD WH 1.",
+        "value": 133
+      },
+      {
+        "key": "SKULabs marked 85 items as fulfilled from UD WH 1.",
+        "value": 129
+      },
+      {
+        "key": "SKULabs marked 150 items as fulfilled from UD WH 1.",
+        "value": 124
+      },
+      {
+        "key": "SKULabs marked 65 items as fulfilled from UD WH 1.",
+        "value": 123
+      },
+      {
+        "key": "SKULabs marked 105 items as fulfilled from UD WH 1.",
+        "value": 123
+      },
+      {
+        "key": "SKULabs marked 110 items as fulfilled from UD WH 1.",
+        "value": 120
+      },
+      {
+        "key": "SKULabs marked 90 items as fulfilled from UD WH 1.",
+        "value": 116
+      },
+      {
+        "key": "SKULabs marked 95 items as fulfilled from UD WH 1.",
+        "value": 112
+      },
+      {
+        "key": "SKULabs marked 130 items as fulfilled from UD WH 1.",
+        "value": 111
+      },
+      {
+        "key": "SKULabs marked 55 items as fulfilled from UD WH 1.",
+        "value": 110
+      },
+      {
+        "key": "SKULabs marked 140 items as fulfilled from UD WH 1.",
+        "value": 108
+      },
+      {
+        "key": "SKULabs marked 135 items as fulfilled from UD WH 1.",
+        "value": 108
+      },
+      {
+        "key": "SKULabs marked 125 items as fulfilled from UD WH 1.",
+        "value": 104
+      },
+      {
+        "key": "SKULabs marked 115 items as fulfilled from UD WH 1.",
+        "value": 104
+      },
+      {
+        "key": "SKULabs marked 160 items as fulfilled from UD WH 1.",
+        "value": 102
+      },
+      {
+        "key": "SKULabs sent a shipping confirmation email to Rajmeet Lalpurwal (rajmeetlalpurwal@gmail.com).",
+        "value": 101
+      },
+      {
+        "key": "SKULabs marked 145 items as fulfilled from UD WH 1.",
+        "value": 95
+      },
+      {
+        "key": "SKULabs marked 190 items as fulfilled from UD WH 1.",
+        "value": 93
+      },
+      {
+        "key": "SKULabs sent a shipping confirmation email to Kiel Brown (kiel@evolutionvapes.co.uk).",
+        "value": 93
+      },
+      {
+        "key": "SKULabs marked 200 items as fulfilled from UD WH 1.",
+        "value": 90
+      },
+      {
+        "key": "SKULabs marked 180 items as fulfilled from UD WH 1.",
+        "value": 86
+      },
+      {
+        "key": "SKULabs marked 165 items as fulfilled from UD WH 1.",
+        "value": 85
+      },
+      {
+        "key": "SKULabs sent a shipping confirmation email to Rory Mills (accounts@vape.co.uk).",
+        "value": 84
+      },
+      {
+        "key": "SKULabs marked 155 items as fulfilled from UD WH 1.",
+        "value": 83
+      },
+      {
+        "key": "SKULabs marked 10 items as fulfilled from UD WH 1.",
+        "value": 80
+      },
+      {
+        "key": "SKULabs sent a shipping confirmation email to Kashif Hussain (hussainkashif246@gmail.com).",
+        "value": 80
+      },
+      {
+        "key": "SKULabs marked 20 items as fulfilled from UD WH 1.",
+        "value": 77
+      },
+      {
+        "key": "SKULabs sent a shipping confirmation email to Rajan Mahal (rsm.empireltd@gmail.com).",
+        "value": 75
+      },
+      {
+        "key": "SKULabs marked 185 items as fulfilled from UD WH 1.",
+        "value": 73
+      },
+      {
+        "key": "SKULabs marked 230 items as fulfilled from UD WH 1.",
+        "value": 71
+      },
+      {
+        "key": "SKULabs marked 175 items as fulfilled from UD WH 1.",
+        "value": 70
+      },
+      {
+        "key": "SKULabs marked 170 items as fulfilled from UD WH 1.",
+        "value": 70
+      },
+      {
+        "key": "SKULabs marked 220 items as fulfilled from UD WH 1.",
+        "value": 69
+      },
+      {
+        "key": "SKULabs sent a shipping confirmation email to Ilmeet Singh (ilmeetking@gmail.com).",
+        "value": 68
+      }
+    ],
+    "sampleMessages": [
+      "SKULabs marked 10 items as fulfilled from UD WH 1.",
+      "SKULabs sent a shipping confirmation email to UniqueTester1 UDTester (kyle.vapeunit@gmail.com).",
+      "SKULabs marked 20 items as fulfilled from UD WH 1.",
+      "SKULabs sent a shipping confirmation email to Richard Bell (richard.bell@uniquedistribution.com).",
+      "SKULabs marked 180 items as fulfilled from UD WH 1.",
+      "SKULabs sent a shipping confirmation email to Sundeep Shergill (sunny.shergill@aol.com).",
+      "SKULabs marked 15 items as fulfilled from UD WH 1.",
+      "SKULabs sent a shipping confirmation email to Quintin Cramond (cramond929@icloud.com).",
+      "SKULabs marked 175 items as fulfilled from UD WH 1.",
+      "SKULabs sent a shipping confirmation email to Jaggi Vohra (simifandw1@yahoo.com).",
+      "SKULabs marked 100 items as fulfilled from UD WH 1.",
+      "SKULabs sent a shipping confirmation email to Mohammed Altairy (m_algarthi@hotmail.co.uk).",
+      "SKULabs marked 125 items as fulfilled from UD WH 1.",
+      "SKULabs sent a shipping confirmation email to Mohammed Ali (mohammed.ammer.ali@gmail.com).",
+      "SKULabs marked 1340 items as fulfilled from UD WH 1.",
+      "SKULabs sent a shipping confirmation email to Raymond Dalgleish (sales@superinks.co.uk).",
+      "SKULabs marked 732 items as fulfilled from UD WH 1.",
+      "SKULabs sent a shipping confirmation email to Abz Shafiq (vapinuk1@gmail.com).",
+      "SKULabs marked 463 items as fulfilled from UD WH 1.",
+      "SKULabs sent a shipping confirmation email to Kamalarajan [ID] (Nkrajan07@outlook.com).",
+      "SKULabs marked 130 items as fulfilled from UD WH 1.",
+      "SKULabs sent a shipping confirmation email to Mana Dhala (adennews79@gmail.com).",
+      "SKULabs marked 189 items as fulfilled from UD WH 1.",
+      "SKULabs sent a shipping confirmation email to Yaseen Jethwa (Yjethwa@hotmail.com).",
+      "SKULabs marked 550 items as fulfilled from UD WH 1."
+    ],
+    "financialStatus": [
+      {
+        "key": "PAID",
+        "value": 9761
+      },
+      {
+        "key": "PENDING",
+        "value": 259
+      },
+      {
+        "key": "PARTIALLY_REFUNDED",
+        "value": 86
+      },
+      {
+        "key": "PARTIALLY_PAID",
+        "value": 33
+      },
+      {
+        "key": "VOIDED",
+        "value": 3
+      },
+      {
+        "key": "REFUNDED",
+        "value": 1
+      }
+    ],
+    "displayFulfillmentStatus": [
+      {
+        "key": "FULFILLED",
+        "value": 10047
+      },
+      {
+        "key": "PARTIALLY_FULFILLED",
+        "value": 86
+      },
+      {
+        "key": "UNFULFILLED",
+        "value": 10
+      }
+    ],
+    "tagsTop": [
+      {
+        "key": "PAID",
+        "value": 9652
+      },
+      {
+        "key": "WebsiteOrder",
+        "value": 8832
+      },
+      {
+        "key": "WorldPayCard",
+        "value": 5593
+      },
+      {
+        "key": "getDraftOrderData1_item.name",
+        "value": 3057
+      },
+      {
+        "key": "Review_Customer_Type",
+        "value": 3057
+      },
+      {
+        "key": "persistent_cart",
+        "value": 2585
+      },
+      {
+        "key": "SP_KaranjotBassi",
+        "value": 2079
+      },
+      {
+        "key": "REF:KaranjotBassi",
+        "value": 2078
+      },
+      {
+        "key": "Karanjot Bassi",
+        "value": 2047
+      },
+      {
+        "key": "FromDraft",
+        "value": 1284
+      },
+      {
+        "key": "REF:JohnYates",
+        "value": 1160
+      },
+      {
+        "key": "SP_JohnYates",
+        "value": 1159
+      },
+      {
+        "key": "SP_MahendraBadsiwal",
+        "value": 1157
+      },
+      {
+        "key": "REF:MahendraBadsiwal",
+        "value": 1154
+      },
+      {
+        "key": "SP_AdamFysal",
+        "value": 1036
+      },
+      {
+        "key": "REF:AdamFysal",
+        "value": 1034
+      },
+      {
+        "key": "REF:SimonHartshorn",
+        "value": 1012
+      },
+      {
+        "key": "SP_SimonHartshorn",
+        "value": 1007
+      },
+      {
+        "key": "sales_rep_simon175",
+        "value": 1002
+      },
+      {
+        "key": "Mahendra Badsiwal",
+        "value": 772
+      },
+      {
+        "key": "Adam Fysal",
+        "value": 692
+      },
+      {
+        "key": "John Yates",
+        "value": 691
+      },
+      {
+        "key": "sales_rep_karanjot646",
+        "value": 588
+      },
+      {
+        "key": "REF:KulwantSingh",
+        "value": 547
+      },
+      {
+        "key": "SP_KulwantSingh",
+        "value": 544
+      },
+      {
+        "key": "SP_TomCook",
+        "value": 475
+      },
+      {
+        "key": "REF:TomCook",
+        "value": 474
+      },
+      {
+        "key": "REF:JakeDodd",
+        "value": 473
+      },
+      {
+        "key": "SP_JakeDodd",
+        "value": 473
+      },
+      {
+        "key": "Tom Cook",
+        "value": 469
+      },
+      {
+        "key": "Jake Dodd",
+        "value": 469
+      },
+      {
+        "key": "Simon Hartshorn",
+        "value": 469
+      },
+      {
+        "key": "Awaiting payment",
+        "value": 467
+      },
+      {
+        "key": "Kulwant Singh",
+        "value": 418
+      },
+      {
+        "key": "REF:AdamYousuf",
+        "value": 373
+      },
+      {
+        "key": "SP_AdamYousuf",
+        "value": 370
+      },
+      {
+        "key": "REF:ReeceMorgan",
+        "value": 355
+      },
+      {
+        "key": "SP_ReeceMorgan",
+        "value": 355
+      },
+      {
+        "key": "Reece Morgan",
+        "value": 348
+      },
+      {
+        "key": "sales_rep_adam319",
+        "value": 345
+      }
+    ],
+    "gateways": [
+      {
+        "key": "Worldpay eCommerce",
+        "value": 5601
+      },
+      {
+        "key": "Bank Deposit",
+        "value": 4457
+      },
+      {
+        "key": "manual",
+        "value": 487
+      },
+      {
+        "key": "shopify_store_credit",
+        "value": 9
+      },
+      {
+        "key": "Worldpay Payments",
+        "value": 2
+      }
+    ],
+    "sourceNames": [
+      {
+        "key": "web",
+        "value": 8826
+      },
+      {
+        "key": "shopify_draft_order",
+        "value": 1317
+      }
+    ],
+    "monthlyEvents": [
+      {
+        "key": "2026-03",
+        "value": 2963
+      },
+      {
+        "key": "2026-08",
+        "value": 2772
+      },
+      {
+        "key": "2026-06",
+        "value": 2771
+      },
+      {
+        "key": "2026-02",
+        "value": 2530
+      },
+      {
+        "key": "2026-01",
+        "value": 2363
+      },
+      {
+        "key": "2026-04",
+        "value": 2342
+      },
+      {
+        "key": "2026-05",
+        "value": 2304
+      },
+      {
+        "key": "2026-07",
+        "value": 1929
+      },
+      {
+        "key": "2026-09",
+        "value": 610
+      },
+      {
+        "key": "2025-12",
+        "value": 2
+      },
+      {
+        "key": "2025-11",
+        "value": 2
+      }
+    ],
+    "monthlyOrders": [
+      {
+        "key": "2026-03",
+        "value": 1450
+      },
+      {
+        "key": "2026-08",
+        "value": 1433
+      },
+      {
+        "key": "2026-06",
+        "value": 1352
+      },
+      {
+        "key": "2026-02",
+        "value": 1243
+      },
+      {
+        "key": "2026-05",
+        "value": 1177
+      },
+      {
+        "key": "2026-01",
+        "value": 1176
+      },
+      {
+        "key": "2026-04",
+        "value": 1100
+      },
+      {
+        "key": "2026-07",
+        "value": 958
+      },
+      {
+        "key": "2026-09",
+        "value": 251
+      },
+      {
+        "key": "2025-01",
+        "value": 1
+      },
+      {
+        "key": "2025-11",
+        "value": 1
+      },
+      {
+        "key": "2025-12",
+        "value": 1
+      }
+    ],
+    "eventsPerOrderHist": [
+      {
+        "key": "2",
+        "value": 9948
+      },
+      {
+        "key": "4",
+        "value": 164
+      },
+      {
+        "key": "1",
+        "value": 30
+      },
+      {
+        "key": "6",
+        "value": 1
+      }
+    ],
+    "shopnameMetafield": {
+      "id": "skulabs.shopname",
+      "populatedCount": 1467,
+      "ownerTypes": {
+        "CUSTOMER": 1462,
+        "ORDER": 5
+      },
+      "topValues": [
+        {
+          "key": "Premier",
+          "value": 19
+        },
+        {
+          "key": "Londis",
+          "value": 12
+        },
+        {
+          "key": "Best one",
+          "value": 10
+        },
+        {
+          "key": "Costcutter",
+          "value": 6
+        },
+        {
+          "key": "Nisa",
+          "value": 5
+        },
+        {
+          "key": "Budgens",
+          "value": 5
+        },
+        {
+          "key": "Bargain booze",
+          "value": 4
+        },
+        {
+          "key": "Nisa Local",
+          "value": 4
+        }
+      ],
+      "sampleValues": [
+        "USER",
+        "Costcutter  ",
+        "SAVVY TECH STORE LTD  ",
+        "Smoke & Vape",
+        "786 ANSTON LTD"
+      ]
+    },
+    "ordersWithEventsCount": 10143
+  },
+  "fulfilment": {
+    "total": 22917,
+    "services": {
+      "Manual": 22917
+    },
+    "locationNames": {
+      "UD WH 1": 22487,
+      "UD003 - Rob Lister": 1,
+      "UD002": 28,
+      "UD004 - Simon Harthshom": 7,
+      "UD006 - Adam fysal": 2,
+      "UD008 - Karanjot Bassi": 7,
+      "UNIQUE DISTRIBUTION LTD WAREHOUSE 2": 385
+    },
+    "trackingCompanies": {
+      "DPD": 12660,
+      "99 Minutos": 2,
+      "UPS": 32,
+      "Other": 14212,
+      "DPD UK": 2404,
+      "(none)": 4,
+      "DPD Local": 222,
+      "DX": 197
+    },
+    "status": {
+      "SUCCESS": 21681,
+      "CANCELLED": 1236
+    },
+    "createdByAppHint": {}
+  },
+  "multiParcel": {
+    "fulfillmentsWithMultiTracking": 4819,
+    "ordersMultiFulfillment": 1345
+  },
+  "release": {
+    "orders": 10143,
+    "paidWithSkulabs": 9761,
+    "pendingWithSkulabs": 259,
+    "authorizedWithSkulabs": 0,
+    "partiallyPaidWithSkulabs": 33,
+    "onHoldWithSkulabs": 0,
+    "onHoldTotal": 0,
+    "payLaterTagWithSkulabs": 0,
+    "bankDepositWithSkulabs": 4457,
+    "worldpayWithSkulabs": 5602,
+    "fromDraftWithSkulabs": 1284,
+    "websiteOrderWithSkulabs": 8832,
+    "unfulfilledWithSkulabs": 10,
+    "fulfilledWithSkulabs": 10047,
+    "partialWithSkulabs": 0
+  },
+  "returns": {
+    "refundOrders": 2959,
+    "refundLineItems": 20413,
+    "restockTypes": [
+      {
+        "key": "CANCEL",
+        "value": 15750
+      },
+      {
+        "key": "NO_RESTOCK",
+        "value": 4471
+      },
+      {
+        "key": "RETURN",
+        "value": 192
+      }
+    ],
+    "nativeReturns": 7,
+    "skulabsOnRefundOrders": 714
+  },
+  "lineSku": {
+    "lines": 531738,
+    "withSku": 516189,
+    "withoutSku": 15549,
+    "deletedProduct": 819
+  },
+  "holdCancel": {
+    "onHoldOrders": 0,
+    "cancelledFulfillments": 1236,
+    "skulabsCancelMessages": 0,
+    "skulabsHoldMessages": 0
+  },
+  "staff": {
+    "skulabsEventsAttributeToUser": 0,
+    "skulabsEventsAttributeToApp": 20588,
+    "commentEvents": 0
+  },
+  "warehouseMetafieldDefs": [
+    {
+      "ownerType": "CUSTOMER",
+      "id": "skulabs.shopname",
+      "name": "Shop Name",
+      "metafieldsCount": 1462,
+      "desc": "Store name use for customer delivery address in packing list"
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "id": "custom.pack_size",
+      "name": "pack_size",
+      "metafieldsCount": 8,
+      "desc": ""
+    },
+    {
+      "ownerType": "ORDER",
+      "id": "skulabs.shopname",
+      "name": "Skulabs Shopname",
+      "metafieldsCount": 5,
+      "desc": "Skulabs Shopname Field for PDF Template"
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "id": "custom.pack_size_rule",
+      "name": "pack_size_rule",
+      "metafieldsCount": 4,
+      "desc": ""
+    },
+    {
+      "ownerType": "PRODUCT",
+      "id": "shopify.package-type",
+      "name": "Package type",
+      "metafieldsCount": 0,
+      "desc": "Defines the type of packaging for a product, e.g. jar, pump"
+    },
+    {
+      "ownerType": "PRODUCT",
+      "id": "my_fields.bin_location",
+      "name": "EasyScan Product Bin Location",
+      "metafieldsCount": 0,
+      "desc": "EasyScan Product Bin Location, update in the EasyScan app"
+    },
+    {
+      "ownerType": "PRODUCT",
+      "id": "custom.ProductPickPackTip",
+      "name": "Pick & Pack Tip",
+      "metafieldsCount": 0,
+      "desc": "Barcode used for picking products"
+    },
+    {
+      "ownerType": "PRODUCT",
+      "id": "custom.ProductLocation",
+      "name": "Product Location",
+      "metafieldsCount": 0,
+      "desc": "Location used for picking products"
+    },
+    {
+      "ownerType": "PRODUCT",
+      "id": "custom.batch_number",
+      "name": "Batch Number",
+      "metafieldsCount": 0,
+      "desc": ""
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "id": "my_fields.bin_location",
+      "name": "EasyScan Variant Bin Location",
+      "metafieldsCount": 0,
+      "desc": "EasyScan Variant Bin Location, update in the EasyScan app"
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "id": "scanpacker.storage_location",
+      "name": "scanpacker.storage_location",
+      "metafieldsCount": 0,
+      "desc": ""
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "id": "mas.binloc",
+      "name": "ScanPick Bin Location",
+      "metafieldsCount": 0,
+      "desc": "An inventory group,bin, or location identifier (used for picking and scanning with ScanPick)"
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "id": "custom.PickPackTip",
+      "name": "Pick & Pack Tip",
+      "metafieldsCount": 0,
+      "desc": "Tip for picking and packing products"
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "id": "custom.VariantLocation",
+      "name": "Variant Location",
+      "metafieldsCount": 0,
+      "desc": "Location of the variant"
+    },
+    {
+      "ownerType": "PRODUCTVARIANT",
+      "id": "custom.batch_number_variant",
+      "name": "Batch Number Variant",
+      "metafieldsCount": 0,
+      "desc": "Batch Number Variant"
+    }
+  ],
+  "envCheck": {
+    "note": "Checked at report time via Phase 3D — no SKULabs credentials expected in repo"
+  },
+  "supplemental": {
+    "skFulfillMarked": 10309,
+    "skShipEmail": 10279,
+    "fulfilledNoSk": 11034,
+    "preSkFulfilled": 6896,
+    "onHoldStatus": 41,
+    "multiFul": 1345,
+    "multiFulSk": 406
+  }
+}

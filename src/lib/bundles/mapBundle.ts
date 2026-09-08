@@ -17,8 +17,9 @@ type BundleItemRpc = {
     name: string
     slug: string
     image_url: string | null
-    price: number
+    price: number | null
     inventory_count: number
+    price_restricted?: boolean
   }
   variants?: Array<Database['public']['Tables']['product_variants']['Row']>
 }
@@ -42,23 +43,30 @@ function mapBundleItem(row: BundleItemRpc): ProductBundleItem {
       id: row.product.id,
       name: row.product.name,
       slug: row.product.slug,
-      imageUrl: row.product.image_url ?? '',
-      price: Number(row.product.price),
+      imageUrl: row.product.image_url?.trim() || variants.find((item) => item.imageUrl?.trim())?.imageUrl?.trim() || '',
+      price: row.product.price == null || row.product.price_restricted ? 0 : Number(row.product.price),
+      priceRestricted: Boolean(row.product.price_restricted) || row.product.price == null,
       inventoryCount: Number(row.product.inventory_count),
       variants: variants.length > 0 ? variants : undefined,
     },
   }
 }
 
-export function mapBundleRow(row: BundleRow, items: ProductBundleItem[] = [], availableQuantity = 0): ProductBundle {
+export function mapBundleRow(
+  row: BundleRow & { price_restricted?: boolean },
+  items: ProductBundleItem[] = [],
+  availableQuantity = 0,
+): ProductBundle {
+  const restricted = Boolean(row.price_restricted) || row.price == null
   return {
     id: row.id,
     name: row.name,
     slug: row.slug,
     overview: row.overview,
     description: row.description,
-    price: Number(row.price),
-    compareAtPrice: row.compare_at_price != null ? Number(row.compare_at_price) : null,
+    price: restricted ? 0 : Number(row.price),
+    compareAtPrice: restricted ? null : row.compare_at_price != null ? Number(row.compare_at_price) : null,
+    priceRestricted: restricted,
     sku: row.sku,
     imageUrl: row.image_url ?? '',
     galleryUrls: galleryFromRow(row),

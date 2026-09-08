@@ -582,6 +582,18 @@ export interface Database {
           approval_status: string
           registration_channel: string | null
           customer_type: string | null
+          payment_terms: string | null
+          trade_access_status: string
+          trade_eligible: boolean
+          trade_eligible_source: string | null
+          trade_eligible_note: string | null
+          trade_eligible_decided_at: string | null
+          trade_eligible_decided_by: string | null
+          pay_later_eligible: boolean
+          pay_later_eligible_source: string | null
+          pay_later_eligible_note: string | null
+          pay_later_eligible_decided_at: string | null
+          pay_later_eligible_decided_by: string | null
           salesperson_id: string | null
           referrer_id: string | null
           cg_assigned_id: string | null
@@ -592,6 +604,7 @@ export interface Database {
           imported_at: string | null
           created_at: string
           updated_at: string
+          version?: number
         }
         Insert: Partial<Database['public']['Tables']['customers']['Row']>
         Update: Partial<Database['public']['Tables']['customers']['Row']>
@@ -1141,6 +1154,13 @@ export interface Database {
           imported_at: string | null
           created_at: string
           updated_at: string
+          cg_assigned_id: string | null
+          version: number
+          duplicated_from_draft_id: string | null
+          created_by_staff_id: string | null
+          payment_terms: string | null
+          discount_snapshot: Json
+          tax_snapshot: Json
         }
         Insert: Partial<Database['public']['Tables']['draft_orders']['Row']>
         Update: Partial<Database['public']['Tables']['draft_orders']['Row']>
@@ -1289,6 +1309,58 @@ export interface Database {
         Args: { p_order_id: string; p_patch: Json }
         Returns: Json
       }
+      rpc_admin_draft_filter_facets: {
+        Args: Record<string, never>
+        Returns: Json
+      }
+      rpc_list_admin_drafts: {
+        Args: { p_limit?: number; p_offset?: number; p_sort?: string; p_filters?: Json }
+        Returns: Json
+      }
+      rpc_get_admin_draft_workspace: {
+        Args: { p_draft_id: string }
+        Returns: Json
+      }
+      rpc_list_admin_draft_lines: {
+        Args: { p_draft_id: string; p_limit?: number; p_offset?: number; p_search?: string | null }
+        Returns: Json
+      }
+      rpc_list_admin_draft_timeline: {
+        Args: { p_draft_id: string; p_limit?: number; p_offset?: number }
+        Returns: Json
+      }
+      rpc_admin_add_draft_note: {
+        Args: { p_draft_id: string; p_body: string }
+        Returns: Json
+      }
+      rpc_admin_search_customers_companies: {
+        Args: { p_search?: string | null; p_limit?: number }
+        Returns: Json
+      }
+      rpc_admin_search_catalog_variants: {
+        Args: { p_search?: string | null; p_limit?: number }
+        Returns: Json
+      }
+      rpc_admin_create_unique_draft: {
+        Args: { p_payload?: Json }
+        Returns: Json
+      }
+      rpc_admin_update_unique_draft: {
+        Args: { p_draft_id: string; p_expected_version: number; p_payload: Json }
+        Returns: Json
+      }
+      rpc_admin_replace_unique_draft_lines: {
+        Args: { p_draft_id: string; p_expected_version: number; p_lines: Json }
+        Returns: Json
+      }
+      rpc_admin_duplicate_draft_as_unique: {
+        Args: { p_source_draft_id: string }
+        Returns: Json
+      }
+      rpc_admin_convert_unique_draft: {
+        Args: { p_draft_id: string; p_expected_version: number }
+        Returns: Json
+      }
       rpc_admin_fulfill_order_inventory: {
         Args: { p_order_id: string }
         Returns: Json
@@ -1356,6 +1428,76 @@ export interface Database {
       }
       rpc_list_admin_customers: {
         Args: { p_limit?: number; p_offset?: number; p_search?: string | null }
+        Returns: Json
+      }
+      rpc_admin_crm_customer_filter_facets: {
+        Args: Record<string, never>
+        Returns: Json
+      }
+      rpc_list_admin_crm_customers: {
+        Args: { p_limit?: number; p_offset?: number; p_sort?: string; p_filters?: Json }
+        Returns: Json
+      }
+      rpc_admin_crm_company_filter_facets: {
+        Args: Record<string, never>
+        Returns: Json
+      }
+      rpc_list_admin_crm_companies: {
+        Args: { p_limit?: number; p_offset?: number; p_sort?: string; p_filters?: Json }
+        Returns: Json
+      }
+      rpc_get_admin_customer_workspace: {
+        Args: { p_customer_id: string }
+        Returns: Json
+      }
+      rpc_get_admin_company_workspace: {
+        Args: { p_company_id: string }
+        Returns: Json
+      }
+      rpc_list_admin_crm_timeline: {
+        Args: {
+          p_entity_type: string
+          p_entity_id: string
+          p_limit?: number
+          p_offset?: number
+        }
+        Returns: Json
+      }
+      rpc_admin_add_crm_note: {
+        Args: { p_entity_type: string; p_entity_id: string; p_body: string }
+        Returns: Json
+      }
+      rpc_admin_create_unique_customer: {
+        Args: { p_payload?: Json }
+        Returns: Json
+      }
+      rpc_admin_update_unique_customer: {
+        Args: { p_customer_id: string; p_expected_version: number; p_payload: Json }
+        Returns: Json
+      }
+      rpc_admin_create_unique_company: {
+        Args: { p_payload?: Json }
+        Returns: Json
+      }
+      rpc_admin_update_unique_company: {
+        Args: { p_company_id: string; p_expected_version: number; p_payload: Json }
+        Returns: Json
+      }
+      rpc_admin_add_company_contact: {
+        Args: {
+          p_company_id: string
+          p_customer_id: string
+          p_title?: string | null
+          p_is_primary?: boolean
+        }
+        Returns: Json
+      }
+      rpc_admin_remove_company_contact: {
+        Args: { p_company_id: string; p_customer_id: string }
+        Returns: Json
+      }
+      rpc_admin_crm_defaults_for_draft: {
+        Args: { p_customer_id?: string | null; p_company_id?: string | null }
         Returns: Json
       }
       rpc_list_low_stock_products: {

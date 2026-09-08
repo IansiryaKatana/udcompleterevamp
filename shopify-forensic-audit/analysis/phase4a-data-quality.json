@@ -1,0 +1,26 @@
+{
+  "customer_type_metafield": [
+    [
+      "order:Wholesale",
+      138
+    ]
+  ],
+  "draft_customer_type": [
+    [
+      "Wholesale",
+      909
+    ]
+  ],
+  "customers_without_company": 2701,
+  "customers_without_salesperson": 394,
+  "customers_without_cg": 6219,
+  "duplicate_email_groups": 0,
+  "companies_without_contacts": 22,
+  "companies_without_salesperson": 3478,
+  "duplicate_company_name_groups": 86,
+  "totals": {
+    "customers": 6219,
+    "companies": 3518,
+    "contacts": 3518
+  }
+}

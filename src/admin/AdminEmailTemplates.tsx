@@ -17,6 +17,7 @@ import {
   renderBrandedEmail,
   type EmailBrandContext,
 } from '@/lib/email/templateEngine'
+import { DEFAULT_BRAND_PALETTE } from '@/lib/brandPalette'
 import { adminBtnPrimary, adminBtnSecondary, adminInput, adminLabel } from '@/admin/adminClassNames'
 import { RichTextEditor } from '@/admin/components/RichTextEditor'
 
@@ -53,7 +54,7 @@ export function AdminEmailTemplates() {
       brandColor:
         getSettingValue(entries, 'email_brand_color') ||
         snapshot.siteSettings.brand_primary ||
-        '#5c4a32',
+        DEFAULT_BRAND_PALETTE.primary,
       footerText: getSettingValue(entries, 'email_footer_text', 'Thank you for shopping with us.'),
       storeUrl: storeUrl.replace(/\/$/, ''),
     }
@@ -187,12 +188,12 @@ export function AdminEmailTemplates() {
               <input
                 type="color"
                 className="h-10 w-14 cursor-pointer rounded border border-[var(--admin-border)]"
-                value={getSettingValue(entries, 'email_brand_color', '#5c4a32')}
+                value={getSettingValue(entries, 'email_brand_color', DEFAULT_BRAND_PALETTE.primary)}
                 onChange={(e) => updateBrandSetting('email_brand_color', e.target.value)}
               />
               <input
                 className={adminInput}
-                value={getSettingValue(entries, 'email_brand_color', '#5c4a32')}
+                value={getSettingValue(entries, 'email_brand_color', DEFAULT_BRAND_PALETTE.primary)}
                 onChange={(e) => updateBrandSetting('email_brand_color', e.target.value)}
               />
             </div>

@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TradeRouteImport } from './routes/trade'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as CartRouteImport } from './routes/cart'
@@ -17,6 +18,7 @@ import { Route as BackendRouteRouteImport } from './routes/backend/route'
 import { Route as AdminRouteRouteImport } from './routes/admin/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BundlesIndexRouteImport } from './routes/bundles/index'
+import { Route as BrandsIndexRouteImport } from './routes/brands/index'
 import { Route as BackendIndexRouteImport } from './routes/backend/index'
 import { Route as AdminIndexRouteImport } from './routes/admin/index'
 import { Route as ProductSlugRouteImport } from './routes/product/$slug'
@@ -24,10 +26,13 @@ import { Route as PagesSlugRouteImport } from './routes/pages/$slug'
 import { Route as CollectionSlugRouteImport } from './routes/collection/$slug'
 import { Route as CheckoutSuccessRouteImport } from './routes/checkout/success'
 import { Route as BundleSlugRouteImport } from './routes/bundle/$slug'
+import { Route as BrandsHandleRouteImport } from './routes/brands/$handle'
+import { Route as BackendWmsRouteImport } from './routes/backend/wms'
 import { Route as BackendUsersRouteImport } from './routes/backend/users'
 import { Route as BackendSubmissionsRouteImport } from './routes/backend/submissions'
 import { Route as BackendSiteSettingsRouteImport } from './routes/backend/site-settings'
 import { Route as BackendSettingsRouteImport } from './routes/backend/settings'
+import { Route as BackendSalesRouteImport } from './routes/backend/sales'
 import { Route as BackendProductsRouteImport } from './routes/backend/products'
 import { Route as BackendPagesRouteImport } from './routes/backend/pages'
 import { Route as BackendOrdersRouteImport } from './routes/backend/orders'
@@ -40,10 +45,16 @@ import { Route as BackendIntegrationsRouteImport } from './routes/backend/integr
 import { Route as BackendHomepageSectionsRouteImport } from './routes/backend/homepage-sections'
 import { Route as BackendHomepageRouteImport } from './routes/backend/homepage'
 import { Route as BackendHeroSlidesRouteImport } from './routes/backend/hero-slides'
+import { Route as BackendFulfilmentRouteImport } from './routes/backend/fulfilment'
+import { Route as BackendFinanceRouteImport } from './routes/backend/finance'
 import { Route as BackendFeatureCardsRouteImport } from './routes/backend/feature-cards'
 import { Route as BackendEmailTemplatesRouteImport } from './routes/backend/email-templates'
+import { Route as BackendDraftsRouteImport } from './routes/backend/drafts'
 import { Route as BackendDataTransferRouteImport } from './routes/backend/data-transfer'
+import { Route as BackendCutoverRouteImport } from './routes/backend/cutover'
+import { Route as BackendCustomersRouteImport } from './routes/backend/customers'
 import { Route as BackendContentRouteImport } from './routes/backend/content'
+import { Route as BackendCompaniesRouteImport } from './routes/backend/companies'
 import { Route as BackendCommunicationsRouteImport } from './routes/backend/communications'
 import { Route as BackendCommerceRouteImport } from './routes/backend/commerce'
 import { Route as BackendCollectionsRouteImport } from './routes/backend/collections'
@@ -51,9 +62,32 @@ import { Route as BackendCheckoutRouteImport } from './routes/backend/checkout'
 import { Route as BackendCategoriesRouteImport } from './routes/backend/categories'
 import { Route as BackendCatalogRouteImport } from './routes/backend/catalog'
 import { Route as AdminSplatRouteImport } from './routes/admin/$'
+import { Route as AccountQuotesRouteImport } from './routes/account/quotes'
+import { Route as AccountInvoicesRouteImport } from './routes/account/invoices'
+import { Route as AccountCompanyRouteImport } from './routes/account/company'
+import { Route as AccountAddressesRouteImport } from './routes/account/addresses'
 import { Route as BackendOrdersOrderIdRouteImport } from './routes/backend/orders.$orderId'
+import { Route as BackendFinanceStatementsRouteImport } from './routes/backend/finance.statements'
+import { Route as BackendFinanceRefundsRouteImport } from './routes/backend/finance.refunds'
+import { Route as BackendFinanceReconciliationRouteImport } from './routes/backend/finance.reconciliation'
+import { Route as BackendFinanceReceivablesRouteImport } from './routes/backend/finance.receivables'
+import { Route as BackendFinancePaymentsRouteImport } from './routes/backend/finance.payments'
+import { Route as BackendFinanceInvoicesRouteImport } from './routes/backend/finance.invoices'
+import { Route as BackendDraftsNewRouteImport } from './routes/backend/drafts.new'
+import { Route as BackendDraftsDraftIdRouteImport } from './routes/backend/drafts.$draftId'
+import { Route as BackendCustomersNewRouteImport } from './routes/backend/customers.new'
+import { Route as BackendCustomersCustomerIdRouteImport } from './routes/backend/customers.$customerId'
+import { Route as BackendCompaniesNewRouteImport } from './routes/backend/companies.new'
+import { Route as BackendCompaniesCompanyIdRouteImport } from './routes/backend/companies.$companyId'
 import { Route as AccountOrdersOrderIdRouteImport } from './routes/account/orders/$orderId'
+import { Route as BackendFinancePaymentsPaymentIdRouteImport } from './routes/backend/finance.payments.$paymentId'
+import { Route as BackendFinanceInvoicesInvoiceIdRouteImport } from './routes/backend/finance.invoices.$invoiceId'
 
+const TradeRoute = TradeRouteImport.update({
+  id: '/trade',
+  path: '/trade',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SearchRoute = SearchRouteImport.update({
   id: '/search',
   path: '/search',
@@ -94,6 +128,11 @@ const BundlesIndexRoute = BundlesIndexRouteImport.update({
   path: '/bundles/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BrandsIndexRoute = BrandsIndexRouteImport.update({
+  id: '/brands/',
+  path: '/brands/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BackendIndexRoute = BackendIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -129,6 +168,16 @@ const BundleSlugRoute = BundleSlugRouteImport.update({
   path: '/bundle/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BrandsHandleRoute = BrandsHandleRouteImport.update({
+  id: '/brands/$handle',
+  path: '/brands/$handle',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BackendWmsRoute = BackendWmsRouteImport.update({
+  id: '/wms',
+  path: '/wms',
+  getParentRoute: () => BackendRouteRoute,
+} as any)
 const BackendUsersRoute = BackendUsersRouteImport.update({
   id: '/users',
   path: '/users',
@@ -147,6 +196,11 @@ const BackendSiteSettingsRoute = BackendSiteSettingsRouteImport.update({
 const BackendSettingsRoute = BackendSettingsRouteImport.update({
   id: '/settings',
   path: '/settings',
+  getParentRoute: () => BackendRouteRoute,
+} as any)
+const BackendSalesRoute = BackendSalesRouteImport.update({
+  id: '/sales',
+  path: '/sales',
   getParentRoute: () => BackendRouteRoute,
 } as any)
 const BackendProductsRoute = BackendProductsRouteImport.update({
@@ -209,6 +263,16 @@ const BackendHeroSlidesRoute = BackendHeroSlidesRouteImport.update({
   path: '/hero-slides',
   getParentRoute: () => BackendRouteRoute,
 } as any)
+const BackendFulfilmentRoute = BackendFulfilmentRouteImport.update({
+  id: '/fulfilment',
+  path: '/fulfilment',
+  getParentRoute: () => BackendRouteRoute,
+} as any)
+const BackendFinanceRoute = BackendFinanceRouteImport.update({
+  id: '/finance',
+  path: '/finance',
+  getParentRoute: () => BackendRouteRoute,
+} as any)
 const BackendFeatureCardsRoute = BackendFeatureCardsRouteImport.update({
   id: '/feature-cards',
   path: '/feature-cards',
@@ -219,14 +283,34 @@ const BackendEmailTemplatesRoute = BackendEmailTemplatesRouteImport.update({
   path: '/email-templates',
   getParentRoute: () => BackendRouteRoute,
 } as any)
+const BackendDraftsRoute = BackendDraftsRouteImport.update({
+  id: '/drafts',
+  path: '/drafts',
+  getParentRoute: () => BackendRouteRoute,
+} as any)
 const BackendDataTransferRoute = BackendDataTransferRouteImport.update({
   id: '/data-transfer',
   path: '/data-transfer',
   getParentRoute: () => BackendRouteRoute,
 } as any)
+const BackendCutoverRoute = BackendCutoverRouteImport.update({
+  id: '/cutover',
+  path: '/cutover',
+  getParentRoute: () => BackendRouteRoute,
+} as any)
+const BackendCustomersRoute = BackendCustomersRouteImport.update({
+  id: '/customers',
+  path: '/customers',
+  getParentRoute: () => BackendRouteRoute,
+} as any)
 const BackendContentRoute = BackendContentRouteImport.update({
   id: '/content',
   path: '/content',
+  getParentRoute: () => BackendRouteRoute,
+} as any)
+const BackendCompaniesRoute = BackendCompaniesRouteImport.update({
+  id: '/companies',
+  path: '/companies',
   getParentRoute: () => BackendRouteRoute,
 } as any)
 const BackendCommunicationsRoute = BackendCommunicationsRouteImport.update({
@@ -264,16 +348,113 @@ const AdminSplatRoute = AdminSplatRouteImport.update({
   path: '/$',
   getParentRoute: () => AdminRouteRoute,
 } as any)
+const AccountQuotesRoute = AccountQuotesRouteImport.update({
+  id: '/quotes',
+  path: '/quotes',
+  getParentRoute: () => AccountRoute,
+} as any)
+const AccountInvoicesRoute = AccountInvoicesRouteImport.update({
+  id: '/invoices',
+  path: '/invoices',
+  getParentRoute: () => AccountRoute,
+} as any)
+const AccountCompanyRoute = AccountCompanyRouteImport.update({
+  id: '/company',
+  path: '/company',
+  getParentRoute: () => AccountRoute,
+} as any)
+const AccountAddressesRoute = AccountAddressesRouteImport.update({
+  id: '/addresses',
+  path: '/addresses',
+  getParentRoute: () => AccountRoute,
+} as any)
 const BackendOrdersOrderIdRoute = BackendOrdersOrderIdRouteImport.update({
   id: '/$orderId',
   path: '/$orderId',
   getParentRoute: () => BackendOrdersRoute,
 } as any)
+const BackendFinanceStatementsRoute =
+  BackendFinanceStatementsRouteImport.update({
+    id: '/statements',
+    path: '/statements',
+    getParentRoute: () => BackendFinanceRoute,
+  } as any)
+const BackendFinanceRefundsRoute = BackendFinanceRefundsRouteImport.update({
+  id: '/refunds',
+  path: '/refunds',
+  getParentRoute: () => BackendFinanceRoute,
+} as any)
+const BackendFinanceReconciliationRoute =
+  BackendFinanceReconciliationRouteImport.update({
+    id: '/reconciliation',
+    path: '/reconciliation',
+    getParentRoute: () => BackendFinanceRoute,
+  } as any)
+const BackendFinanceReceivablesRoute =
+  BackendFinanceReceivablesRouteImport.update({
+    id: '/receivables',
+    path: '/receivables',
+    getParentRoute: () => BackendFinanceRoute,
+  } as any)
+const BackendFinancePaymentsRoute = BackendFinancePaymentsRouteImport.update({
+  id: '/payments',
+  path: '/payments',
+  getParentRoute: () => BackendFinanceRoute,
+} as any)
+const BackendFinanceInvoicesRoute = BackendFinanceInvoicesRouteImport.update({
+  id: '/invoices',
+  path: '/invoices',
+  getParentRoute: () => BackendFinanceRoute,
+} as any)
+const BackendDraftsNewRoute = BackendDraftsNewRouteImport.update({
+  id: '/new',
+  path: '/new',
+  getParentRoute: () => BackendDraftsRoute,
+} as any)
+const BackendDraftsDraftIdRoute = BackendDraftsDraftIdRouteImport.update({
+  id: '/$draftId',
+  path: '/$draftId',
+  getParentRoute: () => BackendDraftsRoute,
+} as any)
+const BackendCustomersNewRoute = BackendCustomersNewRouteImport.update({
+  id: '/new',
+  path: '/new',
+  getParentRoute: () => BackendCustomersRoute,
+} as any)
+const BackendCustomersCustomerIdRoute =
+  BackendCustomersCustomerIdRouteImport.update({
+    id: '/$customerId',
+    path: '/$customerId',
+    getParentRoute: () => BackendCustomersRoute,
+  } as any)
+const BackendCompaniesNewRoute = BackendCompaniesNewRouteImport.update({
+  id: '/new',
+  path: '/new',
+  getParentRoute: () => BackendCompaniesRoute,
+} as any)
+const BackendCompaniesCompanyIdRoute =
+  BackendCompaniesCompanyIdRouteImport.update({
+    id: '/$companyId',
+    path: '/$companyId',
+    getParentRoute: () => BackendCompaniesRoute,
+  } as any)
 const AccountOrdersOrderIdRoute = AccountOrdersOrderIdRouteImport.update({
   id: '/orders/$orderId',
   path: '/orders/$orderId',
   getParentRoute: () => AccountRoute,
 } as any)
+const BackendFinancePaymentsPaymentIdRoute =
+  BackendFinancePaymentsPaymentIdRouteImport.update({
+    id: '/$paymentId',
+    path: '/$paymentId',
+    getParentRoute: () => BackendFinancePaymentsRoute,
+  } as any)
+const BackendFinanceInvoicesInvoiceIdRoute =
+  BackendFinanceInvoicesInvoiceIdRouteImport.update({
+    id: '/$invoiceId',
+    path: '/$invoiceId',
+    getParentRoute: () => BackendFinanceInvoicesRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -283,6 +464,11 @@ export interface FileRoutesByFullPath {
   '/cart': typeof CartRoute
   '/checkout': typeof CheckoutRouteWithChildren
   '/search': typeof SearchRoute
+  '/trade': typeof TradeRoute
+  '/account/addresses': typeof AccountAddressesRoute
+  '/account/company': typeof AccountCompanyRoute
+  '/account/invoices': typeof AccountInvoicesRoute
+  '/account/quotes': typeof AccountQuotesRoute
   '/admin/$': typeof AdminSplatRoute
   '/backend/catalog': typeof BackendCatalogRoute
   '/backend/categories': typeof BackendCategoriesRoute
@@ -290,10 +476,16 @@ export interface FileRoutesByFullPath {
   '/backend/collections': typeof BackendCollectionsRoute
   '/backend/commerce': typeof BackendCommerceRoute
   '/backend/communications': typeof BackendCommunicationsRoute
+  '/backend/companies': typeof BackendCompaniesRouteWithChildren
   '/backend/content': typeof BackendContentRoute
+  '/backend/customers': typeof BackendCustomersRouteWithChildren
+  '/backend/cutover': typeof BackendCutoverRoute
   '/backend/data-transfer': typeof BackendDataTransferRoute
+  '/backend/drafts': typeof BackendDraftsRouteWithChildren
   '/backend/email-templates': typeof BackendEmailTemplatesRoute
   '/backend/feature-cards': typeof BackendFeatureCardsRoute
+  '/backend/finance': typeof BackendFinanceRouteWithChildren
+  '/backend/fulfilment': typeof BackendFulfilmentRoute
   '/backend/hero-slides': typeof BackendHeroSlidesRoute
   '/backend/homepage': typeof BackendHomepageRoute
   '/backend/homepage-sections': typeof BackendHomepageSectionsRoute
@@ -306,10 +498,13 @@ export interface FileRoutesByFullPath {
   '/backend/orders': typeof BackendOrdersRouteWithChildren
   '/backend/pages': typeof BackendPagesRoute
   '/backend/products': typeof BackendProductsRoute
+  '/backend/sales': typeof BackendSalesRoute
   '/backend/settings': typeof BackendSettingsRoute
   '/backend/site-settings': typeof BackendSiteSettingsRoute
   '/backend/submissions': typeof BackendSubmissionsRoute
   '/backend/users': typeof BackendUsersRoute
+  '/backend/wms': typeof BackendWmsRoute
+  '/brands/$handle': typeof BrandsHandleRoute
   '/bundle/$slug': typeof BundleSlugRoute
   '/checkout/success': typeof CheckoutSuccessRoute
   '/collection/$slug': typeof CollectionSlugRoute
@@ -317,9 +512,24 @@ export interface FileRoutesByFullPath {
   '/product/$slug': typeof ProductSlugRoute
   '/admin/': typeof AdminIndexRoute
   '/backend/': typeof BackendIndexRoute
+  '/brands/': typeof BrandsIndexRoute
   '/bundles/': typeof BundlesIndexRoute
   '/account/orders/$orderId': typeof AccountOrdersOrderIdRoute
+  '/backend/companies/$companyId': typeof BackendCompaniesCompanyIdRoute
+  '/backend/companies/new': typeof BackendCompaniesNewRoute
+  '/backend/customers/$customerId': typeof BackendCustomersCustomerIdRoute
+  '/backend/customers/new': typeof BackendCustomersNewRoute
+  '/backend/drafts/$draftId': typeof BackendDraftsDraftIdRoute
+  '/backend/drafts/new': typeof BackendDraftsNewRoute
+  '/backend/finance/invoices': typeof BackendFinanceInvoicesRouteWithChildren
+  '/backend/finance/payments': typeof BackendFinancePaymentsRouteWithChildren
+  '/backend/finance/receivables': typeof BackendFinanceReceivablesRoute
+  '/backend/finance/reconciliation': typeof BackendFinanceReconciliationRoute
+  '/backend/finance/refunds': typeof BackendFinanceRefundsRoute
+  '/backend/finance/statements': typeof BackendFinanceStatementsRoute
   '/backend/orders/$orderId': typeof BackendOrdersOrderIdRoute
+  '/backend/finance/invoices/$invoiceId': typeof BackendFinanceInvoicesInvoiceIdRoute
+  '/backend/finance/payments/$paymentId': typeof BackendFinancePaymentsPaymentIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -327,6 +537,11 @@ export interface FileRoutesByTo {
   '/cart': typeof CartRoute
   '/checkout': typeof CheckoutRouteWithChildren
   '/search': typeof SearchRoute
+  '/trade': typeof TradeRoute
+  '/account/addresses': typeof AccountAddressesRoute
+  '/account/company': typeof AccountCompanyRoute
+  '/account/invoices': typeof AccountInvoicesRoute
+  '/account/quotes': typeof AccountQuotesRoute
   '/admin/$': typeof AdminSplatRoute
   '/backend/catalog': typeof BackendCatalogRoute
   '/backend/categories': typeof BackendCategoriesRoute
@@ -334,10 +549,16 @@ export interface FileRoutesByTo {
   '/backend/collections': typeof BackendCollectionsRoute
   '/backend/commerce': typeof BackendCommerceRoute
   '/backend/communications': typeof BackendCommunicationsRoute
+  '/backend/companies': typeof BackendCompaniesRouteWithChildren
   '/backend/content': typeof BackendContentRoute
+  '/backend/customers': typeof BackendCustomersRouteWithChildren
+  '/backend/cutover': typeof BackendCutoverRoute
   '/backend/data-transfer': typeof BackendDataTransferRoute
+  '/backend/drafts': typeof BackendDraftsRouteWithChildren
   '/backend/email-templates': typeof BackendEmailTemplatesRoute
   '/backend/feature-cards': typeof BackendFeatureCardsRoute
+  '/backend/finance': typeof BackendFinanceRouteWithChildren
+  '/backend/fulfilment': typeof BackendFulfilmentRoute
   '/backend/hero-slides': typeof BackendHeroSlidesRoute
   '/backend/homepage': typeof BackendHomepageRoute
   '/backend/homepage-sections': typeof BackendHomepageSectionsRoute
@@ -350,10 +571,13 @@ export interface FileRoutesByTo {
   '/backend/orders': typeof BackendOrdersRouteWithChildren
   '/backend/pages': typeof BackendPagesRoute
   '/backend/products': typeof BackendProductsRoute
+  '/backend/sales': typeof BackendSalesRoute
   '/backend/settings': typeof BackendSettingsRoute
   '/backend/site-settings': typeof BackendSiteSettingsRoute
   '/backend/submissions': typeof BackendSubmissionsRoute
   '/backend/users': typeof BackendUsersRoute
+  '/backend/wms': typeof BackendWmsRoute
+  '/brands/$handle': typeof BrandsHandleRoute
   '/bundle/$slug': typeof BundleSlugRoute
   '/checkout/success': typeof CheckoutSuccessRoute
   '/collection/$slug': typeof CollectionSlugRoute
@@ -361,9 +585,24 @@ export interface FileRoutesByTo {
   '/product/$slug': typeof ProductSlugRoute
   '/admin': typeof AdminIndexRoute
   '/backend': typeof BackendIndexRoute
+  '/brands': typeof BrandsIndexRoute
   '/bundles': typeof BundlesIndexRoute
   '/account/orders/$orderId': typeof AccountOrdersOrderIdRoute
+  '/backend/companies/$companyId': typeof BackendCompaniesCompanyIdRoute
+  '/backend/companies/new': typeof BackendCompaniesNewRoute
+  '/backend/customers/$customerId': typeof BackendCustomersCustomerIdRoute
+  '/backend/customers/new': typeof BackendCustomersNewRoute
+  '/backend/drafts/$draftId': typeof BackendDraftsDraftIdRoute
+  '/backend/drafts/new': typeof BackendDraftsNewRoute
+  '/backend/finance/invoices': typeof BackendFinanceInvoicesRouteWithChildren
+  '/backend/finance/payments': typeof BackendFinancePaymentsRouteWithChildren
+  '/backend/finance/receivables': typeof BackendFinanceReceivablesRoute
+  '/backend/finance/reconciliation': typeof BackendFinanceReconciliationRoute
+  '/backend/finance/refunds': typeof BackendFinanceRefundsRoute
+  '/backend/finance/statements': typeof BackendFinanceStatementsRoute
   '/backend/orders/$orderId': typeof BackendOrdersOrderIdRoute
+  '/backend/finance/invoices/$invoiceId': typeof BackendFinanceInvoicesInvoiceIdRoute
+  '/backend/finance/payments/$paymentId': typeof BackendFinancePaymentsPaymentIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -374,6 +613,11 @@ export interface FileRoutesById {
   '/cart': typeof CartRoute
   '/checkout': typeof CheckoutRouteWithChildren
   '/search': typeof SearchRoute
+  '/trade': typeof TradeRoute
+  '/account/addresses': typeof AccountAddressesRoute
+  '/account/company': typeof AccountCompanyRoute
+  '/account/invoices': typeof AccountInvoicesRoute
+  '/account/quotes': typeof AccountQuotesRoute
   '/admin/$': typeof AdminSplatRoute
   '/backend/catalog': typeof BackendCatalogRoute
   '/backend/categories': typeof BackendCategoriesRoute
@@ -381,10 +625,16 @@ export interface FileRoutesById {
   '/backend/collections': typeof BackendCollectionsRoute
   '/backend/commerce': typeof BackendCommerceRoute
   '/backend/communications': typeof BackendCommunicationsRoute
+  '/backend/companies': typeof BackendCompaniesRouteWithChildren
   '/backend/content': typeof BackendContentRoute
+  '/backend/customers': typeof BackendCustomersRouteWithChildren
+  '/backend/cutover': typeof BackendCutoverRoute
   '/backend/data-transfer': typeof BackendDataTransferRoute
+  '/backend/drafts': typeof BackendDraftsRouteWithChildren
   '/backend/email-templates': typeof BackendEmailTemplatesRoute
   '/backend/feature-cards': typeof BackendFeatureCardsRoute
+  '/backend/finance': typeof BackendFinanceRouteWithChildren
+  '/backend/fulfilment': typeof BackendFulfilmentRoute
   '/backend/hero-slides': typeof BackendHeroSlidesRoute
   '/backend/homepage': typeof BackendHomepageRoute
   '/backend/homepage-sections': typeof BackendHomepageSectionsRoute
@@ -397,10 +647,13 @@ export interface FileRoutesById {
   '/backend/orders': typeof BackendOrdersRouteWithChildren
   '/backend/pages': typeof BackendPagesRoute
   '/backend/products': typeof BackendProductsRoute
+  '/backend/sales': typeof BackendSalesRoute
   '/backend/settings': typeof BackendSettingsRoute
   '/backend/site-settings': typeof BackendSiteSettingsRoute
   '/backend/submissions': typeof BackendSubmissionsRoute
   '/backend/users': typeof BackendUsersRoute
+  '/backend/wms': typeof BackendWmsRoute
+  '/brands/$handle': typeof BrandsHandleRoute
   '/bundle/$slug': typeof BundleSlugRoute
   '/checkout/success': typeof CheckoutSuccessRoute
   '/collection/$slug': typeof CollectionSlugRoute
@@ -408,9 +661,24 @@ export interface FileRoutesById {
   '/product/$slug': typeof ProductSlugRoute
   '/admin/': typeof AdminIndexRoute
   '/backend/': typeof BackendIndexRoute
+  '/brands/': typeof BrandsIndexRoute
   '/bundles/': typeof BundlesIndexRoute
   '/account/orders/$orderId': typeof AccountOrdersOrderIdRoute
+  '/backend/companies/$companyId': typeof BackendCompaniesCompanyIdRoute
+  '/backend/companies/new': typeof BackendCompaniesNewRoute
+  '/backend/customers/$customerId': typeof BackendCustomersCustomerIdRoute
+  '/backend/customers/new': typeof BackendCustomersNewRoute
+  '/backend/drafts/$draftId': typeof BackendDraftsDraftIdRoute
+  '/backend/drafts/new': typeof BackendDraftsNewRoute
+  '/backend/finance/invoices': typeof BackendFinanceInvoicesRouteWithChildren
+  '/backend/finance/payments': typeof BackendFinancePaymentsRouteWithChildren
+  '/backend/finance/receivables': typeof BackendFinanceReceivablesRoute
+  '/backend/finance/reconciliation': typeof BackendFinanceReconciliationRoute
+  '/backend/finance/refunds': typeof BackendFinanceRefundsRoute
+  '/backend/finance/statements': typeof BackendFinanceStatementsRoute
   '/backend/orders/$orderId': typeof BackendOrdersOrderIdRoute
+  '/backend/finance/invoices/$invoiceId': typeof BackendFinanceInvoicesInvoiceIdRoute
+  '/backend/finance/payments/$paymentId': typeof BackendFinancePaymentsPaymentIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -422,6 +690,11 @@ export interface FileRouteTypes {
     | '/cart'
     | '/checkout'
     | '/search'
+    | '/trade'
+    | '/account/addresses'
+    | '/account/company'
+    | '/account/invoices'
+    | '/account/quotes'
     | '/admin/$'
     | '/backend/catalog'
     | '/backend/categories'
@@ -429,10 +702,16 @@ export interface FileRouteTypes {
     | '/backend/collections'
     | '/backend/commerce'
     | '/backend/communications'
+    | '/backend/companies'
     | '/backend/content'
+    | '/backend/customers'
+    | '/backend/cutover'
     | '/backend/data-transfer'
+    | '/backend/drafts'
     | '/backend/email-templates'
     | '/backend/feature-cards'
+    | '/backend/finance'
+    | '/backend/fulfilment'
     | '/backend/hero-slides'
     | '/backend/homepage'
     | '/backend/homepage-sections'
@@ -445,10 +724,13 @@ export interface FileRouteTypes {
     | '/backend/orders'
     | '/backend/pages'
     | '/backend/products'
+    | '/backend/sales'
     | '/backend/settings'
     | '/backend/site-settings'
     | '/backend/submissions'
     | '/backend/users'
+    | '/backend/wms'
+    | '/brands/$handle'
     | '/bundle/$slug'
     | '/checkout/success'
     | '/collection/$slug'
@@ -456,9 +738,24 @@ export interface FileRouteTypes {
     | '/product/$slug'
     | '/admin/'
     | '/backend/'
+    | '/brands/'
     | '/bundles/'
     | '/account/orders/$orderId'
+    | '/backend/companies/$companyId'
+    | '/backend/companies/new'
+    | '/backend/customers/$customerId'
+    | '/backend/customers/new'
+    | '/backend/drafts/$draftId'
+    | '/backend/drafts/new'
+    | '/backend/finance/invoices'
+    | '/backend/finance/payments'
+    | '/backend/finance/receivables'
+    | '/backend/finance/reconciliation'
+    | '/backend/finance/refunds'
+    | '/backend/finance/statements'
     | '/backend/orders/$orderId'
+    | '/backend/finance/invoices/$invoiceId'
+    | '/backend/finance/payments/$paymentId'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -466,6 +763,11 @@ export interface FileRouteTypes {
     | '/cart'
     | '/checkout'
     | '/search'
+    | '/trade'
+    | '/account/addresses'
+    | '/account/company'
+    | '/account/invoices'
+    | '/account/quotes'
     | '/admin/$'
     | '/backend/catalog'
     | '/backend/categories'
@@ -473,10 +775,16 @@ export interface FileRouteTypes {
     | '/backend/collections'
     | '/backend/commerce'
     | '/backend/communications'
+    | '/backend/companies'
     | '/backend/content'
+    | '/backend/customers'
+    | '/backend/cutover'
     | '/backend/data-transfer'
+    | '/backend/drafts'
     | '/backend/email-templates'
     | '/backend/feature-cards'
+    | '/backend/finance'
+    | '/backend/fulfilment'
     | '/backend/hero-slides'
     | '/backend/homepage'
     | '/backend/homepage-sections'
@@ -489,10 +797,13 @@ export interface FileRouteTypes {
     | '/backend/orders'
     | '/backend/pages'
     | '/backend/products'
+    | '/backend/sales'
     | '/backend/settings'
     | '/backend/site-settings'
     | '/backend/submissions'
     | '/backend/users'
+    | '/backend/wms'
+    | '/brands/$handle'
     | '/bundle/$slug'
     | '/checkout/success'
     | '/collection/$slug'
@@ -500,9 +811,24 @@ export interface FileRouteTypes {
     | '/product/$slug'
     | '/admin'
     | '/backend'
+    | '/brands'
     | '/bundles'
     | '/account/orders/$orderId'
+    | '/backend/companies/$companyId'
+    | '/backend/companies/new'
+    | '/backend/customers/$customerId'
+    | '/backend/customers/new'
+    | '/backend/drafts/$draftId'
+    | '/backend/drafts/new'
+    | '/backend/finance/invoices'
+    | '/backend/finance/payments'
+    | '/backend/finance/receivables'
+    | '/backend/finance/reconciliation'
+    | '/backend/finance/refunds'
+    | '/backend/finance/statements'
     | '/backend/orders/$orderId'
+    | '/backend/finance/invoices/$invoiceId'
+    | '/backend/finance/payments/$paymentId'
   id:
     | '__root__'
     | '/'
@@ -512,6 +838,11 @@ export interface FileRouteTypes {
     | '/cart'
     | '/checkout'
     | '/search'
+    | '/trade'
+    | '/account/addresses'
+    | '/account/company'
+    | '/account/invoices'
+    | '/account/quotes'
     | '/admin/$'
     | '/backend/catalog'
     | '/backend/categories'
@@ -519,10 +850,16 @@ export interface FileRouteTypes {
     | '/backend/collections'
     | '/backend/commerce'
     | '/backend/communications'
+    | '/backend/companies'
     | '/backend/content'
+    | '/backend/customers'
+    | '/backend/cutover'
     | '/backend/data-transfer'
+    | '/backend/drafts'
     | '/backend/email-templates'
     | '/backend/feature-cards'
+    | '/backend/finance'
+    | '/backend/fulfilment'
     | '/backend/hero-slides'
     | '/backend/homepage'
     | '/backend/homepage-sections'
@@ -535,10 +872,13 @@ export interface FileRouteTypes {
     | '/backend/orders'
     | '/backend/pages'
     | '/backend/products'
+    | '/backend/sales'
     | '/backend/settings'
     | '/backend/site-settings'
     | '/backend/submissions'
     | '/backend/users'
+    | '/backend/wms'
+    | '/brands/$handle'
     | '/bundle/$slug'
     | '/checkout/success'
     | '/collection/$slug'
@@ -546,9 +886,24 @@ export interface FileRouteTypes {
     | '/product/$slug'
     | '/admin/'
     | '/backend/'
+    | '/brands/'
     | '/bundles/'
     | '/account/orders/$orderId'
+    | '/backend/companies/$companyId'
+    | '/backend/companies/new'
+    | '/backend/customers/$customerId'
+    | '/backend/customers/new'
+    | '/backend/drafts/$draftId'
+    | '/backend/drafts/new'
+    | '/backend/finance/invoices'
+    | '/backend/finance/payments'
+    | '/backend/finance/receivables'
+    | '/backend/finance/reconciliation'
+    | '/backend/finance/refunds'
+    | '/backend/finance/statements'
     | '/backend/orders/$orderId'
+    | '/backend/finance/invoices/$invoiceId'
+    | '/backend/finance/payments/$paymentId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -559,15 +914,25 @@ export interface RootRouteChildren {
   CartRoute: typeof CartRoute
   CheckoutRoute: typeof CheckoutRouteWithChildren
   SearchRoute: typeof SearchRoute
+  TradeRoute: typeof TradeRoute
+  BrandsHandleRoute: typeof BrandsHandleRoute
   BundleSlugRoute: typeof BundleSlugRoute
   CollectionSlugRoute: typeof CollectionSlugRoute
   PagesSlugRoute: typeof PagesSlugRoute
   ProductSlugRoute: typeof ProductSlugRoute
+  BrandsIndexRoute: typeof BrandsIndexRoute
   BundlesIndexRoute: typeof BundlesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/trade': {
+      id: '/trade'
+      path: '/trade'
+      fullPath: '/trade'
+      preLoaderRoute: typeof TradeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/search': {
       id: '/search'
       path: '/search'
@@ -624,6 +989,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BundlesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/brands/': {
+      id: '/brands/'
+      path: '/brands'
+      fullPath: '/brands/'
+      preLoaderRoute: typeof BrandsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/backend/': {
       id: '/backend/'
       path: '/'
@@ -673,6 +1045,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BundleSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/brands/$handle': {
+      id: '/brands/$handle'
+      path: '/brands/$handle'
+      fullPath: '/brands/$handle'
+      preLoaderRoute: typeof BrandsHandleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/backend/wms': {
+      id: '/backend/wms'
+      path: '/wms'
+      fullPath: '/backend/wms'
+      preLoaderRoute: typeof BackendWmsRouteImport
+      parentRoute: typeof BackendRouteRoute
+    }
     '/backend/users': {
       id: '/backend/users'
       path: '/users'
@@ -699,6 +1085,13 @@ declare module '@tanstack/react-router' {
       path: '/settings'
       fullPath: '/backend/settings'
       preLoaderRoute: typeof BackendSettingsRouteImport
+      parentRoute: typeof BackendRouteRoute
+    }
+    '/backend/sales': {
+      id: '/backend/sales'
+      path: '/sales'
+      fullPath: '/backend/sales'
+      preLoaderRoute: typeof BackendSalesRouteImport
       parentRoute: typeof BackendRouteRoute
     }
     '/backend/products': {
@@ -785,6 +1178,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BackendHeroSlidesRouteImport
       parentRoute: typeof BackendRouteRoute
     }
+    '/backend/fulfilment': {
+      id: '/backend/fulfilment'
+      path: '/fulfilment'
+      fullPath: '/backend/fulfilment'
+      preLoaderRoute: typeof BackendFulfilmentRouteImport
+      parentRoute: typeof BackendRouteRoute
+    }
+    '/backend/finance': {
+      id: '/backend/finance'
+      path: '/finance'
+      fullPath: '/backend/finance'
+      preLoaderRoute: typeof BackendFinanceRouteImport
+      parentRoute: typeof BackendRouteRoute
+    }
     '/backend/feature-cards': {
       id: '/backend/feature-cards'
       path: '/feature-cards'
@@ -799,6 +1206,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BackendEmailTemplatesRouteImport
       parentRoute: typeof BackendRouteRoute
     }
+    '/backend/drafts': {
+      id: '/backend/drafts'
+      path: '/drafts'
+      fullPath: '/backend/drafts'
+      preLoaderRoute: typeof BackendDraftsRouteImport
+      parentRoute: typeof BackendRouteRoute
+    }
     '/backend/data-transfer': {
       id: '/backend/data-transfer'
       path: '/data-transfer'
@@ -806,11 +1220,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BackendDataTransferRouteImport
       parentRoute: typeof BackendRouteRoute
     }
+    '/backend/cutover': {
+      id: '/backend/cutover'
+      path: '/cutover'
+      fullPath: '/backend/cutover'
+      preLoaderRoute: typeof BackendCutoverRouteImport
+      parentRoute: typeof BackendRouteRoute
+    }
+    '/backend/customers': {
+      id: '/backend/customers'
+      path: '/customers'
+      fullPath: '/backend/customers'
+      preLoaderRoute: typeof BackendCustomersRouteImport
+      parentRoute: typeof BackendRouteRoute
+    }
     '/backend/content': {
       id: '/backend/content'
       path: '/content'
       fullPath: '/backend/content'
       preLoaderRoute: typeof BackendContentRouteImport
+      parentRoute: typeof BackendRouteRoute
+    }
+    '/backend/companies': {
+      id: '/backend/companies'
+      path: '/companies'
+      fullPath: '/backend/companies'
+      preLoaderRoute: typeof BackendCompaniesRouteImport
       parentRoute: typeof BackendRouteRoute
     }
     '/backend/communications': {
@@ -862,6 +1297,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminSplatRouteImport
       parentRoute: typeof AdminRouteRoute
     }
+    '/account/quotes': {
+      id: '/account/quotes'
+      path: '/quotes'
+      fullPath: '/account/quotes'
+      preLoaderRoute: typeof AccountQuotesRouteImport
+      parentRoute: typeof AccountRoute
+    }
+    '/account/invoices': {
+      id: '/account/invoices'
+      path: '/invoices'
+      fullPath: '/account/invoices'
+      preLoaderRoute: typeof AccountInvoicesRouteImport
+      parentRoute: typeof AccountRoute
+    }
+    '/account/company': {
+      id: '/account/company'
+      path: '/company'
+      fullPath: '/account/company'
+      preLoaderRoute: typeof AccountCompanyRouteImport
+      parentRoute: typeof AccountRoute
+    }
+    '/account/addresses': {
+      id: '/account/addresses'
+      path: '/addresses'
+      fullPath: '/account/addresses'
+      preLoaderRoute: typeof AccountAddressesRouteImport
+      parentRoute: typeof AccountRoute
+    }
     '/backend/orders/$orderId': {
       id: '/backend/orders/$orderId'
       path: '/$orderId'
@@ -869,12 +1332,110 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BackendOrdersOrderIdRouteImport
       parentRoute: typeof BackendOrdersRoute
     }
+    '/backend/finance/statements': {
+      id: '/backend/finance/statements'
+      path: '/statements'
+      fullPath: '/backend/finance/statements'
+      preLoaderRoute: typeof BackendFinanceStatementsRouteImport
+      parentRoute: typeof BackendFinanceRoute
+    }
+    '/backend/finance/refunds': {
+      id: '/backend/finance/refunds'
+      path: '/refunds'
+      fullPath: '/backend/finance/refunds'
+      preLoaderRoute: typeof BackendFinanceRefundsRouteImport
+      parentRoute: typeof BackendFinanceRoute
+    }
+    '/backend/finance/reconciliation': {
+      id: '/backend/finance/reconciliation'
+      path: '/reconciliation'
+      fullPath: '/backend/finance/reconciliation'
+      preLoaderRoute: typeof BackendFinanceReconciliationRouteImport
+      parentRoute: typeof BackendFinanceRoute
+    }
+    '/backend/finance/receivables': {
+      id: '/backend/finance/receivables'
+      path: '/receivables'
+      fullPath: '/backend/finance/receivables'
+      preLoaderRoute: typeof BackendFinanceReceivablesRouteImport
+      parentRoute: typeof BackendFinanceRoute
+    }
+    '/backend/finance/payments': {
+      id: '/backend/finance/payments'
+      path: '/payments'
+      fullPath: '/backend/finance/payments'
+      preLoaderRoute: typeof BackendFinancePaymentsRouteImport
+      parentRoute: typeof BackendFinanceRoute
+    }
+    '/backend/finance/invoices': {
+      id: '/backend/finance/invoices'
+      path: '/invoices'
+      fullPath: '/backend/finance/invoices'
+      preLoaderRoute: typeof BackendFinanceInvoicesRouteImport
+      parentRoute: typeof BackendFinanceRoute
+    }
+    '/backend/drafts/new': {
+      id: '/backend/drafts/new'
+      path: '/new'
+      fullPath: '/backend/drafts/new'
+      preLoaderRoute: typeof BackendDraftsNewRouteImport
+      parentRoute: typeof BackendDraftsRoute
+    }
+    '/backend/drafts/$draftId': {
+      id: '/backend/drafts/$draftId'
+      path: '/$draftId'
+      fullPath: '/backend/drafts/$draftId'
+      preLoaderRoute: typeof BackendDraftsDraftIdRouteImport
+      parentRoute: typeof BackendDraftsRoute
+    }
+    '/backend/customers/new': {
+      id: '/backend/customers/new'
+      path: '/new'
+      fullPath: '/backend/customers/new'
+      preLoaderRoute: typeof BackendCustomersNewRouteImport
+      parentRoute: typeof BackendCustomersRoute
+    }
+    '/backend/customers/$customerId': {
+      id: '/backend/customers/$customerId'
+      path: '/$customerId'
+      fullPath: '/backend/customers/$customerId'
+      preLoaderRoute: typeof BackendCustomersCustomerIdRouteImport
+      parentRoute: typeof BackendCustomersRoute
+    }
+    '/backend/companies/new': {
+      id: '/backend/companies/new'
+      path: '/new'
+      fullPath: '/backend/companies/new'
+      preLoaderRoute: typeof BackendCompaniesNewRouteImport
+      parentRoute: typeof BackendCompaniesRoute
+    }
+    '/backend/companies/$companyId': {
+      id: '/backend/companies/$companyId'
+      path: '/$companyId'
+      fullPath: '/backend/companies/$companyId'
+      preLoaderRoute: typeof BackendCompaniesCompanyIdRouteImport
+      parentRoute: typeof BackendCompaniesRoute
+    }
     '/account/orders/$orderId': {
       id: '/account/orders/$orderId'
       path: '/orders/$orderId'
       fullPath: '/account/orders/$orderId'
       preLoaderRoute: typeof AccountOrdersOrderIdRouteImport
       parentRoute: typeof AccountRoute
+    }
+    '/backend/finance/payments/$paymentId': {
+      id: '/backend/finance/payments/$paymentId'
+      path: '/$paymentId'
+      fullPath: '/backend/finance/payments/$paymentId'
+      preLoaderRoute: typeof BackendFinancePaymentsPaymentIdRouteImport
+      parentRoute: typeof BackendFinancePaymentsRoute
+    }
+    '/backend/finance/invoices/$invoiceId': {
+      id: '/backend/finance/invoices/$invoiceId'
+      path: '/$invoiceId'
+      fullPath: '/backend/finance/invoices/$invoiceId'
+      preLoaderRoute: typeof BackendFinanceInvoicesInvoiceIdRouteImport
+      parentRoute: typeof BackendFinanceInvoicesRoute
     }
   }
 }
@@ -891,6 +1452,96 @@ const AdminRouteRouteChildren: AdminRouteRouteChildren = {
 
 const AdminRouteRouteWithChildren = AdminRouteRoute._addFileChildren(
   AdminRouteRouteChildren,
+)
+
+interface BackendCompaniesRouteChildren {
+  BackendCompaniesCompanyIdRoute: typeof BackendCompaniesCompanyIdRoute
+  BackendCompaniesNewRoute: typeof BackendCompaniesNewRoute
+}
+
+const BackendCompaniesRouteChildren: BackendCompaniesRouteChildren = {
+  BackendCompaniesCompanyIdRoute: BackendCompaniesCompanyIdRoute,
+  BackendCompaniesNewRoute: BackendCompaniesNewRoute,
+}
+
+const BackendCompaniesRouteWithChildren =
+  BackendCompaniesRoute._addFileChildren(BackendCompaniesRouteChildren)
+
+interface BackendCustomersRouteChildren {
+  BackendCustomersCustomerIdRoute: typeof BackendCustomersCustomerIdRoute
+  BackendCustomersNewRoute: typeof BackendCustomersNewRoute
+}
+
+const BackendCustomersRouteChildren: BackendCustomersRouteChildren = {
+  BackendCustomersCustomerIdRoute: BackendCustomersCustomerIdRoute,
+  BackendCustomersNewRoute: BackendCustomersNewRoute,
+}
+
+const BackendCustomersRouteWithChildren =
+  BackendCustomersRoute._addFileChildren(BackendCustomersRouteChildren)
+
+interface BackendDraftsRouteChildren {
+  BackendDraftsDraftIdRoute: typeof BackendDraftsDraftIdRoute
+  BackendDraftsNewRoute: typeof BackendDraftsNewRoute
+}
+
+const BackendDraftsRouteChildren: BackendDraftsRouteChildren = {
+  BackendDraftsDraftIdRoute: BackendDraftsDraftIdRoute,
+  BackendDraftsNewRoute: BackendDraftsNewRoute,
+}
+
+const BackendDraftsRouteWithChildren = BackendDraftsRoute._addFileChildren(
+  BackendDraftsRouteChildren,
+)
+
+interface BackendFinanceInvoicesRouteChildren {
+  BackendFinanceInvoicesInvoiceIdRoute: typeof BackendFinanceInvoicesInvoiceIdRoute
+}
+
+const BackendFinanceInvoicesRouteChildren: BackendFinanceInvoicesRouteChildren =
+  {
+    BackendFinanceInvoicesInvoiceIdRoute: BackendFinanceInvoicesInvoiceIdRoute,
+  }
+
+const BackendFinanceInvoicesRouteWithChildren =
+  BackendFinanceInvoicesRoute._addFileChildren(
+    BackendFinanceInvoicesRouteChildren,
+  )
+
+interface BackendFinancePaymentsRouteChildren {
+  BackendFinancePaymentsPaymentIdRoute: typeof BackendFinancePaymentsPaymentIdRoute
+}
+
+const BackendFinancePaymentsRouteChildren: BackendFinancePaymentsRouteChildren =
+  {
+    BackendFinancePaymentsPaymentIdRoute: BackendFinancePaymentsPaymentIdRoute,
+  }
+
+const BackendFinancePaymentsRouteWithChildren =
+  BackendFinancePaymentsRoute._addFileChildren(
+    BackendFinancePaymentsRouteChildren,
+  )
+
+interface BackendFinanceRouteChildren {
+  BackendFinanceInvoicesRoute: typeof BackendFinanceInvoicesRouteWithChildren
+  BackendFinancePaymentsRoute: typeof BackendFinancePaymentsRouteWithChildren
+  BackendFinanceReceivablesRoute: typeof BackendFinanceReceivablesRoute
+  BackendFinanceReconciliationRoute: typeof BackendFinanceReconciliationRoute
+  BackendFinanceRefundsRoute: typeof BackendFinanceRefundsRoute
+  BackendFinanceStatementsRoute: typeof BackendFinanceStatementsRoute
+}
+
+const BackendFinanceRouteChildren: BackendFinanceRouteChildren = {
+  BackendFinanceInvoicesRoute: BackendFinanceInvoicesRouteWithChildren,
+  BackendFinancePaymentsRoute: BackendFinancePaymentsRouteWithChildren,
+  BackendFinanceReceivablesRoute: BackendFinanceReceivablesRoute,
+  BackendFinanceReconciliationRoute: BackendFinanceReconciliationRoute,
+  BackendFinanceRefundsRoute: BackendFinanceRefundsRoute,
+  BackendFinanceStatementsRoute: BackendFinanceStatementsRoute,
+}
+
+const BackendFinanceRouteWithChildren = BackendFinanceRoute._addFileChildren(
+  BackendFinanceRouteChildren,
 )
 
 interface BackendOrdersRouteChildren {
@@ -912,10 +1563,16 @@ interface BackendRouteRouteChildren {
   BackendCollectionsRoute: typeof BackendCollectionsRoute
   BackendCommerceRoute: typeof BackendCommerceRoute
   BackendCommunicationsRoute: typeof BackendCommunicationsRoute
+  BackendCompaniesRoute: typeof BackendCompaniesRouteWithChildren
   BackendContentRoute: typeof BackendContentRoute
+  BackendCustomersRoute: typeof BackendCustomersRouteWithChildren
+  BackendCutoverRoute: typeof BackendCutoverRoute
   BackendDataTransferRoute: typeof BackendDataTransferRoute
+  BackendDraftsRoute: typeof BackendDraftsRouteWithChildren
   BackendEmailTemplatesRoute: typeof BackendEmailTemplatesRoute
   BackendFeatureCardsRoute: typeof BackendFeatureCardsRoute
+  BackendFinanceRoute: typeof BackendFinanceRouteWithChildren
+  BackendFulfilmentRoute: typeof BackendFulfilmentRoute
   BackendHeroSlidesRoute: typeof BackendHeroSlidesRoute
   BackendHomepageRoute: typeof BackendHomepageRoute
   BackendHomepageSectionsRoute: typeof BackendHomepageSectionsRoute
@@ -928,10 +1585,12 @@ interface BackendRouteRouteChildren {
   BackendOrdersRoute: typeof BackendOrdersRouteWithChildren
   BackendPagesRoute: typeof BackendPagesRoute
   BackendProductsRoute: typeof BackendProductsRoute
+  BackendSalesRoute: typeof BackendSalesRoute
   BackendSettingsRoute: typeof BackendSettingsRoute
   BackendSiteSettingsRoute: typeof BackendSiteSettingsRoute
   BackendSubmissionsRoute: typeof BackendSubmissionsRoute
   BackendUsersRoute: typeof BackendUsersRoute
+  BackendWmsRoute: typeof BackendWmsRoute
   BackendIndexRoute: typeof BackendIndexRoute
 }
 
@@ -942,10 +1601,16 @@ const BackendRouteRouteChildren: BackendRouteRouteChildren = {
   BackendCollectionsRoute: BackendCollectionsRoute,
   BackendCommerceRoute: BackendCommerceRoute,
   BackendCommunicationsRoute: BackendCommunicationsRoute,
+  BackendCompaniesRoute: BackendCompaniesRouteWithChildren,
   BackendContentRoute: BackendContentRoute,
+  BackendCustomersRoute: BackendCustomersRouteWithChildren,
+  BackendCutoverRoute: BackendCutoverRoute,
   BackendDataTransferRoute: BackendDataTransferRoute,
+  BackendDraftsRoute: BackendDraftsRouteWithChildren,
   BackendEmailTemplatesRoute: BackendEmailTemplatesRoute,
   BackendFeatureCardsRoute: BackendFeatureCardsRoute,
+  BackendFinanceRoute: BackendFinanceRouteWithChildren,
+  BackendFulfilmentRoute: BackendFulfilmentRoute,
   BackendHeroSlidesRoute: BackendHeroSlidesRoute,
   BackendHomepageRoute: BackendHomepageRoute,
   BackendHomepageSectionsRoute: BackendHomepageSectionsRoute,
@@ -958,10 +1623,12 @@ const BackendRouteRouteChildren: BackendRouteRouteChildren = {
   BackendOrdersRoute: BackendOrdersRouteWithChildren,
   BackendPagesRoute: BackendPagesRoute,
   BackendProductsRoute: BackendProductsRoute,
+  BackendSalesRoute: BackendSalesRoute,
   BackendSettingsRoute: BackendSettingsRoute,
   BackendSiteSettingsRoute: BackendSiteSettingsRoute,
   BackendSubmissionsRoute: BackendSubmissionsRoute,
   BackendUsersRoute: BackendUsersRoute,
+  BackendWmsRoute: BackendWmsRoute,
   BackendIndexRoute: BackendIndexRoute,
 }
 
@@ -970,10 +1637,18 @@ const BackendRouteRouteWithChildren = BackendRouteRoute._addFileChildren(
 )
 
 interface AccountRouteChildren {
+  AccountAddressesRoute: typeof AccountAddressesRoute
+  AccountCompanyRoute: typeof AccountCompanyRoute
+  AccountInvoicesRoute: typeof AccountInvoicesRoute
+  AccountQuotesRoute: typeof AccountQuotesRoute
   AccountOrdersOrderIdRoute: typeof AccountOrdersOrderIdRoute
 }
 
 const AccountRouteChildren: AccountRouteChildren = {
+  AccountAddressesRoute: AccountAddressesRoute,
+  AccountCompanyRoute: AccountCompanyRoute,
+  AccountInvoicesRoute: AccountInvoicesRoute,
+  AccountQuotesRoute: AccountQuotesRoute,
   AccountOrdersOrderIdRoute: AccountOrdersOrderIdRoute,
 }
 
@@ -1000,10 +1675,13 @@ const rootRouteChildren: RootRouteChildren = {
   CartRoute: CartRoute,
   CheckoutRoute: CheckoutRouteWithChildren,
   SearchRoute: SearchRoute,
+  TradeRoute: TradeRoute,
+  BrandsHandleRoute: BrandsHandleRoute,
   BundleSlugRoute: BundleSlugRoute,
   CollectionSlugRoute: CollectionSlugRoute,
   PagesSlugRoute: PagesSlugRoute,
   ProductSlugRoute: ProductSlugRoute,
+  BrandsIndexRoute: BrandsIndexRoute,
   BundlesIndexRoute: BundlesIndexRoute,
 }
 export const routeTree = rootRouteImport

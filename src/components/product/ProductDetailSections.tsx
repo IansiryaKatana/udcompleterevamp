@@ -40,8 +40,15 @@ function buildDetailSections(product: Product): ProductSectionBlock[] {
 
   if (hasFeatures(product)) {
     sections.push({
-      label: 'Features',
+      label: 'Specifications',
       content: <ProductSpecsList specs={product.specs ?? []} />,
+    })
+  }
+
+  if (product.packQuantity) {
+    sections.push({
+      label: 'Pack / case information',
+      content: <p className="text-sm text-muted">Pack quantity: {product.packQuantity}. Case quantities are shown only when present on the product record.</p>,
     })
   }
 

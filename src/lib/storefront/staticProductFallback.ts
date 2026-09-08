@@ -10,6 +10,7 @@ export type StorefrontListFilter =
   | 'deals'
   | 'category'
   | 'collection'
+  | 'brand'
 
 export type StorefrontListParams = {
   filter: StorefrontListFilter
@@ -18,6 +19,9 @@ export type StorefrontListParams = {
   maxPrice?: number | null
   inStockOnly?: boolean
   sort?: 'default' | 'price_asc' | 'price_desc' | 'name'
+  vendor?: string | null
+  productType?: string | null
+  strength?: string | null
 }
 
 export function resolveStorefrontListParams(
@@ -27,7 +31,7 @@ export function resolveStorefrontListParams(
   if (slug === 'all') return { filter: 'all' }
   if (slug === 'new') return { filter: 'new' }
   if (slug === 'best') return { filter: 'best' }
-  if (slug === 'deals' || slug === 'summer') return { filter: 'deals' }
+  if (slug === 'deals' || slug === 'summer' || slug === 'offers') return { filter: 'deals' }
 
   const category = getCategoryBySlug(snapshot, slug)
   if (category) return { filter: 'category', slug }
@@ -39,7 +43,7 @@ export function resolveStorefrontListParams(
 }
 
 function filterStaticProducts(params: StorefrontListParams, snapshot: CmsSnapshot): Product[] {
-  let products = snapshot.products.length > 0 ? snapshot.products : staticCmsSnapshot.products
+  let products = snapshot.products
 
   switch (params.filter) {
     case 'all':
@@ -127,7 +131,7 @@ export function getStaticHomepageProducts(sectionKey: 'newly_dropped' | 'summer_
   return staticCmsSnapshot.products.filter((p) => p.isSummer).slice(0, 8)
 }
 
-/** Prefer parent category so sibling products appear (e.g. other phones under Mobile Phones). */
+/** Prefer parent category so sibling products appear. */
 export function buildRelatedProductFilters(
   product: Product,
   snapshot: CmsSnapshot,
@@ -184,7 +188,7 @@ export function getRelatedStaticProducts(
   snapshot: CmsSnapshot,
   limit = 4,
 ): Product[] {
-  const products = snapshot.products.length > 0 ? snapshot.products : staticCmsSnapshot.products
+  const products = snapshot.products
   const others = products.filter((p) => p.id !== product.id && p.published !== false)
 
   if (product.categoryId) {

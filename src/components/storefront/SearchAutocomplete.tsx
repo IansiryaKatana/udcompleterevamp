@@ -36,7 +36,7 @@ export function SearchAutocomplete({ query }: { query: string }) {
   if (items.length === 0) return null
 
   return (
-    <ul className="absolute z-20 mt-1 w-full overflow-hidden rounded-lg border border-[#e8e0d4] bg-white shadow-lg">
+    <ul className="absolute z-20 mt-1 w-full overflow-hidden rounded-lg border border-brand-border bg-white shadow-lg">
       {items.map((item) => (
         <li key={item.id}>
           <Link
@@ -49,7 +49,11 @@ export function SearchAutocomplete({ query }: { query: string }) {
             ) : null}
             <div className="min-w-0 flex-1">
               <p className="truncate text-sm font-semibold">{item.name}</p>
-              <p className="text-xs text-muted">{formatPrice(Number(item.price))}</p>
+              <p className="text-xs text-muted">
+                {item.price == null || item.price_restricted
+                  ? 'Trade pricing on approval'
+                  : formatPrice(Number(item.price))}
+              </p>
             </div>
           </Link>
         </li>

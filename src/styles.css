@@ -1,24 +1,69 @@
 @import 'tailwindcss';
 
+:root {
+  --brand-primary: #66a441;
+  --brand-primary-hover: #548835;
+  --brand-primary-dark: #426b29;
+  --brand-primary-muted: #e8f3e2;
+  --brand-page-bg: #f3f5f2;
+  --brand-content-bg: #fafbf9;
+  --brand-text: #1d2518;
+  --brand-muted: #6b7665;
+  --brand-soft: #e8f3e2;
+  --brand-footer: #14220b;
+  --brand-on-dark: #f7faf4;
+  --brand-hero: #426b29;
+  --brand-border: #d4decf;
+  --brand-50: #f7faf4;
+  --brand-100: #e8f3e2;
+  --brand-200: #cce4be;
+  --brand-300: #aad392;
+  --brand-400: #85c062;
+  --brand-500: #66a441;
+  --brand-600: #548835;
+  --brand-700: #426b29;
+  --brand-800: #32521e;
+  --brand-900: #223914;
+  --brand-950: #14220b;
+}
+
 @theme {
   --font-display: 'Fraunces', Georgia, serif;
   --font-sans: 'Inter Tight', system-ui, sans-serif;
 
-  --color-page-bg: #eeeeec;
-  --color-content-bg: #f8f7f3;
-  --color-hero-brown: #7b674f;
-  --color-text-brown: #2b2118;
-  --color-cta-brown: #806035;
-  --color-soft-beige: #efe8dd;
-  --color-footer-dark: #1e140c;
-  --color-cream-text: #f8f1e8;
-  --color-muted: #7e766c;
+  --color-page-bg: var(--brand-page-bg);
+  --color-content-bg: var(--brand-content-bg);
+  --color-hero-brown: var(--brand-hero);
+  --color-text-brown: var(--brand-text);
+  --color-cta-brown: var(--brand-primary);
+  --color-soft-beige: var(--brand-soft);
+  --color-footer-dark: var(--brand-footer);
+  --color-cream-text: var(--brand-on-dark);
+  --color-muted: var(--brand-muted);
+  --color-brand: var(--brand-primary);
+  --color-brand-hover: var(--brand-primary-hover);
+  --color-brand-muted: var(--brand-primary-muted);
+  --color-brand-dark: var(--brand-primary-dark);
+  --color-brand-border: var(--brand-border);
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+  --color-brand-950: var(--brand-950);
 
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 14px;
-  --radius-xl: 22px;
-  --radius-pill: 999px;
+  --radius-xl: 10px;
+  --radius-2xl: 10px;
+  --radius-pill: 10px;
+  --radius-full: 10px;
 }
 
 @layer base {
@@ -68,6 +113,78 @@ html.storefront-no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
+.marketing-article {
+  max-width: 42rem;
+  margin-inline: auto;
+  color: var(--color-text-brown);
+}
+
+.marketing-article > :first-child {
+  margin-top: 0;
+}
+
+.marketing-article h2,
+.marketing-article h3,
+.marketing-article h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--color-text-brown);
+}
+
+.marketing-article h2 {
+  font-size: 1.75rem;
+  line-height: 1.25;
+  margin-top: 3.25rem;
+  margin-bottom: 1.15rem;
+}
+
+.marketing-article h3,
+.marketing-article h4 {
+  font-size: 1.2rem;
+  line-height: 1.35;
+  margin-top: 2.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.marketing-article p {
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: color-mix(in srgb, var(--color-text-brown) 88%, white);
+  margin-top: 1.35rem;
+  margin-bottom: 1.35rem;
+}
+
+.marketing-article ul,
+.marketing-article ol {
+  margin: 1.75rem 0;
+  padding-left: 1.35rem;
+}
+
+.marketing-article li {
+  margin: 0.7rem 0;
+  line-height: 1.85;
+}
+
+.marketing-article li::marker {
+  color: var(--color-cta-brown);
+}
+
+.marketing-article a {
+  color: var(--color-cta-brown);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.marketing-article a:hover {
+  text-decoration: underline;
+}
+
+.marketing-article strong {
+  color: var(--color-text-brown);
+  font-weight: 650;
+}
+
 .feature-cards-carousel {
   scroll-snap-type: x mandatory;
   -ms-overflow-style: none;
@@ -104,12 +221,12 @@ html.storefront-no-scrollbar::-webkit-scrollbar {
   min-width: 4.5rem;
   cursor: pointer;
   border-radius: var(--radius-md);
-  border: 1px solid #e8e0d4;
+  border: 1px solid var(--brand-border);
   background-color: #fff;
   padding: 0 2.25rem 0 0.75rem;
   font-size: 0.875rem;
   color: var(--color-text-brown);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237e766c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7665' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0.625rem center;
   background-size: 1rem;
@@ -129,7 +246,7 @@ html.storefront-no-scrollbar::-webkit-scrollbar {
   gap: 0.75rem;
   cursor: pointer;
   border-radius: var(--radius-md);
-  border: 1px solid rgb(215 199 180 / 0.6);
+  border: 1px solid color-mix(in srgb, var(--brand-border) 80%, transparent);
   background-color: #fff;
   padding: 0 0.75rem;
   font-size: 0.875rem;
@@ -145,11 +262,11 @@ html.storefront-no-scrollbar::-webkit-scrollbar {
 .storefront-branded-select-content {
   z-index: 60;
   overflow: hidden;
-  border: 1px solid #e8e0d4;
+  border: 1px solid var(--brand-border);
   border-radius: var(--radius-md);
   background: #fff;
   padding: 0.25rem;
-  box-shadow: 0 10px 28px rgba(43, 33, 24, 0.12);
+  box-shadow: 0 10px 28px color-mix(in srgb, var(--brand-footer) 14%, transparent);
   animation: storefront-select-in 0.15s ease-out;
 }
 

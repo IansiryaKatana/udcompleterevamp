@@ -1,23 +1,23 @@
 :root {
-  --admin-primary: #806035;
-  --admin-primary-hover: #6b5029;
-  --admin-primary-muted: #efe8dd;
-  --admin-surface: #f8f7f3;
+  --admin-primary: var(--brand-primary);
+  --admin-primary-hover: var(--brand-primary-hover);
+  --admin-primary-muted: var(--brand-primary-muted);
+  --admin-surface: var(--brand-content-bg);
   --admin-surface-elevated: #ffffff;
-  --admin-border: #e5e0d8;
-  --admin-text: #2b2118;
-  --admin-muted: #7e766c;
+  --admin-border: var(--brand-border);
+  --admin-text: var(--brand-text);
+  --admin-muted: var(--brand-muted);
   --admin-danger: #b42318;
   --admin-danger-muted: #fef3f2;
   --admin-success: #027a48;
-  --admin-sidebar: #1e140c;
-  --admin-sidebar-text: #f8f1e8;
-  --admin-sidebar-muted: #a89a8c;
-  --admin-sidebar-active: #806035;
+  --admin-sidebar: var(--brand-footer);
+  --admin-sidebar-text: var(--brand-on-dark);
+  --admin-sidebar-muted: color-mix(in srgb, var(--brand-on-dark) 58%, var(--brand-footer));
+  --admin-sidebar-active: var(--brand-primary);
   --admin-radius: 10px;
-  --admin-shadow: 0 1px 3px rgba(30, 20, 12, 0.08);
-  --chart-1: #806035;
-  --chart-2: #a8895c;
+  --admin-shadow: 0 1px 3px color-mix(in srgb, var(--brand-footer) 12%, transparent);
+  --chart-1: var(--brand-primary);
+  --chart-2: var(--brand-primary-hover);
 }
 
 .admin-root {

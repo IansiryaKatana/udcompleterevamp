@@ -1,0 +1,67 @@
+{
+  "phase": "3E",
+  "generatedAt": "2026-09-06T18:15:00.000Z",
+  "status": "stopped_access_unavailable",
+  "verdict": "SKULABS_ACCESS_NOT_AVAILABLE",
+  "access": {
+    "method": null,
+    "accountStoreId": null,
+    "apiVersionPublicDocs": "4.5.0",
+    "publicBaseUrlDocumented": "https://api.skulabs.com",
+    "projectCredentialsPresent": false,
+    "envKeysChecked": ["SKULABS_API_TOKEN", "SKULABS_STORE_ID", "SKULABS_API_BASE_URL"],
+    "privateSettingsSkulabsKeys": [],
+    "extractionAttempted": false
+  },
+  "carrierUnchanged": {
+    "carrier_mode": "disabled",
+    "product_status": "unconfirmed"
+  },
+  "inventorySourceOfTruth": {
+    "conclusion": "UNRESOLVED",
+    "priorHypothesis": "LIKELY_HYBRID",
+    "reason": "No SKULabs direct quantities or movements extracted"
+  },
+  "resources": [
+    { "resource": "stores", "status": "BLOCKED" },
+    { "resource": "warehouses", "status": "BLOCKED" },
+    { "resource": "locations", "status": "BLOCKED" },
+    { "resource": "bins", "status": "BLOCKED" },
+    { "resource": "inventory_balances", "status": "BLOCKED" },
+    { "resource": "inventory_movements", "status": "BLOCKED" },
+    { "resource": "orders", "status": "BLOCKED" },
+    { "resource": "picks", "status": "BLOCKED" },
+    { "resource": "packs", "status": "BLOCKED" },
+    { "resource": "shipments", "status": "BLOCKED" },
+    { "resource": "purchase_orders", "status": "BLOCKED" },
+    { "resource": "receipts", "status": "BLOCKED" },
+    { "resource": "transfers", "status": "BLOCKED" },
+    { "resource": "adjustments", "status": "BLOCKED" },
+    { "resource": "returns", "status": "BLOCKED" },
+    { "resource": "suppliers", "status": "BLOCKED" },
+    { "resource": "users", "status": "BLOCKED" },
+    { "resource": "kits", "status": "BLOCKED" },
+    { "resource": "settings_automation", "status": "BLOCKED" }
+  ],
+  "requiredFromBusiness": [
+    "Read-only SKULabs API Bearer token for Unique account",
+    "Store/account identifier linked to Shopify Unique store",
+    "Confirmation extraction is authorized read-only against production",
+    "Optional CSV exports if API history incomplete",
+    "Contact for rate limits / page size if Enterprise needed"
+  ],
+  "shopifyBaselineUnchanged": {
+    "orders": 21767,
+    "skulabsEvents": 20588,
+    "skulabsOrders": 10143,
+    "firstSkulabsEvent": "2025-11-25",
+    "lastSkulabsEvent": "2026-09-04",
+    "udWh1Approx": {
+      "available": 533290,
+      "on_hand": 597648,
+      "committed": 63253,
+      "incoming": 205753,
+      "reserved": 0
+    }
+  }
+}

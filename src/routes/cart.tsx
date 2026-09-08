@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { toast } from 'sonner'
-import { useCartStore, isBundleCartItem } from '@/lib/stores/cart-store'
+import { useCartStore } from '@/lib/stores/cart-store'
+import { CartLineMeta } from '@/components/ecommerce/CartLineMeta'
 import { useFormatPrice } from '@/lib/currency'
 import { cartItemDetailPath } from '@/lib/cart/cartPayload'
 import { Button } from '@/components/ui/button'
@@ -24,32 +25,30 @@ function CartPage() {
   return (
     <StorefrontLayout>
       <PageHero
-        title="Your Cart"
-        subtitle={`${items.length} item(s)`}
+            title="Your Cart"
+        subtitle={`${items.length} wholesale line(s)`}
         backLabel="Continue Shopping"
       />
 
       <div className="px-6 py-10 md:px-14">
         {items.length === 0 ? (
-          <div className="flex flex-col items-center rounded-xl border border-[#e8e0d4] p-10 text-center">
+          <div className="flex flex-col items-center rounded-xl border border-brand-border p-10 text-center">
             <p className="text-muted">Your cart is empty.</p>
             <Button asChild className="mt-4 w-fit">
-              <Link to="/">Shop Now</Link>
+              <Link to="/">Shop wholesale</Link>
             </Button>
           </div>
         ) : (
           <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
             <ul className="space-y-4">
               {items.map((item) => (
-                <li key={item.lineKey} className="flex flex-col gap-4 rounded-xl border border-[#e8e0d4] p-4 sm:flex-row">
+                <li key={item.lineKey} className="flex flex-col gap-4 rounded-xl border border-brand-border p-4 sm:flex-row">
                   <img src={item.imageUrl} alt="" className="h-28 w-28 shrink-0 rounded-lg bg-[#f3f1ec] object-cover object-center" />
                   <div className="flex-1">
                     <Link to={cartItemDetailPath(item)} params={{ slug: item.slug }} className="font-display text-lg font-extrabold">
                       {item.name}
                     </Link>
-                    {isBundleCartItem(item) ? (
-                      <p className="mt-1 text-xs text-muted">{item.componentSummary}</p>
-                    ) : null}
+                    <CartLineMeta item={item} />
                     <p className="mt-1 font-extrabold">{formatPrice(item.price)}</p>
                     <div className="mt-3 flex flex-wrap items-center gap-3">
                       <div className="flex items-center gap-2">
@@ -78,15 +77,18 @@ function CartPage() {
               ))}
             </ul>
 
-            <aside className="h-fit rounded-xl border border-[#e8e0d4] p-6">
+            <aside className="h-fit rounded-xl border border-brand-border p-6">
               <h2 className="font-display text-xl font-extrabold">Order Summary</h2>
               <div className="mt-4 flex justify-between text-sm">
                 <span>Subtotal</span>
                 <span className="font-bold">{formatPrice(subtotal)}</span>
               </div>
-              <p className="mt-2 text-xs text-muted">Shipping and tax are calculated below based on your address.</p>
+              <p className="mt-2 text-xs text-muted">
+                Unit prices shown when Unique commercial policy allows. Case quantities are only used when the product
+                record includes them.
+              </p>
               <Button asChild className="mt-6 w-full">
-                <Link to="/checkout">Checkout</Link>
+                <Link to="/checkout">Checkout / request a quote</Link>
               </Button>
               <Button variant="destructive" className="mt-2 w-full" onClick={clearCart}>
                 Clear Cart

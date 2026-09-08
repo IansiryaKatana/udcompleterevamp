@@ -22,7 +22,7 @@ function LifestyleCard({
   className?: string
 }) {
   return (
-    <CmsLink href={ctaUrl} className={`group relative block overflow-hidden rounded-[14px] ${className ?? ''}`}>
+    <CmsLink href={ctaUrl} className={`group relative block overflow-hidden rounded-lg ${className ?? ''}`}>
       <img
         src={imageUrl}
         alt=""
@@ -71,8 +71,12 @@ export function RecommendedCollections() {
     <section ref={ref} className="py-10">
       <SectionContainer>
       <div className="mb-8 text-center">
-        <h2 className="font-display text-4xl font-extrabold text-text-brown">Recommended Collections</h2>
-        <p className="mt-2 text-[11px] text-muted">Curated tech edits to inspire your next upgrade.</p>
+        <h2 className="font-display text-4xl font-extrabold text-text-brown">
+          {snapshot.siteSettings.lifestyle_heading || 'Shop the trade catalogue'}
+        </h2>
+        <p className="mt-2 text-[11px] text-muted">
+          {snapshot.siteSettings.lifestyle_subtitle || 'Browse wholesale ranges used by UK retailers.'}
+        </p>
       </div>
 
       <div className="grid gap-5 lg:grid-cols-[1.05fr_1fr]">

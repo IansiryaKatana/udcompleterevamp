@@ -12,7 +12,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 const btnBase =
-  'pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full shadow-lg transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta-brown/40'
+  'pointer-events-auto flex h-12 w-12 items-center justify-center rounded-md shadow-lg transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta-brown/40'
 
 export function FloatingContactActions() {
   const { snapshot } = useCms()

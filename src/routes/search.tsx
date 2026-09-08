@@ -47,7 +47,7 @@ function SearchPage() {
 
   return (
     <StorefrontLayout>
-      <PageHero title="Search" subtitle={q ? `${total} result(s) for “${q}”` : 'Find components, phones, and more'} />
+      <PageHero title="Search" subtitle={q ? `${total} result(s) for “${q}”` : 'Search the wholesale catalogue by name, SKU or brand'} />
 
       <div className="px-6 py-10 md:px-14">
         <form method="get" action="/search" className="relative mx-auto mb-10 max-w-xl">
@@ -55,7 +55,7 @@ function SearchPage() {
             name="q"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search components, phones, consoles…"
+            placeholder="Search products, SKUs, brands…"
             aria-label="Search products"
             className="h-12"
           />
@@ -70,7 +70,7 @@ function SearchPage() {
           </div>
         ) : results.length === 0 ? (
           <div className="text-center">
-            <p className="text-muted">No products match your search.</p>
+            <p className="text-muted">No products match your search. Try a SKU, brand, or a shorter name.</p>
             <Link to="/" className="mt-4 inline-block text-sm font-semibold text-cta-brown underline">
               Browse all products
             </Link>

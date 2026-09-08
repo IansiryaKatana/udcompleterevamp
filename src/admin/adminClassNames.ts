@@ -25,6 +25,13 @@ export const adminBtnGhost = cn(
   'text-[var(--admin-muted)] transition-colors hover:bg-[var(--admin-primary-muted)] hover:text-[var(--admin-text)]',
 )
 
+/** Workspace jump next to a primary CTA — white so it does not compete with green actions. */
+export const adminBtnRelated = cn(
+  'inline-flex items-center justify-center gap-1.5 rounded-[var(--admin-radius)] px-3 py-2 text-sm font-medium',
+  'border border-[var(--admin-border)] bg-white text-[var(--admin-text)]',
+  'transition-colors hover:border-[var(--admin-primary)] hover:bg-[var(--admin-primary-muted)] hover:text-[var(--admin-primary)]',
+)
+
 export const adminNavLink = cn(
   'flex items-center gap-3 rounded-[var(--admin-radius)] px-3 py-2.5 text-sm font-medium transition-colors',
   'text-[var(--admin-sidebar-muted)] hover:bg-white/5 hover:text-[var(--admin-sidebar-text)]',

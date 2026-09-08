@@ -20,10 +20,11 @@ export function buildProductJsonLd(product: {
   sku?: string | null
   price: number
   compareAtPrice?: number | null
+  priceRestricted?: boolean
   imageUrl: string
   inventoryCount: number
 }, siteName: string, storeUrl: string, currency: string) {
-  return {
+  const base = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: product.name,
@@ -31,6 +32,27 @@ export function buildProductJsonLd(product: {
     image: product.imageUrl ? [product.imageUrl] : undefined,
     sku: product.sku?.trim() || product.slug,
     brand: { '@type': 'Brand', name: siteName },
+  }
+
+  // Phase 4G: under trade price restriction, do NOT leak protected B2B prices via JSON-LD.
+  // SEO: Product entity remains; Offer without price (availability only).
+  if (product.priceRestricted) {
+    return {
+      ...base,
+      offers: {
+        '@type': 'Offer',
+        url: `${storeUrl}/product/${product.slug}`,
+        priceCurrency: currency,
+        availability:
+          product.inventoryCount > 0
+            ? 'https://schema.org/InStock'
+            : 'https://schema.org/OutOfStock',
+      },
+    }
+  }
+
+  return {
+    ...base,
     offers: {
       '@type': 'Offer',
       url: `${storeUrl}/product/${product.slug}`,

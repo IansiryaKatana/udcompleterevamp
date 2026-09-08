@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { Link } from '@tanstack/react-router'
+import { AdminRelatedLink } from '@/admin/components/AdminRelatedLink'
 import { toast } from 'sonner'
 import {
   fetchOrderFilterFacets,
@@ -82,21 +82,13 @@ export function AdminOrderOperations({ embedded = false }: { embedded?: boolean 
               Unique Distribution wholesale order operations · {total.toLocaleString()} matching
             </p>
           </div>
-          <Link
-            to="/backend/commerce"
-            search={{ tab: 'customers' }}
-            className="text-sm font-medium text-[var(--admin-primary)] hover:underline"
-          >
-            Customers →
-          </Link>
+          <AdminRelatedLink to="/backend/customers">Customers</AdminRelatedLink>
         </div>
       )}
       {embedded && (
         <div className="flex items-center justify-between gap-2">
           <p className="text-sm text-[var(--admin-muted)]">{total.toLocaleString()} orders</p>
-          <Link to="/backend/orders" className="text-sm font-medium text-[var(--admin-primary)] hover:underline">
-            Open full order workspace →
-          </Link>
+          <AdminRelatedLink to="/backend/orders">Open full order workspace</AdminRelatedLink>
         </div>
       )}
 
@@ -119,7 +111,7 @@ export function AdminOrderOperations({ embedded = false }: { embedded?: boolean 
       {loading ? (
         <AdminLoadingState />
       ) : (
-        <OrderListTable rows={rows} currencyFallback={currency} />
+        <OrderListTable rows={rows} currencyFallback={currency.code} />
       )}
 
       <AdminTablePagination

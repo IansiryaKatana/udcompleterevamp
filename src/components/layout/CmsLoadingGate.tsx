@@ -3,7 +3,7 @@ import { useCms } from '@/contexts/CmsContext'
 import { productGridClasses } from '@/components/storefront/productGridClasses'
 
 function SkeletonBlock({ className }: { className?: string }) {
-  return <div className={`animate-pulse rounded-lg bg-[#e8e0d4]/70 ${className ?? ''}`} />
+  return <div className={`animate-pulse rounded-lg bg-brand-border/70 ${className ?? ''}`} />
 }
 
 function StorefrontSkeleton() {

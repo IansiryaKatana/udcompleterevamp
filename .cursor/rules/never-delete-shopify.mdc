@@ -1,0 +1,12 @@
+---
+description: Never delete Shopify data; triple-confirm ambiguous wipe prompts
+alwaysApply: true
+---
+
+# Shopify data is off-limits
+
+- **Never delete, cancel, archive, or mutate live Shopify data** (products, orders, customers, companies, inventory, discounts, metafields, or anything else on `c906ff-0a.myshopify.com` / uniquedistribution.com).
+- Shopify forensic-audit scripts are **read-only**. Do not send Admin GraphQL mutations against the live store.
+- If a prompt could mean Shopify **or** Supabase (or is otherwise ambiguous about *which* system to wipe), **stop and ask three separate confirmation questions** before taking any destructive action. Do not proceed on a single yes.
+
+Supabase demo/commerce data in project `The UD Revamp` (`oelolusdbaoyiqkgukib`) is a different system and may be wiped only when the user clearly names Supabase.

@@ -1,0 +1,24 @@
+---
+description: Unique OS uses modest rounded corners, never circular/pill shapes
+alwaysApply: true
+---
+
+# Corners: rounded, not round
+
+Unique OS is **rounded rectangles**, not circles or pills.
+
+- Use `rounded-md` (10px) for controls, tiles, chips, icon buttons, badges, inputs.
+- Use `rounded-lg` (14px) only for large media surfaces (hero tiles, lifestyle/feature cards, FinalCTA).
+- **Never** use `rounded-full`, `rounded-pill`, or a 999px radius.
+- Do not use `rounded-xl` for compact rows (48px tiles look circular). Prefer `rounded-md`.
+- Theme tokens `--radius-full` and `--radius-xl` are capped at 10px; do not raise them.
+
+```tsx
+// BAD
+<button className="rounded-full h-8 w-8" />
+<a className="rounded-xl h-12" />
+
+// GOOD
+<button className="rounded-md h-8 w-8" />
+<a className="rounded-md h-12 border ..." />
+```

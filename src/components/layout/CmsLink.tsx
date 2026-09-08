@@ -1,15 +1,21 @@
-import { Link, type LinkProps } from '@tanstack/react-router'
+import { Link } from '@tanstack/react-router'
+import type { CSSProperties, MouseEventHandler, ReactNode } from 'react'
 import { isExternalHref, normalizeCmsHref, resolveStorefrontLink } from '@/lib/cmsLink'
 
-type CmsLinkProps = Omit<LinkProps, 'to' | 'params'> & {
+type CmsLinkProps = {
   href: string | null | undefined
+  children?: ReactNode
+  className?: string
+  style?: CSSProperties
+  target?: string
+  rel?: string
+  onClick?: MouseEventHandler<HTMLAnchorElement>
 }
 
-export function CmsLink({ href, children, ...props }: CmsLinkProps) {
+export function CmsLink({ href, children, className, style, target, rel, onClick }: CmsLinkProps) {
   const normalized = normalizeCmsHref(href)
 
   if (isExternalHref(normalized)) {
-    const { className, style, target, rel, onClick, ...rest } = props
     return (
       <a
         href={normalized}
@@ -18,7 +24,6 @@ export function CmsLink({ href, children, ...props }: CmsLinkProps) {
         target={target ?? '_blank'}
         rel={rel ?? 'noopener noreferrer'}
         onClick={onClick}
-        {...rest}
       >
         {children}
       </a>
@@ -32,7 +37,14 @@ export function CmsLink({ href, children, ...props }: CmsLinkProps) {
   }
 
   return (
-    <Link to={resolved.to} params={resolved.params} {...props}>
+    <Link
+      to={resolved.to as never}
+      params={resolved.params as never}
+      hash={resolved.hash as never}
+      className={className}
+      style={style}
+      onClick={onClick}
+    >
       {children}
     </Link>
   )

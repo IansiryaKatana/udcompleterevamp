@@ -16,5 +16,8 @@ shopify-forensic-audit/raw/
 shopify-forensic-audit/raw_repairs/
 shopify-forensic-audit/import/out/
 
+# SKULabs forensic extraction (Phase 3E+) — may contain warehouse/ops PII
+raw_skulabs/
+
 .tanstack/tmp/
 

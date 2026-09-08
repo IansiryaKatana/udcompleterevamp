@@ -21,7 +21,7 @@ export function ScrollProgressBar({
 
   return (
     <div
-      className={cn('h-0.5 w-full bg-[#e8e0d4]/60', trackClassName, className)}
+      className={cn('h-0.5 w-full bg-brand-border/60', trackClassName, className)}
       role="progressbar"
       aria-valuenow={Math.round(progress)}
       aria-valuemin={0}

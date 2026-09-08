@@ -36,6 +36,32 @@ Deno.serve(async (req) => {
     }
     const userId = await resolveUserIdFromRequest(req)
 
+    let customerId: string | null = null
+    if (userId) {
+      const { data: linked } = await supabase
+        .from('customers')
+        .select('id')
+        .eq('auth_user_id', userId)
+        .limit(1)
+        .maybeSingle()
+      customerId = linked?.id ?? null
+    }
+
+    const { data: access, error: accessError } = await supabase.rpc('rpc_assert_storefront_commercial_action', {
+      p_action: 'quote',
+      p_payment_option: body.payment_option ?? null,
+      p_customer_id: customerId,
+    })
+    if (accessError || access?.ok === false) {
+      return new Response(
+        JSON.stringify({
+          error: access?.message ?? access?.error ?? accessError?.message ?? 'Commercial access denied',
+          code: access?.error ?? 'COMMERCIAL_ACCESS_DENIED',
+        }),
+        { status: 403, headers: corsHeaders },
+      )
+    }
+
     const { data: modeRow } = await supabase.from('site_settings').select('value').eq('key', 'checkout_mode').maybeSingle()
     if (modeRow?.value !== 'quote') {
       return new Response(JSON.stringify({ error: 'Quote checkout is not enabled' }), { status: 400, headers: corsHeaders })
@@ -83,6 +109,22 @@ Deno.serve(async (req) => {
 
     if (orderError || !order) {
       return new Response(JSON.stringify({ error: orderError?.message ?? 'Quote create failed' }), { status: 500, headers: corsHeaders })
+    }
+
+    const { data: bind, error: bindError } = await supabase.rpc('rpc_storefront_bind_order_commercial_context', {
+      p_order_id: order.id,
+      p_payment_option: body.payment_option ?? null,
+      p_client_customer_id: body.customer_id ?? null,
+      p_client_company_id: body.company_id ?? null,
+    })
+    if (bindError || bind?.ok === false) {
+      return new Response(
+        JSON.stringify({
+          error: bind?.message ?? bind?.error ?? bindError?.message ?? 'Commercial bind failed',
+          code: bind?.error ?? 'COMMERCIAL_BIND_FAILED',
+        }),
+        { status: 403, headers: corsHeaders },
+      )
     }
 
     const cartItems = totals.items as Array<Record<string, unknown>>

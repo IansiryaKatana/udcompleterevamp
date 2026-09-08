@@ -22,7 +22,7 @@ function chunkCards<T>(items: T[], size: number): T[][] {
 
 function FeatureCardArticle({ card, index }: { card: FeatureCard; index: number }) {
   return (
-    <article className="feature-card group relative aspect-[3/4] w-full overflow-hidden rounded-[14px]">
+    <article className="feature-card group relative aspect-[3/4] w-full overflow-hidden rounded-lg">
       <img
         src={card.imageUrl}
         alt=""
@@ -46,7 +46,7 @@ function FeatureCardArticle({ card, index }: { card: FeatureCard; index: number 
         <Button
           asChild
           size="sm"
-          className="h-8 rounded-md bg-white px-4 text-[11px] font-bold text-[#2b2117] hover:bg-white/90"
+          className="h-8 rounded-md bg-white px-4 text-[11px] font-bold text-text-brown hover:bg-white/90"
         >
           <CmsLink href={card.ctaUrl}>{card.ctaLabel}</CmsLink>
         </Button>
@@ -81,7 +81,7 @@ function FeatureCardNavDots({
           aria-label={getItemLabel(i)}
           onClick={() => onSelect(i)}
           className={cn(
-            'h-1 rounded-full transition-all',
+            'h-1 rounded-md transition-all',
             activeIndex === i ? 'w-6 bg-cta-brown' : 'w-1.5 bg-text-brown/30 hover:bg-text-brown/50',
           )}
         />

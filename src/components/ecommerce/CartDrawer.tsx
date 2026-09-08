@@ -2,7 +2,8 @@ import { Link } from '@tanstack/react-router'
 import { toast } from 'sonner'
 import { ShoppingBag, X } from 'lucide-react'
 import { useEffect, useRef } from 'react'
-import { useCartStore, isBundleCartItem } from '@/lib/stores/cart-store'
+import { useCartStore } from '@/lib/stores/cart-store'
+import { CartLineMeta } from '@/components/ecommerce/CartLineMeta'
 import { useFormatPrice } from '@/lib/currency'
 import { cartItemDetailPath } from '@/lib/cart/cartPayload'
 import { Button } from '@/components/ui/button'
@@ -32,7 +33,7 @@ export function CartDrawer() {
     <div className="fixed inset-0 z-50">
       <button type="button" aria-label="Close cart" className="absolute inset-0 bg-black/40" onClick={closeCart} />
       <aside className="absolute inset-y-0 right-0 flex w-full max-w-md flex-col bg-content-bg shadow-xl">
-        <div className="shrink-0 border-b border-[#e8e0d4]">
+        <div className="shrink-0 border-b border-brand-border">
           <div className="flex items-center justify-between px-5 py-4">
             <div className="flex items-center gap-2">
               <ShoppingBag className="h-5 w-5" />
@@ -65,9 +66,7 @@ export function CartDrawer() {
                     >
                       {item.name}
                     </Link>
-                    {isBundleCartItem(item) ? (
-                      <p className="text-xs text-muted">{item.componentSummary}</p>
-                    ) : null}
+                    <CartLineMeta item={item} />
                     <p className="text-sm font-extrabold">{formatPrice(item.price)}</p>
                     <div className="mt-2 flex flex-wrap items-center gap-2">
                       <QuantityStepper
@@ -95,14 +94,19 @@ export function CartDrawer() {
           )}
         </div>
 
-        <div className="border-t border-[#e8e0d4] p-5">
+        <div className="border-t border-brand-border p-5">
           <div className="mb-4 flex justify-between text-sm font-bold">
             <span>Subtotal</span>
             <span>{formatPrice(subtotal)}</span>
           </div>
           <Button asChild className="w-full" disabled={items.length === 0}>
             <Link to="/cart" onClick={closeCart}>
-              View Cart
+              View cart
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="mt-2 w-full" disabled={items.length === 0}>
+            <Link to="/checkout" onClick={closeCart}>
+              Request a quote
             </Link>
           </Button>
         </div>

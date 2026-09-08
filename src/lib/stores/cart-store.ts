@@ -33,6 +33,8 @@ export type ProductCartItem = CartItemBase & {
   productId: string
   variantId: string | null
   variantName: string | null
+  sku: string | null
+  packQuantity: string | null
 }
 
 export type BundleCartItem = CartItemBase & {
@@ -81,6 +83,8 @@ function buildProductCartItem(selection: CartProductSelection, quantity: number)
     productId: product.id,
     variantId,
     variantName: variant?.name ?? null,
+    sku: variant?.sku ?? product.sku ?? null,
+    packQuantity: product.packQuantity ?? null,
     slug: product.slug,
     name: displayName,
     price: effectiveProductPrice(product, variant),
@@ -208,7 +212,7 @@ export const useCartStore = create<CartState>()(
     }),
     {
       name: 'unique-cart',
-      version: 2,
+      version: 3,
       migrate: (persisted, version) => {
         if (!persisted || typeof persisted !== 'object' || !('items' in persisted)) {
           return persisted as CartState
@@ -228,6 +232,8 @@ export const useCartStore = create<CartState>()(
             productId,
             variantId,
             variantName: (item.variantName as string | null | undefined) ?? null,
+            sku: (item.sku as string | null | undefined) ?? null,
+            packQuantity: (item.packQuantity as string | null | undefined) ?? null,
             slug: String(item.slug ?? ''),
             name: String(item.name ?? ''),
             price: Number(item.price ?? 0),

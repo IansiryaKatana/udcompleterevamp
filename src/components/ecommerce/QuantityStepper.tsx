@@ -11,7 +11,7 @@ type QuantityStepperProps = {
 }
 
 const stepperBtn =
-  'flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-[#d7c7b4]/60 bg-white text-text-brown transition-colors hover:bg-soft-beige focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta-brown/30 disabled:cursor-not-allowed disabled:opacity-40'
+  'flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-brand-border/80 bg-white text-text-brown transition-colors hover:bg-soft-beige focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta-brown/30 disabled:cursor-not-allowed disabled:opacity-40'
 
 export function QuantityStepper({ value, onChange, min = 1, max, className }: QuantityStepperProps) {
   function setQuantity(next: number) {

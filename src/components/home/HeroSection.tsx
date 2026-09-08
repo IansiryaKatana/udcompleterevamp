@@ -65,9 +65,23 @@ export function HeroSection() {
               </span>
             ))}
           </h1>
-          <Button asChild variant="cream" size="sm" className="hero-cta mt-8 h-10 px-6 text-xs font-bold">
-            <CmsLink href={slide.ctaUrl}>{slide.ctaLabel}</CmsLink>
-          </Button>
+          {snapshot.siteSettings.hero_supporting_copy?.trim() ? (
+            <p className="hero-supporting mt-5 max-w-[520px] text-sm leading-relaxed text-white/80 md:text-base">
+              {snapshot.siteSettings.hero_supporting_copy}
+            </p>
+          ) : null}
+          <div className="hero-cta mt-8 flex flex-wrap items-center gap-3">
+            <Button asChild variant="cream" size="sm" className="h-10 px-6 text-xs font-bold">
+              <CmsLink href={slide.ctaUrl}>{slide.ctaLabel}</CmsLink>
+            </Button>
+            {snapshot.siteSettings.hero_secondary_cta_label?.trim() ? (
+              <Button asChild variant="outline" size="sm" className="h-10 border-white/40 bg-transparent px-6 text-xs font-bold text-white hover:bg-white/10">
+                <CmsLink href={snapshot.siteSettings.hero_secondary_cta_url || '/trade'}>
+                  {snapshot.siteSettings.hero_secondary_cta_label}
+                </CmsLink>
+              </Button>
+            ) : null}
+          </div>
         </div>
       </div>
 
@@ -77,7 +91,7 @@ export function HeroSection() {
             type="button"
             aria-label="Previous slide"
             onClick={() => go(-1)}
-            className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white"
+            className="flex h-8 w-8 items-center justify-center rounded-md bg-black text-white"
           >
             <ChevronLeft className="h-4 w-4" />
           </button>
@@ -85,7 +99,7 @@ export function HeroSection() {
             type="button"
             aria-label="Next slide"
             onClick={() => go(1)}
-            className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white"
+            className="flex h-8 w-8 items-center justify-center rounded-md bg-black text-white"
           >
             <ChevronRight className="h-4 w-4" />
           </button>

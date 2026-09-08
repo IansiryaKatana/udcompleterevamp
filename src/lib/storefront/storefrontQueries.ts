@@ -5,11 +5,22 @@ import {
   fetchCustomerOrderDetail,
   fetchCustomerOrders,
   fetchHomepageProducts,
+  fetchMyAddresses,
+  fetchMyCompany,
+  fetchMyInvoices,
+  fetchMyQuotes,
+  fetchMyStatements,
+  fetchShopNav,
+  fetchStorefrontBrands,
   fetchStorefrontBundleBySlug,
   fetchStorefrontBundles,
+  fetchStorefrontFacets,
   fetchStorefrontProductBySlug,
   fetchStorefrontProducts,
   fetchStorefrontSearch,
+  fetchTradeApplicationFields,
+  fetchCheckoutRules,
+  fetchPaymentGatewayPublicStatus,
 } from '@/lib/storefront/storefrontRpc'
 import type { StorefrontListParams } from '@/lib/storefront/staticProductFallback'
 import type { Product } from '@/data/static-cms'
@@ -43,6 +54,17 @@ export const storefrontKeys = {
     [...storefrontKeys.all, 'bundles', limit, offset] as const,
   bundle: (slug: string) => [...storefrontKeys.all, 'bundle', slug] as const,
   hasBundles: () => [...storefrontKeys.all, 'has-bundles'] as const,
+  shopNav: () => [...storefrontKeys.all, 'shop-nav'] as const,
+  brands: (query: string) => [...storefrontKeys.all, 'brands', query] as const,
+  facets: () => [...storefrontKeys.all, 'facets'] as const,
+  quotes: () => [...storefrontKeys.all, 'quotes'] as const,
+  invoices: () => [...storefrontKeys.all, 'invoices'] as const,
+  statements: () => [...storefrontKeys.all, 'statements'] as const,
+  addresses: () => [...storefrontKeys.all, 'addresses'] as const,
+  company: () => [...storefrontKeys.all, 'company'] as const,
+  tradeFields: () => [...storefrontKeys.all, 'trade-fields'] as const,
+  checkoutRules: (context: Record<string, unknown>) => [...storefrontKeys.all, 'checkout-rules', context] as const,
+  paymentGateway: () => [...storefrontKeys.all, 'payment-gateway'] as const,
 }
 
 function useDatabaseCatalog() {
@@ -208,6 +230,99 @@ export function useRelatedProducts(product: Product, limit = 4) {
       }
       return getRelatedStaticProducts(product, snapshot, limit)
     },
+    staleTime: 60_000,
+  })
+}
+
+export function useShopNav() {
+  return useQuery({
+    queryKey: storefrontKeys.shopNav(),
+    queryFn: fetchShopNav,
+    staleTime: 5 * 60_000,
+  })
+}
+
+export function useStorefrontBrands(query = '') {
+  return useQuery({
+    queryKey: storefrontKeys.brands(query.trim().toLowerCase()),
+    queryFn: () => fetchStorefrontBrands(query.trim() || undefined),
+    staleTime: 5 * 60_000,
+  })
+}
+
+export function useStorefrontFacets() {
+  return useQuery({
+    queryKey: storefrontKeys.facets(),
+    queryFn: fetchStorefrontFacets,
+    staleTime: 5 * 60_000,
+  })
+}
+
+export function useMyQuotes(enabled: boolean) {
+  return useQuery({
+    queryKey: storefrontKeys.quotes(),
+    queryFn: fetchMyQuotes,
+    enabled: enabled && isSupabaseConfigured(),
+    staleTime: 30_000,
+  })
+}
+
+export function useMyInvoices(enabled: boolean) {
+  return useQuery({
+    queryKey: storefrontKeys.invoices(),
+    queryFn: fetchMyInvoices,
+    enabled: enabled && isSupabaseConfigured(),
+    staleTime: 30_000,
+  })
+}
+
+export function useMyStatements(enabled: boolean) {
+  return useQuery({
+    queryKey: storefrontKeys.statements(),
+    queryFn: fetchMyStatements,
+    enabled: enabled && isSupabaseConfigured(),
+    staleTime: 30_000,
+  })
+}
+
+export function useMyAddresses(enabled: boolean) {
+  return useQuery({
+    queryKey: storefrontKeys.addresses(),
+    queryFn: fetchMyAddresses,
+    enabled: enabled && isSupabaseConfigured(),
+    staleTime: 30_000,
+  })
+}
+
+export function useMyCompany(enabled: boolean) {
+  return useQuery({
+    queryKey: storefrontKeys.company(),
+    queryFn: fetchMyCompany,
+    enabled: enabled && isSupabaseConfigured(),
+    staleTime: 30_000,
+  })
+}
+
+export function useTradeApplicationFields() {
+  return useQuery({
+    queryKey: storefrontKeys.tradeFields(),
+    queryFn: fetchTradeApplicationFields,
+    staleTime: 5 * 60_000,
+  })
+}
+
+export function useCheckoutRules(context: Record<string, unknown> = {}) {
+  return useQuery({
+    queryKey: storefrontKeys.checkoutRules(context),
+    queryFn: () => fetchCheckoutRules(context),
+    staleTime: 30_000,
+  })
+}
+
+export function usePaymentGatewayPublicStatus() {
+  return useQuery({
+    queryKey: storefrontKeys.paymentGateway(),
+    queryFn: fetchPaymentGatewayPublicStatus,
     staleTime: 60_000,
   })
 }

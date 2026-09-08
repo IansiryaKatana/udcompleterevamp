@@ -15,7 +15,7 @@ export function AdminSettingsHub({ tab }: { tab: TabId }) {
   return (
     <AdminTabHub
       title="Settings"
-      subtitle="Store configuration, admin users, and data transfer."
+      subtitle="Store configuration, branding, admin users, and data transfer."
       hubPath="/backend/settings"
       tabs={[...TABS]}
       activeTab={tab}

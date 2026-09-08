@@ -31,6 +31,32 @@ Deno.serve(async (req) => {
     const { success_url, cancel_url, coupon_code } = body
     const shippingCountry = shipping.shipping_address?.country ?? null
 
+    let customerId: string | null = null
+    if (userId) {
+      const { data: linked } = await supabase
+        .from('customers')
+        .select('id')
+        .eq('auth_user_id', userId)
+        .limit(1)
+        .maybeSingle()
+      customerId = linked?.id ?? null
+    }
+
+    const { data: access, error: accessError } = await supabase.rpc('rpc_assert_storefront_commercial_action', {
+      p_action: 'purchase',
+      p_payment_option: body.payment_option ?? null,
+      p_customer_id: customerId,
+    })
+    if (accessError || access?.ok === false) {
+      return new Response(
+        JSON.stringify({
+          error: access?.message ?? access?.error ?? accessError?.message ?? 'Commercial access denied',
+          code: access?.error ?? 'COMMERCIAL_ACCESS_DENIED',
+        }),
+        { status: 403, headers: corsHeaders },
+      )
+    }
+
     const { data: enabled } = await supabase.from('site_settings').select('value').eq('key', 'stripe_enabled').maybeSingle()
     if (enabled?.value !== 'true') {
       return new Response(JSON.stringify({ error: 'Stripe checkout is not enabled' }), { status: 400, headers: corsHeaders })

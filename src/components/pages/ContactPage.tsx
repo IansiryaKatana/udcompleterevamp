@@ -47,6 +47,23 @@ export function ContactPage({ page }: { page: MarketingPage }) {
             />
           ) : null}
 
+          {(snapshot.siteSettings.contact_company_legal_name ||
+            snapshot.siteSettings.contact_company_number ||
+            snapshot.siteSettings.contact_address ||
+            snapshot.siteSettings.contact_hours) ? (
+            <div className="mx-auto mt-6 max-w-lg space-y-1 text-sm text-white/85">
+              {snapshot.siteSettings.contact_company_legal_name ? (
+                <p className="font-semibold">{snapshot.siteSettings.contact_company_legal_name}</p>
+              ) : null}
+              {snapshot.siteSettings.contact_company_number ? (
+                <p>Company number {snapshot.siteSettings.contact_company_number}</p>
+              ) : null}
+              {snapshot.siteSettings.contact_address ? <p>{snapshot.siteSettings.contact_address}</p> : null}
+              {snapshot.siteSettings.contact_hours ? <p>{snapshot.siteSettings.contact_hours}</p> : null}
+              {snapshot.siteSettings.contact_phone ? <p>{snapshot.siteSettings.contact_phone}</p> : null}
+            </div>
+          ) : null}
+
           <ContactForm className="mt-8 w-full max-w-lg text-left" />
         </div>
       </section>

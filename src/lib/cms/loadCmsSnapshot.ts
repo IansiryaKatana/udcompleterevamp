@@ -3,6 +3,7 @@ import type { Database } from '@/integrations/supabase/database.types'
 import type { CmsSnapshot } from '@/data/static-cms'
 import { staticCmsSnapshot } from '@/data/static-cms'
 import { normalizeCmsHref } from '@/lib/cmsLink'
+import { DEFAULT_HERO_BACKGROUND } from '@/lib/brandPalette'
 
 function mapCollection(row: Database['public']['Tables']['collections']['Row']): CmsSnapshot['collections'][0] {
   return {
@@ -40,7 +41,7 @@ function mapHeroSlide(row: Database['public']['Tables']['hero_slides']['Row']): 
     imageUrl: row.image_url ?? '',
     imageUrlTablet: row.image_url_tablet ?? '',
     imageUrlMobile: row.image_url_mobile ?? '',
-    backgroundColor: row.background_color ?? '#7b674f',
+    backgroundColor: row.background_color ?? DEFAULT_HERO_BACKGROUND,
     sortOrder: row.sort_order,
     isActive: row.is_active,
   }
@@ -199,7 +200,7 @@ export async function loadCmsSnapshot(
         : staticCmsSnapshot.collections,
       categories: categoriesRes.data?.length
         ? categoriesRes.data.map(mapCategory)
-        : staticCmsSnapshot.categories,
+        : [],
       heroSlides: heroRes.data?.length
         ? heroRes.data.map(mapHeroSlide)
         : staticCmsSnapshot.heroSlides,
@@ -220,7 +221,7 @@ export async function loadCmsSnapshot(
         : socialRes.data?.length
           ? socialRes.data.map(mapSocialLink)
           : [],
-      bundles: staticCmsSnapshot.bundles,
+      bundles: [],
       marketingPages: pagesRes.data?.length
         ? pagesRes.data.map(mapMarketingPage)
         : staticCmsSnapshot.marketingPages,

@@ -23,8 +23,8 @@ export function CookiePreferencesDialog() {
 
   return (
     <Dialog open={preferencesOpen} onOpenChange={(open) => !open && closePreferences()}>
-      <DialogContent className="max-h-[90dvh] overflow-y-auto border-[#e8e0d4] p-0 sm:max-w-md">
-        <div className="border-b border-[#e8e0d4] px-5 py-4 pr-12">
+      <DialogContent className="max-h-[90dvh] overflow-y-auto border-brand-border p-0 sm:max-w-md">
+        <div className="border-b border-brand-border px-5 py-4 pr-12">
           <DialogHeader>
             <DialogTitle className="font-display text-xl font-extrabold text-text-brown">Cookie preferences</DialogTitle>
           </DialogHeader>
@@ -38,7 +38,7 @@ export function CookiePreferencesDialog() {
         </div>
 
         <div className="space-y-4 px-5 py-4">
-          <label className="flex items-start gap-3 rounded-lg border border-[#e8e0d4] bg-[#faf8f4] p-4">
+          <label className="flex items-start gap-3 rounded-lg border border-brand-border bg-content-bg p-4">
             <input type="checkbox" checked disabled className="mt-1" />
             <span>
               <span className="block text-sm font-semibold text-text-brown">Strictly necessary</span>
@@ -46,7 +46,7 @@ export function CookiePreferencesDialog() {
             </span>
           </label>
 
-          <label className="flex items-start gap-3 rounded-lg border border-[#e8e0d4] p-4">
+          <label className="flex items-start gap-3 rounded-lg border border-brand-border p-4">
             <input
               type="checkbox"
               checked={analytics}
@@ -59,7 +59,7 @@ export function CookiePreferencesDialog() {
             </span>
           </label>
 
-          <label className="flex items-start gap-3 rounded-lg border border-[#e8e0d4] p-4">
+          <label className="flex items-start gap-3 rounded-lg border border-brand-border p-4">
             <input
               type="checkbox"
               checked={marketing}
@@ -73,7 +73,7 @@ export function CookiePreferencesDialog() {
           </label>
         </div>
 
-        <div className="flex flex-col gap-2 border-t border-[#e8e0d4] px-5 py-4 sm:flex-row sm:justify-end">
+        <div className="flex flex-col gap-2 border-t border-brand-border px-5 py-4 sm:flex-row sm:justify-end">
           <Button type="button" variant="ghost" className="w-full sm:w-auto" onClick={closePreferences}>
             Close
           </Button>

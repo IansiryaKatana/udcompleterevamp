@@ -1,0 +1,296 @@
+{
+  "poOrders": 133,
+  "poDrafts": 2,
+  "payLaterTag": [
+    {
+      "id": "7d578261-bdc7-404e-bd3d-e7840364f24e",
+      "name": "PAY LATER"
+    }
+  ],
+  "payLaterLinks": 732,
+  "sureTag": [
+    {
+      "id": "419e947a-0200-44af-a2a7-287f20701eaf",
+      "name": "SureCust_Wholesale"
+    },
+    {
+      "id": "7fcd2220-89c6-4d03-88ac-b7b859ddf3a2",
+      "name": "SureCust_POS"
+    }
+  ],
+  "sureLinks": 5726,
+  "draft_customer_type_sample": [],
+  "customer_type_mf_sample": [],
+  "mfCt": 138,
+  "mfDraftCt": 909,
+  "custTotal": 6219,
+  "contactTotal": 3518,
+  "staff": [
+    {
+      "name": "Adam Fysal",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Adam Yousuf",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Amjad Ashraf",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Anas M",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Andy James",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Ben Stevens",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Corbin Rose",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Davide Almeida",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Drew Murray",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Frank Castle",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Harry Sihra",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Haseeb Ali",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Inderpal Bolla",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Jake Dodd",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "John Yates",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Kal Joshi",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Kalpesh Joshi",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Karanjot Bassi",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Kulwant Singh",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Mahendra Badsiwal",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Matt Scarborough",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Maz Barlas",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "MM",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Mo Farah",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Mohammed Hussain",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "MP",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Muaaz Raja",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Nash Shakti",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Neil Cookson",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Neil Gill",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Nick Gourlay",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Nick Jane",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Oscar Patel",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Rashad Akhtar",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Reece Morgan",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Richard Bell",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Rob Lister",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Rose Thomson",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Sam Hussain",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Sam Robins",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Sharoze Ali",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Simon Hartshorn",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Sol Umar",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Tauqir Ashfaq",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Teresa Campbell",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Tom Cook",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Tom Thompson",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "UD LEADS",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "UD Wholesale",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "UK PLUG ME",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "VB LEADS",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Vivek Keshwala",
+      "active": true,
+      "staff_type": "sales"
+    },
+    {
+      "name": "Yusuf Lambat",
+      "active": true,
+      "staff_type": "sales"
+    }
+  ],
+  "addrMissingCityOrLine": 1898
+}

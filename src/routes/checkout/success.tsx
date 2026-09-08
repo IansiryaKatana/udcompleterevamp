@@ -73,7 +73,8 @@ function CheckoutSuccessPage() {
             <h1 className="font-display text-4xl font-extrabold">Quote requested!</h1>
             {orderNumber && <p className="mt-2 text-sm font-semibold text-cta-brown">Reference {orderNumber}</p>}
             <p className="mt-3 max-w-md text-muted">
-              Your cart has been sent to our team. We will review your request and get back to you shortly to discuss pricing and availability.
+              Your quote request has been received. Unique will confirm availability and next steps. No dispatch is
+              implied until fulfilment data exists on the order.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Button asChild variant="outline">
@@ -89,7 +90,10 @@ function CheckoutSuccessPage() {
             <h1 className="font-display text-4xl font-extrabold">Thank you!</h1>
             {orderNumber && <p className="mt-2 text-sm font-semibold text-cta-brown">Order {orderNumber}</p>}
             {orderTotal != null && <p className="mt-1 font-extrabold">{formatPrice(orderTotal)}</p>}
-            <p className="mt-3 max-w-md text-muted">Your payment was successful. We are preparing your order.</p>
+            <p className="mt-3 max-w-md text-muted">
+              Payment was recorded. Fulfilment and tracking appear on your account only when Unique has that data — this
+              confirmation is not a shipment claim.
+            </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               {orderId ? (
                 <Button asChild>

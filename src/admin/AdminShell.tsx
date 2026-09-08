@@ -1,7 +1,10 @@
 import { Link, useRouterState } from '@tanstack/react-router'
 import {
+  Building2,
   ClipboardList,
+  FileEdit,
   FileText,
+  Landmark,
   LayoutDashboard,
   LogOut,
   Menu,
@@ -10,17 +13,31 @@ import {
   Settings,
   ShoppingBag,
   Sparkles,
+  Target,
+  Truck,
+  UserRound,
+  Users,
+  Warehouse,
   X,
 } from 'lucide-react'
 import { useState } from 'react'
 import type { LucideIcon } from 'lucide-react'
 import type { ReactNode } from 'react'
+import { SiteLogo } from '@/components/layout/SiteLogo'
 import { useAdminAuth } from '@/contexts/AdminAuthContext'
 import { adminNavLink, adminNavLinkActive, adminSidebarSignOut } from '@/admin/adminClassNames'
 
 const NAV_ITEMS: { label: string; to: string; icon: LucideIcon; exact?: boolean }[] = [
   { label: 'Dashboard', to: '/backend', icon: LayoutDashboard, exact: true },
   { label: 'Orders', to: '/backend/orders', icon: ClipboardList },
+  { label: 'Fulfilment', to: '/backend/fulfilment', icon: Truck },
+  { label: 'WMS Opening', to: '/backend/wms', icon: Warehouse },
+  { label: 'Draft Orders', to: '/backend/drafts', icon: FileEdit },
+  { label: 'Customers', to: '/backend/customers', icon: UserRound },
+  { label: 'Companies', to: '/backend/companies', icon: Building2 },
+  { label: 'Sales', to: '/backend/sales', icon: Users },
+  { label: 'Cutover', to: '/backend/cutover', icon: Target },
+  { label: 'Finance', to: '/backend/finance', icon: Landmark },
   { label: 'Catalog', to: '/backend/catalog', icon: Package },
   { label: 'Homepage', to: '/backend/homepage', icon: Sparkles },
   { label: 'Site Content', to: '/backend/content', icon: FileText },
@@ -71,9 +88,13 @@ function SidebarFooter({ onSignOut }: { onSignOut: () => void }) {
 
 function SidebarBrand() {
   return (
-    <div className="shrink-0 border-b border-white/10 px-4 py-5">
-      <p className="text-xs font-medium uppercase tracking-widest text-[var(--admin-sidebar-muted)]">Unique CMS</p>
-      <p className="text-lg font-semibold">Admin</p>
+    <div className="shrink-0 border-b border-white/10 px-4 py-4">
+      <SiteLogo
+        variant="dark"
+        to="/backend"
+        className="w-full"
+        imageClassName="h-10 max-w-full"
+      />
     </div>
   )
 }
@@ -103,8 +124,13 @@ export function AdminShell({ children }: { children: ReactNode }) {
             onClick={() => setMobileOpen(false)}
           />
           <aside className="relative flex h-full w-72 max-w-[85vw] flex-col bg-[var(--admin-sidebar)] text-[var(--admin-sidebar-text)]">
-            <div className="flex shrink-0 items-center justify-between border-b border-white/10 px-4 py-4">
-              <p className="font-semibold">Menu</p>
+            <div className="flex shrink-0 items-center justify-between gap-3 border-b border-white/10 px-4 py-4">
+              <SiteLogo
+                variant="dark"
+                to="/backend"
+                onNavigate={() => setMobileOpen(false)}
+                imageClassName="h-8 max-w-[180px]"
+              />
               <button type="button" className="rounded p-2 hover:bg-white/10" onClick={() => setMobileOpen(false)}>
                 <X className="h-5 w-5" />
               </button>
@@ -124,7 +150,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
           >
             <Menu className="h-5 w-5" />
           </button>
-          <p className="text-sm font-semibold">Unique Admin</p>
+          <SiteLogo variant="light" to="/backend" imageClassName="h-7 max-w-[160px]" />
           <div className="w-9" />
         </header>
         <main className="admin-main flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">{children}</main>

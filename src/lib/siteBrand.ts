@@ -1,5 +1,6 @@
-import { useEffect } from 'react'
+import { useEffect, useLayoutEffect, useMemo } from 'react'
 import { useCms } from '@/contexts/CmsContext'
+import { paletteToCssVars, resolveBrandPalette } from '@/lib/brandPalette'
 
 export const DEFAULT_FAVICON_URL = '/images/favicon%20astor.png'
 export const DEFAULT_LOGO_DARK_URL = '/images/ASTOR%20logo.png'
@@ -23,6 +24,24 @@ export function resolveHeroSlideImages(
   const tablet = slide.imageUrlTablet || defaults.heroBgTablet || desktop
   const mobile = slide.imageUrlMobile || defaults.heroBgMobile || tablet
   return { desktop, tablet, mobile }
+}
+
+/** Applies CMS brand colors to CSS custom properties on the document. */
+export function SiteBrandTheme() {
+  const { snapshot } = useCms()
+  const cssVars = useMemo(
+    () => paletteToCssVars(resolveBrandPalette(snapshot.siteSettings)),
+    [snapshot.siteSettings],
+  )
+
+  useLayoutEffect(() => {
+    const root = document.documentElement
+    for (const [property, value] of Object.entries(cssVars)) {
+      root.style.setProperty(property, value)
+    }
+  }, [cssVars])
+
+  return null
 }
 
 /** Injects favicon from CMS site settings. */

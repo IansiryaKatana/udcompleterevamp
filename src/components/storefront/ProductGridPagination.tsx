@@ -30,7 +30,7 @@ export function ProductGridPagination({
   const end = Math.min(page * pageSize, totalItems)
 
   return (
-    <div className="mt-10 flex flex-col gap-4 border-t border-[#e8e0d4] pt-8 sm:flex-row sm:items-center sm:justify-between">
+    <div className="mt-10 flex flex-col gap-4 border-t border-brand-border pt-8 sm:flex-row sm:items-center sm:justify-between">
       <p className="text-sm text-muted">
         Showing {start}–{end} of {totalItems} products
       </p>

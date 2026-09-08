@@ -8,15 +8,17 @@ type SiteLogoProps = {
   className?: string
   imageClassName?: string
   onNavigate?: () => void
+  to?: string
 }
 
-export function SiteLogo({ variant, className, imageClassName, onNavigate }: SiteLogoProps) {
+export function SiteLogo({ variant, className, imageClassName, onNavigate, to = '/' }: SiteLogoProps) {
   const { snapshot } = useCms()
   const brand = getBrandSettings(snapshot.siteSettings)
-  const logoUrl = variant === 'dark' ? brand.logoDarkUrl : brand.logoLightUrl
+  const logoUrl =
+    variant === 'dark' ? brand.logoDarkUrl || brand.logoLightUrl : brand.logoLightUrl || brand.logoDarkUrl
 
   return (
-    <Link to="/" className={cn('inline-flex items-center', className)} onClick={onNavigate}>
+    <Link to={to} className={cn('inline-flex items-center', className)} onClick={onNavigate}>
       {logoUrl ? (
         <img
           src={logoUrl}

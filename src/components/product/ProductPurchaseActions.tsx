@@ -9,6 +9,7 @@ import {
 } from '@/lib/cms/mapProduct'
 import { useCartStore } from '@/lib/stores/cart-store'
 import { Button } from '@/components/ui/button'
+import { gateStorefrontPurchase } from '@/lib/storefront/commercialSession'
 
 type ProductPurchaseActionsProps = {
   product: Product
@@ -33,14 +34,29 @@ export function ProductPurchaseActions({ product, variant, className }: ProductP
           variant="secondary"
           size="product"
           className="min-w-0 flex-1"
-          disabled={disabled}
+          disabled={disabled || product.priceRestricted}
           onClick={() => {
-            const result = addItem(selection)
-            if (!result.ok) {
-              toast.error(result.error)
-              return
-            }
-            toast.success(`${product.name} added to cart`)
+            void (async () => {
+              try {
+                const gate = await gateStorefrontPurchase('add_to_cart')
+                if (!gate.ok) {
+                  toast.error(gate.message)
+                  return
+                }
+                if (product.priceRestricted) {
+                  toast.error('Trade pricing requires an approved account')
+                  return
+                }
+                const result = addItem(selection)
+                if (!result.ok) {
+                  toast.error(result.error)
+                  return
+                }
+                toast.success(`${product.name} added to cart`)
+              } catch (e) {
+                toast.error(e instanceof Error ? e.message : 'Unable to add to cart')
+              }
+            })()
           }}
         >
           {needsVariant && !variant ? 'Select an option' : inventory <= 0 ? 'Out of stock' : 'Add to Cart'}
@@ -50,14 +66,25 @@ export function ProductPurchaseActions({ product, variant, className }: ProductP
           variant="default"
           size="product"
           className="min-w-0 flex-1"
-          disabled={disabled}
+          disabled={disabled || product.priceRestricted}
           onClick={() => {
-            const result = addItem(selection, 1)
-            if (!result.ok) {
-              toast.error(result.error)
-              return
-            }
-            void navigate({ to: '/checkout' })
+            void (async () => {
+              try {
+                const gate = await gateStorefrontPurchase('add_to_cart')
+                if (!gate.ok) {
+                  toast.error(gate.message)
+                  return
+                }
+                const result = addItem(selection, 1)
+                if (!result.ok) {
+                  toast.error(result.error)
+                  return
+                }
+                void navigate({ to: '/checkout' })
+              } catch (e) {
+                toast.error(e instanceof Error ? e.message : 'Unable to continue')
+              }
+            })()
           }}
         >
           Buy Now

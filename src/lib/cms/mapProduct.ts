@@ -6,6 +6,19 @@ function parseGalleryUrls(value: unknown): string[] {
   return value.filter((item): item is string => typeof item === 'string' && item.trim().length > 0)
 }
 
+export function resolveProductImageUrl(product: {
+  imageUrl?: string | null
+  galleryUrls?: string[] | null
+  variants?: Array<{ imageUrl?: string | null }> | null
+}): string {
+  const primary = product.imageUrl?.trim() ?? ''
+  if (primary) return primary
+  const gallery = product.galleryUrls?.find((url) => url.trim().length > 0)?.trim()
+  if (gallery) return gallery
+  const variant = product.variants?.find((item) => item.imageUrl?.trim())?.imageUrl?.trim()
+  return variant ?? ''
+}
+
 function parseSpecs(value: unknown): ProductSpec[] {
   if (!Array.isArray(value)) return []
   return value
@@ -23,14 +36,19 @@ function parseOptionValues(value: unknown): Record<string, string> {
   return out
 }
 
-export function mapVariantRow(row: Database['public']['Tables']['product_variants']['Row']): ProductVariant {
+export function mapVariantRow(
+  row: Database['public']['Tables']['product_variants']['Row'] & {
+    price_restricted?: boolean
+  },
+): ProductVariant {
+  const restricted = Boolean(row.price_restricted) || row.price == null
   return {
     id: row.id,
     productId: row.product_id,
     name: row.name,
     sku: row.sku ?? null,
-    price: row.price != null ? Number(row.price) : null,
-    compareAtPrice: row.compare_at_price != null ? Number(row.compare_at_price) : null,
+    price: restricted ? null : Number(row.price),
+    compareAtPrice: restricted ? null : row.compare_at_price != null ? Number(row.compare_at_price) : null,
     inventoryCount: row.inventory_count,
     optionValues: parseOptionValues(row.option_values),
     imageUrl: row.image_url ?? null,
@@ -38,20 +56,42 @@ export function mapVariantRow(row: Database['public']['Tables']['product_variant
   }
 }
 
-export function mapProductRow(row: Database['public']['Tables']['products']['Row']): Product {
+function readOptionalText(value: unknown): string | null {
+  if (typeof value !== 'string') return null
+  const trimmed = value.trim()
+  return trimmed.length > 0 ? trimmed : null
+}
+
+export function mapProductRow(
+  row: Database['public']['Tables']['products']['Row'] & {
+    price_restricted?: boolean
+    price_visibility?: string
+    vendor?: string | null
+    product_type?: string | null
+    nicotine_strength?: string | null
+    pack_quantity?: string | null
+  },
+): Product {
+  const extra = row as Record<string, unknown>
+  const restricted =
+    Boolean(row.price_restricted) ||
+    row.price_visibility === 'redacted' ||
+    row.price == null
+  const galleryUrls = parseGalleryUrls(row.gallery_urls)
   return {
     id: row.id,
     name: row.name,
     slug: row.slug,
     description: row.description ?? '',
     overview: row.overview ?? '',
-    price: Number(row.price),
-    compareAtPrice: row.compare_at_price != null ? Number(row.compare_at_price) : null,
+    price: restricted ? 0 : Number(row.price),
+    compareAtPrice: restricted ? null : row.compare_at_price != null ? Number(row.compare_at_price) : null,
+    priceRestricted: restricted,
     sku: row.sku ?? null,
     weightKg: row.weight_kg != null ? Number(row.weight_kg) : null,
     specs: parseSpecs(row.specs),
-    imageUrl: row.image_url ?? '',
-    galleryUrls: parseGalleryUrls(row.gallery_urls),
+    imageUrl: resolveProductImageUrl({ imageUrl: row.image_url, galleryUrls }),
+    galleryUrls,
     categoryId: row.category_id,
     collectionId: row.collection_id,
     badge: row.badge,
@@ -61,6 +101,10 @@ export function mapProductRow(row: Database['public']['Tables']['products']['Row
     inventoryCount: row.inventory_count,
     published: row.published,
     sortOrder: row.sort_order,
+    vendor: readOptionalText(extra.vendor),
+    productType: readOptionalText(extra.product_type ?? extra.productType),
+    nicotineStrength: readOptionalText(extra.nicotine_strength ?? extra.nicotineStrength),
+    packQuantity: readOptionalText(extra.pack_quantity ?? extra.packQuantity),
   }
 }
 

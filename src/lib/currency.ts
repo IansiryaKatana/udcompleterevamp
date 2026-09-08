@@ -24,9 +24,11 @@ export function getDefaultLocaleForCurrency(code: string) {
 
 export function formatCurrency(
   value: number,
-  { code, locale }: CurrencyConfig = { code: 'USD', locale: 'en-US' },
+  currency: CurrencyConfig | string = { code: 'USD', locale: 'en-US' },
 ) {
-  const normalizedCode = code.trim().toUpperCase()
+  const cfg = typeof currency === 'string' ? { code: currency, locale: 'en-GB' } : currency
+  const normalizedCode = String(cfg.code || 'USD').trim().toUpperCase()
+  const locale = cfg.locale || 'en-US'
   const zeroDecimal = normalizedCode === 'JPY' || normalizedCode === 'KRW'
   try {
     return new Intl.NumberFormat(locale, {

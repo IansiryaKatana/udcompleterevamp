@@ -1,6 +1,5 @@
 import { CmsLink } from '@/components/layout/CmsLink'
 import { SiteHeader } from '@/components/layout/SiteHeader'
-import { SectionContainer } from '@/components/layout/SectionContainer'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
@@ -24,16 +23,6 @@ export function PageHero({
   contained = false,
   className,
 }: PageHeroProps) {
-  const heading = (
-    <>
-      <h1 className="font-display text-4xl font-extrabold">{title}</h1>
-      {subtitle ? <p className="mt-2 max-w-lg text-sm text-white/75">{subtitle}</p> : null}
-      <Button asChild variant="cream" size="sm" className="mt-4">
-        <CmsLink href={backTo}>{backLabel}</CmsLink>
-      </Button>
-    </>
-  )
-
   return (
     <div className={cn('relative overflow-hidden bg-hero-brown text-white', className)}>
       <img
@@ -48,11 +37,13 @@ export function PageHero({
       />
       <div className="relative z-10">
         <SiteHeader />
-        {contained ? (
-          <SectionContainer className="pb-12 pt-28">{heading}</SectionContainer>
-        ) : (
-          <div className="px-6 pb-10 pt-28 md:px-14">{heading}</div>
-        )}
+        <div className={cn('px-6 pb-24 pt-36 md:px-14', contained && 'md:pb-28')}>
+          <h1 className="font-display text-4xl font-extrabold md:text-5xl">{title}</h1>
+          {subtitle ? <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/75 md:text-base">{subtitle}</p> : null}
+          <Button asChild variant="cream" size="sm" className="mt-6">
+            <CmsLink href={backTo}>{backLabel}</CmsLink>
+          </Button>
+        </div>
       </div>
     </div>
   )

@@ -1,11 +1,13 @@
 import { Link } from '@tanstack/react-router'
 import { ChevronDown, Search, ShoppingBag, User, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { useCms } from '@/contexts/CmsContext'
+import { useStorefrontAuth } from '@/contexts/StorefrontAuthContext'
 import { CmsLink } from '@/components/layout/CmsLink'
 import { SiteLogo } from '@/components/layout/SiteLogo'
-import { getChildCategories, getTopLevelCategories, getVisibleHeaderNavLinks } from '@/lib/cms/loadCmsSnapshot'
-import { useHasStorefrontBundles } from '@/lib/storefront/storefrontQueries'
+import { mobileAccountLinks } from '@/components/layout/AccountUtilityNav'
+import { useShopNav } from '@/lib/storefront/storefrontQueries'
+import { headerCategoryLinks, UNIQUE_OTHERS_NAV } from '@/lib/storefront/uniqueCatalogueNav'
+import { useCommercialSession } from '@/lib/storefront/useCommercialSession'
 import { useCartStore } from '@/lib/stores/cart-store'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
@@ -16,13 +18,19 @@ type MobileMenuDrawerProps = {
 }
 
 export function MobileMenuDrawer({ open, onClose }: MobileMenuDrawerProps) {
-  const { snapshot } = useCms()
-  const { data: hasBundles = false } = useHasStorefrontBundles()
-  const headerLinks = getVisibleHeaderNavLinks(snapshot, hasBundles)
-  const topCategories = getTopLevelCategories(snapshot)
-  const [expandedId, setExpandedId] = useState<string | null>(null)
+  const { user, signOut } = useStorefrontAuth()
+  const { data: session } = useCommercialSession()
+  const { data: shopNav } = useShopNav()
+  const headerLinks = shopNav?.header?.length ? shopNav.header : headerCategoryLinks()
+  const othersLinks = shopNav?.others?.length ? shopNav.others : UNIQUE_OTHERS_NAV
+  const [othersOpen, setOthersOpen] = useState(false)
   const cartCount = useCartStore((s) => s.items.reduce((sum, i) => sum + i.quantity, 0))
   const openCart = useCartStore((s) => s.openCart)
+  const accountItems = mobileAccountLinks({
+    signedIn: Boolean(user),
+    linked: Boolean(session?.auth_linked),
+    hasCompany: Boolean(session?.company_id),
+  })
 
   useEffect(() => {
     if (!open) return
@@ -42,7 +50,7 @@ export function MobileMenuDrawer({ open, onClose }: MobileMenuDrawerProps) {
   }, [open, onClose])
 
   useEffect(() => {
-    if (!open) setExpandedId(null)
+    if (!open) setOthersOpen(false)
   }, [open])
 
   if (!open) return null
@@ -65,7 +73,7 @@ export function MobileMenuDrawer({ open, onClose }: MobileMenuDrawerProps) {
           type="button"
           aria-label="Close menu"
           onClick={onClose}
-          className="rounded-full p-2.5 text-cream-text transition hover:bg-white/10"
+          className="rounded-md p-2.5 text-cream-text transition hover:bg-white/10"
         >
           <X className="h-5 w-5" />
         </button>
@@ -75,77 +83,88 @@ export function MobileMenuDrawer({ open, onClose }: MobileMenuDrawerProps) {
         <Link
           to="/"
           onClick={onClose}
-          className="border-b border-[#e8e0d4] py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-text-brown transition hover:text-cta-brown"
+          className="border-b border-brand-border py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-text-brown transition hover:text-cta-brown"
         >
           Home
         </Link>
 
-        {topCategories.map((cat) => {
-          const children = getChildCategories(snapshot, cat.id)
-          const expanded = expandedId === cat.id
-
-          if (children.length === 0) {
-            return (
-              <CmsLink
-                key={cat.id}
-                href={`/collection/${cat.slug}`}
-                onClick={onClose}
-                className="border-b border-[#e8e0d4] py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-text-brown transition hover:text-cta-brown"
-              >
-                {cat.name}
-              </CmsLink>
-            )
-          }
-
-          return (
-            <div key={cat.id} className="border-b border-[#e8e0d4]">
-              <button
-                type="button"
-                aria-expanded={expanded}
-                onClick={() => setExpandedId(expanded ? null : cat.id)}
-                className="flex w-full items-center justify-between gap-3 py-4 text-left text-[11px] font-semibold uppercase tracking-[0.14em] text-text-brown transition hover:text-cta-brown"
-              >
-                <span>{cat.name}</span>
-                <ChevronDown className={cn('h-4 w-4 shrink-0 text-muted transition-transform duration-200', expanded && 'rotate-180')} />
-              </button>
-              {expanded ? (
-                <div className="flex flex-col gap-1 pb-4 pl-1">
-                  <CmsLink
-                    href={`/collection/${cat.slug}`}
-                    onClick={onClose}
-                    className="rounded-lg px-3 py-2.5 text-sm font-semibold text-cta-brown transition hover:bg-soft-beige"
-                  >
-                    Shop all {cat.name}
-                  </CmsLink>
-                  {children.map((child) => (
-                    <CmsLink
-                      key={child.id}
-                      href={`/collection/${child.slug}`}
-                      onClick={onClose}
-                      className="rounded-lg px-3 py-2.5 text-sm text-text-brown transition hover:bg-soft-beige"
-                    >
-                      {child.name}
-                    </CmsLink>
-                  ))}
-                </div>
-              ) : null}
-            </div>
-          )
-        })}
-
         {headerLinks.map((link) => (
-            <CmsLink
-              key={link.id}
-              href={link.href}
-              onClick={onClose}
-              className="border-b border-[#e8e0d4] py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-text-brown transition hover:text-cta-brown"
+          <CmsLink
+            key={link.href}
+            href={link.href}
+            onClick={onClose}
+            className="border-b border-brand-border py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-text-brown transition hover:text-cta-brown"
+          >
+            {link.label}
+          </CmsLink>
+        ))}
+
+        <div className="border-b border-brand-border">
+          <button
+            type="button"
+            aria-expanded={othersOpen}
+            onClick={() => setOthersOpen((value) => !value)}
+            className="flex w-full items-center justify-between gap-3 py-4 text-left text-[11px] font-semibold uppercase tracking-[0.14em] text-text-brown transition hover:text-cta-brown"
+          >
+            <span>Others</span>
+            <ChevronDown className={cn('h-4 w-4 shrink-0 text-muted transition-transform duration-200', othersOpen && 'rotate-180')} />
+          </button>
+          {othersOpen ? (
+            <div className="flex flex-col gap-1 pb-4 pl-1">
+              {othersLinks.map((item) => (
+                <CmsLink
+                  key={item.href}
+                  href={item.href}
+                  onClick={onClose}
+                  className="rounded-lg px-3 py-2.5 text-sm text-text-brown transition hover:bg-soft-beige"
+                >
+                  {item.label}
+                </CmsLink>
+              ))}
+            </div>
+          ) : null}
+        </div>
+
+        <CmsLink href="/account" onClick={onClose} className="border-b border-brand-border py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-text-brown transition hover:text-cta-brown">
+          Trade login
+        </CmsLink>
+        <CmsLink href="/trade" onClick={onClose} className="border-b border-brand-border py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-text-brown transition hover:text-cta-brown">
+          Trade registration
+        </CmsLink>
+        <CmsLink href="/pages/help" onClick={onClose} className="border-b border-brand-border py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-text-brown transition hover:text-cta-brown">
+          Help
+        </CmsLink>
+        <CmsLink href="/pages/contact" onClick={onClose} className="border-b border-brand-border py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-text-brown transition hover:text-cta-brown">
+          Contact
+        </CmsLink>
+
+        {accountItems.map((item) =>
+          item.href === '#sign-out' ? (
+            <button
+              key={item.label}
+              type="button"
+              onClick={() => {
+                void signOut()
+                onClose()
+              }}
+              className="border-b border-brand-border py-4 text-left text-[11px] font-semibold uppercase tracking-[0.14em] text-text-brown transition hover:text-cta-brown"
             >
-              {link.label}
+              {item.label}
+            </button>
+          ) : (
+            <CmsLink
+              key={`${item.href}-${item.label}`}
+              href={item.href}
+              onClick={onClose}
+              className="border-b border-brand-border py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-text-brown transition hover:text-cta-brown"
+            >
+              {item.label}
             </CmsLink>
-          ))}
+          ),
+        )}
       </nav>
 
-      <div className="shrink-0 border-t border-[#e8e0d4] bg-soft-beige px-6 py-4 pb-[max(1rem,env(safe-area-inset-bottom))] md:px-8">
+      <div className="shrink-0 border-t border-brand-border bg-soft-beige px-6 py-4 pb-[max(1rem,env(safe-area-inset-bottom))] md:px-8">
         <div className="grid grid-cols-3 gap-2">
           <Link
             to="/search"
@@ -161,7 +180,7 @@ export function MobileMenuDrawer({ open, onClose }: MobileMenuDrawerProps) {
             className="flex flex-col items-center gap-1.5 rounded-xl bg-content-bg px-2 py-3 text-center text-xs font-semibold text-text-brown transition hover:bg-white"
           >
             <User className="h-5 w-5 text-cta-brown" />
-            Account
+            {user ? 'Account' : 'Sign in'}
           </Link>
           <button
             type="button"
@@ -171,14 +190,14 @@ export function MobileMenuDrawer({ open, onClose }: MobileMenuDrawerProps) {
             <ShoppingBag className="h-5 w-5 text-cta-brown" />
             Cart
             {cartCount > 0 ? (
-              <span className="absolute right-3 top-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-hero-brown px-1 text-[9px] font-bold text-cream-text">
+              <span className="absolute right-3 top-2 flex h-4 min-w-4 items-center justify-center rounded-md bg-hero-brown px-1 text-[9px] font-bold text-cream-text">
                 {cartCount}
               </span>
             ) : null}
           </button>
         </div>
 
-        <Button type="button" variant="cream" className="mt-3 h-11 w-full rounded-full text-sm font-bold" onClick={onClose}>
+        <Button type="button" variant="cream" className="mt-3 h-11 w-full rounded-md text-sm font-bold" onClick={onClose}>
           Close menu
         </Button>
       </div>

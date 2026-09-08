@@ -10,7 +10,7 @@ export function CookieConsentBanner() {
     <>
       {bannerOpen ? (
         <div
-          className="fixed inset-x-0 bottom-0 z-[60] border-t border-white/10 bg-footer-dark/95 px-4 py-4 text-[#f7efe5] shadow-[0_-8px_32px_rgba(0,0,0,0.35)] backdrop-blur-md md:px-8"
+          className="fixed inset-x-0 bottom-0 z-[60] border-t border-white/10 bg-footer-dark/95 px-4 py-4 text-cream-text shadow-[0_-8px_32px_rgba(0,0,0,0.35)] backdrop-blur-md md:px-8"
           role="dialog"
           aria-labelledby="cookie-consent-title"
           aria-describedby="cookie-consent-desc"
@@ -22,7 +22,7 @@ export function CookieConsentBanner() {
               </p>
               <p id="cookie-consent-desc" className="mt-1 text-xs leading-relaxed text-white/75 sm:text-sm">
                 We use strictly necessary cookies for checkout and your cart. With your consent we also use optional analytics and marketing cookies to improve Unique Distribution. See our{' '}
-                <Link to="/pages/cookies" className="font-semibold text-[#f7efe5] underline">
+                <Link to="/pages/cookies" className="font-semibold text-cream-text underline">
                   Cookie Policy
                 </Link>
                 .
@@ -47,7 +47,7 @@ export function CookieConsentBanner() {
               </Button>
               <Button
                 type="button"
-                className="h-9 w-full bg-[#f7efe5] text-[#1e140c] hover:bg-white sm:w-auto"
+                className="h-9 w-full bg-cream-text text-footer-dark hover:bg-white sm:w-auto"
                 onClick={acceptAll}
               >
                 Accept all

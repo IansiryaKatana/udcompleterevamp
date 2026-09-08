@@ -45,7 +45,7 @@ export function ContactForm({ className }: ContactFormProps) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className={cn('space-y-4 rounded-xl border border-[#e8e0d4] bg-white p-6 text-text-brown shadow-lg', className)}
+      className={cn('space-y-4 rounded-xl border border-brand-border bg-white p-6 text-text-brown shadow-lg', className)}
     >
       <div>
         <label className="mb-1 block text-sm font-semibold">Name</label>
@@ -63,7 +63,7 @@ export function ContactForm({ className }: ContactFormProps) {
           {...register('message')}
           rows={5}
           placeholder="How can we help?"
-          className="flex w-full rounded-md border border-[#d7c7b4]/60 bg-white px-3 py-2 text-sm text-text-brown focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta-brown/30"
+          className="flex w-full rounded-md border border-brand-border/80 bg-white px-3 py-2 text-sm text-text-brown focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cta-brown/30"
         />
         {errors.message && <p className="mt-1 text-xs text-red-600">{errors.message.message}</p>}
       </div>

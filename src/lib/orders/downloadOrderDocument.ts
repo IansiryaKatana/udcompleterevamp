@@ -1,4 +1,5 @@
 import type { CustomerOrderDetail } from '@/lib/storefront/storefrontRpc'
+import { DEFAULT_BRAND_PALETTE } from '@/lib/brandPalette'
 import { formatShippingAddress } from '@/lib/formatShippingAddress'
 
 export type OrderDocumentType = 'invoice' | 'receipt'
@@ -37,15 +38,15 @@ function buildOrderDocumentHtml(
   <meta charset="utf-8" />
   <title>${title} ${escapeHtml(order.order_number)}</title>
   <style>
-    body { font-family: system-ui, sans-serif; color: #2b2118; margin: 40px; }
+    body { font-family: system-ui, sans-serif; color: ${DEFAULT_BRAND_PALETTE.text}; margin: 40px; }
     h1 { font-size: 24px; margin: 0 0 8px; }
-    .meta { color: #7e766c; font-size: 14px; margin-bottom: 24px; }
+    .meta { color: ${DEFAULT_BRAND_PALETTE.muted}; font-size: 14px; margin-bottom: 24px; }
     table { width: 100%; border-collapse: collapse; margin-top: 16px; }
-    th, td { border-bottom: 1px solid #e8e0d4; padding: 10px 8px; font-size: 14px; }
-    th { text-align: left; font-size: 12px; text-transform: uppercase; color: #7e766c; }
+    th, td { border-bottom: 1px solid ${DEFAULT_BRAND_PALETTE.border}; padding: 10px 8px; font-size: 14px; }
+    th { text-align: left; font-size: 12px; text-transform: uppercase; color: ${DEFAULT_BRAND_PALETTE.muted}; }
     .totals { margin-top: 24px; max-width: 280px; margin-left: auto; }
     .totals div { display: flex; justify-content: space-between; padding: 6px 0; }
-    .totals .grand { font-weight: 800; font-size: 18px; border-top: 2px solid #2b2118; margin-top: 8px; padding-top: 12px; }
+    .totals .grand { font-weight: 800; font-size: 18px; border-top: 2px solid ${DEFAULT_BRAND_PALETTE.text}; margin-top: 8px; padding-top: 12px; }
     address { white-space: pre-line; font-style: normal; line-height: 1.5; }
   </style>
 </head>

@@ -14,6 +14,8 @@ export type AdminSheetProps = {
   saveLabel?: string
   saving?: boolean
   size?: 'md' | 'lg' | 'xl'
+  footer?: 'save' | 'filters' | 'none'
+  onReset?: () => void
 }
 
 const widthClasses = {
@@ -33,6 +35,8 @@ export function AdminSheet({
   saveLabel = 'Save',
   saving = false,
   size = 'lg',
+  footer = 'save',
+  onReset,
 }: AdminSheetProps) {
   return (
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
@@ -63,18 +67,37 @@ export function AdminSheet({
 
           <div className="flex-1 overflow-y-auto p-4">{children}</div>
 
-          <div className="flex flex-col-reverse gap-2 border-t border-[var(--admin-border)] p-4 sm:flex-row sm:justify-end">
-            <Dialog.Close asChild>
-              <button type="button" className={adminBtnSecondary}>
-                Cancel
-              </button>
-            </Dialog.Close>
-            {onSave ? (
-              <button type="button" className={adminBtnPrimary} disabled={saving} onClick={onSave}>
-                {saving ? 'Saving…' : saveLabel}
-              </button>
-            ) : null}
-          </div>
+          {footer !== 'none' ? (
+            <div className="flex flex-col-reverse gap-2 border-t border-[var(--admin-border)] p-4 sm:flex-row sm:justify-end">
+              {footer === 'filters' ? (
+                <>
+                  {onReset ? (
+                    <button type="button" className={adminBtnSecondary} onClick={onReset}>
+                      Reset
+                    </button>
+                  ) : null}
+                  <Dialog.Close asChild>
+                    <button type="button" className={adminBtnPrimary}>
+                      Done
+                    </button>
+                  </Dialog.Close>
+                </>
+              ) : (
+                <>
+                  <Dialog.Close asChild>
+                    <button type="button" className={adminBtnSecondary}>
+                      Cancel
+                    </button>
+                  </Dialog.Close>
+                  {onSave ? (
+                    <button type="button" className={adminBtnPrimary} disabled={saving} onClick={onSave}>
+                      {saving ? 'Saving…' : saveLabel}
+                    </button>
+                  ) : null}
+                </>
+              )}
+            </div>
+          ) : null}
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>

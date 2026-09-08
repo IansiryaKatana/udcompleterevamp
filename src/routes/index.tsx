@@ -8,11 +8,12 @@ import { HeroSection } from '@/components/home/HeroSection'
 import { FeatureCards } from '@/components/home/FeatureCards'
 import { ProductSection } from '@/components/home/ProductSection'
 import { RecommendedCollections } from '@/components/home/RecommendedCollections'
+import { ShopByCategory } from '@/components/home/ShopByCategory'
 import { FinalCTA } from '@/components/home/FinalCTA'
 
 export const Route = createFileRoute('/')({
   component: HomePage,
-  head: () => ({ meta: [{ title: 'Unique Distribution — Premium Tech' }] }),
+  head: () => ({ meta: [{ title: 'Unique Distribution — UK wholesale for retailers' }] }),
 })
 
 function HomePage() {
@@ -27,6 +28,7 @@ function HomePage() {
         <HeroSection />
       </div>
       <FeatureCards />
+      <ShopByCategory />
       <ProductSection sectionKey="newly_dropped" />
       <RecommendedCollections />
       <ProductSection sectionKey="summer_collections" />

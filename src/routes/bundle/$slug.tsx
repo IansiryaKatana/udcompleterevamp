@@ -29,7 +29,7 @@ function BundleDetailPage() {
 
   const marqueeText =
     snapshot.siteSettings.footer_tagline?.trim() ||
-    `${snapshot.siteName} — Premium electronics for work, play, and everything in between.`
+    `${snapshot.siteName} — UK wholesale for retailers.`
 
   usePageMeta(
     bundle

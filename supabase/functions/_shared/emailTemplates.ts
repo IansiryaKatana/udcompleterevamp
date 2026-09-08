@@ -41,15 +41,15 @@ function wrapBrandedEmailLayout(brand: EmailBrandContext, bodyHtml: string): str
   return `<!DOCTYPE html>
 <html lang="en">
 <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /></head>
-<body style="margin:0;padding:0;background-color:#f4f0ea;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f0ea;padding:32px 16px;">
+<body style="margin:0;padding:0;background-color:#f3f5f2;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f3f5f2;padding:32px 16px;">
     <tr><td align="center">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(60,45,30,0.08);">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(20,34,11,0.08);">
         <tr><td style="background-color:${escapeHtml(brand.brandColor)};padding:28px 32px;text-align:center;">${logoBlock}</td></tr>
         <tr><td style="padding:32px;">${bodyHtml}</td></tr>
-        <tr><td style="padding:24px 32px;background-color:#faf8f5;border-top:1px solid #e8e0d4;text-align:center;">
-          <p style="margin:0 0 8px;font-size:13px;line-height:1.5;color:#6b5d4d;">${escapeHtml(brand.footerText)}</p>
-          <p style="margin:0;font-size:12px;color:#9a8b78;"><a href="${escapeHtml(brand.storeUrl)}" style="color:#5c4a32;text-decoration:none;font-weight:600;">${escapeHtml(brand.siteName)}</a></p>
+        <tr><td style="padding:24px 32px;background-color:#fafbf9;border-top:1px solid #d4decf;text-align:center;">
+          <p style="margin:0 0 8px;font-size:13px;line-height:1.5;color:#6b7665;">${escapeHtml(brand.footerText)}</p>
+          <p style="margin:0;font-size:12px;color:#6b7665;"><a href="${escapeHtml(brand.storeUrl)}" style="color:${escapeHtml(brand.brandColor)};text-decoration:none;font-weight:600;">${escapeHtml(brand.siteName)}</a></p>
         </td></tr>
       </table>
     </td></tr>
@@ -153,7 +153,7 @@ export async function loadEmailBrand(supabase: SupabaseClient): Promise<EmailBra
   return {
     siteName,
     logoUrl: settings.logo_light_url?.trim() || '',
-    brandColor: settings.email_brand_color?.trim() || settings.brand_primary?.trim() || '#5c4a32',
+    brandColor: settings.email_brand_color?.trim() || settings.brand_primary?.trim() || '#66a441',
     footerText: settings.email_footer_text?.trim() || `Thank you for shopping with ${siteName}.`,
     storeUrl: storeUrl.replace(/\/$/, ''),
     fromName: settings.email_from_name?.trim() || siteName,

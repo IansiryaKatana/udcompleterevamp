@@ -19,6 +19,8 @@ export type OrderListFilters = {
   salesperson_id?: string
   cg_assigned_id?: string
   referrer_id?: string
+  /** Server expands to current admin staff_member_id (historical order snapshot) */
+  mine_salesperson?: boolean
   customer_id?: string
   company_id?: string
   min_total?: string

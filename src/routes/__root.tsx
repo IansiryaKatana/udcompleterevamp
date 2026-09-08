@@ -18,9 +18,10 @@ import { FloatingContactActions } from '@/components/layout/FloatingContactActio
 import { NotFoundPage } from '@/components/layout/NotFoundPage'
 import { CookieConsentBanner } from '@/components/legal/CookieConsentBanner'
 import { CookieConsentProvider } from '@/contexts/CookieConsentContext'
+import { AgeGateDisplayNotice } from '@/components/legal/AgeGateDisplayNotice'
 import { StorefrontAuthProvider } from '@/contexts/StorefrontAuthContext'
 import { GoogleTagManager } from '@/components/analytics/GoogleTagManager'
-import { DEFAULT_FAVICON_URL, SiteFavicon } from '@/lib/siteBrand'
+import { DEFAULT_FAVICON_URL, SiteBrandTheme, SiteFavicon } from '@/lib/siteBrand'
 
 export const Route = createRootRoute({
   component: RootLayout,
@@ -60,12 +61,14 @@ function RootDocument({ children }: { children: ReactNode }) {
             <StorefrontAuthProvider>
               <CookieConsentProvider>
                 <CmsProvider skipFetch={isAdmin}>
+                  <SiteBrandTheme />
                   {!isAdmin ? <GoogleTagManager /> : null}
                   {!isAdmin ? <SiteFavicon /> : null}
                   {children}
                   {!isAdmin ? <SiteScrollProgress /> : null}
                   {!isAdmin ? <FloatingContactActions /> : null}
                   {!isAdmin ? <CookieConsentBanner /> : null}
+                  {!isAdmin ? <AgeGateDisplayNotice /> : null}
                   <CartDrawer />
                   <AppToaster />
                 </CmsProvider>

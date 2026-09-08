@@ -16,6 +16,7 @@ import { useBulkSelection } from '@/admin/hooks/useBulkSelection'
 import { adminBtnPrimary, adminBtnSecondary, adminInput, adminLabel } from '@/admin/adminClassNames'
 import { AdminClickableTableRow, AdminTableStopCell } from '@/admin/components/AdminClickableTableRow'
 import { AdminRowActions, adminTableActionsCellClass, adminTableActionsHeadClass, crudRowActions } from '@/admin/components/AdminRowActions'
+import { DEFAULT_HERO_BACKGROUND } from '@/lib/brandPalette'
 
 type Row = Database['public']['Tables']['hero_slides']['Row']
 
@@ -38,7 +39,7 @@ const emptyForm = (): FormState => ({
   image_url: '',
   image_url_tablet: '',
   image_url_mobile: '',
-  background_color: '#7b674f',
+  background_color: DEFAULT_HERO_BACKGROUND,
   sort_order: '0',
   is_active: true,
 })
@@ -83,7 +84,7 @@ export function AdminHeroSlides() {
       image_url: row.image_url ?? '',
       image_url_tablet: row.image_url_tablet ?? '',
       image_url_mobile: row.image_url_mobile ?? '',
-      background_color: row.background_color ?? '#7b674f',
+      background_color: row.background_color ?? DEFAULT_HERO_BACKGROUND,
       sort_order: String(row.sort_order),
       is_active: row.is_active,
     })
@@ -100,7 +101,7 @@ export function AdminHeroSlides() {
       image_url: row.image_url ?? '',
       image_url_tablet: row.image_url_tablet ?? '',
       image_url_mobile: row.image_url_mobile ?? '',
-      background_color: row.background_color ?? '#7b674f',
+      background_color: row.background_color ?? DEFAULT_HERO_BACKGROUND,
       sort_order: String(row.sort_order),
       is_active: row.is_active,
     })

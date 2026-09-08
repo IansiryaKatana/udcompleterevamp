@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { Plus, RefreshCw, Save, Trash2 } from 'lucide-react'
+import { Plus, RefreshCw, RotateCcw, Save, Trash2, WandSparkles } from 'lucide-react'
 import { toast } from 'sonner'
 import { tryGetSupabase } from '@/integrations/supabase/client'
 import type { Database } from '@/integrations/supabase/database.types'
@@ -25,6 +25,17 @@ import {
 import { BrandedSelect } from '@/components/ui/BrandedSelect'
 import { adminBtnDanger, adminBtnPrimary, adminBtnSecondary, adminInput, adminLabel } from '@/admin/adminClassNames'
 import { sanitizeMarketingHtml } from '@/lib/sanitizeHtml'
+import {
+  BRAND_COLOR_FIELDS,
+  BRAND_SETTING_KEYS,
+  DEFAULT_BRAND_PALETTE,
+  derivePaletteFromPrimary,
+  deriveScaleFromPrimary,
+  LEGACY_UNUSED_PRIMARY,
+  normalizeHex,
+  resolveBrandPalette,
+  type BrandPalette,
+} from '@/lib/brandPalette'
 
 type Row = Database['public']['Tables']['site_settings']['Row']
 
@@ -40,7 +51,22 @@ export function AdminSiteSettings() {
     setLoading(true)
     const { data, error: fetchError } = await tryGetSupabase().from('site_settings').select('*').order('key')
     if (fetchError) setError(fetchError.message)
-    else setEntries((data ?? []).map((row) => ({ key: row.key, value: row.value })))
+    else {
+      let mapped = (data ?? []).map((row) => ({ key: row.key, value: row.value }))
+      const hasCompanion = mapped.some(
+        (entry) =>
+          (entry.key === BRAND_SETTING_KEYS.pageBg || entry.key === BRAND_SETTING_KEYS.footer) &&
+          Boolean(normalizeHex(entry.value)),
+      )
+      if (!hasCompanion) {
+        mapped = mapped.map((entry) =>
+          entry.key === BRAND_SETTING_KEYS.primary && normalizeHex(entry.value) === LEGACY_UNUSED_PRIMARY
+            ? { ...entry, value: DEFAULT_BRAND_PALETTE.primary }
+            : entry,
+        )
+      }
+      setEntries(mapped)
+    }
     setLoading(false)
   }, [])
 
@@ -78,6 +104,45 @@ export function AdminSiteSettings() {
     toast.success(`Saved ${entry.key}`)
     await refresh()
     await refetchCms()
+  }
+
+  const brandSettings = Object.fromEntries(entries.map((entry) => [entry.key, entry.value]))
+  const livePalette = resolveBrandPalette(brandSettings)
+  const liveScale = deriveScaleFromPrimary(livePalette.primary)
+
+  function applyPaletteToEntries(palette: BrandPalette) {
+    setEntries((prev) => {
+      let next = prev
+      for (const field of BRAND_COLOR_FIELDS) {
+        next = patchSetting(next, field.settingKey, palette[field.key])
+      }
+      return next
+    })
+  }
+
+  async function saveBrandColors() {
+    setSavingSection('colors')
+    setError(null)
+    try {
+      const primary = normalizeHex(getSettingValue(entries, BRAND_SETTING_KEYS.primary)) ?? DEFAULT_BRAND_PALETTE.primary
+      const palette = resolveBrandPalette({
+        ...Object.fromEntries(entries.map((entry) => [entry.key, entry.value])),
+        [BRAND_SETTING_KEYS.primary]: primary,
+      })
+      let next = entries
+      for (const field of BRAND_COLOR_FIELDS) {
+        next = patchSetting(next, field.settingKey, palette[field.key])
+      }
+      next = patchSetting(next, 'email_brand_color', palette.primary)
+      await upsertSiteSettings([...Object.values(BRAND_SETTING_KEYS), 'email_brand_color'], next)
+      toast.success('Brand colors saved')
+      await refresh()
+      await refetchCms()
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to save brand colors')
+    } finally {
+      setSavingSection(null)
+    }
   }
 
   async function saveBrandAssets() {
@@ -195,6 +260,123 @@ export function AdminSiteSettings() {
       <AdminErrorBanner message={error} />
 
       <div className="admin-section space-y-4">
+        <h2 className="font-semibold">Brand colors</h2>
+        <p className="text-sm text-[var(--admin-muted)]">
+          Built around Unique Distribution green <span className="font-mono">#66a441</span>. These colors drive the
+          storefront, admin chrome, and email header. Saving also updates the email accent color.
+        </p>
+
+        <div className="overflow-hidden rounded-[var(--admin-radius)] border border-[var(--admin-border)]">
+          <div className="flex h-10">
+            {([50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950] as const).map((step) => (
+              <div
+                key={step}
+                className="relative min-w-0 flex-1"
+                style={{ backgroundColor: liveScale[step] }}
+                title={`brand-${step} ${liveScale[step]}`}
+              >
+                <span
+                  className={`absolute inset-x-0 bottom-0 pb-0.5 text-center text-[9px] font-medium ${
+                    step >= 500 ? 'text-white/90' : 'text-[var(--admin-text)]/70'
+                  }`}
+                >
+                  {step}
+                </span>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center gap-3 border-t border-[var(--admin-border)] bg-white px-4 py-3">
+            <button
+              type="button"
+              className="rounded-md px-4 py-2 text-sm font-semibold text-white"
+              style={{ backgroundColor: livePalette.primary }}
+            >
+              Primary button
+            </button>
+            <span className="text-sm font-medium" style={{ color: livePalette.text }}>
+              Body text
+            </span>
+            <span className="text-sm" style={{ color: livePalette.muted }}>
+              Muted caption
+            </span>
+            <span
+              className="rounded-full px-2.5 py-0.5 text-xs font-semibold"
+              style={{ backgroundColor: livePalette.footer, color: livePalette.onDark }}
+            >
+              Dark surface
+            </span>
+          </div>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {BRAND_COLOR_FIELDS.map((field) => {
+            const value = getSettingValue(entries, field.settingKey, DEFAULT_BRAND_PALETTE[field.key])
+            const pickerValue = normalizeHex(value) ?? DEFAULT_BRAND_PALETTE[field.key]
+            return (
+              <div key={field.settingKey}>
+                <label className={adminLabel} htmlFor={`brand-${field.settingKey}`}>
+                  {field.label}
+                </label>
+                <div className="mt-1 flex gap-2">
+                  <input
+                    type="color"
+                    aria-label={`${field.label} picker`}
+                    className="h-10 w-12 cursor-pointer rounded border border-[var(--admin-border)] bg-white p-1"
+                    value={pickerValue}
+                    disabled={savingSection === 'colors'}
+                    onChange={(e) => updateManagedSetting(field.settingKey, e.target.value)}
+                  />
+                  <input
+                    id={`brand-${field.settingKey}`}
+                    className={adminInput}
+                    value={value}
+                    spellCheck={false}
+                    disabled={savingSection === 'colors'}
+                    onChange={(e) => updateManagedSetting(field.settingKey, e.target.value)}
+                  />
+                </div>
+                <p className="mt-1 text-xs text-[var(--admin-muted)]">{field.hint}</p>
+              </div>
+            )
+          })}
+        </div>
+
+        <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            className={adminBtnPrimary}
+            disabled={savingSection === 'colors'}
+            onClick={() => void saveBrandColors()}
+          >
+            <Save className="h-4 w-4" />
+            Save brand colors
+          </button>
+          <button
+            type="button"
+            className={adminBtnSecondary}
+            disabled={savingSection === 'colors'}
+            onClick={() => {
+              const primary =
+                normalizeHex(getSettingValue(entries, BRAND_SETTING_KEYS.primary)) ?? DEFAULT_BRAND_PALETTE.primary
+              applyPaletteToEntries(derivePaletteFromPrimary(primary))
+            }}
+          >
+            <WandSparkles className="h-4 w-4" />
+            Generate range from brand color
+          </button>
+          <button
+            type="button"
+            className={adminBtnSecondary}
+            disabled={savingSection === 'colors'}
+            onClick={() => applyPaletteToEntries(DEFAULT_BRAND_PALETTE)}
+          >
+            <RotateCcw className="h-4 w-4" />
+            Reset to #66a441
+          </button>
+        </div>
+      </div>
+
+      <div className="admin-section space-y-4">
         <h2 className="font-semibold">Store currency</h2>
         <p className="text-sm text-[var(--admin-muted)]">
           Applies to product prices, cart, checkout, and order emails. Changes appear on the storefront immediately after saving.
@@ -280,6 +462,104 @@ export function AdminSiteSettings() {
         >
           <Save className="h-4 w-4" />
           Save delivery information
+        </button>
+      </div>
+
+      <div className="admin-section space-y-4">
+        <h2 className="font-semibold">Storefront wholesale copy</h2>
+        <p className="text-sm text-[var(--admin-muted)]">
+          Homepage supporting copy and published company details. Do not invent dispatch guarantees or awards here.
+        </p>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="sm:col-span-2">
+            <label className={adminLabel}>Hero supporting copy</label>
+            <textarea
+              className={adminInput}
+              rows={3}
+              value={getSettingValue(entries, 'hero_supporting_copy')}
+              onChange={(e) => updateManagedSetting('hero_supporting_copy', e.target.value)}
+            />
+          </div>
+          <div>
+            <label className={adminLabel}>Hero secondary CTA label</label>
+            <input
+              className={adminInput}
+              value={getSettingValue(entries, 'hero_secondary_cta_label')}
+              onChange={(e) => updateManagedSetting('hero_secondary_cta_label', e.target.value)}
+            />
+          </div>
+          <div>
+            <label className={adminLabel}>Hero secondary CTA URL</label>
+            <input
+              className={adminInput}
+              value={getSettingValue(entries, 'hero_secondary_cta_url')}
+              onChange={(e) => updateManagedSetting('hero_secondary_cta_url', e.target.value)}
+            />
+          </div>
+          <div>
+            <label className={adminLabel}>Legal company name</label>
+            <input
+              className={adminInput}
+              value={getSettingValue(entries, 'contact_company_legal_name')}
+              onChange={(e) => updateManagedSetting('contact_company_legal_name', e.target.value)}
+            />
+          </div>
+          <div>
+            <label className={adminLabel}>Company number</label>
+            <input
+              className={adminInput}
+              value={getSettingValue(entries, 'contact_company_number')}
+              onChange={(e) => updateManagedSetting('contact_company_number', e.target.value)}
+            />
+          </div>
+          <div className="sm:col-span-2">
+            <label className={adminLabel}>Registered address</label>
+            <input
+              className={adminInput}
+              value={getSettingValue(entries, 'contact_address')}
+              onChange={(e) => updateManagedSetting('contact_address', e.target.value)}
+            />
+          </div>
+          <div className="sm:col-span-2">
+            <label className={adminLabel}>Contact hours</label>
+            <input
+              className={adminInput}
+              value={getSettingValue(entries, 'contact_hours')}
+              onChange={(e) => updateManagedSetting('contact_hours', e.target.value)}
+            />
+          </div>
+        </div>
+        <button
+          type="button"
+          className={adminBtnPrimary}
+          disabled={savingSection === 'storefront-copy'}
+          onClick={async () => {
+            setSavingSection('storefront-copy')
+            try {
+              await upsertSiteSettings(
+                [
+                  'hero_supporting_copy',
+                  'hero_secondary_cta_label',
+                  'hero_secondary_cta_url',
+                  'contact_company_legal_name',
+                  'contact_company_number',
+                  'contact_address',
+                  'contact_hours',
+                ],
+                entries,
+              )
+              toast.success('Storefront copy saved')
+              await refresh()
+              await refetchCms()
+            } catch (err) {
+              setError(err instanceof Error ? err.message : 'Failed to save storefront copy')
+            } finally {
+              setSavingSection(null)
+            }
+          }}
+        >
+          <Save className="h-4 w-4" />
+          Save storefront copy
         </button>
       </div>
 

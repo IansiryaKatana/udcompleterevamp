@@ -38,7 +38,7 @@ export function StockAlertForm({ productId, variantId, disabled }: StockAlertFor
   }
 
   return (
-    <div className="mt-4 rounded-lg border border-[#e8e0d4] p-4">
+    <div className="mt-4 rounded-lg border border-brand-border p-4">
       <p className="text-sm font-semibold text-text-brown">Notify me when back in stock</p>
       <div className="mt-2 flex flex-col gap-2 sm:flex-row">
         <Input

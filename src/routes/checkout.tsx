@@ -10,6 +10,9 @@ import { useCartServerSync } from '@/lib/cart/useCartServerSync'
 import { tryGetSupabase } from '@/integrations/supabase/client'
 import { useStorefrontAuth } from '@/contexts/StorefrontAuthContext'
 import { useCms } from '@/contexts/CmsContext'
+import { useCommercialSession } from '@/lib/storefront/useCommercialSession'
+import { useCheckoutRules, usePaymentGatewayPublicStatus } from '@/lib/storefront/storefrontQueries'
+import { assertStorefrontCommercialAction, canUsePayLater, gateStorefrontPurchase } from '@/lib/storefront/commercialSession'
 import { StorefrontLayout } from '@/components/layout/StorefrontLayout'
 import { SectionContainer } from '@/components/layout/SectionContainer'
 import { PageHero } from '@/components/layout/PageHero'
@@ -40,11 +43,18 @@ function CheckoutPage() {
   const { snapshot } = useCms()
   const checkoutMode = snapshot.siteSettings.checkout_mode === 'stripe' ? 'stripe' : 'quote'
   const stripeEnabled = snapshot.siteSettings.stripe_enabled === 'true'
-  const useStripe = checkoutMode === 'stripe' && stripeEnabled
+  const { data: commercial } = useCommercialSession()
+  const { data: gateway } = usePaymentGatewayPublicStatus()
+  const { data: checkoutRules } = useCheckoutRules({})
+  const cardOperational = Boolean(gateway?.card_operational) && checkoutMode === 'stripe' && stripeEnabled
+  const payLaterOk = canUsePayLater(commercial ?? null)
+  const requiredFields = new Set((checkoutRules?.fields ?? []).filter((f) => f.required).map((f) => f.field))
 
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [notes, setNotes] = useState('')
+  const [poNumber, setPoNumber] = useState('')
+  const [deliveryInstructions, setDeliveryInstructions] = useState('')
   const [shipping, setShipping] = useState<ShippingAddressValues>(emptyShipping())
   const [couponCode, setCouponCode] = useState('')
   const [appliedCoupon, setAppliedCoupon] = useState<string | null>(null)
@@ -113,6 +123,10 @@ function CheckoutPage() {
   }
 
   async function handleStripeCheckout() {
+    if (!cardOperational) {
+      toast.error('Card checkout is not operational.')
+      return
+    }
     if (!email.trim() || items.length === 0) {
       toast.error('Email and cart items required')
       return
@@ -167,10 +181,34 @@ function CheckoutPage() {
     window.location.href = body.url as string
   }
 
-  async function handleQuoteRequest() {
+  async function handleQuoteRequest(paymentOption?: 'pay_later' | null) {
     if (!email.trim() || items.length === 0) {
       toast.error('Email and cart items required')
       return
+    }
+    if (requiredFields.has('purchase_order') && !poNumber.trim()) {
+      toast.error('Purchase order number is required')
+      return
+    }
+    if (requiredFields.has('delivery_instructions') && !deliveryInstructions.trim()) {
+      toast.error('Delivery instructions are required')
+      return
+    }
+    const gate = await gateStorefrontPurchase(paymentOption === 'pay_later' ? 'pay_later' : 'quote')
+    if (!gate.ok) {
+      toast.error(gate.message)
+      return
+    }
+    if (paymentOption === 'pay_later') {
+      if (!payLaterOk) {
+        toast.error('PAY LATER is not available on this account.')
+        return
+      }
+      const payLaterGate = await assertStorefrontCommercialAction('pay_later', 'pay_later')
+      if (!payLaterGate?.ok) {
+        toast.error(payLaterGate?.message ?? 'PAY LATER is not available')
+        return
+      }
     }
     const sb = tryGetSupabase()
     if (!sb) {
@@ -211,7 +249,16 @@ function CheckoutPage() {
       body: JSON.stringify({
         email: email.trim(),
         name: name.trim(),
-        notes: notes.trim(),
+        notes: [
+          notes.trim(),
+          poNumber.trim() ? `PO: ${poNumber.trim()}` : '',
+          deliveryInstructions.trim() ? `Delivery: ${deliveryInstructions.trim()}` : '',
+        ]
+          .filter(Boolean)
+          .join('\n'),
+        purchase_order: poNumber.trim() || undefined,
+        delivery_instructions: deliveryInstructions.trim() || undefined,
+        payment_option: paymentOption ?? undefined,
         shipping_address: shippingPayload.ok ? shippingPayload.shipping_address : undefined,
         coupon_code: appliedCoupon ?? undefined,
         items: rpcItems,
@@ -257,20 +304,40 @@ function CheckoutPage() {
             <label className="block text-sm font-semibold">Email</label>
             <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" className="mt-1" />
           </div>
-          {!useStripe && (
-            <>
-              <div>
-                <label className="block text-sm font-semibold">Name (optional)</label>
-                <Input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" className="mt-1" />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold">Notes (optional)</label>
-                <Input value={notes} onChange={(e) => setNotes(e.target.value)} placeholder="Specs, quantity, delivery timeline…" className="mt-1" />
-              </div>
-            </>
-          )}
+          <div>
+            <label className="block text-sm font-semibold">Name (optional)</label>
+            <Input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" className="mt-1" />
+          </div>
+          <div>
+            <label className="block text-sm font-semibold">
+              Purchase order{requiredFields.has('purchase_order') ? ' *' : ' (optional)'}
+            </label>
+            <Input
+              value={poNumber}
+              onChange={(e) => setPoNumber(e.target.value)}
+              placeholder="PO number"
+              className="mt-1"
+              required={requiredFields.has('purchase_order')}
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-semibold">
+              Delivery instructions{requiredFields.has('delivery_instructions') ? ' *' : ' (optional)'}
+            </label>
+            <Input
+              value={deliveryInstructions}
+              onChange={(e) => setDeliveryInstructions(e.target.value)}
+              placeholder="Delivery notes for Unique"
+              className="mt-1"
+              required={requiredFields.has('delivery_instructions')}
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-semibold">Notes (optional)</label>
+            <Input value={notes} onChange={(e) => setNotes(e.target.value)} placeholder="Anything Unique should know about this order" className="mt-1" />
+          </div>
 
-          <div className="rounded-xl border border-[#e8e0d4] p-4">
+          <div className="rounded-xl border border-brand-border p-4">
             <h3 className="text-sm font-semibold">Promo code</h3>
             {isCouponApplied ? (
               <div className="mt-2">
@@ -328,8 +395,8 @@ function CheckoutPage() {
             )}
           </div>
 
-          <div className="rounded-xl border border-[#e8e0d4] p-4">
-            <h3 className="text-sm font-semibold">Shipping address{useStripe ? '' : ' (optional)'}</h3>
+          <div className="rounded-xl border border-brand-border p-4">
+            <h3 className="text-sm font-semibold">Shipping address{cardOperational ? '' : ' (optional for quotes)'}</h3>
             <div className="mt-3 flex flex-col gap-3">
               <Input
                 value={shipping.line1}
@@ -372,14 +439,23 @@ function CheckoutPage() {
             </div>
           </div>
 
+          {(checkoutRules?.messages ?? []).length > 0 ? (
+            <ul className="space-y-1 text-xs text-muted">
+              {checkoutRules?.messages.map((message) => (
+                <li key={message}>{message}</li>
+              ))}
+            </ul>
+          ) : null}
+          {checkoutRules?.blocked ? (
+            <p className="text-sm text-red-700">Checkout is currently blocked by Unique checkout rules.</p>
+          ) : null}
           <p className="text-xs text-muted">
-            {useStripe
-              ? 'You will be redirected to Stripe for secure payment.'
-              : 'Your cart will be emailed to our team. We will contact you to discuss pricing and availability.'}
+            Quote checkout is the default. Card and Worldpay are not shown as live while the payment gateway is
+            disabled. PAY LATER appears only when Unique marks this account eligible.
           </p>
         </div>
 
-        <aside className="h-fit rounded-xl border border-[#e8e0d4] p-6">
+        <aside className="h-fit rounded-xl border border-brand-border p-6">
           <h2 className="font-display text-xl font-extrabold">Order summary</h2>
           <ul className="mt-4 space-y-2 text-sm">
             {items.map((i) => (
@@ -397,7 +473,7 @@ function CheckoutPage() {
               </li>
             ))}
           </ul>
-          <div className="mt-4 space-y-2 border-t border-[#e8e0d4] pt-4 text-sm">
+          <div className="mt-4 space-y-2 border-t border-brand-border pt-4 text-sm">
             <div className="flex justify-between">
               <span>Subtotal</span>
               <span>{formatPrice(totals?.subtotal ?? 0)}</span>
@@ -416,18 +492,40 @@ function CheckoutPage() {
               <span>Tax</span>
               <span>{formatPrice(totals?.tax ?? 0)}</span>
             </div>
-            <div className="flex justify-between border-t border-[#e8e0d4] pt-2 font-bold">
-              <span>{useStripe ? 'Total' : 'Estimated total'}</span>
+            <div className="flex justify-between border-t border-brand-border pt-2 font-bold">
+              <span>{cardOperational ? 'Total' : 'Estimated total'}</span>
               <span>{formatPrice(totals?.total ?? 0)}</span>
             </div>
           </div>
           <Button
             className="mt-6 w-full"
-            disabled={loading}
-            onClick={() => void (useStripe ? handleStripeCheckout() : handleQuoteRequest())}
+            disabled={loading || Boolean(checkoutRules?.blocked)}
+            onClick={() => void handleQuoteRequest()}
           >
-            {loading ? 'Submitting…' : useStripe ? 'Pay with Stripe' : 'Request a quote'}
+            {loading ? 'Submitting…' : 'Request a quote'}
           </Button>
+          {payLaterOk ? (
+            <Button
+              variant="outline"
+              className="mt-2 w-full"
+              disabled={loading || Boolean(checkoutRules?.blocked)}
+              onClick={() => void handleQuoteRequest('pay_later')}
+            >
+              Place PAY LATER order
+            </Button>
+          ) : null}
+          {cardOperational ? (
+            <Button
+              variant="outline"
+              className="mt-2 w-full"
+              disabled={loading || Boolean(checkoutRules?.blocked)}
+              onClick={() => void handleStripeCheckout()}
+            >
+              Pay by card
+            </Button>
+          ) : (
+            <p className="mt-3 text-xs text-muted">Card and Worldpay checkout are not operational.</p>
+          )}
           <Button variant="cream" className="mt-2 w-full rounded-md hover:bg-white" onClick={() => navigate({ to: '/cart' })}>
             Back to cart
           </Button>
